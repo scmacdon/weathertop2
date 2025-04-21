@@ -1,8 +1,8 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f5f7fa;
-  color: #333;
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
 .app-container {
@@ -15,6 +15,7 @@ body {
   font-size: 2rem;
   margin-bottom: 1.5rem;
   text-align: center;
+  color: #ffffff;
 }
 
 .dashboard {
@@ -32,16 +33,17 @@ body {
 }
 
 .card {
-  background-color: white;
+  background-color: #1e1e1e;
   padding: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
 }
 
 label {
   display: block;
   margin-top: 1rem;
   font-weight: 500;
+  color: #cfcfcf;
 }
 
 input[type="number"],
@@ -49,13 +51,21 @@ select {
   width: 100%;
   padding: 0.5rem;
   margin-top: 0.25rem;
-  border: 1px solid #ccc;
+  background-color: #2a2a2a;
+  color: #f1f1f1;
+  border: 1px solid #444;
   border-radius: 6px;
+}
+
+input[type="number"]::placeholder,
+select::placeholder {
+  color: #aaa;
 }
 
 .checkbox-group label {
   display: block;
   margin-top: 0.5rem;
+  color: #ccc;
 }
 
 button {
@@ -66,20 +76,31 @@ button {
   border-radius: 6px;
   border: none;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .btn-primary {
-  background-color: #007bff;
+  background-color: #0d6efd;
   color: white;
 }
 
+.btn-primary:hover {
+  background-color: #0b5ed7;
+}
+
 .btn-secondary {
-  background-color: #e2e6ea;
-  color: #333;
+  background-color: #343a40;
+  color: #e0e0e0;
+}
+
+.btn-secondary:hover {
+  background-color: #495057;
 }
 
 .log-list {
   margin-top: 0.5rem;
   padding-left: 1rem;
+  color: #bbb;
 }
+
 

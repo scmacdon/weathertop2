@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 
-function TestResultsDashboard({ summary = {} }) {
+function TestResultsDashboard({ summary = {}, allBreakdowns = [] }) {
   const {
     total = 0,
     passed = 0,
     failed = 0,
     duration = '—',
-    languageBreakdown = []
   } = summary;
 
   const passRate = total > 0 ? ((passed / total) * 100).toFixed(2) : '0.00';
@@ -47,9 +46,9 @@ function TestResultsDashboard({ summary = {} }) {
         <h2 className="text-2xl font-semibold mb-4 text-gray-800 flex items-center">
           🧪 Test Breakdown by Language
         </h2>
-        {languageBreakdown.length > 0 ? (
+        {allBreakdowns.length > 0 ? (
           <ul className="space-y-3 text-lg text-gray-700">
-            {languageBreakdown.map((lang, idx) => (
+            {allBreakdowns.map((lang, idx) => (
               <li key={idx} className="flex justify-between border-b pb-1">
                 <span>{lang.name}</span>
                 <span>{lang.total} tests – {lang.passRate}% pass</span>
@@ -64,7 +63,6 @@ function TestResultsDashboard({ summary = {} }) {
   );
 }
 
-// Updated Sample Data
 const summaryData = {
   Java: {
     total: 800,
@@ -89,6 +87,9 @@ const summaryData = {
   }
 };
 
+// Flatten all languageBreakdown arrays into one
+const allBreakdowns = Object.values(summaryData).flatMap(lang => lang.languageBreakdown);
+
 export default function App() {
   const [selectedLang, setSelectedLang] = useState('Java');
 
@@ -111,7 +112,10 @@ export default function App() {
           <option value=".NET">.NET</option>
         </select>
       </div>
-      <TestResultsDashboard summary={summaryData[selectedLang]} />
+      <TestResultsDashboard
+        summary={summaryData[selectedLang]}
+        allBreakdowns={allBreakdowns}
+      />
     </div>
   );
 }
