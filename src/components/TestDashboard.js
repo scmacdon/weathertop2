@@ -65,11 +65,11 @@ function TestResultsDashboard({ summary = {}, allBreakdowns = [] }) {
 
 const summaryData = {
   Java: {
-    total: 800,
-    passed: 799,
-    failed: 1,
-    duration: '5 min 30 sec',
-    languageBreakdown: [{ name: 'Java', total: 800, passRate: 99.88 }]
+    total: 442,
+    passed: 432,
+    failed: 10,
+    duration: '5 hours 30 sec',
+    languageBreakdown: [{ name: 'Java', total: 442, passRate: 97.7 }]
   },
   Python: {
     total: 500,
