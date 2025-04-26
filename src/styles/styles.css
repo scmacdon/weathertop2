@@ -103,4 +103,70 @@ button {
   color: #bbb;
 }
 
+/* You can style the modal and overlay to fit your design */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Modal Overlay */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.7); /* Dark background with transparency */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Styling */
+.modal {
+  background-color: #333; /* Dark background */
+  color: white; /* White font color */
+  padding: 20px;
+  max-width: 600px;
+  max-height: 80vh; /* Limit the modal height */
+  overflow-y: auto; /* Enable vertical scrollbar if content exceeds height */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Optional shadow effect */
+}
+
+/* Button to Close Modal */
+button {
+  background-color: #e53e3e; /* Red background for the close button */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #c53030; /* Darker red on hover */
+}
+
+/* Ensure JSON is scrollable */
+pre {
+  white-space: pre-wrap; /* Wrap long lines */
+  word-wrap: break-word; /* Allow long words to break */
+  max-height: 60vh; /* Ensure pre content doesn't overflow */
+  overflow-y: auto; /* Vertical scrollbar */
+  padding: 10px;
+  background-color: #444; /* Darker background for the JSON */
+  border-radius: 5px;
+  font-family: 'Courier New', monospace;
+}
+
+
 
