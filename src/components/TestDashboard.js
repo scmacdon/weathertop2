@@ -63,23 +63,23 @@ function TestResultsDashboard({ summary = {}, allBreakdowns = [] }) {
         </h2>
         <div className="grid gap-4 text-gray-700 text-lg">
           <div className="flex justify-between">
-            <span>✅ <strong>Total Tests Run:</strong></span>
+            <span>✅ <strong>Total Tests Run: </strong></span>
             <span>{total}</span>
           </div>
           <div className="flex justify-between">
-            <span>🟢 <strong>Passed:</strong></span>
+            <span>🟢 <strong>Passed: </strong></span>
             <span>{passed}</span>
           </div>
           <div className="flex justify-between">
-            <span>🔴 <strong>Failed:</strong></span>
+            <span>🔴 <strong>Failed: </strong></span>
             <span>{failed}</span>
           </div>
           <div className="flex justify-between">
-            <span>📈 <strong>Pass Rate:</strong></span>
+            <span>📈 <strong>Pass Rate: </strong></span>
             <span>{passRate}%</span>
           </div>
           <div className="flex justify-between">
-            <span>⏱️ <strong>Execution Time:</strong></span>
+            <span>⏱️ <strong>Execution Time: </strong></span>
             <span>{duration}</span>
           </div>
           {/* Button to view fail information */}
