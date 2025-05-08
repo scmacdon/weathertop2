@@ -81,7 +81,7 @@ function TestResultsDashboard({ summary, allBreakdowns, loading }) {
         </h2>
         <div className="grid gap-4 text-gray-700 text-lg">
           <div className="flex justify-between">
-            <span>🆔 <strong>Run ID: </strong></span>
+            <span>🆔 <strong>Run Id: </strong></span>
             <span>{runId}</span>
           </div>
           <div className="flex justify-between">
