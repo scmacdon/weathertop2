@@ -15,10 +15,8 @@ function ExecutionControlCard() {
       day,
       time,
       parallelExecution: parallel,
-      selectedLanguages: languages
+      selectedLanguages: languages,
     };
-
-    // Call backend API to save schedule
     console.log("Schedule saved:", payload);
   };
 
@@ -26,57 +24,87 @@ function ExecutionControlCard() {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
       {/* On-Demand Execution */}
       <div className="rounded-2xl shadow-md p-4 bg-white">
-        <h2 className="text-xl font-semibold mb-2">▶️ On-Demand Execution</h2>
-        <div>
-          <label>Parallel Execution</label>
-          <input type="number" value={parallel} onChange={e => setParallel(e.target.value)} className="input" />
-          {/* Add test suite, languages etc. here */}
+        <h2 className="text-xl font-semibold mb-4">▶️ On-Demand Execution</h2>
+        <div className="mb-4">
+          <label className="block font-medium mb-1">Parallel Execution</label>
+          <input
+            type="number"
+            value={parallel}
+            onChange={e => setParallel(parseInt(e.target.value, 10))}
+            className="w-full border border-gray-300 rounded px-3 py-2"
+          />
         </div>
-        <button className="bg-blue-500 text-white px-4 py-2 mt-3 rounded" onClick={() => console.log("Run now!")}>
-          Run Tests Now
-        </button>
+        <div className="flex gap-2">
+          <button onClick={() => alert("Not implemented yet")}>
+            Run Selected Tests
+          </button>
+          <button onClick={() => alert("Not implemented yet")}>
+            Run All Tests
+          </button>
+        </div>
       </div>
 
       {/* Scheduled Execution */}
       <div className="rounded-2xl shadow-md p-4 bg-white">
-        <h2 className="text-xl font-semibold mb-2">📆 Scheduled Execution</h2>
-        <div>
-          <label>
-            <input type="checkbox" checked={scheduleEnabled} onChange={() => setScheduleEnabled(!scheduleEnabled)} />
+        <h2 className="text-xl font-semibold mb-4">📆 Scheduled Execution</h2>
+        <div className="space-y-4">
+          <label className="block">
+            <input
+              type="checkbox"
+              checked={scheduleEnabled}
+              onChange={() => setScheduleEnabled(!scheduleEnabled)}
+              className="mr-2"
+            />
             Enable Weekly Schedule
           </label>
 
-          <div className="mt-2">
-            <label>Frequency</label>
-            <select value={frequency} onChange={e => setFrequency(e.target.value)} className="input">
+          <div>
+            <label className="block font-medium mb-1">Frequency</label>
+            <select
+              value={frequency}
+              onChange={e => setFrequency(e.target.value)}
+              className="w-full border border-gray-300 rounded px-3 py-2"
+            >
               <option>Weekly</option>
               <option>Bi-weekly</option>
               <option>Monthly</option>
             </select>
           </div>
 
-          <div className="mt-2">
-            <label>Day of Week</label>
-            <select value={day} onChange={e => setDay(e.target.value)} className="input">
+          <div>
+            <label className="block font-medium mb-1">Day of Week</label>
+            <select
+              value={day}
+              onChange={e => setDay(e.target.value)}
+              className="w-full border border-gray-300 rounded px-3 py-2"
+            >
               {["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].map(d => (
                 <option key={d}>{d}</option>
               ))}
             </select>
           </div>
 
-          <div className="mt-2">
-            <label>Time (24h format)</label>
-            <input type="time" value={time} onChange={e => setTime(e.target.value)} className="input" />
+          <div>
+            <label className="block font-medium mb-1">Time (24h format)</label>
+            <input
+              type="time"
+              value={time}
+              onChange={e => setTime(e.target.value)}
+              className="w-full border border-gray-300 rounded px-3 py-2"
+            />
           </div>
 
-          <div className="mt-2">
-            <label>Parallel Execution</label>
-            <input type="number" value={parallel} onChange={e => setParallel(e.target.value)} className="input" />
+          <div>
+            <label className="block font-medium mb-1">Parallel Execution</label>
+            <input
+              type="number"
+              value={parallel}
+              onChange={e => setParallel(parseInt(e.target.value, 10))}
+              className="w-full border border-gray-300 rounded px-3 py-2"
+            />
           </div>
 
-          {/* Add multi-select for languages if needed */}
-
-          <button className="bg-green-600 text-white px-4 py-2 mt-3 rounded" onClick={handleSaveSchedule}>
+          <button onClick={() => alert("Not implemented yet")}>
             Save Schedule
           </button>
         </div>
@@ -86,4 +114,3 @@ function ExecutionControlCard() {
 }
 
 export default ExecutionControlCard;
-
