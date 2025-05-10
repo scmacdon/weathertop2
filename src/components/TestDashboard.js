@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Modal from 'react-modal';
+import LanguageBreakdown from './LanguageBreakdown';
 
 // Set the app element for accessibility
 Modal.setAppElement('#root');
@@ -118,25 +119,7 @@ function TestResultsDashboard({ summary, allBreakdowns, loading }) {
       </div>
 
       {/* Language Breakdown */}
-      <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
-        <h2 className="text-2xl font-semibold mb-4 text-gray-800 flex items-center">
-          🧪 Test Breakdown by Language
-        </h2>
-        {allBreakdowns.length > 0 ? (
-          <ul className="space-y-3 text-lg text-gray-700">
-            {allBreakdowns.map((lang, idx) => (
-              <li key={idx} className="flex justify-between border-b pb-1">
-                <span>{lang.name}</span>
-                <span>
-                  {lang.total} tests – {lang.passRate}% pass
-                </span>
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p className="text-gray-500 italic">No language data available.</p>
-        )}
-      </div>
+      <LanguageBreakdown allBreakdowns={allBreakdowns} />
 
       {/* Modal */}
       <Modal
