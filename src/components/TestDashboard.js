@@ -12,7 +12,7 @@ function TestResultsDashboard({ summary, allBreakdowns, loading }) {
     passed = 0,
     failed = 0,
     duration = '—',
-    servicesTested = '—', // New field for Total Services Tested
+    servicesTested = '—',
   } = summary || {};
 
   const passRate = total > 0 ? ((passed / total) * 100).toFixed(2) : '0.00';
@@ -22,13 +22,11 @@ function TestResultsDashboard({ summary, allBreakdowns, loading }) {
   const failInfo = [
     {
       serviceName: 'bedrock-agents-runtime',
-      errorSummary:
-        'software.amazon.awssdk.core.exception.SdkClientException: Unable to marshall request to JSON: flowAliasIdentifier cannot be empty.',
+      errorSummary: 'software.amazon.awssdk.core.exception.SdkClientException: Unable to marshall request to JSON: flowAliasIdentifier cannot be empty.',
     },
     {
       serviceName: 'ecr',
-      errorSummary:
-        'java.util.concurrent.CompletionException: javax.ws.rs.ProcessingException: java.net.SocketException: No such file or directory',
+      errorSummary: 'java.util.concurrent.CompletionException: javax.ws.rs.ProcessingException: java.net.SocketException: No such file or directory',
     },
     {
       serviceName: 'glacier',
@@ -36,28 +34,23 @@ function TestResultsDashboard({ summary, allBreakdowns, loading }) {
     },
     {
       serviceName: 'rds',
-      errorSummary:
-        'java.lang.NullPointerException: Cannot invoke "software.amazon.awssdk.services.rds.model.Endpoint.address()" because the return value of "software.amazon.awssdk.services.rds.model.DBInstance.endpoint()" is null',
+      errorSummary: 'java.lang.NullPointerException: Cannot invoke "software.amazon.awssdk.services.rds.model.Endpoint.address()" because the return value of "software.amazon.awssdk.services.rds.model.DBInstance.endpoint()" is null',
     },
     {
       serviceName: 's3',
-      errorSummary:
-        '[ERROR] TransferManagerTest.s3DirectoriesDownloadWorks -- Time elapsed: 1.664 s <<< FAILURE!',
+      errorSummary: '[ERROR] TransferManagerTest.s3DirectoriesDownloadWorks -- Time elapsed: 1.664 s <<< FAILURE!',
     },
     {
       serviceName: 'sns',
-      errorSummary:
-        '[ERROR] com.example.sns.PriceUpdateExampleTest.publishPriceUpdateTest -- Time elapsed: 3.630 s <<< ERROR!',
+      errorSummary: '[ERROR] com.example.sns.PriceUpdateExampleTest.publishPriceUpdateTest -- Time elapsed: 3.630 s <<< ERROR!',
     },
     {
       serviceName: 'ssm',
-      errorSummary:
-        'java.util.concurrent.CompletionException: software.amazon.awssdk.services.ssm.model.ResourceLimitExceededException: Window limit exceeded. (Service: Ssm, Status Code: 400, Request ID: c413e487-6da6-439d-ac8f-0589a41b5e73)',
+      errorSummary: 'java.util.concurrent.CompletionException: software.amazon.awssdk.services.ssm.model.ResourceLimitExceededException: Window limit exceeded. (Service: Ssm, Status Code: 400, Request ID: c413e487-6da6-439d-ac8f-0589a41b5e73)',
     },
     {
       serviceName: 'transcribe-streaming',
-      errorSummary:
-        '[ERROR] TranscribeTest.BidirectionalStreaming -- Time elapsed: 0.033 s <<< ERROR!',
+      errorSummary: '[ERROR] TranscribeTest.BidirectionalStreaming -- Time elapsed: 0.033 s <<< ERROR!',
     },
   ];
 
@@ -131,9 +124,14 @@ function TestResultsDashboard({ summary, allBreakdowns, loading }) {
       >
         <div>
           <h3 className="text-xl font-semibold mb-4 text-gray-800">Fail Information</h3>
-          <pre className="text-sm text-gray-700 whitespace-pre-wrap">
-            {JSON.stringify(failInfo, null, 2)}
-          </pre>
+          <div className="space-y-4">
+            {failInfo.map((item, index) => (
+              <div key={index} className="border p-4 rounded-lg bg-gray-50">
+                <h4 className="font-semibold text-lg text-gray-800">{item.serviceName}</h4>
+                <p className="text-sm text-red-600">{item.errorSummary}</p>
+              </div>
+            ))}
+          </div>
           <button
             onClick={handleModalToggle}
             className="mt-4 px-4 py-2 bg-red-500 text-white rounded-lg"
@@ -156,51 +154,49 @@ export default function App() {
     setLoading(true);
     setSummaryData({});
     setAllBreakdowns([]);
-  
+
     try {
       const url = `https://4mjmf7v6c2.execute-api.us-east-1.amazonaws.com/Weathertopstage/mydata?lang=${lang}`;
       const res = await fetch(url);
-  
+
       if (!res.ok) {
         throw new Error('API request failed');
       }
-  
+
       const outerJson = await res.json(); // First parse
       console.log('🌐 Outer JSON:', outerJson);
-  
+
       const innerJson = JSON.parse(outerJson.body); // Second parse
       console.log('✅ Parsed Summary Data:', innerJson);
-  
+
       const runId = innerJson?.RunId || '—';
       const passed = Number(innerJson?.TotalPassed ?? 0);
       const failed = Number(innerJson?.TotalFailed ?? 0);
-      const total = passed + failed; // Total tests is passed + failed tests
+      const total = passed + failed;
       const duration = innerJson?.TotalTime || '—';
-      const servicesTested = innerJson?.ServicesTested || '—';  // Parsing ServicesTested
-  
+      const servicesTested = innerJson?.ServicesTested || '—';
+
       console.log('Total:', total);
       console.log('Passed:', passed);
       console.log('Failed:', failed);
-  
-      // Correct pass rate formula (calculate pass rate by dividing passed tests by total tests)
+
       const calculatedPassRate = total > 0 ? ((passed / total) * 100).toFixed(2) : '0.00';
       console.log('Calculated Pass Rate:', calculatedPassRate);
-  
-      const passRate = `${calculatedPassRate}%`;  // Make it a percentage string
-  
-      // Final check of pass rate and other data before updating state
+
+      const passRate = `${calculatedPassRate}%`;
+
       console.log('Pass Rate:', passRate);
-  
+
       setSummaryData({
         runId,
         total,
         passed,
         failed,
         duration,
-        servicesTested, // Add ServicesTested to summary data
-        passRate: passRate, // Store passRate as a string with "%" symbol
+        servicesTested,
+        passRate,
       });
-  
+
       setAllBreakdowns([{
         name: lang,
         total,
@@ -246,6 +242,3 @@ export default function App() {
     </div>
   );
 }
-
-
-
