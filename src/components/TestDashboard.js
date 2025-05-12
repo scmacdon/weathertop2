@@ -18,44 +18,24 @@ function TestResultsDashboard({ summary, allBreakdowns, loading }) {
   const passRate = total > 0 ? ((passed / total) * 100).toFixed(2) : '0.00';
 
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [failInfo, setFailInfo] = useState([]); // Stores the fail information from API
+  const [failLoading, setFailLoading] = useState(false);
 
-  const failInfo = [
-    {
-      serviceName: 'bedrock-agents-runtime',
-      errorSummary: 'software.amazon.awssdk.core.exception.SdkClientException: Unable to marshall request to JSON: flowAliasIdentifier cannot be empty.',
-    },
-    {
-      serviceName: 'ecr',
-      errorSummary: 'java.util.concurrent.CompletionException: javax.ws.rs.ProcessingException: java.net.SocketException: No such file or directory',
-    },
-    {
-      serviceName: 'glacier',
-      errorSummary: 'java.nio.file.NoSuchFileException: ./ReadME.MD',
-    },
-    {
-      serviceName: 'rds',
-      errorSummary: 'java.lang.NullPointerException: Cannot invoke "software.amazon.awssdk.services.rds.model.Endpoint.address()" because the return value of "software.amazon.awssdk.services.rds.model.DBInstance.endpoint()" is null',
-    },
-    {
-      serviceName: 's3',
-      errorSummary: '[ERROR] TransferManagerTest.s3DirectoriesDownloadWorks -- Time elapsed: 1.664 s <<< FAILURE!',
-    },
-    {
-      serviceName: 'sns',
-      errorSummary: '[ERROR] com.example.sns.PriceUpdateExampleTest.publishPriceUpdateTest -- Time elapsed: 3.630 s <<< ERROR!',
-    },
-    {
-      serviceName: 'ssm',
-      errorSummary: 'java.util.concurrent.CompletionException: software.amazon.awssdk.services.ssm.model.ResourceLimitExceededException: Window limit exceeded. (Service: Ssm, Status Code: 400, Request ID: c413e487-6da6-439d-ac8f-0589a41b5e73)',
-    },
-    {
-      serviceName: 'transcribe-streaming',
-      errorSummary: '[ERROR] TranscribeTest.BidirectionalStreaming -- Time elapsed: 0.033 s <<< ERROR!',
-    },
-  ];
+  const handleModalToggle = async () => {
+    const url = `https://dtpuya01xb.execute-api.us-east-1.amazonaws.com/prod/myresource?runId=${runId}`;
+    const res = await fetch(url);
 
-  const handleModalToggle = () => {
-    setIsModalOpen(!isModalOpen);
+    if (!res.ok) {
+      throw new Error('Failed to fetch fail information');
+    }
+
+    const outerJson = await res.json();
+    console.log('outerJson:', outerJson); // Log the JSON response to inspect its structure
+
+    // Set the fail information in state
+    setFailInfo(outerJson); // Store the JSON data returned from the API in the failInfo state
+
+    setIsModalOpen(!isModalOpen); // Toggle the modal open/close state
   };
 
   if (loading) {
@@ -124,14 +104,22 @@ function TestResultsDashboard({ summary, allBreakdowns, loading }) {
       >
         <div>
           <h3 className="text-xl font-semibold mb-4 text-gray-800">Fail Information</h3>
-          <div className="space-y-4">
-            {failInfo.map((item, index) => (
-              <div key={index} className="border p-4 rounded-lg bg-gray-50">
-                <h4 className="font-semibold text-lg text-gray-800">{item.serviceName}</h4>
-                <p className="text-sm text-red-600">{item.errorSummary}</p>
-              </div>
-            ))}
-          </div>
+
+          {failLoading ? (
+            <div className="text-center text-gray-600">Loading fail data...</div>
+          ) : failInfo.length === 0 ? (
+            <div className="text-gray-600">No fail information available.</div>
+          ) : (
+            <div className="space-y-4">
+              {failInfo.map((item, index) => (
+                <div key={index} className="border p-4 rounded-lg bg-gray-50">
+                  <h4 className="font-semibold text-lg text-gray-800">{item.serviceName}</h4>
+                  <p className="text-sm text-red-600">{item.errorSummary}</p>
+                </div>
+              ))}
+            </div>
+          )}
+
           <button
             onClick={handleModalToggle}
             className="mt-4 px-4 py-2 bg-red-500 text-white rounded-lg"
@@ -176,16 +164,7 @@ export default function App() {
       const duration = innerJson?.TotalTime || '—';
       const servicesTested = innerJson?.ServicesTested || '—';
 
-      console.log('Total:', total);
-      console.log('Passed:', passed);
-      console.log('Failed:', failed);
-
       const calculatedPassRate = total > 0 ? ((passed / total) * 100).toFixed(2) : '0.00';
-      console.log('Calculated Pass Rate:', calculatedPassRate);
-
-      const passRate = `${calculatedPassRate}%`;
-
-      console.log('Pass Rate:', passRate);
 
       setSummaryData({
         runId,
@@ -194,13 +173,13 @@ export default function App() {
         failed,
         duration,
         servicesTested,
-        passRate,
+        passRate: `${calculatedPassRate}%`,
       });
 
       setAllBreakdowns([{
         name: lang,
         total,
-        passRate,
+        passRate: `${calculatedPassRate}%`,
       }]);
     } catch (err) {
       console.error('❌ Error parsing summary data:', err);
