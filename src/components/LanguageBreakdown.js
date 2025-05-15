@@ -56,7 +56,7 @@ const LanguageBreakdown = () => {
 
         setData(breakdowns);
       } catch (err) {
-        console.error('❌ Error loading breakdowns:', err);
+        console.error('❌ Error loading breakdown data:', err);
       } finally {
         setLoading(false);
       }
@@ -83,6 +83,7 @@ const LanguageBreakdown = () => {
   return (
     <div className="breakdown-wrapper">
       <h2 className="section-title">🧪 Test Coverage by Language</h2>
+      <h4>Click on a Card to see run rate.</h4>
       <div className="breakdown-container">
         {data.map((item) => (
           <div className="card" key={item.name} onClick={() => handleCardClick(item.name.toLowerCase())}>
