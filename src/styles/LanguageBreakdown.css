@@ -49,35 +49,4 @@
   color: #4cd964; /* Light green */
 }
 
-.bottom-modal {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #1e1e1e; /* Match main background */
-  border-top: 2px solid #444;
-  padding: 20px;
-  box-shadow: 0 -2px 10px rgba(0,0,0,0.5);
-  z-index: 1000;
-  color: #f0f0f0;
-}
-
-.modal-content {
-  max-width: 600px;
-  margin: auto;
-  text-align: center;
-  background-color: #2a2a2a;
-  padding: 16px;
-  border-radius: 10px;
-}
-
-.close-button {
-  float: right;
-  background: none;
-  border: none;
-  font-size: 1.2em;
-  color: #cccccc;
-  cursor: pointer;
-}
-
 
