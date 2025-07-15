@@ -291,3 +291,21 @@ pre {
     transform: translateY(0);
   }
 }
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(15, 23, 42, 0.8); /* dark translucent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050; /* higher than modals */
+  color: #f3f4f6;
+  font-size: 1.5rem;
+  font-weight: 600;
+  user-select: none;
+}
+

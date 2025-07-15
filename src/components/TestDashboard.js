@@ -13,6 +13,7 @@ function TestResultsDashboard({ summary, runId, onModalToggle, loading, selected
     passed = 0,
     failed = 0,
     duration = '—',
+    services = 0,    // <-- added here
   } = summary || {};
 
   const passRate = total > 0 ? ((passed / total) * 100).toFixed(2) : '0.00';
@@ -30,6 +31,7 @@ function TestResultsDashboard({ summary, runId, onModalToggle, loading, selected
           failed={failed}
           passRate={passRate}
           duration={duration}
+          services={services}  
         />
 
         <div className="flex space-x-4 mt-6">
@@ -70,11 +72,10 @@ export default function App() {
   const [isRunRateModalOpen, setIsRunRateModalOpen] = useState(false);
 
   const runRateData = [
-  { date: '2025-07-13', passRate: 97.5 },
-  { date: '2025-07-14', passRate: 98.2 },
-  { date: '2025-07-15', passRate: 99.1 },
-];
-
+    { date: '2025-07-13', passRate: 97.5 },
+    { date: '2025-07-14', passRate: 98.2 },
+    { date: '2025-07-15', passRate: 99.1 },
+  ];
 
   const fetchSummary = async (lang) => {
     setLoading(true);
@@ -86,6 +87,7 @@ export default function App() {
 
       if (!summary) throw new Error('Summary data missing');
 
+      const services = Number(summary.services ?? 0);
       const tests = Number(summary.tests ?? 0);
       const passed = Number(summary.passed ?? 0);
       const failed = Number(summary.failed ?? 0);
@@ -97,7 +99,8 @@ export default function App() {
       const duration = `${hours} hours ${minutes} minutes`;
 
       setRunId(`${lang}-${new Date().toISOString().slice(0, 16).replace(/[:T]/g, '-')}`);
-      setSummaryData({ total: tests, passed, failed, duration });
+      setSummaryData({ total: tests, passed, failed, duration, services });
+
     } catch (err) {
       console.error('❌ Error loading SDK summary:', err);
       setRunId(null);
@@ -131,6 +134,12 @@ export default function App() {
 
   return (
     <div className="p-6">
+      {loading && (
+        <div className="loading-overlay">
+          Loading data, please wait...
+        </div>
+      )}
+
       <LanguageBreakdown onCardClick={handleCardClick} />
 
       <TestResultsDashboard
@@ -182,3 +191,4 @@ export default function App() {
     </div>
   );
 }
+

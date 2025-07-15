@@ -9,6 +9,7 @@ export default function SummaryCard({
   failed,
   passRate,
   duration,
+  services = 0, // default to 0 if not provided
 }) {
   // Capitalize first letter of sdkName if present
   const displayName = sdkName
@@ -25,6 +26,11 @@ export default function SummaryCard({
       <div className="summary-grid">
         <div className="summary-tile">
           <span className="summary-icon">🔧</span>
+          <div className="summary-value">{services}</div>
+          <div className="summary-label">Services Tested</div>
+        </div>
+        <div className="summary-tile">
+          <span className="summary-icon">🧪</span>
           <div className="summary-value">{total}</div>
           <div className="summary-label">Total Tests</div>
         </div>

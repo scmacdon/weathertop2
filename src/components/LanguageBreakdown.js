@@ -37,9 +37,9 @@ const LanguageBreakdown = ({ onCardClick }) => {
   return (
     <div className="breakdown-wrapper">
       <h2 className="section-title">🧪 AWS SDK Test Coverage Overview</h2>
-      <h5 className="text-gray-600">
+      <h4 className="text-gray-600">
         Aggregated test results for each SDK language. Click a card to view detailed run summary.
-      </h5>
+      </h4>
 
       <div className="breakdown-container">
         {data.map((item) => (
