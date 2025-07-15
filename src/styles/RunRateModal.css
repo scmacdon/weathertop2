@@ -1,0 +1,40 @@
+.fullscreen-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #1e1e2f;
+  color: #fff;
+  padding: 2rem;
+  overflow-y: auto;
+  border: none;
+  outline: none;
+}
+
+.fullscreen-overlay {
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 1000;
+}
+
+.modal-heading {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+.modal-close-button {
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  background: #444;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.modal-close-button:hover {
+  background: #666;
+}

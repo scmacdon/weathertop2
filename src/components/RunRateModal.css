@@ -1,0 +1,78 @@
+/* Overlay: still slightly transparent for depth */
+.runrate-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.9); /* dark navy overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* Modal Container: dark theme */
+.runrate-modal {
+  background: #1e293b; /* slate-800 */
+  color: #f3f4f6;       /* slate-100 */
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 720px;
+  max-height: 90vh;
+  overflow-y: auto;
+  outline: none;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  animation: fadeIn 0.25s ease-out;
+}
+
+/* Inner content layout */
+.runrate-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Chart header */
+.runrate-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+  color: #f9fafb;
+}
+
+/* Close button */
+.runrate-close {
+  align-self: center;
+  background-color: #334155; /* slate-700 */
+  color: #f1f5f9;             /* slate-100 */
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.runrate-close:hover {
+  background-color: #475569; /* slate-600 */
+}
+
+/* Chart responsiveness */
+.recharts-wrapper {
+  margin-top: 0.5rem;
+}
+
+/* Simple fade in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

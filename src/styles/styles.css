@@ -210,3 +210,84 @@ pre {
   font-family: 'Courier New', monospace;
 }
 
+/* Overlay covers full screen with a dark blur */
+/* Overlay: dimmed background */
+.runrate-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(18, 24, 36, 0.85); /* darker navy overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* Modal Box */
+.runrate-modal {
+  background: #f9fafb; /* light slate */
+  color: #111827; /* dark text */
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 720px;
+  max-height: 90vh;
+  overflow-y: auto;
+  outline: none;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.25s ease-out;
+}
+
+/* Modal Content Wrapper */
+.runrate-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Header Title */
+.runrate-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+}
+
+/* Close Button */
+.runrate-close {
+  align-self: center;
+  background-color: #2563eb; /* blue-600 */
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.runrate-close:hover {
+  background-color: #1e40af; /* blue-800 */
+}
+
+/* Chart Container: space-aware */
+.recharts-wrapper {
+  margin-top: 0.5rem;
+}
+
+/* Entrance animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

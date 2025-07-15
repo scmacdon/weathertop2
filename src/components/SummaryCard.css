@@ -1,0 +1,139 @@
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.summary-card {
+  background: linear-gradient(145deg, #232526, #414345); /* dark glass */
+  color: #f9f9f9;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  position: relative;
+}
+
+.summary-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5);
+}
+
+.summary-icon {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  display: block;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-4px); }
+  100% { transform: translateY(0px); }
+}
+
+.summary-title {
+  font-size: 0.95rem;
+  color: #aaa;
+  margin-bottom: 4px;
+}
+
+.summary-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.summary-card.pass .summary-value {
+  color: #4cd964;
+}
+
+.summary-card.fail .summary-value {
+  color: #ff3b30;
+}
+
+.summary-card.duration .summary-value {
+  color: #ffd700;
+}
+
+@media (max-width: 600px) {
+  .summary-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .summary-card {
+    padding: 16px;
+  }
+}
+
+/* ✨ Reflective Shine on Hover */
+.summary-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -75%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 40%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  transform: rotate(25deg) translateX(-100%);
+  transition: transform 0.8s ease-in-out;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.summary-card:hover::before {
+  transform: rotate(25deg) translateX(100%);
+}
+
+/* Ensure content appears above the shine layer */
+.summary-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Base button style */
+/* Base button style - changed to teal-blue */
+.test-summary-button {
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  color: #f0f0f0;
+  background: linear-gradient(135deg, #17a2b8, #0e768a); /* teal-blue gradient */
+  box-shadow: 0 4px 10px rgba(23, 162, 184, 0.4);
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect */
+.test-summary-button:hover {
+  background: linear-gradient(135deg, #0e768a, #17a2b8);
+  box-shadow: 0 6px 20px rgba(23, 162, 184, 0.7);
+  transform: translateY(-2px);
+}
+
+/* Secondary button style (blue) */
+.test-summary-button.secondary {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.4);
+  color: #f0f0f0;
+}
+
+.test-summary-button.secondary:hover {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.7);
+  transform: translateY(-2px);
+}

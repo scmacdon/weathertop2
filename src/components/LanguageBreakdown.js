@@ -1,60 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/LanguageBreakdown.css';
-import {
-  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
-} from 'recharts';
 
-const getLanguagesFromFiles = (files) => {
-  const langs = new Set();
-  for (const file of files) {
-    const match = file.match(/^([^-]+)-/); // Extract "php" from "php-2025-05-12T12-15.json"
-    if (match) {
-      langs.add(match[1]);
-    }
-  }
-  return Array.from(langs);
-};
-
-const LanguageBreakdown = () => {
+const LanguageBreakdown = ({ onCardClick }) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [selectedLang, setSelectedLang] = useState(null);
-  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
-    const fetchBreakdowns = async () => {
+    const fetchStats = async () => {
       try {
-        const res = await fetch('/test-runs/index.json');
-        const files = await res.json();
-        const languages = getLanguagesFromFiles(files);
+        const res = await fetch('https://7mzatujfx8.execute-api.us-east-1.amazonaws.com/prod/stats');
+        if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+        const json = await res.json();
 
-        const latestFiles = {};
-        for (const lang of languages) {
-          const langFiles = files.filter((file) => file.startsWith(`${lang}-`));
-          if (!langFiles.length) continue;
-          langFiles.sort((a, b) => b.localeCompare(a)); // Descending
-          latestFiles[lang] = langFiles[0];
-        }
+        // Assuming the summary array is at json.summary or adjust accordingly
+        const summary = json.summary ?? [];
 
-        const breakdowns = [];
-        for (const lang of Object.keys(latestFiles)) {
-          const file = latestFiles[lang];
-          const response = await fetch(`/test-runs/${file}`);
-          const json = await response.json();
-          const summary = json?.results?.summary;
+        const mappedData = summary.map(({ language, tests, passRate }) => ({
+          name: language,
+          total: tests,
+          passRate: `${passRate}%`,
+        }));
 
-          const tests = Number(summary?.tests ?? 0);
-          const passed = Number(summary?.passed ?? 0);
-          const passRate = tests > 0 ? ((passed / tests) * 100).toFixed(2) : '0.00';
-
-          breakdowns.push({
-            name: lang,
-            total: tests,
-            passRate: `${passRate}%`,
-          });
-        }
-
-        setData(breakdowns);
+        setData(mappedData);
       } catch (err) {
         console.error('❌ Error loading breakdown data:', err);
       } finally {
@@ -62,31 +29,26 @@ const LanguageBreakdown = () => {
       }
     };
 
-    fetchBreakdowns();
+    fetchStats();
   }, []);
-
-  const handleCardClick = (lang) => {
-    if (lang === 'java') {
-      setSelectedLang(lang);
-      setShowModal(true);
-    }
-  };
-
-  const barData = [
-    { day: 'Test Run 1', passRate: 98 },
-    { day: 'Test Run 2', passRate: 96 },
-    { day: 'Test Run 3', passRate: 94 },
-  ];
 
   if (loading) return <p>Loading breakdowns...</p>;
 
   return (
     <div className="breakdown-wrapper">
-      <h2 className="section-title">🧪 Test Coverage by Language</h2>
-      <h4>Click on a Card to see run rate.</h4>
+      <h2 className="section-title">🧪 AWS SDK Test Coverage Overview</h2>
+      <h5 className="text-gray-600">
+        Aggregated test results for each SDK language. Click a card to view detailed run summary.
+      </h5>
+
       <div className="breakdown-container">
         {data.map((item) => (
-          <div className="card" key={item.name} onClick={() => handleCardClick(item.name.toLowerCase())}>
+          <div
+            className="card"
+            key={item.name}
+            onClick={() => onCardClick(item.name.toLowerCase())}
+            style={{ cursor: 'pointer' }}
+          >
             <h3>{item.name}</h3>
             <p>{item.total} tests</p>
             <p className="label">Pass Rate</p>
@@ -94,41 +56,9 @@ const LanguageBreakdown = () => {
           </div>
         ))}
       </div>
-
-      {showModal && selectedLang === 'java' && (
-        <div className="bottom-modal">
-          <div className="modal-content">
-            <button className="close-button" onClick={() => setShowModal(false)}>✖</button>
-            <h3>📊 Java - 3 Test Run Pass Rate</h3>
-            <ResponsiveContainer width="100%" height={200}>
-  <BarChart data={barData}>
-    <CartesianGrid stroke="#444" />
-    <XAxis dataKey="day" stroke="#ccc" />
-    <YAxis unit="%" domain={[0, 100]} stroke="#ccc" />
-    <Tooltip 
-      contentStyle={{ backgroundColor: '#333', border: 'none', color: '#f0f0f0' }} 
-      labelStyle={{ color: '#ccc' }} 
-      itemStyle={{ color: '#f0f0f0' }}
-    />
-    <Bar dataKey="passRate" fill="#4cd964" />
-  </BarChart>
-</ResponsiveContainer>
-
-          </div>
-        </div>
-      )}
     </div>
   );
 };
 
 export default LanguageBreakdown;
-
-
-
-
-
-
-
-
-
 
