@@ -184,10 +184,10 @@ export default function App() {
       </Modal>
 
       <RunRateModal
-        isOpen={isRunRateModalOpen}
-        onClose={() => setIsRunRateModalOpen(false)}
-        data={runRateData}
-      />
+  isOpen={isRunRateModalOpen}
+  onClose={() => setIsRunRateModalOpen(false)}
+   language={selectedLang}
+/>
     </div>
   );
 }

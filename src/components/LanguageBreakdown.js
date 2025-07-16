@@ -32,7 +32,29 @@ const LanguageBreakdown = ({ onCardClick }) => {
     fetchStats();
   }, []);
 
-  if (loading) return <p>Loading breakdowns...</p>;
+  if (loading)
+    return (
+      <div
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100vw',
+          height: '100vh',
+          backgroundColor: 'rgba(15, 23, 42, 0.9)',
+          color: '#facc15',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          fontSize: '1.5rem',
+          fontWeight: '600',
+          zIndex: 9999,
+          userSelect: 'none',
+        }}
+      >
+        ⏳ Loading AWS Test Results Data...
+      </div>
+    );
 
   return (
     <div className="breakdown-wrapper">
@@ -61,4 +83,5 @@ const LanguageBreakdown = ({ onCardClick }) => {
 };
 
 export default LanguageBreakdown;
+
 
