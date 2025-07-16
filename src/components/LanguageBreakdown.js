@@ -42,7 +42,7 @@ const LanguageBreakdown = ({ onCardClick }) => {
           width: '100vw',
           height: '100vh',
           backgroundColor: 'rgba(15, 23, 42, 0.9)',
-          color: '#facc15',
+          color: '#facc15',       // Yellow text color to match SummaryCard
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
@@ -83,5 +83,6 @@ const LanguageBreakdown = ({ onCardClick }) => {
 };
 
 export default LanguageBreakdown;
+
 
 

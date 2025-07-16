@@ -32,9 +32,9 @@ function App() {
   return (
     <div className={`app-container ${theme}`}>
       <h1 className="app-title">Weathertop</h1>
-      <h4>
+      <h3>
   Weathertop is an integration test platform designed to test AWS Code examples. It ensures that the examples work as intended, helping to raise the quality and reliability of the code examples.
-</h4>
+</h3>
       <div className="dashboard">
         <div className="column">
           <TestDashboard status={status} logs={logs} />

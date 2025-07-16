@@ -13,7 +13,7 @@ function TestResultsDashboard({ summary, runId, onModalToggle, loading, selected
     passed = 0,
     failed = 0,
     duration = '—',
-    services = 0,    // <-- added here
+    services = 0,
   } = summary || {};
 
   const passRate = total > 0 ? ((passed / total) * 100).toFixed(2) : '0.00';
@@ -21,8 +21,8 @@ function TestResultsDashboard({ summary, runId, onModalToggle, loading, selected
   if (!runId) return null;
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
-      <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-200 dark:bg-zinc-900 dark:border-zinc-800">
+    <div className="dashboard-container">
+      <div className="summary-panel">
         <SummaryCard
           sdkName={selectedLang}
           runId={runId}
@@ -31,28 +31,19 @@ function TestResultsDashboard({ summary, runId, onModalToggle, loading, selected
           failed={failed}
           passRate={passRate}
           duration={duration}
-          services={services}  
+          services={services}
         />
 
-        <div className="flex space-x-4 mt-6">
-          <button
-            onClick={onModalToggle}
-            className="test-summary-button secondary"
-          >
+        <div className="button-group">
+          <button onClick={onModalToggle} className="test-summary-button secondary">
             View Fail Information
           </button>
 
-          <button
-            onClick={onShowRunRate}
-            className="test-summary-button"
-          >
+          <button onClick={onShowRunRate} className="test-summary-button">
             ⏳ View Run Rate
           </button>
 
-          <button
-            onClick={() => alert("Echo Tests")}
-            className="test-summary-button"
-          >
+          <button onClick={() => alert("Echo Tests")} className="test-summary-button">
             🚀 Execute Tests
           </button>
         </div>
@@ -120,8 +111,10 @@ export default function App() {
       if (!runId) return;
 
       setFailLoading(true);
-      // Fail detail fetching logic goes here
-      setFailInfo([]);
+      const apiUrl = `https://krs0zv3z9j.execute-api.us-east-1.amazonaws.com/prod/stats?language=${selectedLang}`;
+      const res = await fetch(apiUrl);
+      const json = await res.json();
+      setFailInfo(json ?? []);
       setIsModalOpen(true);
     } catch (err) {
       console.error('Failed to fetch failure details:', err);
@@ -132,63 +125,68 @@ export default function App() {
     }
   };
 
-  return (
-    <div className="p-6">
-      {loading && (
-        <div className="loading-overlay">
-          Loading data, please wait...
-        </div>
-      )}
+return (
+  <div className="app-wrapper">
+    {failLoading && (
+      <div className="loading-overlay-fullscreen">
+        <div className="loading-text yellow-text">Loading data...</div>
+      </div>
+    )}
 
-      <LanguageBreakdown onCardClick={handleCardClick} />
+    {loading && (
+      <div className="loading-overlay-fullscreen">
+        <div className="loading-text">Loading data, please wait...</div>
+      </div>
+    )}
 
-      <TestResultsDashboard
-        summary={summaryData}
-        runId={runId}
-        loading={loading}
-        onModalToggle={handleModalToggle}
-        selectedLang={selectedLang}
-        onShowRunRate={() => setIsRunRateModalOpen(true)}
-      />
+    <LanguageBreakdown onCardClick={handleCardClick} />
 
-      <Modal
-        isOpen={isModalOpen}
-        onRequestClose={() => setIsModalOpen(false)}
-        contentLabel="Fail Information"
-        shouldCloseOnOverlayClick={false}
-        shouldCloseOnEsc={false}
-        className="custom-modal"
-        overlayClassName="custom-overlay"
-      >
-        <div className="modal-body">
-          <h3 className="modal-title">Fail Information</h3>
-          {failLoading ? (
-            <div className="modal-message">Loading fail data...</div>
-          ) : failInfo.length === 0 ? (
-            <div className="modal-message">No fail information available.</div>
-          ) : (
-            <div className="fail-info-list">
-              {failInfo.map((item, index) => (
-                <div key={index} className="fail-info-row">
-                  <h4 className="fail-info-title">🔧 {item.name}</h4>
-                  <p className="fail-info-message"><strong>AWS Service:</strong> {item.message}</p>
-                  {item.log && <pre className="fail-info-log">{item.log}</pre>}
-                </div>
-              ))}
-            </div>
-          )}
-          <button onClick={() => setIsModalOpen(false)} className="modal-close-button">
-            Close
-          </button>
-        </div>
-      </Modal>
+    <TestResultsDashboard
+      summary={summaryData}
+      runId={runId}
+      loading={loading}
+      onModalToggle={handleModalToggle}
+      selectedLang={selectedLang}
+      onShowRunRate={() => setIsRunRateModalOpen(true)}
+    />
 
-      <RunRateModal
-  isOpen={isRunRateModalOpen}
-  onClose={() => setIsRunRateModalOpen(false)}
-   language={selectedLang}
-/>
-    </div>
-  );
+    <Modal
+      isOpen={isModalOpen}
+      onRequestClose={() => setIsModalOpen(false)}
+      contentLabel="Fail Information"
+      shouldCloseOnOverlayClick={false}
+      shouldCloseOnEsc={false}
+      className="custom-modal"
+      overlayClassName="custom-overlay"
+    >
+      <div className="modal-body">
+        <h3 className="modal-title">Fail Information</h3>
+        {failLoading ? (
+          <div className="modal-message">Loading fail data...</div>
+        ) : failInfo.length === 0 ? (
+          <div className="modal-message">No fail information available.</div>
+        ) : (
+          <div className="fail-info-list">
+            {failInfo.map((item, index) => (
+              <div key={index} className="fail-info-row">
+                <h4 className="fail-info-title">🔧 {item.name}</h4>
+                <p className="fail-info-message"><strong>AWS Service:</strong> {item.message}</p>
+                {item.log && <pre className="fail-info-log">{item.log}</pre>}
+              </div>
+            ))}
+          </div>
+        )}
+        <button onClick={() => setIsModalOpen(false)} className="modal-close-button">
+          Close
+        </button>
+      </div>
+    </Modal>
+
+    <RunRateModal
+      isOpen={isRunRateModalOpen}
+      onClose={() => setIsRunRateModalOpen(false)}
+      language={selectedLang}
+    />
+  </div>
+);
 }
-

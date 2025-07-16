@@ -309,3 +309,69 @@ pre {
   user-select: none;
 }
 
+/* Fullscreen Yellow Loading Overlay */
+.loading-overlay-fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 20, 20, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.loading-text {
+  color: #FFD700;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Fail Info Card Styling */
+.fail-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.fail-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-left: 5px solid #d9534f;
+  border-radius: 6px;
+  padding: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.fail-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #b52e31;
+  margin-bottom: 0.5rem;
+}
+
+.fail-log {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: monospace;
+  white-space: pre-wrap;
+  max-height: 200px;
+  overflow-y: auto;
+  color: #333;
+}
+
+
