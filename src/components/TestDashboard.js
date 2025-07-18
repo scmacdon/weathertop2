@@ -7,7 +7,7 @@ import '../styles/styles.css';
 
 Modal.setAppElement('#root');
 
-function TestResultsDashboard({ summary, runId, onModalToggle, loading, selectedLang, onShowRunRate }) {
+function TestResultsDashboard({ summary, runId, onModalToggle, loading, selectedLang, onShowRunRate, onExecuteTests }) {
   const {
     total = 0,
     passed = 0,
@@ -43,7 +43,7 @@ function TestResultsDashboard({ summary, runId, onModalToggle, loading, selected
             ⏳ View Run Rate
           </button>
 
-          <button onClick={() => alert("Echo Tests")} className="test-summary-button">
+          <button onClick={onExecuteTests} className="test-summary-button">
             🚀 Execute Tests
           </button>
         </div>
@@ -61,6 +61,13 @@ export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [failLoading, setFailLoading] = useState(false);
   const [isRunRateModalOpen, setIsRunRateModalOpen] = useState(false);
+
+  // NEW: Execute Tests Modal state and message
+  const [isExecTestsModalOpen, setIsExecTestsModalOpen] = useState(false);
+  const [taskArnMessage, setTaskArnMessage] = useState('');
+
+  // NEW: Invoking mask state
+  const [isInvoking, setIsInvoking] = useState(false);
 
   const runRateData = [
     { date: '2025-07-13', passRate: 97.5 },
@@ -89,7 +96,7 @@ export default function App() {
       const minutes = Math.floor((durationMs % (1000 * 60 * 60)) / (1000 * 60));
       const duration = `${hours} hours ${minutes} minutes`;
 
-      setRunId(`${lang}-${new Date().toISOString().slice(0, 16).replace(/[:T]/g, '-')}`);
+      setRunId(json?.results?.runid ?? null);
       setSummaryData({ total: tests, passed, failed, duration, services });
 
     } catch (err) {
@@ -125,68 +132,145 @@ export default function App() {
     }
   };
 
-return (
-  <div className="app-wrapper">
-    {failLoading && (
-      <div className="loading-overlay-fullscreen">
-        <div className="loading-text yellow-text">Loading data...</div>
-      </div>
-    )}
+  // NEW: Execute Tests handler to call Docker run API, parse taskArn, show modal
+  const handleExecuteTests = async () => {
+    setIsInvoking(true); // Show mask
+    try {
+      const apiUrl = `https://txgy8zzalb.execute-api.us-east-1.amazonaws.com/prod/stats?language=${selectedLang ?? 'java'}`;
+      const res = await fetch(apiUrl);
+      const json = await res.json();
 
-    {loading && (
-      <div className="loading-overlay-fullscreen">
-        <div className="loading-text">Loading data, please wait...</div>
-      </div>
-    )}
+      // If Lambda returns stringified JSON in body, parse it
+      const data = json.body ? JSON.parse(json.body) : json;
 
-    <LanguageBreakdown onCardClick={handleCardClick} />
+      const taskArn = data.taskArn;
 
-    <TestResultsDashboard
-      summary={summaryData}
-      runId={runId}
-      loading={loading}
-      onModalToggle={handleModalToggle}
-      selectedLang={selectedLang}
-      onShowRunRate={() => setIsRunRateModalOpen(true)}
-    />
+      if (taskArn) {
+        setTaskArnMessage(`Docker Test run was invoked. The Task ARN is: ${taskArn}`);
+      } else {
+        setTaskArnMessage('Docker Test run invoked, but no Task ARN returned.');
+      }
+    } catch (error) {
+      setTaskArnMessage(`Failed to invoke Docker Test run: ${error.message}`);
+    } finally {
+      setIsInvoking(false); // Hide mask
+      setIsExecTestsModalOpen(true);
+    }
+  };
 
-    <Modal
-      isOpen={isModalOpen}
-      onRequestClose={() => setIsModalOpen(false)}
-      contentLabel="Fail Information"
-      shouldCloseOnOverlayClick={false}
-      shouldCloseOnEsc={false}
-      className="custom-modal"
-      overlayClassName="custom-overlay"
-    >
-      <div className="modal-body">
-        <h3 className="modal-title">Fail Information</h3>
-        {failLoading ? (
-          <div className="modal-message">Loading fail data...</div>
-        ) : failInfo.length === 0 ? (
-          <div className="modal-message">No fail information available.</div>
-        ) : (
-          <div className="fail-info-list">
-            {failInfo.map((item, index) => (
-              <div key={index} className="fail-info-row">
-                <h4 className="fail-info-title">🔧 {item.name}</h4>
-                <p className="fail-info-message"><strong>AWS Service:</strong> {item.message}</p>
-                {item.log && <pre className="fail-info-log">{item.log}</pre>}
-              </div>
-            ))}
+  return (
+    <div className="app-wrapper">
+      {failLoading && (
+        <div className="loading-overlay-fullscreen">
+          <div className="loading-text yellow-text">Loading data...</div>
+        </div>
+      )}
+
+      {loading && (
+        <div className="loading-overlay-fullscreen">
+          <div className="loading-text">Loading data, please wait...</div>
+        </div>
+      )}
+
+      {/* NEW: Fullscreen mask for invoking Docker Test Runner */}
+      {isInvoking && (
+        <div
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100vw',
+            height: '100vh',
+            backgroundColor: 'rgba(0,0,0,0.6)',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            zIndex: 2000,
+          }}
+        >
+          <div
+            style={{
+              color: '#FFD700', // same yellow
+              fontSize: '1.8rem',
+              fontWeight: 'bold',
+              fontFamily: 'Yekka, sans-serif', // assuming you use Yekka
+              userSelect: 'none',
+              textShadow: '1px 1px 3px black',
+            }}
+          >
+            Invoking the Docker Test Runner...
           </div>
-        )}
-        <button onClick={() => setIsModalOpen(false)} className="modal-close-button">
-          Close
-        </button>
-      </div>
-    </Modal>
+        </div>
+      )}
 
-    <RunRateModal
-      isOpen={isRunRateModalOpen}
-      onClose={() => setIsRunRateModalOpen(false)}
-      language={selectedLang}
-    />
-  </div>
-);
+      <LanguageBreakdown onCardClick={handleCardClick} />
+
+      <TestResultsDashboard
+        summary={summaryData}
+        runId={runId}
+        loading={loading}
+        onModalToggle={handleModalToggle}
+        selectedLang={selectedLang}
+        onShowRunRate={() => setIsRunRateModalOpen(true)}
+        onExecuteTests={handleExecuteTests}
+      />
+
+      <Modal
+        isOpen={isModalOpen}
+        onRequestClose={() => setIsModalOpen(false)}
+        contentLabel="Fail Information"
+        shouldCloseOnOverlayClick={false}
+        shouldCloseOnEsc={false}
+        className="custom-modal"
+        overlayClassName="custom-overlay"
+      >
+        <div className="modal-body">
+          <h3 className="modal-title">Fail Information</h3>
+          {failLoading ? (
+            <div className="modal-message">Loading fail data...</div>
+          ) : failInfo.length === 0 ? (
+            <div className="modal-message">No fail information available.</div>
+          ) : (
+            <div className="fail-info-list">
+              {failInfo.map((item, index) => (
+                <div key={index} className="fail-info-row">
+                  <h4 className="fail-info-title">🔧 {item.name}</h4>
+                  <p className="fail-info-message"><strong>AWS Service:</strong> {item.message}</p>
+                  {item.log && <pre className="fail-info-log">{item.log}</pre>}
+                </div>
+              ))}
+            </div>
+          )}
+          <button onClick={() => setIsModalOpen(false)} className="modal-close-button">
+            Close
+          </button>
+        </div>
+      </Modal>
+
+      <RunRateModal
+        isOpen={isRunRateModalOpen}
+        onClose={() => setIsRunRateModalOpen(false)}
+        language={selectedLang}
+      />
+
+      <Modal
+        isOpen={isExecTestsModalOpen}
+        onRequestClose={() => setIsExecTestsModalOpen(false)}
+        contentLabel="Execute Tests"
+        shouldCloseOnOverlayClick={true}
+        shouldCloseOnEsc={true}
+        className="custom-modal"
+        overlayClassName="custom-overlay"
+      >
+        <div className="modal-body">
+          <h3 className="modal-title">Execute Tests Result</h3>
+          <p>{taskArnMessage}</p>
+          <button onClick={() => setIsExecTestsModalOpen(false)} className="modal-close-button">
+            Close
+          </button>
+        </div>
+      </Modal>
+    </div>
+  );
 }
+
