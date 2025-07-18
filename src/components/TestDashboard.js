@@ -7,7 +7,7 @@ import '../styles/styles.css';
 
 Modal.setAppElement('#root');
 
-function TestResultsDashboard({ summary, runId, onModalToggle, loading, selectedLang, onShowRunRate, onExecuteTests }) {
+function TestResultsDashboard({ summary, runId, onModalToggle, loading, selectedLang, onShowRunRate, onExecuteTests,  onScheduleTests }) {
   const {
     total = 0,
     passed = 0,
@@ -46,6 +46,10 @@ function TestResultsDashboard({ summary, runId, onModalToggle, loading, selected
           <button onClick={onExecuteTests} className="test-summary-button">
             🚀 Execute Tests
           </button>
+
+         <button onClick={() => alert('📅 Test run scheduled (mocked)!')}  className="test-summary-button" >
+  📅 Schedule Tests
+</button>
         </div>
       </div>
     </div>
