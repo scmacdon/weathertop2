@@ -141,6 +141,8 @@ export default function App() {
     fetchSummary(lang);
   };
 
+  
+
   const handleModalToggle = async () => {
     try {
       if (!runId) return;
@@ -163,32 +165,36 @@ export default function App() {
 
   // NEW: Execute Tests handler to call Docker run API, parse taskArn, show modal
   const handleExecuteTests = async () => {
-    setIsInvoking(true); // Show mask
-    try {
-      const apiUrl = `https://0qz7nimte6.execute-api.us-east-1.amazonaws.com/prod/stats?language=${
-        selectedLang ?? "java"
-      }`;
-      const res = await fetch(apiUrl);
-      const json = await res.json();
+  setIsInvoking(true); // Show mask
+  try {
+    const apiUrl = `https://z2403v9kpl.execute-api.us-east-1.amazonaws.com/prod/stats?language=${selectedLang}`;
+    const res = await fetch(apiUrl);
+    const json = await res.json();
 
-      // If Lambda returns stringified JSON in body, parse it
-      const data = json.body ? JSON.parse(json.body) : json;
+    // If Lambda returns stringified JSON in body, parse it
+    const data = json.body ? JSON.parse(json.body) : json;
 
-      const taskArn = data.taskArn;
-
-      if (taskArn) {
-        setTaskArnMessage(
-          `Docker Test run was invoked. The Task ARN is: ${taskArn}`
-        );
-      } else {
-        setTaskArnMessage("Docker Test run invoked, but no Task ARN returned.");
-      }
-    } catch (error) {
-      setTaskArnMessage(`Failed to invoke Docker Test run: ${error.message}`);
-    } finally {
-      setIsInvoking(false); // Hide mask
-      setIsExecTestsModalOpen(true);
+    // ✅ Check if there's an error
+    if (data.error) {
+      setTaskArnMessage(`Error: ${data.error}`);
+    } else if (data.taskArn) {
+      setTaskArnMessage(
+        `Weathertop test run was invoked. The Task ARN is: ${data.taskArn}`
+      );
+    } else {
+      setTaskArnMessage("Docker Test run invoked, but no Task ARN returned.");
     }
+  } catch (error) {
+    setTaskArnMessage(`Failed to invoke Docker Test run: ${error.message}`);
+  } finally {
+    setIsInvoking(false); // Hide mask
+    setIsExecTestsModalOpen(true);
+  }
+};
+
+
+  const handleClose = () => {
+    setIsModalOpen(false);
   };
 
   return (
@@ -231,7 +237,7 @@ export default function App() {
               textShadow: "1px 1px 3px black",
             }}
           >
-            Invoking the Docker Test Runner...
+          Invoking the Docker Test Runner for  <strong>{selectedLang} ...</strong>
           </div>
         </div>
       )}
@@ -302,7 +308,7 @@ export default function App() {
         className="custom-modal dark-theme-modal"
         overlayClassName="custom-overlay"
       >
-        <InspectFargateTask />
+       <InspectFargateTask onClose={handleClose} language={selectedLang} />
         <button
           onClick={() => setIsInspectModalOpen(false)}
           className="modal-close-button"

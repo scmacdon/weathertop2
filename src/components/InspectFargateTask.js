@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 
-const InspectFargateTask = ({ onClose }) => {
+const InspectFargateTask = ({ onClose, language = "java" }) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const labelStyle = {
     fontWeight: "bold",
@@ -23,17 +24,30 @@ const InspectFargateTask = ({ onClose }) => {
   };
 
   useEffect(() => {
-    fetch("https://bkuj0vm303.execute-api.us-east-1.amazonaws.com/prod/stats?language=java")
-      .then((response) => response.json())
-      .then((json) => {
-        setData(json);
+    setLoading(true);
+    setError(null);
+    setData(null);
+
+    fetch(
+      `https://bkuj0vm303.execute-api.us-east-1.amazonaws.com/prod/stats?language=${language}`
+    )
+      .then((response) =>
+        response.json().then((json) => ({ status: response.status, body: json }))
+      )
+      .then(({ status, body }) => {
+        if (status !== 200) {
+          setError(body.error || "An unknown error occurred.");
+        } else {
+          setData(body);
+        }
         setLoading(false);
       })
-      .catch((error) => {
-        console.error("Failed to fetch ECS stats:", error);
+      .catch((err) => {
+        console.error("Fetch error:", err);
+        setError("Failed to fetch ECS stats. Please check your network.");
         setLoading(false);
       });
-  }, []);
+  }, [language]);
 
   if (loading) {
     return (
@@ -41,19 +55,19 @@ const InspectFargateTask = ({ onClose }) => {
         style={{
           padding: "28px",
           backgroundColor: "#1e1e2f",
-          color: "#facc15", // bold yellow
+          color: "#facc15",
           borderRadius: "12px",
           fontSize: "24px",
           fontWeight: "bold",
           textAlign: "center",
         }}
       >
-        🔄 Fetching Data...
+        🔄 Fetching Data for <strong>{language}</strong>...
       </div>
     );
   }
 
-  if (!data) {
+  if (error) {
     return (
       <div
         style={{
@@ -64,9 +78,13 @@ const InspectFargateTask = ({ onClose }) => {
           fontSize: "20px",
         }}
       >
-        ❌ Failed to load data.
+        ❌ {error}
       </div>
     );
+  }
+
+  if (!data) {
+    return null;
   }
 
   return (
@@ -83,10 +101,10 @@ const InspectFargateTask = ({ onClose }) => {
         position: "relative",
       }}
     >
-      {/* Header */}
-      <h2 style={{ color: "#22d3ee", marginBottom: "24px" }}>🔍 Fargate Task Inspection</h2>
+      <h2 style={{ color: "#22d3ee", marginBottom: "24px" }}>
+        🔍 Fargate Task Inspection for {language}
+      </h2>
 
-      {/* Latest Task Definition ARN */}
       <p>
         <span style={labelStyle}>✅ Latest Task Definition ARN:</span>
         <span style={{ ...valueStyle, color: "#34d399" }}>
@@ -94,7 +112,6 @@ const InspectFargateTask = ({ onClose }) => {
         </span>
       </p>
 
-      {/* Task Definition Metadata */}
       <div style={sectionTitleStyle}>📦 Task Definition Metadata</div>
       <p>
         <span style={labelStyle}>Task Role ARN:</span>
@@ -117,13 +134,11 @@ const InspectFargateTask = ({ onClose }) => {
         <span style={valueStyle}>{data.taskDefinitionMetadata.memory}</span>
       </p>
 
-      {/* Cluster ARN */}
       <p style={{ marginTop: "24px" }}>
         <span style={labelStyle}>🔗 ECS Cluster ARN:</span>
         <span style={valueStyle}>{data.clusterArn}</span>
       </p>
 
-      {/* Tasks */}
       <div style={sectionTitleStyle}>🛠 ECS Tasks</div>
       {data.tasks && data.tasks.length > 0 ? (
         <ul>
@@ -179,7 +194,6 @@ const InspectFargateTask = ({ onClose }) => {
         </p>
       )}
 
-      {/* EventBridge Rules */}
       <div style={sectionTitleStyle}>🔔 EventBridge Rules</div>
       {data.eventBridgeRules && data.eventBridgeRules.length > 0 ? (
         data.eventBridgeRules.map((rule) => (
@@ -245,7 +259,8 @@ const InspectFargateTask = ({ onClose }) => {
                           </p>
                           <p>
                             <strong>Security Groups:</strong>{" "}
-                            {target.ecsParameters.securityGroups?.join(", ") || "N/A"}
+                            {target.ecsParameters.securityGroups?.join(", ") ||
+                              "N/A"}
                           </p>
                           <p>
                             <strong>Assign Public IP:</strong>{" "}
@@ -272,3 +287,4 @@ const InspectFargateTask = ({ onClose }) => {
 };
 
 export default InspectFargateTask;
+
