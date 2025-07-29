@@ -60,7 +60,7 @@ function TestResultsDashboard({
           </button>
 
           <button onClick={onExecuteTests} className="test-summary-button">
-            🚀 Execute Tests
+            🚀 Execute SDK Tests
           </button>
 
           <button onClick={onScheduleTests} className="test-summary-button">
@@ -165,7 +165,7 @@ export default function App() {
   const handleExecuteTests = async () => {
     setIsInvoking(true); // Show mask
     try {
-      const apiUrl = `https://txgy8zzalb.execute-api.us-east-1.amazonaws.com/prod/stats?language=${
+      const apiUrl = `https://0qz7nimte6.execute-api.us-east-1.amazonaws.com/prod/stats?language=${
         selectedLang ?? "java"
       }`;
       const res = await fetch(apiUrl);
