@@ -100,37 +100,40 @@ export default function App() {
     { date: "2025-07-15", passRate: 99.1 },
   ];
 
-  const fetchSummary = async (lang) => {
-    setLoading(true);
-    try {
-      const apiUrl = `https://2j5064gkt0.execute-api.us-east-1.amazonaws.com/prod/stats?language=${lang}`;
-      const res = await fetch(apiUrl);
-      const json = await res.json();
-      const summary = json?.results?.summary;
 
-      if (!summary) throw new Error("Summary data missing");
+  // MAKES A CALL TO API Gateway to retrieve stats for given lang
+ const fetchSummary = async (lang) => {
+  setLoading(true);
+  try {
+    const apiUrl = `https://2j5064gkt0.execute-api.us-east-1.amazonaws.com/prod/stats?language=${lang}`;
+    const res = await fetch(apiUrl);
+    const json = await res.json();
+    const summary = json?.results?.summary;
 
-      const services = Number(summary.services ?? 0);
-      const tests = Number(summary.tests ?? 0);
-      const passed = Number(summary.passed ?? 0);
-      const failed = Number(summary.failed ?? 0);
-      const startTime = summary.start_time ?? 0;
-      const stopTime = summary.stop_time ?? 0;
-      const durationMs = stopTime - startTime;
-      const hours = Math.floor(durationMs / (1000 * 60 * 60));
-      const minutes = Math.floor((durationMs % (1000 * 60 * 60)) / (1000 * 60));
-      const duration = `${hours} hours ${minutes} minutes`;
+    if (!summary) throw new Error("Summary data missing");
 
-      setRunId(json?.results?.runid ?? null);
-      setSummaryData({ total: tests, passed, failed, duration, services });
-    } catch (err) {
-      console.error("❌ Error loading SDK summary:", err);
-      setRunId(null);
-      setSummaryData({});
-    } finally {
-      setLoading(false);
-    }
-  };
+    const services = Number(summary.services ?? 0);
+    const tests = Number(summary.tests ?? 0);
+    const passed = Number(summary.passed ?? 0);
+    const failed = Number(summary.failed ?? 0);
+    const startTime = summary.start_time ?? 0;
+    const stopTime = summary.stop_time ?? 0;
+    const durationMs = stopTime - startTime;
+    const hours = Math.floor(durationMs / (1000 * 60 * 60));
+    const minutes = Math.floor((durationMs % (1000 * 60 * 60)) / (1000 * 60));
+    const duration = `${hours} hours ${minutes} minutes`;
+
+    setRunId(json?.runid ?? null); // ✅ FIXED
+    setSummaryData({ total: tests, passed, failed, duration, services });
+  } catch (err) {
+    console.error("❌ Error loading SDK summary:", err);
+    setRunId(null);
+    setSummaryData({});
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   const handleScheduleTests = () => {
     setIsScheduleModalOpen(true);
