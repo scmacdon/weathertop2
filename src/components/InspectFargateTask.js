@@ -32,7 +32,9 @@ const InspectFargateTask = ({ onClose, language = "java" }) => {
       `https://bkuj0vm303.execute-api.us-east-1.amazonaws.com/prod/stats?language=${language}`
     )
       .then((response) =>
-        response.json().then((json) => ({ status: response.status, body: json }))
+        response
+          .json()
+          .then((json) => ({ status: response.status, body: json }))
       )
       .then(({ status, body }) => {
         if (status !== 200) {
@@ -115,15 +117,21 @@ const InspectFargateTask = ({ onClose, language = "java" }) => {
       <div style={sectionTitleStyle}>📦 Task Definition Metadata</div>
       <p>
         <span style={labelStyle}>Task Role ARN:</span>
-        <span style={valueStyle}>{data.taskDefinitionMetadata.taskRoleArn}</span>
+        <span style={valueStyle}>
+          {data.taskDefinitionMetadata.taskRoleArn}
+        </span>
       </p>
       <p>
         <span style={labelStyle}>Execution Role ARN:</span>
-        <span style={valueStyle}>{data.taskDefinitionMetadata.executionRoleArn}</span>
+        <span style={valueStyle}>
+          {data.taskDefinitionMetadata.executionRoleArn}
+        </span>
       </p>
       <p>
         <span style={labelStyle}>Network Mode:</span>
-        <span style={valueStyle}>{data.taskDefinitionMetadata.networkMode}</span>
+        <span style={valueStyle}>
+          {data.taskDefinitionMetadata.networkMode}
+        </span>
       </p>
       <p>
         <span style={labelStyle}>CPU:</span>
@@ -195,8 +203,8 @@ const InspectFargateTask = ({ onClose, language = "java" }) => {
       )}
 
       <div style={sectionTitleStyle}>🔔 EventBridge Rules</div>
-      {data.eventBridgeRules && data.eventBridgeRules.length > 0 ? (
-        data.eventBridgeRules.map((rule) => (
+      {data.eventBridgeRules || data.eventBridgeRule ? (
+        (data.eventBridgeRules || [data.eventBridgeRule]).map((rule) => (
           <div
             key={rule.name}
             style={{
@@ -287,4 +295,3 @@ const InspectFargateTask = ({ onClose, language = "java" }) => {
 };
 
 export default InspectFargateTask;
-
