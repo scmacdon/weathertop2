@@ -94,13 +94,6 @@ export default function App() {
   // NEW: Invoking mask state
   const [isInvoking, setIsInvoking] = useState(false);
 
-  const runRateData = [
-    { date: "2025-07-13", passRate: 97.5 },
-    { date: "2025-07-14", passRate: 98.2 },
-    { date: "2025-07-15", passRate: 99.1 },
-  ];
-
-
   // MAKES A CALL TO API Gateway to retrieve stats for given lang
  const fetchSummary = async (lang) => {
   setLoading(true);
@@ -146,6 +139,7 @@ export default function App() {
 
   
 
+  // Makes a Call to get Fail information 
   const handleModalToggle = async () => {
     try {
       if (!runId) return;
@@ -166,8 +160,16 @@ export default function App() {
   };
 
 
-  // NEW: Execute Tests handler to call Docker run API, parse taskArn, show modal
-  const handleExecuteTests = async () => {
+  // Starts a test run for a given lang
+const handleExecuteTests = async () => {
+  // Ask for confirmation first
+  const confirmed = window.confirm("Do you want to invoke the tests? Click Cancel for No!");
+
+  if (!confirmed) {
+    // If user selects "No", exit the function
+    return;
+  }
+
   setIsInvoking(true); // Show mask
   try {
     const apiUrl = `https://z2403v9kpl.execute-api.us-east-1.amazonaws.com/prod/stats?language=${selectedLang}`;
@@ -194,6 +196,7 @@ export default function App() {
     setIsExecTestsModalOpen(true);
   }
 };
+
 
 
   const handleClose = () => {
