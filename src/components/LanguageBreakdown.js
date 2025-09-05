@@ -6,6 +6,8 @@ const LanguageBreakdown = ({ onCardClick }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    
+    // Get the Starts for all SDKs - this reads the JSON in S3 
     const fetchStats = async () => {
       try {
         const res = await fetch('https://7mzatujfx8.execute-api.us-east-1.amazonaws.com/prod/stats');
@@ -52,7 +54,7 @@ const LanguageBreakdown = ({ onCardClick }) => {
           userSelect: 'none',
         }}
       >
-        ⏳ Loading AWS Test Results Data...
+        ⏳ Loading AWS SDK Test Results Data...
       </div>
     );
 

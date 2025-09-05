@@ -166,7 +166,7 @@ const handleExecuteTests = async () => {
   const confirmed = window.confirm("Do you want to invoke the tests? Click Cancel for No!");
 
   if (!confirmed) {
-    // If user selects "No", exit the function
+    // If user selects Cancal, exit the function
     return;
   }
 
