@@ -5,18 +5,16 @@ import SummaryCard from "./SummaryCard";
 import RunRateModal from "./RunRateModal";
 import ScheduleTaskForm from "./ScheduleTaskForm";
 import InspectFargateTask from "./InspectFargateTask";
-
 import "../styles/styles.css";
 
 Modal.setAppElement("#root");
 
-// === TestResultsDashboard Component ===
 function TestResultsDashboard({
   summary,
   runId,
+  onModalToggle,
   loading,
   selectedLang,
-  onModalToggle,
   onShowRunRate,
   onExecuteTests,
   onScheduleTests,
@@ -29,8 +27,37 @@ function TestResultsDashboard({
     duration = "—",
     services = 0,
   } = summary || {};
-
   const passRate = total > 0 ? ((passed / total) * 100).toFixed(2) : "0.00";
+
+  const [showTotalInfo, setShowTotalInfo] = useState(false);
+  const [totalTestInfo, setTotalTestInfo] = useState({ total: 0, avgPassRate: "0.00" });
+  const [loadingTotalInfo, setLoadingTotalInfo] = useState(false);
+
+  const fetchTotalTestInfo = async () => {
+    setLoadingTotalInfo(true);
+    try {
+      const apiUrl = "https://7mzatujfx8.execute-api.us-east-1.amazonaws.com/prod/stats";
+      const res = await fetch(apiUrl);
+      const json = await res.json();
+      const summaryArray = json?.summary || [];
+      const totalTests = summaryArray.reduce((acc, item) => acc + (item.tests || 0), 0);
+      const avgPassRate =
+        summaryArray.length > 0
+          ? (
+              summaryArray.reduce((acc, item) => acc + (item.passRate || 0), 0) /
+              summaryArray.length
+            ).toFixed(2)
+          : "0.00";
+      setTotalTestInfo({ total: totalTests, avgPassRate });
+      setShowTotalInfo(true);
+    } catch (err) {
+      console.error("Failed to fetch total test info:", err);
+      setTotalTestInfo({ total: 0, avgPassRate: "0.00" });
+      setShowTotalInfo(true);
+    } finally {
+      setLoadingTotalInfo(false);
+    }
+  };
 
   if (!runId) return null;
 
@@ -47,23 +74,19 @@ function TestResultsDashboard({
           duration={duration}
           services={services}
         />
+  
 
+       
         <div className="button-group">
-          <button
-            onClick={onModalToggle}
-            className="test-summary-button secondary"
-          >
+          <button onClick={onModalToggle} className="test-summary-button secondary">
             View Fail Information
           </button>
-
           <button onClick={onShowRunRate} className="test-summary-button">
             ⏳ View Run Rate
           </button>
-
           <button onClick={onExecuteTests} className="test-summary-button">
             🚀 Execute SDK Tests
           </button>
-
           <button onClick={onScheduleTests} className="test-summary-button">
             📅 Schedule Tests
           </button>
@@ -72,11 +95,38 @@ function TestResultsDashboard({
           </button>
         </div>
       </div>
+
+      {/* Slide-in Total Test Info Panel */}
+      {showTotalInfo && (
+        <div className="side-panel-overlay">
+          <div className="side-panel-modal" style={{ transform: "translateX(0%)" }}>
+            <h3>Total Test Information</h3>
+            {loadingTotalInfo ? (
+              <p>Loading...</p>
+            ) : (
+              <div>
+                <p>
+                  <strong>Total Tests:</strong> {totalTestInfo.total}
+                </p>
+                <p>
+                  <strong>Average Pass Rate:</strong> {totalTestInfo.avgPassRate}%
+                </p>
+              </div>
+            )}
+            <button
+              onClick={() => setShowTotalInfo(false)}
+              className="modal-close-button"
+              style={{ alignSelf: "flex-end", marginTop: "auto" }}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
 
-// === Main App Component ===
 export default function App() {
   const [selectedLang, setSelectedLang] = useState(null);
   const [summaryData, setSummaryData] = useState({});
@@ -89,23 +139,14 @@ export default function App() {
   const [isScheduleModalOpen, setIsScheduleModalOpen] = useState(false);
   const [isInspectModalOpen, setIsInspectModalOpen] = useState(false);
 
+  // NEW: Execute Tests Modal state and message
   const [isExecTestsModalOpen, setIsExecTestsModalOpen] = useState(false);
   const [taskArnMessage, setTaskArnMessage] = useState("");
+
+  // NEW: Invoking mask state
   const [isInvoking, setIsInvoking] = useState(false);
 
-  const [isTotalSummaryOpen, setIsTotalSummaryOpen] = useState(false);
-  const [totalTestSummary, setTotalTestSummary] = useState({
-    total: 0,
-    averagePassRate: 0,
-  });
-
-  const [totalSummary, setTotalSummary] = useState({
-    total: 0,
-    passed: 0,
-    failed: 0,
-    services: 0,
-  });
-
+  // MAKES A CALL TO API Gateway to retrieve stats for given lang
   const fetchSummary = async (lang) => {
     setLoading(true);
     try {
@@ -113,7 +154,6 @@ export default function App() {
       const res = await fetch(apiUrl);
       const json = await res.json();
       const summary = json?.results?.summary;
-
       if (!summary) throw new Error("Summary data missing");
 
       const services = Number(summary.services ?? 0);
@@ -127,7 +167,7 @@ export default function App() {
       const minutes = Math.floor((durationMs % (1000 * 60 * 60)) / (1000 * 60));
       const duration = `${hours} hours ${minutes} minutes`;
 
-      setRunId(json?.runid ?? null);
+      setRunId(json?.runid ?? null); // ✅ FIXED
       setSummaryData({ total: tests, passed, failed, duration, services });
     } catch (err) {
       console.error("❌ Error loading SDK summary:", err);
@@ -138,25 +178,19 @@ export default function App() {
     }
   };
 
-  useEffect(() => {
-    setTotalSummary({
-      total: summaryData.total ?? 0,
-      passed: summaryData.passed ?? 0,
-      failed: summaryData.failed ?? 0,
-      services: summaryData.services ?? 0,
-    });
-  }, [summaryData]);
+  const handleScheduleTests = () => {
+    setIsScheduleModalOpen(true);
+  };
 
-  const handleScheduleTests = () => setIsScheduleModalOpen(true);
   const handleCardClick = (lang) => {
     setSelectedLang(lang);
     fetchSummary(lang);
   };
 
+  // Makes a Call to get Fail information. This returns JSON
   const handleModalToggle = async () => {
     try {
       if (!runId) return;
-
       setFailLoading(true);
       const apiUrl = `https://krs0zv3z9j.execute-api.us-east-1.amazonaws.com/prod/stats?language=${selectedLang}`;
       const res = await fetch(apiUrl);
@@ -172,26 +206,29 @@ export default function App() {
     }
   };
 
+  // Starts a test run for a given lang
   const handleExecuteTests = async () => {
     const confirmed = window.confirm(
       "Do you want to invoke the tests? Click Cancel for No!"
     );
     if (!confirmed) return;
 
-    setIsInvoking(true);
+    setIsInvoking(true); // Show mask
     try {
       const apiUrl = `https://z2403v9kpl.execute-api.us-east-1.amazonaws.com/prod/stats?language=${selectedLang}`;
       const res = await fetch(apiUrl);
       const json = await res.json();
       const data = json.body ? JSON.parse(json.body) : json;
 
-      if (data.error) setTaskArnMessage(`Error: ${data.error}`);
-      else if (data.taskArn)
+      if (data.error) {
+        setTaskArnMessage(`Error: ${data.error}`);
+      } else if (data.taskArn) {
         setTaskArnMessage(
           `Weathertop test run was invoked. The Task ARN is: ${data.taskArn}`
         );
-      else
+      } else {
         setTaskArnMessage("Docker Test run invoked, but no Task ARN returned.");
+      }
     } catch (error) {
       setTaskArnMessage(`Failed to invoke Docker Test run: ${error.message}`);
     } finally {
@@ -200,62 +237,24 @@ export default function App() {
     }
   };
 
-  const handleClose = () => setIsModalOpen(false);
-
-  const handleOpenTotalSummary = async () => {
-    try {
-      const res = await fetch(
-        "https://7mzatujfx8.execute-api.us-east-1.amazonaws.com/prod/stats"
-      );
-      const json = await res.json();
-      const summaryArr = json.summary ?? [];
-
-      const totalTests = summaryArr.reduce((sum, item) => sum + item.tests, 0);
-      const avgPassRate =
-        summaryArr.reduce((sum, item) => sum + item.passRate, 0) /
-        summaryArr.length;
-
-      setTotalTestSummary({
-        total: totalTests,
-        averagePassRate: avgPassRate.toFixed(2),
-      });
-
-      setIsTotalSummaryOpen(true);
-    } catch (err) {
-      console.error("Failed to fetch total test summary:", err);
-    }
+  const handleClose = () => {
+    setIsModalOpen(false);
   };
-
-  const passRate =
-    totalSummary.total > 0
-      ? ((totalSummary.passed / totalSummary.total) * 100).toFixed(2)
-      : "0.00";
 
   return (
     <div className="app-wrapper">
-      {/* === Total Test Summary Link === */}
-      <div style={{ marginBottom: "1rem" }}>
-        <span
-          className="link-text"
-          onClick={handleOpenTotalSummary}
-          style={{ color: "#007bff", cursor: "pointer", textDecoration: "underline" }}
-        >
-          Total Test Summary
-        </span>
-      </div>
-
       {failLoading && (
         <div className="loading-overlay-fullscreen">
           <div className="loading-text yellow-text">Loading data...</div>
         </div>
       )}
-
       {loading && (
         <div className="loading-overlay-fullscreen">
           <div className="loading-text">Loading data, please wait...</div>
         </div>
       )}
 
+      {/* NEW: Fullscreen mask for invoking Docker Test Runner */}
       {isInvoking && (
         <div
           style={{
@@ -301,28 +300,103 @@ export default function App() {
         onInspectTask={() => setIsInspectModalOpen(true)}
       />
 
-      {/* === TOTAL SUMMARY SIDE PANEL === */}
       <Modal
-        isOpen={isTotalSummaryOpen}
-        onRequestClose={() => setIsTotalSummaryOpen(false)}
-        contentLabel="Total Test Summary"
+        isOpen={isModalOpen}
+        onRequestClose={() => setIsModalOpen(false)}
+        contentLabel="Fail Information"
+        shouldCloseOnOverlayClick={false}
+        shouldCloseOnEsc={false}
+        className="custom-modal"
+        overlayClassName="custom-overlay"
+      >
+        <div className="modal-body">
+          <h3 className="modal-title">Fail Information</h3>
+          {failLoading ? (
+            <div className="modal-message">Loading fail data...</div>
+          ) : failInfo.length === 0 ? (
+            <div className="modal-message">No fail information available.</div>
+          ) : (
+            <div className="fail-info-list">
+              {failInfo.map((item, index) => (
+                <div key={index} className="fail-info-row">
+                  <h4 className="fail-info-title">🔧 {item.test_name}</h4>
+                  <div className="fail-info-detail">
+                    <p>
+                      <strong>Service:</strong> {item.service}
+                    </p>
+                    <p>
+                      <strong>Status:</strong> {item.status}
+                    </p>
+                    <p>
+                      <strong>Message:</strong>
+                    </p>
+                    <pre className="fail-info-log">{item.message}</pre>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+          <button onClick={() => setIsModalOpen(false)} className="modal-close-button">
+            Close
+          </button>
+        </div>
+      </Modal>
+
+      <RunRateModal
+        isOpen={isRunRateModalOpen}
+        onClose={() => setIsRunRateModalOpen(false)}
+        language={selectedLang}
+      />
+
+      <Modal
+        isOpen={isInspectModalOpen}
+        onRequestClose={() => setIsInspectModalOpen(false)}
+        contentLabel="Inspect Fargate Task"
         shouldCloseOnOverlayClick={true}
         shouldCloseOnEsc={true}
-        className="side-panel-modal"
-        overlayClassName="side-panel-overlay"
+        className="custom-modal dark-theme-modal"
+        overlayClassName="custom-overlay"
       >
-        <div className="side-panel-body">
-          <h3>Total Test Summary</h3>
-          <p>
-            <strong>Total Tests:</strong> {totalTestSummary.total}
-          </p>
-          <p>
-            <strong>Average Pass Rate:</strong> {totalTestSummary.averagePassRate}%
-          </p>
-          <button
-            onClick={() => setIsTotalSummaryOpen(false)}
-            className="modal-close-button"
-          >
+        <InspectFargateTask onClose={handleClose} language={selectedLang} />
+        <button onClick={() => setIsInspectModalOpen(false)} className="modal-close-button">
+          Close
+        </button>
+      </Modal>
+
+      <Modal
+        isOpen={isScheduleModalOpen}
+        onRequestClose={() => setIsScheduleModalOpen(false)}
+        contentLabel="Schedule ECS Task"
+        shouldCloseOnOverlayClick={true}
+        shouldCloseOnEsc={true}
+        className="custom-modal"
+        overlayClassName="custom-overlay"
+      >
+        <div className="modal-body">
+          <h3 className="modal-title">Schedule ECS Task</h3>
+          <ScheduleTaskForm
+            selectedLang={selectedLang}
+            onSuccess={() => setIsScheduleModalOpen(false)}
+          />
+          <button onClick={() => setIsScheduleModalOpen(false)} className="modal-close-button">
+            Close
+          </button>
+        </div>
+      </Modal>
+
+      <Modal
+        isOpen={isExecTestsModalOpen}
+        onRequestClose={() => setIsExecTestsModalOpen(false)}
+        contentLabel="Execute Tests"
+        shouldCloseOnOverlayClick={true}
+        shouldCloseOnEsc={true}
+        className="custom-modal"
+        overlayClassName="custom-overlay"
+      >
+        <div className="modal-body">
+          <h3 className="modal-title">Execute Tests Result</h3>
+          <p>{taskArnMessage}</p>
+          <button onClick={() => setIsExecTestsModalOpen(false)} className="modal-close-button">
             Close
           </button>
         </div>
