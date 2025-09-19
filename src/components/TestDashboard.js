@@ -19,7 +19,7 @@ function TestResultsDashboard({
   onShowRunRate,
   onExecuteTests,
   onScheduleTests,
-   onInspectTask,
+  onInspectTask,
 }) {
   const {
     total = 0,
@@ -95,38 +95,37 @@ export default function App() {
   const [isInvoking, setIsInvoking] = useState(false);
 
   // MAKES A CALL TO API Gateway to retrieve stats for given lang
- const fetchSummary = async (lang) => {
-  setLoading(true);
-  try {
-    const apiUrl = `https://2j5064gkt0.execute-api.us-east-1.amazonaws.com/prod/stats?language=${lang}`;
-    const res = await fetch(apiUrl);
-    const json = await res.json();
-    const summary = json?.results?.summary;
+  const fetchSummary = async (lang) => {
+    setLoading(true);
+    try {
+      const apiUrl = `https://2j5064gkt0.execute-api.us-east-1.amazonaws.com/prod/stats?language=${lang}`;
+      const res = await fetch(apiUrl);
+      const json = await res.json();
+      const summary = json?.results?.summary;
 
-    if (!summary) throw new Error("Summary data missing");
+      if (!summary) throw new Error("Summary data missing");
 
-    const services = Number(summary.services ?? 0);
-    const tests = Number(summary.tests ?? 0);
-    const passed = Number(summary.passed ?? 0);
-    const failed = Number(summary.failed ?? 0);
-    const startTime = summary.start_time ?? 0;
-    const stopTime = summary.stop_time ?? 0;
-    const durationMs = stopTime - startTime;
-    const hours = Math.floor(durationMs / (1000 * 60 * 60));
-    const minutes = Math.floor((durationMs % (1000 * 60 * 60)) / (1000 * 60));
-    const duration = `${hours} hours ${minutes} minutes`;
+      const services = Number(summary.services ?? 0);
+      const tests = Number(summary.tests ?? 0);
+      const passed = Number(summary.passed ?? 0);
+      const failed = Number(summary.failed ?? 0);
+      const startTime = summary.start_time ?? 0;
+      const stopTime = summary.stop_time ?? 0;
+      const durationMs = stopTime - startTime;
+      const hours = Math.floor(durationMs / (1000 * 60 * 60));
+      const minutes = Math.floor((durationMs % (1000 * 60 * 60)) / (1000 * 60));
+      const duration = `${hours} hours ${minutes} minutes`;
 
-    setRunId(json?.runid ?? null); // ✅ FIXED
-    setSummaryData({ total: tests, passed, failed, duration, services });
-  } catch (err) {
-    console.error("❌ Error loading SDK summary:", err);
-    setRunId(null);
-    setSummaryData({});
-  } finally {
-    setLoading(false);
-  }
-};
-
+      setRunId(json?.runid ?? null); // ✅ FIXED
+      setSummaryData({ total: tests, passed, failed, duration, services });
+    } catch (err) {
+      console.error("❌ Error loading SDK summary:", err);
+      setRunId(null);
+      setSummaryData({});
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const handleScheduleTests = () => {
     setIsScheduleModalOpen(true);
@@ -137,9 +136,7 @@ export default function App() {
     fetchSummary(lang);
   };
 
-  
-
-  // Makes a Call to get Fail information 
+  // Makes a Call to get Fail information. THis returns JSON
   const handleModalToggle = async () => {
     try {
       if (!runId) return;
@@ -159,45 +156,44 @@ export default function App() {
     }
   };
 
-
   // Starts a test run for a given lang
-const handleExecuteTests = async () => {
-  // Ask for confirmation first
-  const confirmed = window.confirm("Do you want to invoke the tests? Click Cancel for No!");
+  const handleExecuteTests = async () => {
+    // Ask for confirmation first
+    const confirmed = window.confirm(
+      "Do you want to invoke the tests? Click Cancel for No!"
+    );
 
-  if (!confirmed) {
-    // If user selects Cancal, exit the function
-    return;
-  }
-
-  setIsInvoking(true); // Show mask
-  try {
-    const apiUrl = `https://z2403v9kpl.execute-api.us-east-1.amazonaws.com/prod/stats?language=${selectedLang}`;
-    const res = await fetch(apiUrl);
-    const json = await res.json();
-
-    // If Lambda returns stringified JSON in body, parse it
-    const data = json.body ? JSON.parse(json.body) : json;
-
-    // ✅ Check if there's an error
-    if (data.error) {
-      setTaskArnMessage(`Error: ${data.error}`);
-    } else if (data.taskArn) {
-      setTaskArnMessage(
-        `Weathertop test run was invoked. The Task ARN is: ${data.taskArn}`
-      );
-    } else {
-      setTaskArnMessage("Docker Test run invoked, but no Task ARN returned.");
+    if (!confirmed) {
+      // If user selects Cancal, exit the function
+      return;
     }
-  } catch (error) {
-    setTaskArnMessage(`Failed to invoke Docker Test run: ${error.message}`);
-  } finally {
-    setIsInvoking(false); // Hide mask
-    setIsExecTestsModalOpen(true);
-  }
-};
 
+    setIsInvoking(true); // Show mask
+    try {
+      const apiUrl = `https://z2403v9kpl.execute-api.us-east-1.amazonaws.com/prod/stats?language=${selectedLang}`;
+      const res = await fetch(apiUrl);
+      const json = await res.json();
 
+      // If Lambda returns stringified JSON in body, parse it
+      const data = json.body ? JSON.parse(json.body) : json;
+
+      // ✅ Check if there's an error
+      if (data.error) {
+        setTaskArnMessage(`Error: ${data.error}`);
+      } else if (data.taskArn) {
+        setTaskArnMessage(
+          `Weathertop test run was invoked. The Task ARN is: ${data.taskArn}`
+        );
+      } else {
+        setTaskArnMessage("Docker Test run invoked, but no Task ARN returned.");
+      }
+    } catch (error) {
+      setTaskArnMessage(`Failed to invoke Docker Test run: ${error.message}`);
+    } finally {
+      setIsInvoking(false); // Hide mask
+      setIsExecTestsModalOpen(true);
+    }
+  };
 
   const handleClose = () => {
     setIsModalOpen(false);
@@ -243,7 +239,8 @@ const handleExecuteTests = async () => {
               textShadow: "1px 1px 3px black",
             }}
           >
-          Invoking the Docker Test Runner for  <strong>{selectedLang} ...</strong>
+            Invoking the Docker Test Runner for{" "}
+            <strong>{selectedLang} ...</strong>
           </div>
         </div>
       )}
@@ -281,11 +278,20 @@ const handleExecuteTests = async () => {
             <div className="fail-info-list">
               {failInfo.map((item, index) => (
                 <div key={index} className="fail-info-row">
-                  <h4 className="fail-info-title">🔧 {item.name}</h4>
-                  <p className="fail-info-message">
-                    <strong>AWS Service:</strong> {item.message}
-                  </p>
-                  {item.log && <pre className="fail-info-log">{item.log}</pre>}
+                  <h4 className="fail-info-title">🔧 {item.test_name}</h4>
+
+                  <div className="fail-info-detail">
+                    <p>
+                      <strong>Service:</strong> {item.service}
+                    </p>
+                    <p>
+                      <strong>Status:</strong> {item.status}
+                    </p>
+                    <p>
+                      <strong>Message:</strong>
+                    </p>
+                    <pre className="fail-info-log">{item.message}</pre>
+                  </div>
                 </div>
               ))}
             </div>
@@ -314,7 +320,7 @@ const handleExecuteTests = async () => {
         className="custom-modal dark-theme-modal"
         overlayClassName="custom-overlay"
       >
-       <InspectFargateTask onClose={handleClose} language={selectedLang} />
+        <InspectFargateTask onClose={handleClose} language={selectedLang} />
         <button
           onClick={() => setIsInspectModalOpen(false)}
           className="modal-close-button"

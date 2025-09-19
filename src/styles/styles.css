@@ -105,37 +105,38 @@ body {
 
 /* Fail Information Rows */
 .fail-info-list {
-  width: 100%; /* Stretch the list across the width of the modal */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .fail-info-row {
+  background: #1e1e1e;
+  color: #f5f5f5;
   padding: 1rem;
-  background-color: #2a2a2a; /* Light background for contrast */
-  border-radius: 6px; /* Rounded corners */
-  margin-bottom: 1rem; /* Spacing between rows */
-  word-wrap: break-word;
-  color: #fff;
-  width: 100%; /* Ensure rows take up full width */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
 .fail-info-title {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 0.5rem;
+  color: #ff6666;
 }
 
-.fail-info-message {
-  font-size: 1rem;
-  color: #ccc;
+.fail-info-detail p {
+  margin: 0.2rem 0;
 }
 
 .fail-info-log {
+  background: #2b2b2b;
+  padding: 0.5rem;
+  border-radius: 6px;
+  overflow-x: auto;
   white-space: pre-wrap;
-  word-break: break-word;
-  color: #f1f1f1;
-  background: #444;
-  padding: 10px;
-  border-radius: 5px;
-  font-family: 'Courier New', monospace;
+  font-family: "Fira Code", monospace;
+  font-size: 0.9rem;
+  color: #ffeb3b;
 }
 
 /* Dark Theme Styles */
