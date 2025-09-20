@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import TestConfig from './components/TestConfig';
-import ExecutionControl from './components/ExecutionControl';
 import TestDashboard from './components/TestDashboard';
 import './styles/styles.css';
 
@@ -12,7 +10,13 @@ function App() {
   // Side panel state
   const [showSidePanel, setShowSidePanel] = useState(false);
   const [loadingTotalInfo, setLoadingTotalInfo] = useState(false);
-  const [totalTestInfo, setTotalTestInfo] = useState({ total: 0, avgPassRate: '0.00' });
+  const [totalTestInfo, setTotalTestInfo] = useState({
+    total: 0,
+    passed: 0,
+    failed: 0,
+    avgPassRate: '0.00',
+    summary: []
+  });
 
   const handleRun = () => {
     setStatus('Running');
@@ -43,20 +47,25 @@ function App() {
       const json = await res.json();
       const summaryArray = json?.summary || [];
 
+      // Aggregate stats
       const totalTests = summaryArray.reduce((acc, item) => acc + (item.tests || 0), 0);
-      const avgPassRate =
-        summaryArray.length > 0
-          ? (
-              summaryArray.reduce((acc, item) => acc + (item.passRate || 0), 0) /
-              summaryArray.length
-            ).toFixed(2)
-          : '0.00';
+      const totalPassed = summaryArray.reduce((acc, item) => acc + (item.passed || 0), 0);
+      const totalFailed = summaryArray.reduce((acc, item) => acc + (item.failed || 0), 0);
 
-      setTotalTestInfo({ total: totalTests, avgPassRate });
+      const avgPassRate =
+        totalTests > 0 ? ((totalPassed / totalTests) * 100).toFixed(2) : '0.00';
+
+      setTotalTestInfo({ 
+        total: totalTests, 
+        passed: totalPassed, 
+        failed: totalFailed, 
+        avgPassRate, 
+        summary: summaryArray 
+      });
       setShowSidePanel(true);
     } catch (err) {
       console.error('Failed to fetch total test info:', err);
-      setTotalTestInfo({ total: 0, avgPassRate: '0.00' });
+      setTotalTestInfo({ total: 0, passed: 0, failed: 0, avgPassRate: '0.00', summary: [] });
       setShowSidePanel(true);
     } finally {
       setLoadingTotalInfo(false);
@@ -102,7 +111,18 @@ function App() {
             ) : (
               <div>
                 <p><strong>Total Tests:</strong> {totalTestInfo.total}</p>
+                <p><strong>Passed:</strong> {totalTestInfo.passed}</p>
+                <p><strong>Failed:</strong> {totalTestInfo.failed}</p>
                 <p><strong>Average Pass Rate:</strong> {totalTestInfo.avgPassRate}%</p>
+
+                <h4>Breakdown by Language</h4>
+                <ul>
+                  {totalTestInfo.summary.map((item, idx) => (
+                    <li key={idx}>
+                      <strong>{item.language}:</strong> {item.tests} tests — {item.passed} passed, {item.failed} failed ({item.passRate.toFixed(2)}%)
+                    </li>
+                  ))}
+                </ul>
               </div>
             )}
             <button
@@ -120,5 +140,3 @@ function App() {
 }
 
 export default App;
-
-
