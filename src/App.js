@@ -1,96 +1,139 @@
-import React, { useState, useEffect } from 'react';
-import TestDashboard from './components/TestDashboard';
-import './styles/styles.css';
+import React, { useState, useEffect } from "react";
+import TestDashboard from "./components/TestDashboard";
+import "./styles/styles.css";
 
 function App() {
-  const [status, setStatus] = useState('Idle');
+  const [status, setStatus] = useState("Idle");
   const [logs, setLogs] = useState([]);
-  const [theme, setTheme] = useState('dark'); // Default theme
+  const [theme, setTheme] = useState("dark");
 
   // Side panel state
   const [showSidePanel, setShowSidePanel] = useState(false);
-  const [loadingTotalInfo, setLoadingTotalInfo] = useState(false);
-  const [totalTestInfo, setTotalTestInfo] = useState({
-    total: 0,
-    passed: 0,
-    failed: 0,
-    avgPassRate: '0.00',
-    summary: []
-  });
+  const [sidePanelTitle, setSidePanelTitle] = useState("");
+  const [loadingPanelData, setLoadingPanelData] = useState(false);
+  const [panelData, setPanelData] = useState(null);
 
   const handleRun = () => {
-    setStatus('Running');
-    setLogs(['Java Passed', 'Python Running']);
+    setStatus("Running");
+    setLogs(["Java Passed", "Python Running"]);
   };
 
   const handleStop = () => {
-    setStatus('Stopped');
+    setStatus("Stopped");
     setLogs([]);
   };
 
   const toggleTheme = () => {
-    setTheme(prev => (prev === 'dark' ? 'light' : 'dark'));
+    setTheme(prev => (prev === "dark" ? "light" : "dark"));
   };
 
   useEffect(() => {
-    document.body.classList.toggle('dark', theme === 'dark');
-    document.body.classList.toggle('light', theme === 'light');
+    document.body.classList.toggle("dark", theme === "dark");
+    document.body.classList.toggle("light", theme === "light");
   }, [theme]);
 
-  // Fetch total test info from API
-  const handleTotalTestInfoClick = async (e) => {
-    e.preventDefault();
-    setLoadingTotalInfo(true);
+  // --- Fetch Data ---
+  const fetchData = async (title, apiUrl) => {
+    setSidePanelTitle(title);
+    setPanelData(null);
+    setShowSidePanel(true);
+    setLoadingPanelData(true);
+
     try {
-      const apiUrl = 'https://7mzatujfx8.execute-api.us-east-1.amazonaws.com/prod/stats';
       const res = await fetch(apiUrl);
       const json = await res.json();
-      const summaryArray = json?.summary || [];
-
-      // Aggregate stats
-      const totalTests = summaryArray.reduce((acc, item) => acc + (item.tests || 0), 0);
-      const totalPassed = summaryArray.reduce((acc, item) => acc + (item.passed || 0), 0);
-      const totalFailed = summaryArray.reduce((acc, item) => acc + (item.failed || 0), 0);
-
-      const avgPassRate =
-        totalTests > 0 ? ((totalPassed / totalTests) * 100).toFixed(2) : '0.00';
-
-      setTotalTestInfo({ 
-        total: totalTests, 
-        passed: totalPassed, 
-        failed: totalFailed, 
-        avgPassRate, 
-        summary: summaryArray 
-      });
-      setShowSidePanel(true);
+      setPanelData(json);
     } catch (err) {
-      console.error('Failed to fetch total test info:', err);
-      setTotalTestInfo({ total: 0, passed: 0, failed: 0, avgPassRate: '0.00', summary: [] });
-      setShowSidePanel(true);
+      console.error(`Failed to fetch ${title}:`, err);
+      setPanelData(null);
     } finally {
-      setLoadingTotalInfo(false);
+      setLoadingPanelData(false);
     }
   };
 
+  const handleSDKStatsClick = () =>
+    fetchData(
+      "SDK Stats",
+      "https://7mzatujfx8.execute-api.us-east-1.amazonaws.com/prod/stats"
+    );
+
+  const handleNoTestsClick = () =>
+    fetchData(
+      "No SDK Tests",
+      "https://pab1amebbb.execute-api.us-east-1.amazonaws.com/prod/stats"
+    );
+
+  // === Neon Button Styles ===
+  const neonBase = {
+    fontFamily: "monospace",
+    fontSize: "15px",
+    fontWeight: 600,
+    padding: "10px 18px",
+    borderRadius: "8px",
+    cursor: "pointer",
+    border: "2px solid transparent",
+    transition: "all 0.25s ease-in-out",
+    textTransform: "uppercase",
+    letterSpacing: "1px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "8px",
+  };
+
+  const sdkStatsStyle = {
+    ...neonBase,
+    backgroundColor: "#0d0d0d",
+    color: "#39ff14",
+    borderColor: "#39ff14",
+    boxShadow: "0 0 4px #39ff14",
+  };
+
+  const noTestsStyle = {
+    ...neonBase,
+    backgroundColor: "#0d0d0d",
+    color: "#00eaff",
+    borderColor: "#00eaff",
+    boxShadow: "0 0 4px #00eaff",
+  };
+
   return (
-    <div className={`app-container ${theme}`}>
-      <h1 className="app-title">Weathertop</h1>
-      <h3>
-        Weathertop is an integration test platform designed to test AWS Code examples. 
-        It ensures that the examples work as intended, helping to raise the quality and reliability of the code examples.
+    <div
+      className={`app-container ${theme}`}
+      style={{
+        background: "#121212",
+        color: "#f5f5f5",
+        minHeight: "100vh",
+        padding: "20px",
+      }}
+    >
+      <h1 style={{ color: "#39ff14", textShadow: "0 0 4px #39ff14", marginBottom: "10px" }}>
+        Weathertop
+      </h1>
+      <h3 style={{ maxWidth: "800px", lineHeight: "1.4" }}>
+        Weathertop is an integration test platform designed to test AWS Code examples.
       </h3>
 
-      {/* Yellow link under the paragraph */}
-      <h4>
-        <a
-          href="#"
-          onClick={handleTotalTestInfoClick}
-          style={{ color: '#FFD700', fontWeight: 'bold' }}
-        >
-          Total Test Information
-        </a>
-      </h4>
+      {/* Neon Buttons */}
+      <div style={{ display: "flex", gap: "12px", margin: "20px 0" }}>
+        <button onClick={handleSDKStatsClick} style={sdkStatsStyle}>
+          {loadingPanelData && sidePanelTitle === "SDK Stats" ? (
+            <span>Loading...</span>
+          ) : (
+            "SDK Stats"
+          )}
+        </button>
 
+        <button onClick={handleNoTestsClick} style={noTestsStyle}>
+          {loadingPanelData && sidePanelTitle === "No SDK Tests" ? (
+            <span>Loading...</span>
+          ) : (
+            "No Tests"
+          )}
+        </button>
+      </div>
+
+      {/* Dashboard */}
       <div className="dashboard">
         <div className="column">
           <TestDashboard status={status} logs={logs} />
@@ -99,40 +142,95 @@ function App() {
 
       {/* Side Panel */}
       {showSidePanel && (
-        <div className="side-panel-overlay" onClick={() => setShowSidePanel(false)}>
-          <div
-            className="side-panel-modal"
-            style={{ transform: showSidePanel ? 'translateX(0%)' : 'translateX(100%)' }}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <h3>Total Test Information</h3>
-            {loadingTotalInfo ? (
-              <p>Loading...</p>
-            ) : (
-              <div>
-                <p><strong>Total Tests:</strong> {totalTestInfo.total}</p>
-                <p><strong>Passed:</strong> {totalTestInfo.passed}</p>
-                <p><strong>Failed:</strong> {totalTestInfo.failed}</p>
-                <p><strong>Average Pass Rate:</strong> {totalTestInfo.avgPassRate}%</p>
+        <div
+          className="side-panel"
+          style={{
+            position: "fixed",
+            top: 0,
+            right: 0,
+            width: "400px",
+            height: "100%",
+            backgroundColor: "#1e1e1e",
+            color: "#f5f5f5",
+            padding: "20px",
+            overflowY: "auto",
+            boxShadow: "-4px 0 8px rgba(0,0,0,0.5)",
+            zIndex: 1000,
+          }}
+        >
+          <h2 style={{ borderBottom: "1px solid #444", paddingBottom: "10px", marginBottom: "15px" }}>
+            {sidePanelTitle}
+          </h2>
 
-                <h4>Breakdown by Language</h4>
-                <ul>
-                  {totalTestInfo.summary.map((item, idx) => (
-                    <li key={idx}>
-                      <strong>{item.language}:</strong> {item.tests} tests — {item.passed} passed, {item.failed} failed ({item.passRate.toFixed(2)}%)
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-            <button
-              onClick={() => setShowSidePanel(false)}
-              className="modal-close-button"
-              style={{ marginTop: 'auto', alignSelf: 'flex-end' }}
-            >
-              Close
-            </button>
-          </div>
+          {loadingPanelData ? (
+            <p style={{ color: "#ff0", fontWeight: "bold" }}>Loading...</p>
+          ) : panelData ? (
+            <div>
+              {/* --- Totals for SDK Stats --- */}
+              {sidePanelTitle === "SDK Stats" && panelData.summary && (() => {
+                let totalTests = 0;
+                let totalPassed = 0;
+                let totalFailed = 0;
+                panelData.summary.forEach(item => {
+                  totalTests += item.tests;
+                  totalPassed += item.passed;
+                  totalFailed += item.failed;
+                });
+                const averagePassRate = totalTests > 0 ? ((totalPassed / totalTests) * 100).toFixed(2) : "0";
+
+                return (
+                  <div style={{ marginBottom: "20px", borderBottom: "1px solid #444", paddingBottom: "10px" }}>
+                    <p><strong>Total Tests:</strong> {totalTests}</p>
+                    <p><strong>Total Passed:</strong> {totalPassed}</p>
+                    <p><strong>Total Failed:</strong> {totalFailed}</p>
+                    <p><strong>Average Pass Rate:</strong> {averagePassRate}%</p>
+                  </div>
+                );
+              })()}
+
+              {/* --- SDK Stats per language --- */}
+              {sidePanelTitle === "SDK Stats" && panelData.summary && panelData.summary.map((item, idx) => (
+                <div key={idx} style={{ marginBottom: "20px" }}>
+                  <h3 style={{ color: "#39ff14" }}>{item.language}</h3>
+                  <p>
+                    <strong>Tests:</strong> {item.tests} — <strong>Passed:</strong> {item.passed}, <strong>Failed:</strong> {item.failed}
+                  </p>
+                </div>
+              ))}
+
+              {/* --- No SDK Tests --- */}
+              {sidePanelTitle === "No SDK Tests" &&
+                Object.keys(panelData).map((sdk, idx) => (
+                  <div key={idx} style={{ marginBottom: "20px" }}>
+                    <h3 style={{ color: "#00eaff" }}>{sdk}</h3>
+                    <ul>
+                      {panelData[sdk].map((service, i) => (
+                        <li key={i}>{service}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+            </div>
+          ) : (
+            <p>No data available</p>
+          )}
+
+          <button
+            onClick={() => setShowSidePanel(false)}
+            style={{
+              marginTop: "20px",
+              padding: "12px 20px",
+              backgroundColor: "#ff00ff",
+              color: "#fff",
+              fontWeight: "bold",
+              border: "none",
+              borderRadius: "8px",
+              cursor: "pointer",
+              boxShadow: "0 0 10px rgba(255,0,255,0.6)",
+            }}
+          >
+            Close
+          </button>
         </div>
       )}
     </div>
@@ -140,3 +238,10 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+
