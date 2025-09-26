@@ -38,6 +38,16 @@ export default function SummaryCard({
     }).format(utcDate);
   }
 
+  // Determine pass rate color
+  let passRateColor;
+  if (passRate >= 90) {
+    passRateColor = 'green';
+  } else if (passRate >= 80) {
+    passRateColor = 'deepOrange';
+  } else {
+    passRateColor = 'deepRed';
+  }
+
   return (
     <div className="summary-wrapper">
       <h2 className="summary-heading">
@@ -73,7 +83,7 @@ export default function SummaryCard({
         </div>
         <div className="summary-tile">
           <span className="summary-icon">📈</span>
-          <div className="summary-value summary-rate">{passRate}%</div>
+          <div className={`summary-value summary-rate ${passRateColor}`}>{passRate}%</div>
           <div className="summary-label">Pass Rate</div>
         </div>
         <div className="summary-tile">

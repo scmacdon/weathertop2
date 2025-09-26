@@ -5,23 +5,33 @@ const LanguageBreakdown = ({ onCardClick }) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  // Helper for pass rate color
+  const getPassRateStyle = (rate) => {
+    if (rate >= 90) return { color: "#39ff14", fontWeight: "normal" }; // green
+    if (rate >= 80) return { color: "#ffa500", fontWeight: "bold" };   // orange
+    return { color: "#ff1a1a", fontWeight: "bold" };                   // deep red
+  };
+
   useEffect(() => {
-    
-    // Get the Starts for all SDKs - this reads the JSON in S3 
     const fetchStats = async () => {
       try {
         const res = await fetch('https://7mzatujfx8.execute-api.us-east-1.amazonaws.com/prod/stats');
         if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
         const json = await res.json();
 
-        // Assuming the summary array is at json.summary or adjust accordingly
         const summary = json.summary ?? [];
 
-        const mappedData = summary.map(({ language, tests, passRate }) => ({
-          name: language,
-          total: tests,
-          passRate: `${passRate}%`,
-        }));
+        const mappedData = summary.map(({ language, tests, passed }) => {
+          const totalTests = Number(tests ?? 0);
+          const passedTests = Number(passed ?? 0);
+          const passRate = totalTests > 0 ? (passedTests / totalTests) * 100 : 0;
+
+          return {
+            name: language,
+            total: totalTests,
+            passRate: passRate.toFixed(2), // numeric value for display
+          };
+        });
 
         setData(mappedData);
       } catch (err) {
@@ -44,7 +54,7 @@ const LanguageBreakdown = ({ onCardClick }) => {
           width: '100vw',
           height: '100vh',
           backgroundColor: 'rgba(15, 23, 42, 0.9)',
-          color: '#facc15',       // Yellow text color to match SummaryCard
+          color: '#facc15',
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
@@ -76,7 +86,9 @@ const LanguageBreakdown = ({ onCardClick }) => {
             <h3>{item.name}</h3>
             <p>{item.total} tests</p>
             <p className="label">Pass Rate</p>
-            <p className="rate">{item.passRate}</p>
+            <p className="rate" style={getPassRateStyle(Number(item.passRate))}>
+              {item.passRate}%
+            </p>
           </div>
         ))}
       </div>
@@ -85,6 +97,3 @@ const LanguageBreakdown = ({ onCardClick }) => {
 };
 
 export default LanguageBreakdown;
-
-
-

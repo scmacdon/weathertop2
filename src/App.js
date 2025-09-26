@@ -97,6 +97,13 @@ function App() {
     boxShadow: "0 0 4px #00eaff",
   };
 
+  // === Pass Rate Color Helper ===
+  const getPassRateStyle = (rate) => {
+    if (rate >= 90) return { color: "#39ff14", fontWeight: "normal" }; // green
+    if (rate >= 80) return { color: "#ffa500", fontWeight: "bold" };   // orange
+    return { color: "#ff1a1a", fontWeight: "bold" };                   // deep red
+  };
+
   return (
     <div
       className={`app-container ${theme}`}
@@ -117,19 +124,11 @@ function App() {
       {/* Neon Buttons */}
       <div style={{ display: "flex", gap: "12px", margin: "20px 0" }}>
         <button onClick={handleSDKStatsClick} style={sdkStatsStyle}>
-          {loadingPanelData && sidePanelTitle === "SDK Stats" ? (
-            <span>Loading...</span>
-          ) : (
-            "SDK Stats"
-          )}
+          {loadingPanelData && sidePanelTitle === "SDK Stats" ? <span>Loading...</span> : "SDK Stats"}
         </button>
 
         <button onClick={handleNoTestsClick} style={noTestsStyle}>
-          {loadingPanelData && sidePanelTitle === "No SDK Tests" ? (
-            <span>Loading...</span>
-          ) : (
-            "No Tests"
-          )}
+          {loadingPanelData && sidePanelTitle === "No SDK Tests" ? <span>Loading...</span> : "No Tests"}
         </button>
       </div>
 
@@ -171,32 +170,50 @@ function App() {
                 let totalTests = 0;
                 let totalPassed = 0;
                 let totalFailed = 0;
+
                 panelData.summary.forEach(item => {
-                  totalTests += item.tests;
-                  totalPassed += item.passed;
-                  totalFailed += item.failed;
+                  const t = Number(item.tests ?? item.total ?? 0);
+                  const p = Number(item.passed ?? 0);
+                  const f = Number(item.failed ?? 0);
+
+                  totalTests += t;
+                  totalPassed += p;
+                  totalFailed += f;
                 });
-                const averagePassRate = totalTests > 0 ? ((totalPassed / totalTests) * 100).toFixed(2) : "0";
+
+                const averagePassRate = totalTests > 0 ? (totalPassed / totalTests) * 100 : 0;
 
                 return (
                   <div style={{ marginBottom: "20px", borderBottom: "1px solid #444", paddingBottom: "10px" }}>
                     <p><strong>Total Tests:</strong> {totalTests}</p>
                     <p><strong>Total Passed:</strong> {totalPassed}</p>
                     <p><strong>Total Failed:</strong> {totalFailed}</p>
-                    <p><strong>Average Pass Rate:</strong> {averagePassRate}%</p>
+                    <p>
+                      <strong>Average Pass Rate:</strong>{" "}
+                      <span style={getPassRateStyle(averagePassRate)}>{averagePassRate.toFixed(2)}%</span>
+                    </p>
                   </div>
                 );
               })()}
 
               {/* --- SDK Stats per language --- */}
-              {sidePanelTitle === "SDK Stats" && panelData.summary && panelData.summary.map((item, idx) => (
-                <div key={idx} style={{ marginBottom: "20px" }}>
-                  <h3 style={{ color: "#39ff14" }}>{item.language}</h3>
-                  <p>
-                    <strong>Tests:</strong> {item.tests} — <strong>Passed:</strong> {item.passed}, <strong>Failed:</strong> {item.failed}
-                  </p>
-                </div>
-              ))}
+              {sidePanelTitle === "SDK Stats" && panelData.summary && panelData.summary.map((item, idx) => {
+                const totalTests = Number(item.tests ?? item.total ?? 0);
+                const passedTests = Number(item.passed ?? 0);
+                const failedTests = Number(item.failed ?? 0);
+                const passRate = totalTests > 0 ? (passedTests / totalTests) * 100 : 0;
+
+                return (
+                  <div key={idx} style={{ marginBottom: "20px" }}>
+                    <h3 style={{ color: "#39ff14" }}>{item.language}</h3>
+                    <p>
+                      <strong>Tests:</strong> {totalTests} — <strong>Passed:</strong> {passedTests}, <strong>Failed:</strong> {failedTests},{" "}
+                      <strong>Pass Rate:</strong>{" "}
+                      <span style={getPassRateStyle(passRate)}>{passRate.toFixed(2)}%</span>
+                    </p>
+                  </div>
+                );
+              })}
 
               {/* --- No SDK Tests --- */}
               {sidePanelTitle === "No SDK Tests" &&

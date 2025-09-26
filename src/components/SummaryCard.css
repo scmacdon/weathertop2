@@ -11,11 +11,13 @@
   color: #f9f9f9;
   border-radius: 16px;
   padding: 20px;
+  margin: 1rem;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
   position: relative;
+  font-family: Arial, sans-serif;
 }
 
 .summary-card:hover {
@@ -23,6 +25,7 @@
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5);
 }
 
+/* Floating icon */
 .summary-icon {
   font-size: 1.6rem;
   margin-bottom: 10px;
@@ -36,6 +39,7 @@
   100% { transform: translateY(0px); }
 }
 
+/* Title + Value */
 .summary-title {
   font-size: 0.95rem;
   color: #aaa;
@@ -49,6 +53,7 @@
   letter-spacing: 0.5px;
 }
 
+/* Service-specific overrides */
 .summary-card.pass .summary-value {
   color: #4cd964;
 }
@@ -61,6 +66,20 @@
   color: #ffd700;
 }
 
+/* Pass rate color classes */
+.summary-rate.green {
+  color: #4cd964;
+}
+
+.summary-rate.deepOrange {
+  color: #ff8c00;
+}
+
+.summary-rate.deepRed {
+  color: #8b0000;
+}
+
+/* Responsive adjustments */
 @media (max-width: 600px) {
   .summary-grid {
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -103,8 +122,7 @@
   z-index: 2;
 }
 
-/* Base button style */
-/* Base button style - changed to teal-blue */
+/* Buttons */
 .test-summary-button {
   padding: 10px 18px;
   border-radius: 12px;
@@ -118,7 +136,6 @@
   transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
 }
 
-/* Hover effect */
 .test-summary-button:hover {
   background: linear-gradient(135deg, #0e768a, #17a2b8);
   box-shadow: 0 6px 20px rgba(23, 162, 184, 0.7);
@@ -137,3 +154,20 @@
   box-shadow: 0 6px 20px rgba(59, 130, 246, 0.7);
   transform: translateY(-2px);
 }
+
+/* Pass rate text colors */
+.summary-card .good {
+  color: #4cd964;
+  font-weight: normal;
+}
+
+.summary-card .warn {
+  color: orange;
+  font-weight: bold;
+}
+
+.summary-card .bad {
+  color: red;
+  font-weight: bold;
+}
+
