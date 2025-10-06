@@ -216,17 +216,34 @@ function App() {
               })}
 
               {/* --- No SDK Tests --- */}
-              {sidePanelTitle === "No SDK Tests" &&
-                Object.keys(panelData).map((sdk, idx) => (
-                  <div key={idx} style={{ marginBottom: "20px" }}>
-                    <h3 style={{ color: "#00eaff" }}>{sdk}</h3>
-                    <ul>
-                      {panelData[sdk].map((service, i) => (
-                        <li key={i}>{service}</li>
-                      ))}
-                    </ul>
+              {sidePanelTitle === "No SDK Tests" && (() => {
+                // Calculate total number of AWS Services with no tests across all SDKs
+                const totalNoTestServices = Object.values(panelData).reduce(
+                  (sum, arr) => sum + arr.length,
+                  0
+                );
+
+                return (
+                  <div>
+                    {/* Summary sentence */}
+                    <p style={{ marginBottom: "15px", fontWeight: "bold", color: "#ff1a1a" }}>
+                      There are {totalNoTestServices} AWS Services across all SDKs with no tests.
+                    </p>
+
+                    {/* Per-SDK listing */}
+                    {Object.keys(panelData).map((sdk, idx) => (
+                      <div key={idx} style={{ marginBottom: "20px" }}>
+                        <h3 style={{ color: "#00eaff" }}>{sdk}</h3>
+                        <ul>
+                          {panelData[sdk].map((service, i) => (
+                            <li key={i}>{service}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                );
+              })()}
             </div>
           ) : (
             <p>No data available</p>
