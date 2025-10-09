@@ -85,7 +85,7 @@ function TestResultsDashboard({
             ⏳ View Run Rate
           </button>
           <button onClick={onExecuteTests} className="test-summary-button">
-            🚀 Execute SDK Tests
+            🚀 Run SDK Tests
           </button>
           <button onClick={onScheduleTests} className="test-summary-button">
             📅 Schedule Tests
