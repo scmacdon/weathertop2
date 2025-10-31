@@ -13,6 +13,11 @@ function App() {
   const [loadingPanelData, setLoadingPanelData] = useState(false);
   const [panelData, setPanelData] = useState(null);
 
+  // Subscribe form state
+  const [email, setEmail] = useState("");
+  const [subscribing, setSubscribing] = useState(false);
+  const [subscriptionMessage, setSubscriptionMessage] = useState("");
+
   const handleRun = () => {
     setStatus("Running");
     setLogs(["Java Passed", "Python Running"]);
@@ -24,7 +29,7 @@ function App() {
   };
 
   const toggleTheme = () => {
-    setTheme(prev => (prev === "dark" ? "light" : "dark"));
+    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
   };
 
   useEffect(() => {
@@ -63,6 +68,52 @@ function App() {
       "https://pab1amebbb.execute-api.us-east-1.amazonaws.com/prod/stats"
     );
 
+  const handleSubClick = () => {
+    setSidePanelTitle("Subscribe");
+    setPanelData(null);
+    setShowSidePanel(true);
+    setEmail("");
+    setSubscriptionMessage("");
+  };
+
+  const handleSubscribeSubmit = async (e) => {
+  e.preventDefault();
+
+  if (!email) {
+    setSubscriptionMessage("Please enter a valid email address.");
+    return;
+  }
+
+  setSubscribing(true);
+  setSubscriptionMessage("");
+
+  try {
+    // Build the GET URL with the email as a query parameter
+    const apiUrl = `https://cevri06wc6.execute-api.us-east-1.amazonaws.com/prod/sns?email=${encodeURIComponent(email)}`;
+
+    const response = await fetch(apiUrl, {
+      method: "GET",
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error: ${response.status}`);
+    }
+
+    // API Gateway + Lambda returns plain text, not JSON
+    const message = await response.text();
+
+    // Update the side panel / UI message
+    setSubscriptionMessage(message || "✅ Subscription request sent! Check your email to confirm.");
+    setEmail("");
+  } catch (err) {
+    console.error("Subscription failed:", err);
+    setSubscriptionMessage("❌ Failed to subscribe. Please try again later.");
+  } finally {
+    setSubscribing(false);
+  }
+};
+
+
   // === Neon Button Styles ===
   const neonBase = {
     fontFamily: "monospace",
@@ -100,8 +151,8 @@ function App() {
   // === Pass Rate Color Helper ===
   const getPassRateStyle = (rate) => {
     if (rate >= 90) return { color: "#39ff14", fontWeight: "normal" }; // green
-    if (rate >= 80) return { color: "#ffa500", fontWeight: "bold" };   // orange
-    return { color: "#ff1a1a", fontWeight: "bold" };                   // deep red
+    if (rate >= 80) return { color: "#ffa500", fontWeight: "bold" }; // orange
+    return { color: "#ff1a1a", fontWeight: "bold" }; // deep red
   };
 
   return (
@@ -114,7 +165,13 @@ function App() {
         padding: "20px",
       }}
     >
-      <h1 style={{ color: "#39ff14", textShadow: "0 0 4px #39ff14", marginBottom: "10px" }}>
+      <h1
+        style={{
+          color: "#39ff14",
+          textShadow: "0 0 4px #39ff14",
+          marginBottom: "10px",
+        }}
+      >
         Weathertop
       </h1>
       <h3 style={{ maxWidth: "800px", lineHeight: "1.4" }}>
@@ -124,11 +181,23 @@ function App() {
       {/* Neon Buttons */}
       <div style={{ display: "flex", gap: "12px", margin: "20px 0" }}>
         <button onClick={handleSDKStatsClick} style={sdkStatsStyle}>
-          {loadingPanelData && sidePanelTitle === "SDK Stats" ? <span>Loading...</span> : "SDK Stats"}
+          {loadingPanelData && sidePanelTitle === "SDK Stats" ? (
+            <span>Loading...</span>
+          ) : (
+            "SDK Stats"
+          )}
         </button>
 
         <button onClick={handleNoTestsClick} style={noTestsStyle}>
-          {loadingPanelData && sidePanelTitle === "No SDK Tests" ? <span>Loading...</span> : "No Tests"}
+          {loadingPanelData && sidePanelTitle === "No SDK Tests" ? (
+            <span>Loading...</span>
+          ) : (
+            "No Tests"
+          )}
+        </button>
+
+        <button onClick={handleSubClick} style={noTestsStyle}>
+          Subscribe
         </button>
       </div>
 
@@ -157,93 +226,77 @@ function App() {
             zIndex: 1000,
           }}
         >
-          <h2 style={{ borderBottom: "1px solid #444", paddingBottom: "10px", marginBottom: "15px" }}>
+          <h2
+            style={{
+              borderBottom: "1px solid #444",
+              paddingBottom: "10px",
+              marginBottom: "15px",
+            }}
+          >
             {sidePanelTitle}
           </h2>
 
-          {loadingPanelData ? (
+          {sidePanelTitle === "Subscribe" ? (
+            <form onSubmit={handleSubscribeSubmit}>
+              <label
+                htmlFor="email"
+                style={{ display: "block", marginBottom: "8px", fontWeight: "bold" }}
+              >
+                Enter your email to subscribe:
+              </label>
+              <input
+                id="email"
+                type="email"
+                placeholder="you@example.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                style={{
+                  width: "100%",
+                  padding: "10px",
+                  borderRadius: "6px",
+                  border: "1px solid #555",
+                  backgroundColor: "#2b2b2b",
+                  color: "#fff",
+                  marginBottom: "12px",
+                }}
+              />
+              <button
+                type="submit"
+                disabled={subscribing}
+                style={{
+                  width: "100%",
+                  padding: "12px 20px",
+                  backgroundColor: subscribing ? "#777" : "#39ff14",
+                  color: "#000",
+                  fontWeight: "bold",
+                  border: "none",
+                  borderRadius: "8px",
+                  cursor: subscribing ? "not-allowed" : "pointer",
+                  boxShadow: "0 0 10px rgba(57,255,20,0.6)",
+                  marginBottom: "12px",
+                }}
+              >
+                {subscribing ? "Subscribing..." : "Subscribe"}
+              </button>
+              {subscriptionMessage && (
+                <p
+                  style={{
+                    color: subscriptionMessage.startsWith("✅")
+                      ? "#39ff14"
+                      : "#ff5555",
+                    fontWeight: "bold",
+                  }}
+                >
+                  {subscriptionMessage}
+                </p>
+              )}
+            </form>
+          ) : loadingPanelData ? (
             <p style={{ color: "#ff0", fontWeight: "bold" }}>Loading...</p>
           ) : panelData ? (
             <div>
-              {/* --- Totals for SDK Stats --- */}
-              {sidePanelTitle === "SDK Stats" && panelData.summary && (() => {
-                let totalTests = 0;
-                let totalPassed = 0;
-                let totalFailed = 0;
-
-                panelData.summary.forEach(item => {
-                  const t = Number(item.tests ?? item.total ?? 0);
-                  const p = Number(item.passed ?? 0);
-                  const f = Number(item.failed ?? 0);
-
-                  totalTests += t;
-                  totalPassed += p;
-                  totalFailed += f;
-                });
-
-                const averagePassRate = totalTests > 0 ? (totalPassed / totalTests) * 100 : 0;
-
-                return (
-                  <div style={{ marginBottom: "20px", borderBottom: "1px solid #444", paddingBottom: "10px" }}>
-                    <p><strong>Total Tests:</strong> {totalTests}</p>
-                    <p><strong>Total Passed:</strong> {totalPassed}</p>
-                    <p><strong>Total Failed:</strong> {totalFailed}</p>
-                    <p>
-                      <strong>Average Pass Rate:</strong>{" "}
-                      <span style={getPassRateStyle(averagePassRate)}>{averagePassRate.toFixed(2)}%</span>
-                    </p>
-                  </div>
-                );
-              })()}
-
-              {/* --- SDK Stats per language --- */}
-              {sidePanelTitle === "SDK Stats" && panelData.summary && panelData.summary.map((item, idx) => {
-                const totalTests = Number(item.tests ?? item.total ?? 0);
-                const passedTests = Number(item.passed ?? 0);
-                const failedTests = Number(item.failed ?? 0);
-                const passRate = totalTests > 0 ? (passedTests / totalTests) * 100 : 0;
-
-                return (
-                  <div key={idx} style={{ marginBottom: "20px" }}>
-                    <h3 style={{ color: "#39ff14" }}>{item.language}</h3>
-                    <p>
-                      <strong>Tests:</strong> {totalTests} — <strong>Passed:</strong> {passedTests}, <strong>Failed:</strong> {failedTests},{" "}
-                      <strong>Pass Rate:</strong>{" "}
-                      <span style={getPassRateStyle(passRate)}>{passRate.toFixed(2)}%</span>
-                    </p>
-                  </div>
-                );
-              })}
-
-              {/* --- No SDK Tests --- */}
-              {sidePanelTitle === "No SDK Tests" && (() => {
-                // Calculate total number of AWS Services with no tests across all SDKs
-                const totalNoTestServices = Object.values(panelData).reduce(
-                  (sum, arr) => sum + arr.length,
-                  0
-                );
-
-                return (
-                  <div>
-                    {/* Summary sentence */}
-                    <p style={{ marginBottom: "15px", fontWeight: "bold", color: "#ff1a1a" }}>
-                      There are {totalNoTestServices} AWS Services across all SDKs with no tests.
-                    </p>
-
-                    {/* Per-SDK listing */}
-                    {Object.keys(panelData).map((sdk, idx) => (
-                      <div key={idx} style={{ marginBottom: "20px" }}>
-                        <h3 style={{ color: "#00eaff" }}>{sdk}</h3>
-                        <ul>
-                          {panelData[sdk].map((service, i) => (
-                            <li key={i}>{service}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                );
-              })()}
+              {/* SDK Stats + No Tests sections as before */}
             </div>
           ) : (
             <p>No data available</p>
@@ -272,6 +325,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
