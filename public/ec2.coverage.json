@@ -1,0 +1,4734 @@
+{
+  "serviceCode": "ec2",
+  "operations": [
+    {
+      "name": "acceptAddressTransfer",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "acceptCapacityReservationBillingOwnership",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "acceptReservedInstancesExchangeQuote",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "acceptTransitGatewayMulticastDomainAssociations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "acceptTransitGatewayPeeringAttachment",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "acceptTransitGatewayVpcAttachment",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "acceptVpcEndpointConnections",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "acceptVpcPeeringConnection",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "advertiseByoipCidr",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "allocateAddress",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Bash",
+        "C++",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "Python",
+        "Ruby",
+        "Rust",
+        "SAP ABAP",
+        "Swift"
+      ]
+    },
+    {
+      "name": "allocateHosts",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "allocateIpamPoolCidr",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "applySecurityGroupsToClientVpnTargetNetwork",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "assignIpv6Addresses",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "assignPrivateIpAddresses",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "assignPrivateNatGatewayAddress",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "associateAddress",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Bash",
+        "C++",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "Python",
+        "Ruby",
+        "Rust",
+        "SAP ABAP",
+        "Swift"
+      ]
+    },
+    {
+      "name": "associateCapacityReservationBillingOwner",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "associateClientVpnTargetNetwork",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "associateDhcpOptions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "associateEnclaveCertificateIamRole",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "associateIamInstanceProfile",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "associateInstanceEventWindow",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "associateIpamByoasn",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "associateIpamResourceDiscovery",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "associateNatGatewayAddress",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "associateRouteServer",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "associateRouteTable",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "associateSecurityGroupVpc",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "associateSubnetCidrBlock",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "associateTransitGatewayMulticastDomain",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "associateTransitGatewayPolicyTable",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "associateTransitGatewayRouteTable",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "associateTrunkInterface",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "associateVpcCidrBlock",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "attachClassicLinkVpc",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "attachInternetGateway",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "attachNetworkInterface",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "attachVerifiedAccessTrustProvider",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "attachVolume",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "attachVpnGateway",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "authorizeClientVpnIngress",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "authorizeSecurityGroupEgress",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "authorizeSecurityGroupIngress",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Bash",
+        "C++",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "Python",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "bundleInstance",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "cancelBundleTask",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "cancelCapacityReservation",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "cancelCapacityReservationFleets",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "cancelConversionTask",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "cancelDeclarativePoliciesReport",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "cancelExportTask",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "cancelImageLaunchPermission",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "cancelImportTask",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "cancelReservedInstancesListing",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "cancelSpotFleetRequests",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "cancelSpotInstanceRequests",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "confirmProductInstance",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "copyFpgaImage",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "copyImage",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "copySnapshot",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "copyVolumes",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createCapacityManagerDataExport",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createCapacityReservation",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createCapacityReservationBySplitting",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createCapacityReservationFleet",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createCarrierGateway",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createClientVpnEndpoint",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createClientVpnRoute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createCoipCidr",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createCoipPool",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createCustomerGateway",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createDefaultSubnet",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createDefaultVpc",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createDelegateMacVolumeOwnershipTask",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createDhcpOptions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createEgressOnlyInternetGateway",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createFleet",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createFlowLogs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createFpgaImage",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createImage",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createImageUsageReport",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createInstanceConnectEndpoint",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createInstanceEventWindow",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createInstanceExportTask",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createInternetGateway",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createIpam",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createIpamExternalResourceVerificationToken",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createIpamPool",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createIpamPrefixListResolver",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createIpamPrefixListResolverTarget",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createIpamResourceDiscovery",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createIpamScope",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createKeyPair",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Bash",
+        "C++",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "Python",
+        "Ruby",
+        "Rust",
+        "SAP ABAP",
+        "Swift"
+      ]
+    },
+    {
+      "name": "createLaunchTemplate",
+      "found": true,
+      "languages": [
+        ".NET",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "createLaunchTemplateVersion",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createLocalGatewayRoute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createLocalGatewayRouteTable",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createLocalGatewayRouteTableVirtualInterfaceGroupAssociation",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createLocalGatewayRouteTableVpcAssociation",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createLocalGatewayVirtualInterface",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createLocalGatewayVirtualInterfaceGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createMacSystemIntegrityProtectionModificationTask",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createManagedPrefixList",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createNatGateway",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createNetworkAcl",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createNetworkAclEntry",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createNetworkInsightsAccessScope",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createNetworkInsightsPath",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createNetworkInterface",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createNetworkInterfacePermission",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createPlacementGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createPublicIpv4Pool",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createReplaceRootVolumeTask",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createReservedInstancesListing",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createRestoreImageTask",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createRoute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createRouteServer",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createRouteServerEndpoint",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createRouteServerPeer",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createRouteTable",
+      "found": true,
+      "languages": [
+        "Ruby"
+      ]
+    },
+    {
+      "name": "createSecurityGroup",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Bash",
+        "C++",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "Python",
+        "Ruby",
+        "Rust",
+        "SAP ABAP",
+        "Swift"
+      ]
+    },
+    {
+      "name": "createSnapshot",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createSnapshots",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createSpotDatafeedSubscription",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createStoreImageTask",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createSubnet",
+      "found": true,
+      "languages": [
+        "Ruby"
+      ]
+    },
+    {
+      "name": "createSubnetCidrReservation",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createTags",
+      "found": true,
+      "languages": [
+        "C++",
+        "Rust"
+      ]
+    },
+    {
+      "name": "createTrafficMirrorFilter",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createTrafficMirrorFilterRule",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createTrafficMirrorSession",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createTrafficMirrorTarget",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createTransitGateway",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createTransitGatewayConnect",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createTransitGatewayConnectPeer",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createTransitGatewayMulticastDomain",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createTransitGatewayPeeringAttachment",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createTransitGatewayPolicyTable",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createTransitGatewayPrefixListReference",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createTransitGatewayRoute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createTransitGatewayRouteTable",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createTransitGatewayRouteTableAnnouncement",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createTransitGatewayVpcAttachment",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createVerifiedAccessEndpoint",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createVerifiedAccessGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createVerifiedAccessInstance",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createVerifiedAccessTrustProvider",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createVolume",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createVpc",
+      "found": true,
+      "languages": [
+        "PHP",
+        "Python",
+        "Ruby"
+      ]
+    },
+    {
+      "name": "createVpcBlockPublicAccessExclusion",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createVpcEndpoint",
+      "found": true,
+      "languages": [
+        "PHP",
+        "Python"
+      ]
+    },
+    {
+      "name": "createVpcEndpointConnectionNotification",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createVpcEndpointServiceConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createVpcPeeringConnection",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createVpnConnection",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createVpnConnectionRoute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "createVpnGateway",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteCapacityManagerDataExport",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteCarrierGateway",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteClientVpnEndpoint",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteClientVpnRoute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteCoipCidr",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteCoipPool",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteCustomerGateway",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteDhcpOptions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteEgressOnlyInternetGateway",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteFleets",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteFlowLogs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteFpgaImage",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteImageUsageReport",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteInstanceConnectEndpoint",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteInstanceEventWindow",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteInternetGateway",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteIpam",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteIpamExternalResourceVerificationToken",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteIpamPool",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteIpamPrefixListResolver",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteIpamPrefixListResolverTarget",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteIpamResourceDiscovery",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteIpamScope",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteKeyPair",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Bash",
+        "C++",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "Python",
+        "Rust",
+        "SAP ABAP",
+        "Swift"
+      ]
+    },
+    {
+      "name": "deleteLaunchTemplate",
+      "found": true,
+      "languages": [
+        ".NET",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "deleteLaunchTemplateVersions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteLocalGatewayRoute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteLocalGatewayRouteTable",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteLocalGatewayRouteTableVirtualInterfaceGroupAssociation",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteLocalGatewayRouteTableVpcAssociation",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteLocalGatewayVirtualInterface",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteLocalGatewayVirtualInterfaceGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteManagedPrefixList",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteNatGateway",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteNetworkAcl",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteNetworkAclEntry",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteNetworkInsightsAccessScope",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteNetworkInsightsAccessScopeAnalysis",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteNetworkInsightsAnalysis",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteNetworkInsightsPath",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteNetworkInterface",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteNetworkInterfacePermission",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deletePlacementGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deletePublicIpv4Pool",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteQueuedReservedInstances",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteRoute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteRouteServer",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteRouteServerEndpoint",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteRouteServerPeer",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteRouteTable",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteSecurityGroup",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Bash",
+        "C++",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "Python",
+        "Rust",
+        "SAP ABAP",
+        "Swift"
+      ]
+    },
+    {
+      "name": "deleteSnapshot",
+      "found": true,
+      "languages": [
+        "Rust"
+      ]
+    },
+    {
+      "name": "deleteSpotDatafeedSubscription",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteSubnet",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteSubnetCidrReservation",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteTags",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteTrafficMirrorFilter",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteTrafficMirrorFilterRule",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteTrafficMirrorSession",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteTrafficMirrorTarget",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteTransitGateway",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteTransitGatewayConnect",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteTransitGatewayConnectPeer",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteTransitGatewayMulticastDomain",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteTransitGatewayPeeringAttachment",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteTransitGatewayPolicyTable",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteTransitGatewayPrefixListReference",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteTransitGatewayRoute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteTransitGatewayRouteTable",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteTransitGatewayRouteTableAnnouncement",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteTransitGatewayVpcAttachment",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteVerifiedAccessEndpoint",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteVerifiedAccessGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteVerifiedAccessInstance",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteVerifiedAccessTrustProvider",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteVolume",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteVpc",
+      "found": true,
+      "languages": [
+        "PHP",
+        "Python"
+      ]
+    },
+    {
+      "name": "deleteVpcBlockPublicAccessExclusion",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteVpcEndpointConnectionNotifications",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteVpcEndpointServiceConfigurations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteVpcEndpoints",
+      "found": true,
+      "languages": [
+        "PHP",
+        "Python"
+      ]
+    },
+    {
+      "name": "deleteVpcPeeringConnection",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteVpnConnection",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteVpnConnectionRoute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deleteVpnGateway",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deprovisionByoipCidr",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deprovisionIpamByoasn",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deprovisionIpamPoolCidr",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deprovisionPublicIpv4PoolCidr",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deregisterImage",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deregisterInstanceEventNotificationAttributes",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deregisterTransitGatewayMulticastGroupMembers",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "deregisterTransitGatewayMulticastGroupSources",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeAccountAttributes",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeAddressTransfers",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeAddressTransfersPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeAddresses",
+      "found": true,
+      "languages": [
+        "C++",
+        "JavaScript",
+        "SAP ABAP"
+      ]
+    },
+    {
+      "name": "describeAddressesAttribute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeAddressesAttributePaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeAggregateIdFormat",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeAvailabilityZones",
+      "found": true,
+      "languages": [
+        ".NET",
+        "C++",
+        "Python",
+        "SAP ABAP"
+      ]
+    },
+    {
+      "name": "describeAwsNetworkPerformanceMetricSubscriptions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeAwsNetworkPerformanceMetricSubscriptionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeBundleTasks",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeByoipCidrs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeByoipCidrsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeCapacityBlockExtensionHistory",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeCapacityBlockExtensionHistoryPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeCapacityBlockExtensionOfferings",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeCapacityBlockExtensionOfferingsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeCapacityBlockOfferings",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeCapacityBlockOfferingsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeCapacityBlockStatus",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeCapacityBlockStatusPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeCapacityBlocks",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeCapacityBlocksPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeCapacityManagerDataExports",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeCapacityManagerDataExportsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeCapacityReservationBillingRequests",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeCapacityReservationBillingRequestsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeCapacityReservationFleets",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeCapacityReservationFleetsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeCapacityReservationTopology",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeCapacityReservations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeCapacityReservationsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeCarrierGateways",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeCarrierGatewaysPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeClassicLinkInstances",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeClassicLinkInstancesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeClientVpnAuthorizationRules",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeClientVpnAuthorizationRulesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeClientVpnConnections",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeClientVpnConnectionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeClientVpnEndpoints",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeClientVpnEndpointsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeClientVpnRoutes",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeClientVpnRoutesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeClientVpnTargetNetworks",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeClientVpnTargetNetworksPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeCoipPools",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeCoipPoolsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeConversionTasks",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeCustomerGateways",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeDeclarativePoliciesReports",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeDhcpOptions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeDhcpOptionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeEgressOnlyInternetGateways",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeEgressOnlyInternetGatewaysPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeElasticGpus",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeExportImageTasks",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeExportImageTasksPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeExportTasks",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeFastLaunchImages",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeFastLaunchImagesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeFastSnapshotRestores",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeFastSnapshotRestoresPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeFleetHistory",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeFleetInstances",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeFleets",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeFleetsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeFlowLogs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeFlowLogsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeFpgaImageAttribute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeFpgaImages",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeFpgaImagesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeHostReservationOfferings",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeHostReservationOfferingsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeHostReservations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeHostReservationsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeHosts",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeHostsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeIamInstanceProfileAssociations",
+      "found": true,
+      "languages": [
+        ".NET",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "describeIamInstanceProfileAssociationsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeIdFormat",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeIdentityIdFormat",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeImageAttribute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeImageReferences",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeImageReferencesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeImageUsageReportEntries",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeImageUsageReportEntriesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeImageUsageReports",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeImageUsageReportsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeImages",
+      "found": true,
+      "languages": [
+        "Bash",
+        "JavaScript",
+        "Python",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "describeImagesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeImportImageTasks",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeImportImageTasksPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeImportSnapshotTasks",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeImportSnapshotTasksPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeInstanceAttribute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeInstanceConnectEndpoints",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeInstanceConnectEndpointsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeInstanceCreditSpecifications",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeInstanceCreditSpecificationsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeInstanceEventNotificationAttributes",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeInstanceEventWindows",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeInstanceEventWindowsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeInstanceImageMetadata",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeInstanceImageMetadataPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeInstanceSqlHaHistoryStates",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeInstanceSqlHaStates",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeInstanceStatus",
+      "found": true,
+      "languages": [
+        "Rust"
+      ]
+    },
+    {
+      "name": "describeInstanceStatusPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeInstanceTopology",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeInstanceTopologyPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeInstanceTypeOfferings",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeInstanceTypeOfferingsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeInstanceTypes",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Bash",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "Python",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "describeInstanceTypesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeInstances",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Bash",
+        "C++",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "Python",
+        "Ruby",
+        "Rust",
+        "SAP ABAP"
+      ]
+    },
+    {
+      "name": "describeInstancesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeInternetGateways",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeInternetGatewaysPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeIpamByoasn",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeIpamExternalResourceVerificationTokens",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeIpamPools",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeIpamPoolsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeIpamPrefixListResolverTargets",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeIpamPrefixListResolverTargetsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeIpamPrefixListResolvers",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeIpamPrefixListResolversPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeIpamResourceDiscoveries",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeIpamResourceDiscoveriesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeIpamResourceDiscoveryAssociations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeIpamResourceDiscoveryAssociationsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeIpamScopes",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeIpamScopesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeIpams",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeIpamsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeIpv6Pools",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeIpv6PoolsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeKeyPairs",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Bash",
+        "C++",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "Python",
+        "Rust",
+        "SAP ABAP",
+        "Swift"
+      ]
+    },
+    {
+      "name": "describeLaunchTemplateVersions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeLaunchTemplateVersionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeLaunchTemplates",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeLaunchTemplatesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeLocalGatewayRouteTableVirtualInterfaceGroupAssociations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeLocalGatewayRouteTableVpcAssociations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeLocalGatewayRouteTableVpcAssociationsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeLocalGatewayRouteTables",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeLocalGatewayRouteTablesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeLocalGatewayVirtualInterfaceGroups",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeLocalGatewayVirtualInterfaceGroupsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeLocalGatewayVirtualInterfaces",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeLocalGatewayVirtualInterfacesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeLocalGateways",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeLocalGatewaysPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeLockedSnapshots",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeMacHosts",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeMacHostsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeMacModificationTasks",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeMacModificationTasksPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeManagedPrefixLists",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeManagedPrefixListsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeMovingAddresses",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeMovingAddressesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeNatGateways",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeNatGatewaysPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeNetworkAcls",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeNetworkAclsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeNetworkInsightsAccessScopeAnalyses",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeNetworkInsightsAccessScopeAnalysesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeNetworkInsightsAccessScopes",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeNetworkInsightsAccessScopesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeNetworkInsightsAnalyses",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeNetworkInsightsAnalysesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeNetworkInsightsPaths",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeNetworkInsightsPathsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeNetworkInterfaceAttribute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeNetworkInterfacePermissions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeNetworkInterfacePermissionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeNetworkInterfaces",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeNetworkInterfacesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeOutpostLags",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describePlacementGroups",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describePrefixLists",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describePrefixListsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describePrincipalIdFormat",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describePrincipalIdFormatPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describePublicIpv4Pools",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describePublicIpv4PoolsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeRegions",
+      "found": true,
+      "languages": [
+        "C++",
+        "JavaScript",
+        "Ruby",
+        "Rust",
+        "SAP ABAP"
+      ]
+    },
+    {
+      "name": "describeReplaceRootVolumeTasks",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeReplaceRootVolumeTasksPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeReservedInstances",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeReservedInstancesListings",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeReservedInstancesModifications",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeReservedInstancesModificationsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeReservedInstancesOfferings",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeReservedInstancesOfferingsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeRouteServerEndpoints",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeRouteServerEndpointsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeRouteServerPeers",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeRouteServerPeersPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeRouteServers",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeRouteServersPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeRouteTables",
+      "found": true,
+      "languages": [
+        "PHP",
+        "Python"
+      ]
+    },
+    {
+      "name": "describeRouteTablesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeScheduledInstanceAvailability",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeScheduledInstanceAvailabilityPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeScheduledInstances",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeScheduledInstancesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeSecurityGroupReferences",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeSecurityGroupRules",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeSecurityGroupRulesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeSecurityGroupVpcAssociations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeSecurityGroupVpcAssociationsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeSecurityGroups",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Bash",
+        "C++",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "Python",
+        "Rust",
+        "SAP ABAP",
+        "Swift"
+      ]
+    },
+    {
+      "name": "describeSecurityGroupsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeServiceLinkVirtualInterfaces",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeSnapshotAttribute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeSnapshotTierStatus",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeSnapshotTierStatusPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeSnapshots",
+      "found": true,
+      "languages": [
+        "Rust"
+      ]
+    },
+    {
+      "name": "describeSnapshotsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeSpotDatafeedSubscription",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeSpotFleetInstances",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeSpotFleetRequestHistory",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeSpotFleetRequests",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeSpotFleetRequestsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeSpotInstanceRequests",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeSpotInstanceRequestsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeSpotPriceHistory",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeSpotPriceHistoryPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeStaleSecurityGroups",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeStaleSecurityGroupsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeStoreImageTasks",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeStoreImageTasksPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeSubnets",
+      "found": true,
+      "languages": [
+        ".NET",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "describeSubnetsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeTags",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeTagsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeTrafficMirrorFilterRules",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeTrafficMirrorFilters",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeTrafficMirrorFiltersPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeTrafficMirrorSessions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeTrafficMirrorSessionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeTrafficMirrorTargets",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeTrafficMirrorTargetsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeTransitGatewayAttachments",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeTransitGatewayAttachmentsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeTransitGatewayConnectPeers",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeTransitGatewayConnectPeersPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeTransitGatewayConnects",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeTransitGatewayConnectsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeTransitGatewayMulticastDomains",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeTransitGatewayMulticastDomainsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeTransitGatewayPeeringAttachments",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeTransitGatewayPeeringAttachmentsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeTransitGatewayPolicyTables",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeTransitGatewayPolicyTablesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeTransitGatewayRouteTableAnnouncements",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeTransitGatewayRouteTableAnnouncementsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeTransitGatewayRouteTables",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeTransitGatewayRouteTablesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeTransitGatewayVpcAttachments",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeTransitGatewayVpcAttachmentsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeTransitGateways",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeTransitGatewaysPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeTrunkInterfaceAssociations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeTrunkInterfaceAssociationsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVerifiedAccessEndpoints",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVerifiedAccessEndpointsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVerifiedAccessGroups",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVerifiedAccessGroupsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVerifiedAccessInstanceLoggingConfigurations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVerifiedAccessInstanceLoggingConfigurationsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVerifiedAccessInstances",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVerifiedAccessInstancesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVerifiedAccessTrustProviders",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVerifiedAccessTrustProvidersPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVolumeAttribute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVolumeStatus",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVolumeStatusPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVolumes",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVolumesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVolumesModifications",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVolumesModificationsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVpcAttribute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVpcBlockPublicAccessExclusions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVpcBlockPublicAccessOptions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVpcClassicLink",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVpcClassicLinkDnsSupport",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVpcClassicLinkDnsSupportPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVpcEndpointAssociations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVpcEndpointConnectionNotifications",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVpcEndpointConnectionNotificationsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVpcEndpointConnections",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVpcEndpointConnectionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVpcEndpointServiceConfigurations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVpcEndpointServiceConfigurationsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVpcEndpointServicePermissions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVpcEndpointServicePermissionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVpcEndpointServices",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVpcEndpoints",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVpcEndpointsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVpcPeeringConnections",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVpcPeeringConnectionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVpcs",
+      "found": true,
+      "languages": [
+        ".NET",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "describeVpcsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVpnConnections",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "describeVpnGateways",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "detachClassicLinkVpc",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "detachInternetGateway",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "detachNetworkInterface",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "detachVerifiedAccessTrustProvider",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "detachVolume",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "detachVpnGateway",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disableAddressTransfer",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disableAllowedImagesSettings",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disableAwsNetworkPerformanceMetricSubscription",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disableCapacityManager",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disableEbsEncryptionByDefault",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disableFastLaunch",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disableFastSnapshotRestores",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disableImage",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disableImageBlockPublicAccess",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disableImageDeprecation",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disableImageDeregistrationProtection",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disableInstanceSqlHaStandbyDetections",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disableIpamOrganizationAdminAccount",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disableRouteServerPropagation",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disableSerialConsoleAccess",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disableSnapshotBlockPublicAccess",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disableTransitGatewayRouteTablePropagation",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disableVgwRoutePropagation",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disableVpcClassicLink",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disableVpcClassicLinkDnsSupport",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disassociateAddress",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Bash",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "Python",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "disassociateCapacityReservationBillingOwner",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disassociateClientVpnTargetNetwork",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disassociateEnclaveCertificateIamRole",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disassociateIamInstanceProfile",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disassociateInstanceEventWindow",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disassociateIpamByoasn",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disassociateIpamResourceDiscovery",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disassociateNatGatewayAddress",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disassociateRouteServer",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disassociateRouteTable",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disassociateSecurityGroupVpc",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disassociateSubnetCidrBlock",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disassociateTransitGatewayMulticastDomain",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disassociateTransitGatewayPolicyTable",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disassociateTransitGatewayRouteTable",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disassociateTrunkInterface",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "disassociateVpcCidrBlock",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "enableAddressTransfer",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "enableAllowedImagesSettings",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "enableAwsNetworkPerformanceMetricSubscription",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "enableCapacityManager",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "enableEbsEncryptionByDefault",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "enableFastLaunch",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "enableFastSnapshotRestores",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "enableImage",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "enableImageBlockPublicAccess",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "enableImageDeprecation",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "enableImageDeregistrationProtection",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "enableInstanceSqlHaStandbyDetections",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "enableIpamOrganizationAdminAccount",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "enableReachabilityAnalyzerOrganizationSharing",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "enableRouteServerPropagation",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "enableSerialConsoleAccess",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "enableSnapshotBlockPublicAccess",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "enableTransitGatewayRouteTablePropagation",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "enableVgwRoutePropagation",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "enableVolumeIO",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "enableVpcClassicLink",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "enableVpcClassicLinkDnsSupport",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "exportClientVpnClientCertificateRevocationList",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "exportClientVpnClientConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "exportImage",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "exportTransitGatewayRoutes",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "exportVerifiedAccessInstanceClientConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getActiveVpnTunnelStatus",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getAllowedImagesSettings",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getAssociatedEnclaveCertificateIamRoles",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getAssociatedIpv6PoolCidrs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getAssociatedIpv6PoolCidrsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getAwsNetworkPerformanceData",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getAwsNetworkPerformanceDataPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getCapacityManagerAttributes",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getCapacityManagerMetricData",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getCapacityManagerMetricDataPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getCapacityManagerMetricDimensions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getCapacityManagerMetricDimensionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getCapacityReservationUsage",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getCoipPoolUsage",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getConsoleOutput",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getConsoleScreenshot",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getDeclarativePoliciesReportSummary",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getDefaultCreditSpecification",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getEbsDefaultKmsKeyId",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getEbsEncryptionByDefault",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getFlowLogsIntegrationTemplate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getGroupsForCapacityReservation",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getGroupsForCapacityReservationPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getHostReservationPurchasePreview",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getImageAncestry",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getImageBlockPublicAccessState",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getInstanceMetadataDefaults",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getInstanceTpmEkPub",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getInstanceTypesFromInstanceRequirements",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getInstanceTypesFromInstanceRequirementsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getInstanceUefiData",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getIpamAddressHistory",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getIpamAddressHistoryPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getIpamDiscoveredAccounts",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getIpamDiscoveredAccountsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getIpamDiscoveredPublicAddresses",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getIpamDiscoveredResourceCidrs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getIpamDiscoveredResourceCidrsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getIpamPoolAllocations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getIpamPoolAllocationsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getIpamPoolCidrs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getIpamPoolCidrsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getIpamPrefixListResolverRules",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getIpamPrefixListResolverRulesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getIpamPrefixListResolverVersionEntries",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getIpamPrefixListResolverVersionEntriesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getIpamPrefixListResolverVersions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getIpamPrefixListResolverVersionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getIpamResourceCidrs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getIpamResourceCidrsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getLaunchTemplateData",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getManagedPrefixListAssociations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getManagedPrefixListAssociationsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getManagedPrefixListEntries",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getManagedPrefixListEntriesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getNetworkInsightsAccessScopeAnalysisFindings",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getNetworkInsightsAccessScopeAnalysisFindingsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getNetworkInsightsAccessScopeContent",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getPasswordData",
+      "found": true,
+      "languages": [
+        "Java"
+      ]
+    },
+    {
+      "name": "getReservedInstancesExchangeQuote",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getRouteServerAssociations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getRouteServerPropagations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getRouteServerRoutingDatabase",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getSecurityGroupsForVpc",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getSecurityGroupsForVpcPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getSerialConsoleAccessStatus",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getSnapshotBlockPublicAccessState",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getSpotPlacementScores",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getSpotPlacementScoresPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getSubnetCidrReservations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getTransitGatewayAttachmentPropagations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getTransitGatewayAttachmentPropagationsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getTransitGatewayMulticastDomainAssociations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getTransitGatewayMulticastDomainAssociationsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getTransitGatewayPolicyTableAssociations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getTransitGatewayPolicyTableAssociationsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getTransitGatewayPolicyTableEntries",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getTransitGatewayPrefixListReferences",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getTransitGatewayPrefixListReferencesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getTransitGatewayRouteTableAssociations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getTransitGatewayRouteTableAssociationsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getTransitGatewayRouteTablePropagations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getTransitGatewayRouteTablePropagationsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getVerifiedAccessEndpointPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getVerifiedAccessEndpointTargets",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getVerifiedAccessGroupPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getVpnConnectionDeviceSampleConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getVpnConnectionDeviceTypes",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getVpnConnectionDeviceTypesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "getVpnTunnelReplacementStatus",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "importClientVpnClientCertificateRevocationList",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "importImage",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "importInstance",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "importKeyPair",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "importSnapshot",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "importVolume",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "listImagesInRecycleBin",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "listImagesInRecycleBinPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "listSnapshotsInRecycleBin",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "listSnapshotsInRecycleBinPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "lockSnapshot",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyAddressAttribute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyAvailabilityZoneGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyCapacityReservation",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyCapacityReservationFleet",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyClientVpnEndpoint",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyDefaultCreditSpecification",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyEbsDefaultKmsKeyId",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyFleet",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyFpgaImageAttribute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyHosts",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyIdFormat",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyIdentityIdFormat",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyImageAttribute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyInstanceAttribute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyInstanceCapacityReservationAttributes",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyInstanceConnectEndpoint",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyInstanceCpuOptions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyInstanceCreditSpecification",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyInstanceEventStartTime",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyInstanceEventWindow",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyInstanceMaintenanceOptions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyInstanceMetadataDefaults",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyInstanceMetadataOptions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyInstanceNetworkPerformanceOptions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyInstancePlacement",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyIpam",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyIpamPool",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyIpamPrefixListResolver",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyIpamPrefixListResolverTarget",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyIpamResourceCidr",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyIpamResourceDiscovery",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyIpamScope",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyLaunchTemplate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyLocalGatewayRoute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyManagedPrefixList",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyNetworkInterfaceAttribute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyPrivateDnsNameOptions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyPublicIpDnsNameOptions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyReservedInstances",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyRouteServer",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifySecurityGroupRules",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifySnapshotAttribute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifySnapshotTier",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifySpotFleetRequest",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifySubnetAttribute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyTrafficMirrorFilterNetworkServices",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyTrafficMirrorFilterRule",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyTrafficMirrorSession",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyTransitGateway",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyTransitGatewayPrefixListReference",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyTransitGatewayVpcAttachment",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyVerifiedAccessEndpoint",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyVerifiedAccessEndpointPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyVerifiedAccessGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyVerifiedAccessGroupPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyVerifiedAccessInstance",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyVerifiedAccessInstanceLoggingConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyVerifiedAccessTrustProvider",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyVolume",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyVolumeAttribute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyVpcAttribute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyVpcBlockPublicAccessExclusion",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyVpcBlockPublicAccessOptions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyVpcEndpoint",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyVpcEndpointConnectionNotification",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyVpcEndpointServiceConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyVpcEndpointServicePayerResponsibility",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyVpcEndpointServicePermissions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyVpcPeeringConnectionOptions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyVpcTenancy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyVpnConnection",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyVpnConnectionOptions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyVpnTunnelCertificate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "modifyVpnTunnelOptions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "monitorInstances",
+      "found": true,
+      "languages": [
+        "C++",
+        "JavaScript",
+        "SAP ABAP"
+      ]
+    },
+    {
+      "name": "moveAddressToVpc",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "moveByoipCidrToIpam",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "moveCapacityReservationInstances",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "provisionByoipCidr",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "provisionIpamByoasn",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "provisionIpamPoolCidr",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "provisionPublicIpv4PoolCidr",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "purchaseCapacityBlock",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "purchaseCapacityBlockExtension",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "purchaseHostReservation",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "purchaseReservedInstancesOffering",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "purchaseScheduledInstances",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "rebootInstances",
+      "found": true,
+      "languages": [
+        ".NET",
+        "C++",
+        "JavaScript",
+        "Python",
+        "Rust",
+        "SAP ABAP"
+      ]
+    },
+    {
+      "name": "registerImage",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "registerInstanceEventNotificationAttributes",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "registerTransitGatewayMulticastGroupMembers",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "registerTransitGatewayMulticastGroupSources",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "rejectCapacityReservationBillingOwnership",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "rejectTransitGatewayMulticastDomainAssociations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "rejectTransitGatewayPeeringAttachment",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "rejectTransitGatewayVpcAttachment",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "rejectVpcEndpointConnections",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "rejectVpcPeeringConnection",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "releaseAddress",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Bash",
+        "C++",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "Python",
+        "Ruby",
+        "Rust",
+        "SAP ABAP",
+        "Swift"
+      ]
+    },
+    {
+      "name": "releaseHosts",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "releaseIpamPoolAllocation",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "replaceIamInstanceProfileAssociation",
+      "found": true,
+      "languages": [
+        ".NET",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "replaceImageCriteriaInAllowedImagesSettings",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "replaceNetworkAclAssociation",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "replaceNetworkAclEntry",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "replaceRoute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "replaceRouteTableAssociation",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "replaceTransitGatewayRoute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "replaceVpnTunnel",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "reportInstanceStatus",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "requestSpotFleet",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "requestSpotInstances",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "resetAddressAttribute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "resetEbsDefaultKmsKeyId",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "resetFpgaImageAttribute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "resetImageAttribute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "resetInstanceAttribute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "resetNetworkInterfaceAttribute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "resetSnapshotAttribute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "restoreAddressToClassic",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "restoreImageFromRecycleBin",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "restoreManagedPrefixListVersion",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "restoreSnapshotFromRecycleBin",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "restoreSnapshotTier",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "revokeClientVpnIngress",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "revokeSecurityGroupEgress",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "revokeSecurityGroupIngress",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "runInstances",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Bash",
+        "C++",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "Python",
+        "Rust",
+        "SAP ABAP",
+        "Swift"
+      ]
+    },
+    {
+      "name": "runScheduledInstances",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "searchLocalGatewayRoutes",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "searchLocalGatewayRoutesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "searchTransitGatewayMulticastGroups",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "searchTransitGatewayMulticastGroupsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "searchTransitGatewayRoutes",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "sendDiagnosticInterrupt",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "startDeclarativePoliciesReport",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "startInstances",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Bash",
+        "C++",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "Python",
+        "Ruby",
+        "Rust",
+        "SAP ABAP",
+        "Swift"
+      ]
+    },
+    {
+      "name": "startNetworkInsightsAccessScopeAnalysis",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "startNetworkInsightsAnalysis",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "startVpcEndpointServicePrivateDnsVerification",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "stopInstances",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Bash",
+        "C++",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "Python",
+        "Ruby",
+        "Rust",
+        "SAP ABAP",
+        "Swift"
+      ]
+    },
+    {
+      "name": "terminateClientVpnConnections",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "terminateInstances",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Bash",
+        "C++",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "Python",
+        "Ruby",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "unassignIpv6Addresses",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "unassignPrivateIpAddresses",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "unassignPrivateNatGatewayAddress",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "unlockSnapshot",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "unmonitorInstances",
+      "found": true,
+      "languages": [
+        "C++",
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "updateCapacityManagerOrganizationsAccess",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "updateSecurityGroupRuleDescriptionsEgress",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "updateSecurityGroupRuleDescriptionsIngress",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "withdrawByoipCidr",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "waiter",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "create",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "builder",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "serviceMetadata",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "serviceClientConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Provide feedback",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "",
+      "found": false,
+      "languages": []
+    }
+  ]
+}

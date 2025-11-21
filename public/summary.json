@@ -1,0 +1,103 @@
+{
+  "services": [
+    {
+      "serviceCode": "acm",
+      "serviceName": "Amazon ACM",
+      "methodCount": 21,
+      "foundCount": 13,
+      "coveragePercent": 61.9
+    },
+    {
+      "serviceCode": "dynamodb",
+      "serviceName": "Amazon DYNAMODB",
+      "methodCount": 71,
+      "foundCount": 15,
+      "coveragePercent": 21.1
+    },
+    {
+      "serviceCode": "ec2",
+      "serviceName": "Amazon EC2",
+      "methodCount": 890,
+      "foundCount": 42,
+      "coveragePercent": 4.7
+    },
+    {
+      "serviceCode": "s3",
+      "serviceName": "Amazon S3",
+      "methodCount": 119,
+      "foundCount": 51,
+      "coveragePercent": 42.9
+    },
+    {
+      "serviceCode": "sns",
+      "serviceName": "Amazon SNS",
+      "methodCount": 56,
+      "foundCount": 17,
+      "coveragePercent": 30.4
+    },
+    {
+  "serviceCode": "sqs",
+  "serviceName": "Amazon SQS",
+  "methodCount": 36,
+  "foundCount": 14,
+  "coveragePercent": 38.9
+  },
+  {
+  "serviceCode": "rekognition",
+  "serviceName": "Amazon Rekognition",
+  "methodCount": 97,
+  "foundCount": 17,
+  "coveragePercent": 17.5
+  },
+  {
+  "serviceCode": "sagemaker",
+  "serviceName": "Amazon SageMaker",
+  "methodCount": 324,
+  "foundCount": 16,
+  "coveragePercent": 4.94
+},
+{
+  "serviceCode": "kms",
+  "serviceName": "AWS Key Management Service",
+  "methodCount": 40,
+  "foundCount": 21,
+  "coveragePercent": 52.5
+},
+
+{
+  "serviceCode": "comprehend",
+  "serviceName": "Amazon Comprehend",
+  "methodCount": 59,
+  "foundCount": 15,
+  "coveragePercent": 25.42
+}, 
+
+ {
+  "serviceCode": "iam",
+  "serviceName": "AWS Identity and Access Management",
+  "methodCount": 149,
+  "foundCount": 43,
+  "coveragePercent": 28.86
+},
+{
+  "serviceCode": "ecs",
+  "serviceName": "Amazon Elastic Container Service",
+  "methodCount": 51,
+  "foundCount": 9,
+  "coveragePercent": 17.65
+},
+{
+  "serviceCode": "cloudwatch",
+  "serviceName": "Amazon CloudWatch",
+  "methodCount": 42,
+  "foundCount": 19,
+  "coveragePercent": 45.24
+}
+
+
+
+
+
+
+  ]
+}

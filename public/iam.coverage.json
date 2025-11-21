@@ -1,0 +1,1415 @@
+{
+  "serviceCode": "iam",
+  "operations": [
+    {
+      "name": "AcceptDelegationRequest",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "AddClientIDToOpenIDConnectProvider",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "AddRoleToInstanceProfile",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "AddUserToGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "AssociateDelegationRequest",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "AttachGroupPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "AttachRolePolicy",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Bash",
+        "C++",
+        "Go",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "AttachUserPolicy",
+      "found": true,
+      "languages": [
+        "Python",
+        "Ruby",
+        "Rust"
+      ]
+    },
+    {
+      "name": "ChangePassword",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateAccessKey",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Bash",
+        "C++",
+        "Go",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "Python",
+        "Ruby",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "CreateAccountAlias",
+      "found": true,
+      "languages": [
+        "C++",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "Python",
+        "Ruby"
+      ]
+    },
+    {
+      "name": "CreateDelegationRequest",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateGroup",
+      "found": true,
+      "languages": [
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "CreateInstanceProfile",
+      "found": true,
+      "languages": [
+        ".NET",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "CreateLoginProfile",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateOpenIDConnectProvider",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreatePolicy",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Bash",
+        "C++",
+        "Go",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "CreatePolicyVersion",
+      "found": true,
+      "languages": [
+        "Python"
+      ]
+    },
+    {
+      "name": "CreateRole",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Bash",
+        "C++",
+        "Go",
+        "Java",
+        "JavaScript",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "CreateSAMLProvider",
+      "found": true,
+      "languages": [
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "CreateServiceLinkedRole",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Go",
+        "JavaScript",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "CreateServiceSpecificCredential",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateUser",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Bash",
+        "C++",
+        "Go",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "CreateVirtualMFADevice",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeactivateMFADevice",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteAccessKey",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Bash",
+        "C++",
+        "Go",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "Python",
+        "Ruby",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "DeleteAccountAlias",
+      "found": true,
+      "languages": [
+        "C++",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "Python",
+        "Ruby"
+      ]
+    },
+    {
+      "name": "DeleteAccountPasswordPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteGroup",
+      "found": true,
+      "languages": [
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "DeleteGroupPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteInstanceProfile",
+      "found": true,
+      "languages": [
+        ".NET",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "DeleteLoginProfile",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteOpenIDConnectProvider",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeletePolicy",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Bash",
+        "C++",
+        "Go",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "Python",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "DeletePolicyVersion",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteRole",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Bash",
+        "Go",
+        "JavaScript",
+        "Python",
+        "Ruby",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "DeleteRolePermissionsBoundary",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteRolePolicy",
+      "found": true,
+      "languages": [
+        ".NET",
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "DeleteSAMLProvider",
+      "found": true,
+      "languages": [
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "DeleteSSHPublicKey",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteServerCertificate",
+      "found": true,
+      "languages": [
+        "C++",
+        "JavaScript",
+        "Ruby"
+      ]
+    },
+    {
+      "name": "DeleteServiceLinkedRole",
+      "found": true,
+      "languages": [
+        "Go",
+        "JavaScript",
+        "Ruby",
+        "Rust"
+      ]
+    },
+    {
+      "name": "DeleteServiceSpecificCredential",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteSigningCertificate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteUser",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Bash",
+        "C++",
+        "Go",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "Python",
+        "Ruby",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "DeleteUserPermissionsBoundary",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteUserPolicy",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Go",
+        "Ruby",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "DeleteVirtualMFADevice",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DetachGroupPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DetachRolePolicy",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Bash",
+        "C++",
+        "Go",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "Python",
+        "Ruby",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "DetachUserPolicy",
+      "found": true,
+      "languages": [
+        "Python",
+        "Ruby",
+        "Rust"
+      ]
+    },
+    {
+      "name": "DisableOrganizationsRootCredentialsManagement",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DisableOrganizationsRootSessions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "EnableMFADevice",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "EnableOrganizationsRootCredentialsManagement",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "EnableOrganizationsRootSessions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GenerateCredentialReport",
+      "found": true,
+      "languages": [
+        "Python"
+      ]
+    },
+    {
+      "name": "GenerateOrganizationsAccessReport",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GenerateServiceLastAccessedDetails",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetAccessKeyLastUsed",
+      "found": true,
+      "languages": [
+        "C++",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "GetAccountAuthorizationDetails",
+      "found": true,
+      "languages": [
+        "Python"
+      ]
+    },
+    {
+      "name": "GetAccountAuthorizationDetailsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetAccountPasswordPolicy",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Go",
+        "JavaScript",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Rust"
+      ]
+    },
+    {
+      "name": "GetAccountSummary",
+      "found": true,
+      "languages": [
+        "Python"
+      ]
+    },
+    {
+      "name": "GetContextKeysForCustomPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetContextKeysForPrincipalPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetCredentialReport",
+      "found": true,
+      "languages": [
+        "Python"
+      ]
+    },
+    {
+      "name": "GetDelegationRequest",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetGroupPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetGroupPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetHumanReadableSummary",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetInstanceProfile",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetLoginProfile",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetMFADevice",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetOpenIDConnectProvider",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetOrganizationsAccessReport",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetPolicy",
+      "found": true,
+      "languages": [
+        ".NET",
+        "C++",
+        "Go",
+        "JavaScript",
+        "Kotlin",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Swift"
+      ]
+    },
+    {
+      "name": "GetPolicyVersion",
+      "found": true,
+      "languages": [
+        "Python"
+      ]
+    },
+    {
+      "name": "GetRole",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Go",
+        "JavaScript",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "GetRolePolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetSAMLProvider",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetSSHPublicKey",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetServerCertificate",
+      "found": true,
+      "languages": [
+        "C++",
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "GetServiceLastAccessedDetails",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetServiceLastAccessedDetailsWithEntities",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetServiceLinkedRoleDeletionStatus",
+      "found": true,
+      "languages": [
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "GetUser",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Bash",
+        "Go",
+        "Ruby",
+        "Swift"
+      ]
+    },
+    {
+      "name": "GetUserPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAccessKeys",
+      "found": true,
+      "languages": [
+        "Bash",
+        "C++",
+        "Go",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "Python",
+        "Ruby"
+      ]
+    },
+    {
+      "name": "ListAccessKeysPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAccountAliases",
+      "found": true,
+      "languages": [
+        "C++",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "Python",
+        "Ruby"
+      ]
+    },
+    {
+      "name": "ListAccountAliasesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAttachedGroupPolicies",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAttachedGroupPoliciesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAttachedRolePolicies",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Go",
+        "JavaScript",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "ListAttachedRolePoliciesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAttachedUserPolicies",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAttachedUserPoliciesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDelegationRequests",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListEntitiesForPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListEntitiesForPolicyPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListGroupPolicies",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListGroupPoliciesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListGroups",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Go",
+        "JavaScript",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "ListGroupsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListGroupsForUser",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListGroupsForUserPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListInstanceProfileTags",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListInstanceProfileTagsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListInstanceProfiles",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListInstanceProfilesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListInstanceProfilesForRole",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListInstanceProfilesForRolePaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListMFADeviceTags",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListMFADeviceTagsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListMFADevices",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListMFADevicesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListOpenIDConnectProviderTags",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListOpenIDConnectProviderTagsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListOpenIDConnectProviders",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListOrganizationsFeatures",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPolicies",
+      "found": true,
+      "languages": [
+        ".NET",
+        "C++",
+        "Go",
+        "JavaScript",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "ListPoliciesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPoliciesGrantingServiceAccess",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPolicyTags",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPolicyTagsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPolicyVersions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPolicyVersionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListRolePolicies",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Go",
+        "JavaScript",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "ListRolePoliciesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListRoleTags",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListRoleTagsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListRoles",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Go",
+        "JavaScript",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "ListRolesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListSAMLProviderTags",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListSAMLProviderTagsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListSAMLProviders",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Go",
+        "JavaScript",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Rust"
+      ]
+    },
+    {
+      "name": "ListSSHPublicKeys",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListSSHPublicKeysPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListServerCertificateTags",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListServerCertificateTagsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListServerCertificates",
+      "found": true,
+      "languages": [
+        "C++",
+        "JavaScript",
+        "Ruby"
+      ]
+    },
+    {
+      "name": "ListServerCertificatesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListServiceSpecificCredentials",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListSigningCertificates",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListSigningCertificatesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListUserPolicies",
+      "found": true,
+      "languages": [
+        "Go"
+      ]
+    },
+    {
+      "name": "ListUserPoliciesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListUserTags",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListUserTagsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListUsers",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Bash",
+        "C++",
+        "Go",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "ListUsersPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListVirtualMFADevices",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListVirtualMFADevicesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "PutGroupPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "PutRolePermissionsBoundary",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "PutRolePolicy",
+      "found": true,
+      "languages": [
+        ".NET",
+        "C++",
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "PutUserPermissionsBoundary",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "PutUserPolicy",
+      "found": true,
+      "languages": [
+        "Go",
+        "Ruby",
+        "Swift"
+      ]
+    },
+    {
+      "name": "RejectDelegationRequest",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "RemoveClientIDFromOpenIDConnectProvider",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "RemoveRoleFromInstanceProfile",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "RemoveUserFromGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ResetServiceSpecificCredential",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ResyncMFADevice",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "SendDelegationToken",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "SetDefaultPolicyVersion",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "SetSecurityTokenServicePreferences",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "SimulateCustomPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "SimulateCustomPolicyPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "SimulatePrincipalPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "SimulatePrincipalPolicyPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "TagInstanceProfile",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "TagMFADevice",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "TagOpenIDConnectProvider",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "TagPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "TagRole",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "TagSAMLProvider",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "TagServerCertificate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "TagUser",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UntagInstanceProfile",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UntagMFADevice",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UntagOpenIDConnectProvider",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UntagPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UntagRole",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UntagSAMLProvider",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UntagServerCertificate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UntagUser",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateAccessKey",
+      "found": true,
+      "languages": [
+        "Bash",
+        "C++",
+        "Java",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "UpdateAccountPasswordPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateAssumeRolePolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateDelegationRequest",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateLoginProfile",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateOpenIDConnectProviderThumbprint",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateRole",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateRoleDescription",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateSAMLProvider",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateSSHPublicKey",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateServerCertificate",
+      "found": true,
+      "languages": [
+        "C++",
+        "JavaScript",
+        "Ruby"
+      ]
+    },
+    {
+      "name": "UpdateServiceSpecificCredential",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateSigningCertificate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateUser",
+      "found": true,
+      "languages": [
+        "C++",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "Python",
+        "Ruby"
+      ]
+    },
+    {
+      "name": "UploadSSHPublicKey",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UploadServerCertificate",
+      "found": true,
+      "languages": [
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "UploadSigningCertificate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Waiter",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Builder",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceMetadata",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceClientConfiguration",
+      "found": false,
+      "languages": []
+    }
+   
+]
+}

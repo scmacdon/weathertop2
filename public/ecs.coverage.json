@@ -1,0 +1,398 @@
+{
+  "serviceCode": "ecs",
+  "operations": [
+    {
+      "name": "CreateCapacityProvider",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateCluster",
+      "found": true,
+      "languages": [
+        "Java",
+        "Rust"
+      ]
+    },
+    {
+      "name": "CreateService",
+      "found": true,
+      "languages": [
+        "Java"
+      ]
+    },
+    {
+      "name": "CreateTaskSet",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteAccountSetting",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteAttributes",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteCapacityProvider",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteCluster",
+      "found": true,
+      "languages": [
+        "Rust"
+      ]
+    },
+    {
+      "name": "DeleteService",
+      "found": true,
+      "languages": [
+        "Java"
+      ]
+    },
+    {
+      "name": "DeleteTaskDefinitions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteTaskSet",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeregisterContainerInstance",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeregisterTaskDefinition",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeCapacityProviders",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeClusters",
+      "found": true,
+      "languages": [
+        "Java",
+        "Rust"
+      ]
+    },
+    {
+      "name": "DescribeContainerInstances",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeServiceDeployments",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeServiceRevisions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeServices",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeTaskDefinition",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeTaskSets",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeTasks",
+      "found": true,
+      "languages": [
+        "Java"
+      ]
+    },
+    {
+      "name": "DiscoverPollEndpoint",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ExecuteCommand",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetTaskProtection",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAccountSettings",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAccountSettingsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAttributes",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAttributesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListClusters",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Java"
+      ]
+    },
+    {
+      "name": "ListClustersPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListContainerInstances",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListContainerInstancesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListServiceDeployments",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListServices",
+      "found": true,
+      "languages": [
+        ".NET"
+      ]
+    },
+    {
+      "name": "ListServicesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListServicesByNamespace",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListServicesByNamespacePaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTagsForResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTaskDefinitionFamilies",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTaskDefinitionFamiliesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTaskDefinitions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTaskDefinitionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTasks",
+      "found": true,
+      "languages": [
+        ".NET"
+      ]
+    },
+    {
+      "name": "ListTasksPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "PutAccountSetting",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "PutAccountSettingDefault",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "PutAttributes",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "PutClusterCapacityProviders",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "RegisterContainerInstance",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "RegisterTaskDefinition",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "RunTask",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StartTask",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StopServiceDeployment",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StopTask",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "SubmitAttachmentStateChanges",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "SubmitContainerStateChange",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "SubmitTaskStateChange",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "TagResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UntagResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateCapacityProvider",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateCluster",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateClusterSettings",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateContainerAgent",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateContainerInstancesState",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateService",
+      "found": true,
+      "languages": [
+        "Java"
+      ]
+    },
+    {
+      "name": "UpdateServicePrimaryTaskSet",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateTaskProtection",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateTaskSet",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Waiter",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Create",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Builder",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceMetadata",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceClientConfiguration",
+      "found": false,
+      "languages": []
+    }
+  ]
+}

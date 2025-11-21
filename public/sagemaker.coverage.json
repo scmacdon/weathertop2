@@ -1,0 +1,2351 @@
+{
+  "serviceCode": "sagemaker",
+  "operations": [
+    {
+      "name": "AddAssociation",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "AddTags",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "AssociateTrialComponent",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "AttachClusterNodeVolume",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "BatchAddClusterNodes",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "BatchDeleteClusterNodes",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "BatchDescribeModelPackage",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateAction",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateAlgorithm",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateApp",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateAppImageConfig",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateArtifact",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateAutoMLJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateAutoMLJobV2",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateCluster",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateClusterSchedulerConfig",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateCodeRepository",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateCompilationJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateComputeQuota",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateContext",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateDataQualityJobDefinition",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateDeviceFleet",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateDomain",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateEdgeDeploymentPlan",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateEdgeDeploymentStage",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateEdgePackagingJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateEndpoint",
+      "found": true,
+      "languages": [
+        "SAP ABAP"
+      ]
+    },
+    {
+      "name": "CreateEndpointConfig",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateExperiment",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateFeatureGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateFlowDefinition",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateHub",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateHubContentPresignedUrls",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateHubContentPresignedUrlsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateHubContentReference",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateHumanTaskUi",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateHyperParameterTuningJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateImage",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateImageVersion",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateInferenceComponent",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateInferenceExperiment",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateInferenceRecommendationsJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateLabelingJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateMlflowTrackingServer",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateModel",
+      "found": true,
+      "languages": [
+        "SAP ABAP"
+      ]
+    },
+    {
+      "name": "CreateModelBiasJobDefinition",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateModelCard",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateModelCardExportJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateModelExplainabilityJobDefinition",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateModelPackage",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateModelPackageGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateModelQualityJobDefinition",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateMonitoringSchedule",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateNotebookInstance",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateNotebookInstanceLifecycleConfig",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateOptimizationJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreatePartnerApp",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreatePartnerAppPresignedUrl",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreatePipeline",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Java",
+        "JavaScript",
+        "Kotlin"
+      ]
+    },
+    {
+      "name": "CreatePresignedDomainUrl",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreatePresignedMlflowTrackingServerUrl",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreatePresignedNotebookInstanceUrl",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateProcessingJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateProject",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateSpace",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateStudioLifecycleConfig",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateTrainingJob",
+      "found": true,
+      "languages": [
+        "SAP ABAP"
+      ]
+    },
+    {
+      "name": "CreateTrainingPlan",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateTransformJob",
+      "found": true,
+      "languages": [
+        "SAP ABAP"
+      ]
+    },
+    {
+      "name": "CreateTrial",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateTrialComponent",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateUserProfile",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateWorkforce",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateWorkteam",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteAction",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteAlgorithm",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteApp",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteAppImageConfig",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteArtifact",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteAssociation",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteCluster",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteClusterSchedulerConfig",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteCodeRepository",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteCompilationJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteComputeQuota",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteContext",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteDataQualityJobDefinition",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteDeviceFleet",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteDomain",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteEdgeDeploymentPlan",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteEdgeDeploymentStage",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteEndpoint",
+      "found": true,
+      "languages": [
+        "SAP ABAP"
+      ]
+    },
+    {
+      "name": "DeleteEndpointConfig",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteExperiment",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteFeatureGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteFlowDefinition",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteHub",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteHubContent",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteHubContentReference",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteHumanTaskUi",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteHyperParameterTuningJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteImage",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteImageVersion",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteInferenceComponent",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteInferenceExperiment",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteMlflowTrackingServer",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteModel",
+      "found": true,
+      "languages": [
+        "SAP ABAP"
+      ]
+    },
+    {
+      "name": "DeleteModelBiasJobDefinition",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteModelCard",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteModelExplainabilityJobDefinition",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteModelPackage",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteModelPackageGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteModelPackageGroupPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteModelQualityJobDefinition",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteMonitoringSchedule",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteNotebookInstance",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteNotebookInstanceLifecycleConfig",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteOptimizationJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeletePartnerApp",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeletePipeline",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Java",
+        "JavaScript",
+        "Kotlin"
+      ]
+    },
+    {
+      "name": "DeleteProcessingJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteProject",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteSpace",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteStudioLifecycleConfig",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteTags",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteTrainingJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteTrial",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteTrialComponent",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteUserProfile",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteWorkforce",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteWorkteam",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeregisterDevices",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeAction",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeAlgorithm",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeApp",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeAppImageConfig",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeArtifact",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeAutoMLJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeAutoMLJobV2",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeCluster",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeClusterEvent",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeClusterNode",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeClusterSchedulerConfig",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeCodeRepository",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeCompilationJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeComputeQuota",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeContext",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeDataQualityJobDefinition",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeDevice",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeDeviceFleet",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeDomain",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeEdgeDeploymentPlan",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeEdgePackagingJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeEndpoint",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeEndpointConfig",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeExperiment",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeFeatureGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeFeatureMetadata",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeFlowDefinition",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeHub",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeHubContent",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeHumanTaskUi",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeHyperParameterTuningJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeImage",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeImageVersion",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeInferenceComponent",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeInferenceExperiment",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeInferenceRecommendationsJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeLabelingJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeLineageGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeMlflowTrackingServer",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeModel",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeModelBiasJobDefinition",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeModelCard",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeModelCardExportJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeModelExplainabilityJobDefinition",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeModelPackage",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeModelPackageGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeModelQualityJobDefinition",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeMonitoringSchedule",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeNotebookInstance",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeNotebookInstanceLifecycleConfig",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeOptimizationJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribePartnerApp",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribePipeline",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribePipelineDefinitionForExecution",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribePipelineExecution",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Java",
+        "JavaScript",
+        "Kotlin"
+      ]
+    },
+    {
+      "name": "DescribeProcessingJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeProject",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeReservedCapacity",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeSpace",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeStudioLifecycleConfig",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeSubscribedWorkteam",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeTrainingJob",
+      "found": true,
+      "languages": [
+        "SAP ABAP"
+      ]
+    },
+    {
+      "name": "DescribeTrainingPlan",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeTransformJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeTrial",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeTrialComponent",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeUserProfile",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeWorkforce",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeWorkteam",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DetachClusterNodeVolume",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DisableSagemakerServicecatalogPortfolio",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DisassociateTrialComponent",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "EnableSagemakerServicecatalogPortfolio",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetDeviceFleetReport",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetLineageGroupPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetModelPackageGroupPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetSagemakerServicecatalogPortfolioStatus",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetScalingConfigurationRecommendation",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetSearchSuggestions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ImportHubContent",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListActions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListActionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAlgorithms",
+      "found": true,
+      "languages": [
+        "SAP ABAP"
+      ]
+    },
+    {
+      "name": "ListAlgorithmsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAliases",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAliasesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAppImageConfigs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAppImageConfigsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListApps",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAppsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListArtifacts",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListArtifactsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAssociations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAssociationsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAutoMLJobs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAutoMLJobsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListCandidatesForAutoMLJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListCandidatesForAutoMLJobPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListClusterEvents",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListClusterEventsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListClusterNodes",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListClusterNodesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListClusterSchedulerConfigs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListClusterSchedulerConfigsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListClusters",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListClustersPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListCodeRepositories",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListCodeRepositoriesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListCompilationJobs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListCompilationJobsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListComputeQuotas",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListComputeQuotasPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListContexts",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListContextsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDataQualityJobDefinitions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDataQualityJobDefinitionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDeviceFleets",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDeviceFleetsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDevices",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDevicesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDomains",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDomainsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListEdgeDeploymentPlans",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListEdgeDeploymentPlansPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListEdgePackagingJobs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListEdgePackagingJobsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListEndpointConfigs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListEndpointConfigsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListEndpoints",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListEndpointsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListExperiments",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListExperimentsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListFeatureGroups",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListFeatureGroupsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListFlowDefinitions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListFlowDefinitionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListHubContentVersions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListHubContents",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListHubs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListHumanTaskUis",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListHumanTaskUisPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListHyperParameterTuningJobs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListHyperParameterTuningJobsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListImageVersions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListImageVersionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListImages",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListImagesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListInferenceComponents",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListInferenceComponentsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListInferenceExperiments",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListInferenceExperimentsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListInferenceRecommendationsJobSteps",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListInferenceRecommendationsJobStepsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListInferenceRecommendationsJobs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListInferenceRecommendationsJobsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListLabelingJobs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListLabelingJobsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListLabelingJobsForWorkteam",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListLabelingJobsForWorkteamPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListLineageGroups",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListLineageGroupsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListMlflowTrackingServers",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListMlflowTrackingServersPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListModelBiasJobDefinitions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListModelBiasJobDefinitionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListModelCardExportJobs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListModelCardExportJobsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListModelCardVersions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListModelCardVersionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListModelCards",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListModelCardsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListModelExplainabilityJobDefinitions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListModelExplainabilityJobDefinitionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListModelMetadata",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListModelMetadataPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListModelPackageGroups",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListModelPackageGroupsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListModelPackages",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListModelPackagesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListModelQualityJobDefinitions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListModelQualityJobDefinitionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListModels",
+      "found": true,
+      "languages": [
+        "SAP ABAP"
+      ]
+    },
+    {
+      "name": "ListModelsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListMonitoringAlertHistory",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListMonitoringAlertHistoryPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListMonitoringAlerts",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListMonitoringAlertsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListMonitoringExecutions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListMonitoringExecutionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListMonitoringSchedules",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListMonitoringSchedulesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListNotebookInstanceLifecycleConfigs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListNotebookInstanceLifecycleConfigsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListNotebookInstances",
+      "found": true,
+      "languages": [
+        "Rust",
+        "SAP ABAP"
+      ]
+    },
+    {
+      "name": "ListNotebookInstancesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListOptimizationJobs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListOptimizationJobsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPartnerApps",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPartnerAppsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPipelineExecutionSteps",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPipelineExecutionStepsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPipelineExecutions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPipelineExecutionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPipelineParametersForExecution",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPipelineParametersForExecutionPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPipelineVersions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPipelineVersionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPipelines",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPipelinesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListProcessingJobs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListProcessingJobsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListProjects",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListProjectsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListResourceCatalogs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListResourceCatalogsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListSpaces",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListSpacesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListStageDevices",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListStageDevicesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListStudioLifecycleConfigs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListStudioLifecycleConfigsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListSubscribedWorkteams",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListSubscribedWorkteamsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTags",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTagsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTrainingJobs",
+      "found": true,
+      "languages": [
+        "Rust",
+        "SAP ABAP"
+      ]
+    },
+    {
+      "name": "ListTrainingJobsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTrainingJobsForHyperParameterTuningJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTrainingJobsForHyperParameterTuningJobPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTrainingPlans",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTrainingPlansPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTransformJobs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTransformJobsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTrialComponents",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTrialComponentsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTrials",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTrialsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListUltraServersByReservedCapacity",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListUltraServersByReservedCapacityPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListUserProfiles",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListUserProfilesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListWorkforces",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListWorkforcesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListWorkteams",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListWorkteamsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "PutModelPackageGroupPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "QueryLineage",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "QueryLineagePaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "RegisterDevices",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "RenderUiTemplate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "RetryPipelineExecution",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Search",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "SearchPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "SearchTrainingPlanOfferings",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "SendPipelineExecutionStepFailure",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "SendPipelineExecutionStepSuccess",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StartEdgeDeploymentStage",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StartInferenceExperiment",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StartMlflowTrackingServer",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StartMonitoringSchedule",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StartNotebookInstance",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StartPipelineExecution",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Java",
+        "JavaScript",
+        "Kotlin"
+      ]
+    },
+    {
+      "name": "StartSession",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StopAutoMLJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StopCompilationJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StopEdgeDeploymentStage",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StopEdgePackagingJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StopHyperParameterTuningJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StopInferenceExperiment",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StopInferenceRecommendationsJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StopLabelingJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StopMlflowTrackingServer",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StopMonitoringSchedule",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StopNotebookInstance",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StopOptimizationJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StopPipelineExecution",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StopProcessingJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StopTrainingJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StopTransformJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateAction",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateAppImageConfig",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateArtifact",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateCluster",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateClusterSchedulerConfig",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateClusterSoftware",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateCodeRepository",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateComputeQuota",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateContext",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateDeviceFleet",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateDevices",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateDomain",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateEndpoint",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateEndpointWeightsAndCapacities",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateExperiment",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateFeatureGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateFeatureMetadata",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateHub",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateHubContent",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateHubContentReference",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateImage",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateImageVersion",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateInferenceComponent",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateInferenceComponentRuntimeConfig",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateInferenceExperiment",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateMlflowTrackingServer",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateModelCard",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateModelPackage",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateMonitoringAlert",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateMonitoringSchedule",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateNotebookInstance",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateNotebookInstanceLifecycleConfig",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdatePartnerApp",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdatePipeline",
+      "found": true,
+      "languages": [
+        ".NET"
+      ]
+    },
+    {
+      "name": "UpdatePipelineExecution",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdatePipelineVersion",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateProject",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateSpace",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateTrainingJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateTrial",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateTrialComponent",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateUserProfile",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateWorkforce",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateWorkteam",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Waiter",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Create",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Builder",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceMetadata",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceClientConfiguration",
+      "found": false,
+      "languages": []
+    }
+  ]
+}
