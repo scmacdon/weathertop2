@@ -1,0 +1,1760 @@
+{
+  "serviceCode": "iot",
+  "operations": [
+    {
+      "name": "AcceptCertificateTransfer",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "AddThingToBillingGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "AddThingToThingGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "AssociateSbomWithPackageVersion",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "AssociateTargetsWithJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "AttachPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "AttachPrincipalPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "AttachSecurityProfile",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "AttachThingPrincipal",
+      "found": true,
+      "languages": [
+        "C++",
+        "Java",
+        "Kotlin"
+      ]
+    },
+    {
+      "name": "CancelAuditMitigationActionsTask",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CancelAuditTask",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CancelCertificateTransfer",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CancelDetectMitigationActionsTask",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CancelJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CancelJobExecution",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ClearDefaultAuthorizer",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ConfirmTopicRuleDestination",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateAuditSuppression",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateAuthorizer",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateBillingGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateCertificateFromCsr",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateCertificateProvider",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateCommand",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateCustomMetric",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateDimension",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateDomainConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateDynamicThingGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateFleetMetric",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateJobTemplate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateKeysAndCertificate",
+      "found": true,
+      "languages": [
+        "C++",
+        "Java",
+        "Kotlin"
+      ]
+    },
+    {
+      "name": "CreateMitigationAction",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateOTAUpdate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreatePackage",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreatePackageVersion",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreatePolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreatePolicyVersion",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateProvisioningClaim",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateProvisioningTemplate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateProvisioningTemplateVersion",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateRoleAlias",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateScheduledAudit",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateSecurityProfile",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateStream",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateThing",
+      "found": true,
+      "languages": [
+        "C++",
+        "Java",
+        "Kotlin"
+      ]
+    },
+    {
+      "name": "CreateThingGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateThingType",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateTopicRule",
+      "found": true,
+      "languages": [
+        "C++",
+        "Java",
+        "Kotlin"
+      ]
+    },
+    {
+      "name": "CreateTopicRuleDestination",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteAccountAuditConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteAuditSuppression",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteAuthorizer",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteBillingGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteCACertificate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteCertificate",
+      "found": true,
+      "languages": [
+        "C++",
+        "Java",
+        "Kotlin"
+      ]
+    },
+    {
+      "name": "DeleteCertificateProvider",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteCommand",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteCommandExecution",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteCustomMetric",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteDimension",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteDomainConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteDynamicThingGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteFleetMetric",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteJobExecution",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteJobTemplate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteMitigationAction",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteOTAUpdate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeletePackage",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeletePackageVersion",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeletePolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeletePolicyVersion",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteProvisioningTemplate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteProvisioningTemplateVersion",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteRegistrationCode",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteRoleAlias",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteScheduledAudit",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteSecurityProfile",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteStream",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteThing",
+      "found": true,
+      "languages": [
+        "C++",
+        "Java",
+        "Kotlin"
+      ]
+    },
+    {
+      "name": "DeleteThingGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteThingType",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteTopicRule",
+      "found": true,
+      "languages": [
+        "C++"
+      ]
+    },
+    {
+      "name": "DeleteTopicRuleDestination",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteV2LoggingLevel",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeprecateThingType",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeAccountAuditConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeAuditFinding",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeAuditMitigationActionsTask",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeAuditSuppression",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeAuditTask",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeAuthorizer",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeBillingGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeCACertificate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeCertificate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeCertificateProvider",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeCustomMetric",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeDefaultAuthorizer",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeDetectMitigationActionsTask",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeDimension",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeDomainConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeEncryptionConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeEndpoint",
+      "found": true,
+      "languages": [
+        "C++",
+        "Java",
+        "Kotlin",
+        "Rust"
+      ]
+    },
+    {
+      "name": "DescribeEventConfigurations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeFleetMetric",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeIndex",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeJobExecution",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeJobTemplate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeManagedJobTemplate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeMitigationAction",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeProvisioningTemplate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeProvisioningTemplateVersion",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeRoleAlias",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeScheduledAudit",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeSecurityProfile",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeStream",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeThing",
+      "found": true,
+      "languages": [
+        "C++",
+        "Java",
+        "Kotlin"
+      ]
+    },
+    {
+      "name": "DescribeThingGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeThingRegistrationTask",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeThingType",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DetachPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DetachPrincipalPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DetachSecurityProfile",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DetachThingPrincipal",
+      "found": true,
+      "languages": [
+        "C++",
+        "Java",
+        "Kotlin"
+      ]
+    },
+    {
+      "name": "DisableTopicRule",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DisassociateSbomFromPackageVersion",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "EnableTopicRule",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetBehaviorModelTrainingSummaries",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetBehaviorModelTrainingSummariesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetBucketsAggregation",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetCardinality",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetCommand",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetCommandExecution",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetEffectivePolicies",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetIndexingConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetJobDocument",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetLoggingOptions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetOTAUpdate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetPackage",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetPackageConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetPackageVersion",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetPercentiles",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetPolicyVersion",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetRegistrationCode",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetStatistics",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetThingConnectivityData",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetTopicRule",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetTopicRuleDestination",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetV2LoggingOptions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListActiveViolations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListActiveViolationsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAttachedPolicies",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAttachedPoliciesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAuditFindings",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAuditFindingsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAuditMitigationActionsExecutions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAuditMitigationActionsExecutionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAuditMitigationActionsTasks",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAuditMitigationActionsTasksPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAuditSuppressions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAuditSuppressionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAuditTasks",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAuditTasksPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAuthorizers",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAuthorizersPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListBillingGroups",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListBillingGroupsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListCACertificates",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListCACertificatesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListCertificateProviders",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListCertificates",
+      "found": true,
+      "languages": [
+        "C++",
+        "Java",
+        "Kotlin"
+      ]
+    },
+    {
+      "name": "ListCertificatesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListCertificatesByCA",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListCertificatesByCAPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListCommandExecutions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListCommandExecutionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListCommands",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListCommandsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListCustomMetrics",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListCustomMetricsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDetectMitigationActionsExecutions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDetectMitigationActionsExecutionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDetectMitigationActionsTasks",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDetectMitigationActionsTasksPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDimensions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDimensionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDomainConfigurations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDomainConfigurationsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListFleetMetrics",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListFleetMetricsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListIndices",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListIndicesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListJobExecutionsForJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListJobExecutionsForJobPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListJobExecutionsForThing",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListJobExecutionsForThingPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListJobTemplates",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListJobTemplatesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListJobs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListJobsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListManagedJobTemplates",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListManagedJobTemplatesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListMetricValues",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListMetricValuesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListMitigationActions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListMitigationActionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListOTAUpdates",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListOTAUpdatesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListOutgoingCertificates",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListOutgoingCertificatesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPackageVersions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPackageVersionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPackages",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPackagesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPolicies",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPoliciesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPolicyPrincipals",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPolicyPrincipalsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPolicyVersions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPrincipalPolicies",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPrincipalPoliciesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPrincipalThings",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPrincipalThingsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPrincipalThingsV2",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPrincipalThingsV2Paginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListProvisioningTemplateVersions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListProvisioningTemplateVersionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListProvisioningTemplates",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListProvisioningTemplatesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListRelatedResourcesForAuditFinding",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListRelatedResourcesForAuditFindingPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListRoleAliases",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListRoleAliasesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListSbomValidationResults",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListSbomValidationResultsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListScheduledAudits",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListScheduledAuditsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListSecurityProfiles",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListSecurityProfilesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListSecurityProfilesForTarget",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListSecurityProfilesForTargetPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListStreams",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListStreamsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTagsForResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTagsForResourcePaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTargetsForPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTargetsForPolicyPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTargetsForSecurityProfile",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTargetsForSecurityProfilePaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListThingGroups",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListThingGroupsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListThingGroupsForThing",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListThingGroupsForThingPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListThingPrincipals",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListThingPrincipalsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListThingPrincipalsV2",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListThingPrincipalsV2Paginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListThingRegistrationTaskReports",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListThingRegistrationTaskReportsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListThingRegistrationTasks",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListThingRegistrationTasksPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListThingTypes",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListThingTypesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListThings",
+      "found": true,
+      "languages": [
+        "Rust"
+      ]
+    },
+    {
+      "name": "ListThingsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListThingsInBillingGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListThingsInBillingGroupPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListThingsInThingGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListThingsInThingGroupPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTopicRuleDestinations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTopicRuleDestinationsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTopicRules",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTopicRulesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListV2LoggingLevels",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListV2LoggingLevelsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListViolationEvents",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListViolationEventsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "PutVerificationStateOnViolation",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "RegisterCACertificate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "RegisterCertificate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "RegisterCertificateWithoutCA",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "RegisterThing",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "RejectCertificateTransfer",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "RemoveThingFromBillingGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "RemoveThingFromThingGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ReplaceTopicRule",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "SearchIndex",
+      "found": true,
+      "languages": [
+        "C++",
+        "Java",
+        "Kotlin"
+      ]
+    },
+    {
+      "name": "SetDefaultAuthorizer",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "SetDefaultPolicyVersion",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "SetLoggingOptions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "SetV2LoggingLevel",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "SetV2LoggingOptions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StartAuditMitigationActionsTask",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StartDetectMitigationActionsTask",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StartOnDemandAuditTask",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StartThingRegistrationTask",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StopThingRegistrationTask",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "TagResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "TestAuthorization",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "TestInvokeAuthorizer",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "TransferCertificate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UntagResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateAccountAuditConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateAuditSuppression",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateAuthorizer",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateBillingGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateCACertificate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateCertificate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateCertificateProvider",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateCommand",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateCustomMetric",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateDimension",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateDomainConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateDynamicThingGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateEncryptionConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateEventConfigurations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateFleetMetric",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateIndexingConfiguration",
+      "found": true,
+      "languages": [
+        "C++"
+      ]
+    },
+    {
+      "name": "UpdateJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateMitigationAction",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdatePackage",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdatePackageConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdatePackageVersion",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateProvisioningTemplate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateRoleAlias",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateScheduledAudit",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateSecurityProfile",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateStream",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateThing",
+      "found": true,
+      "languages": [
+        "C++",
+        "Java",
+        "Kotlin"
+      ]
+    },
+    {
+      "name": "UpdateThingGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateThingGroupsForThing",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateThingType",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateTopicRuleDestination",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ValidateSecurityProfileBehaviors",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Create",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Builder",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceMetadata",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceClientConfiguration",
+      "found": false,
+      "languages": []
+    }
+  ]
+}

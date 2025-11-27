@@ -1,0 +1,602 @@
+{
+  "serviceCode": "cloudformation",
+  "operations": [
+    {
+      "name": "ActivateOrganizationsAccess",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ActivateType",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "BatchDescribeTypeConfigurations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CancelUpdateStack",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ContinueUpdateRollback",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateChangeSet",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateGeneratedTemplate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateStack",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateStackInstances",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateStackRefactor",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateStackSet",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeactivateOrganizationsAccess",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeactivateType",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteChangeSet",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteGeneratedTemplate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteStack",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteStackInstances",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteStackSet",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeregisterType",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeAccountLimits",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeAccountLimitsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeChangeSet",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeChangeSetPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeChangeSetHooks",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeEvents",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeEventsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeGeneratedTemplate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeOrganizationsAccess",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribePublisher",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeResourceScan",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeStackDriftDetectionStatus",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeStackEvents",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeStackEventsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeStackInstance",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeStackRefactor",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeStackResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeStackResourceDrifts",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeStackResourceDriftsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeStackResources",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeStackSet",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeStackSetOperation",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeStacks",
+      "found": true,
+      "languages": [
+        "Go"
+      ]
+    },
+    {
+      "name": "DescribeStacksPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeType",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeTypeRegistration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DetectStackDrift",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DetectStackResourceDrift",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DetectStackSetDrift",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "EstimateTemplateCost",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ExecuteChangeSet",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ExecuteStackRefactor",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetGeneratedTemplate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetHookResult",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetStackPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetTemplate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetTemplateSummary",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ImportStacksToStackSet",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListChangeSets",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListChangeSetsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListExports",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListExportsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListGeneratedTemplates",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListGeneratedTemplatesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListHookResults",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListImports",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListImportsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListResourceScanRelatedResources",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListResourceScanRelatedResourcesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListResourceScanResources",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListResourceScanResourcesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListResourceScans",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListResourceScansPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListStackInstanceResourceDrifts",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListStackInstances",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListStackInstancesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListStackRefactorActions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListStackRefactorActionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListStackRefactors",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListStackRefactorsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListStackResources",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListStackResourcesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListStackSetAutoDeploymentTargets",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListStackSetOperationResults",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListStackSetOperationResultsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListStackSetOperations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListStackSetOperationsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListStackSets",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListStackSetsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListStacks",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListStacksPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTypeRegistrations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTypeRegistrationsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTypeVersions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTypeVersionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTypes",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTypesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "PublishType",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "RecordHandlerProgress",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "RegisterPublisher",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "RegisterType",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "RollbackStack",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "SetStackPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "SetTypeConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "SetTypeDefaultVersion",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "SignalResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StartResourceScan",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StopStackSetOperation",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "TestType",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateGeneratedTemplate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateStack",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateStackInstances",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateStackSet",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateTerminationProtection",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ValidateTemplate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Waiter",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Create",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Builder",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceMetadata",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceClientConfiguration",
+      "found": false,
+      "languages": []
+    }
+  ]
+}

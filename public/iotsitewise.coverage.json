@@ -1,0 +1,750 @@
+{
+  "serviceCode": "iotsitewise",
+  "operations": [
+    {
+      "name": "AssociateAssets",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "AssociateTimeSeriesToAssetProperty",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "BatchAssociateProjectAssets",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "BatchDisassociateProjectAssets",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "BatchGetAssetPropertyAggregates",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "BatchGetAssetPropertyAggregatesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "BatchGetAssetPropertyValue",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "BatchGetAssetPropertyValuePaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "BatchGetAssetPropertyValueHistory",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "BatchGetAssetPropertyValueHistoryPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "BatchPutAssetPropertyValue",
+      "found": true,
+      "languages": [
+        "Java",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "CreateAccessPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateAsset",
+      "found": true,
+      "languages": [
+        "Java",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "CreateAssetModel",
+      "found": true,
+      "languages": [
+        "Java",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "CreateAssetModelCompositeModel",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateBulkImportJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateComputationModel",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateDashboard",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateDataset",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateGateway",
+      "found": true,
+      "languages": [
+        "Java",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "CreatePortal",
+      "found": true,
+      "languages": [
+        "Java",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "CreateProject",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteAccessPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteAsset",
+      "found": true,
+      "languages": [
+        "Java",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "DeleteAssetModel",
+      "found": true,
+      "languages": [
+        "Java",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "DeleteAssetModelCompositeModel",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteAssetModelInterfaceRelationship",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteComputationModel",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteDashboard",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteDataset",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteGateway",
+      "found": true,
+      "languages": [
+        "Java",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "DeletePortal",
+      "found": true,
+      "languages": [
+        "Java",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "DeleteProject",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteTimeSeries",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeAccessPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeAction",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeAsset",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeAssetCompositeModel",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeAssetModel",
+      "found": true,
+      "languages": [
+        "Java",
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "DescribeAssetModelCompositeModel",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeAssetModelInterfaceRelationship",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeAssetProperty",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeBulkImportJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeComputationModel",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeComputationModelExecutionSummary",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeDashboard",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeDataset",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeDefaultEncryptionConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeExecution",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeGateway",
+      "found": true,
+      "languages": [
+        "Java",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "DescribeGatewayCapabilityConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeLoggingOptions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribePortal",
+      "found": true,
+      "languages": [
+        "Java",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "DescribeProject",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeStorageConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeTimeSeries",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DisassociateAssets",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DisassociateTimeSeriesFromAssetProperty",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ExecuteAction",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ExecuteQuery",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ExecuteQueryPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetAssetPropertyAggregates",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetAssetPropertyAggregatesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetAssetPropertyValue",
+      "found": true,
+      "languages": [
+        "Java",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "GetAssetPropertyValueHistory",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetAssetPropertyValueHistoryPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetInterpolatedAssetPropertyValues",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetInterpolatedAssetPropertyValuesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAccessPolicies",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAccessPoliciesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListActions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListActionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAssetModelCompositeModels",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAssetModelCompositeModelsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAssetModelProperties",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAssetModelPropertiesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAssetModels",
+      "found": true,
+      "languages": [
+        "Java",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "ListAssetModelsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAssetProperties",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAssetPropertiesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAssetRelationships",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAssetRelationshipsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAssets",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAssetsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAssociatedAssets",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAssociatedAssetsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListBulkImportJobs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListBulkImportJobsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListCompositionRelationships",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListCompositionRelationshipsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListComputationModelDataBindingUsages",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListComputationModelDataBindingUsagesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListComputationModelResolveToResources",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListComputationModelResolveToResourcesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListComputationModels",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListComputationModelsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDashboards",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDashboardsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDatasets",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDatasetsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListExecutions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListExecutionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListGateways",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListGatewaysPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListInterfaceRelationships",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListInterfaceRelationshipsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPortals",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPortalsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListProjectAssets",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListProjectAssetsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListProjects",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListProjectsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTagsForResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTimeSeries",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTimeSeriesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "PutAssetModelInterfaceRelationship",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "PutDefaultEncryptionConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "PutLoggingOptions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "PutStorageConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "TagResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UntagResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateAccessPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateAsset",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateAssetModel",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateAssetModelCompositeModel",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateAssetProperty",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateComputationModel",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateDashboard",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateDataset",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateGateway",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateGatewayCapabilityConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdatePortal",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateProject",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Waiter",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Create",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Builder",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceMetadata",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceClientConfiguration",
+      "found": false,
+      "languages": []
+    }
+  ]
+}

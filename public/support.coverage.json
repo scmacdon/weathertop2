@@ -1,0 +1,168 @@
+{
+  "serviceCode": "support",
+  "operations": [
+    {
+      "name": "AddAttachmentsToSet",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "Python"
+      ]
+    },
+    {
+      "name": "AddCommunicationToCase",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "Python"
+      ]
+    },
+    {
+      "name": "CreateCase",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "Python"
+      ]
+    },
+    {
+      "name": "DescribeAttachment",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "Python"
+      ]
+    },
+    {
+      "name": "DescribeCases",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "Python"
+      ]
+    },
+    {
+      "name": "DescribeCasesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeCommunications",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "Python"
+      ]
+    },
+    {
+      "name": "DescribeCommunicationsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeCreateCaseOptions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeServices",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Java",
+        "Kotlin",
+        "Python"
+      ]
+    },
+    {
+      "name": "DescribeSeverityLevels",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "Python"
+      ]
+    },
+    {
+      "name": "DescribeSupportedLanguages",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeTrustedAdvisorCheckRefreshStatuses",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeTrustedAdvisorCheckResult",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeTrustedAdvisorCheckSummaries",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeTrustedAdvisorChecks",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "RefreshTrustedAdvisorCheck",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ResolveCase",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "Python"
+      ]
+    },
+    {
+      "name": "Create",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Builder",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceMetadata",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceClientConfiguration",
+      "found": false,
+      "languages": []
+    }
+  ]
+}

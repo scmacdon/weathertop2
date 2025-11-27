@@ -1,0 +1,424 @@
+{
+  "serviceCode": "forecast",
+  "operations": [
+    {
+      "name": "CreateAutoPredictor",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateDataset",
+      "found": true,
+      "languages": [
+        "Java"
+      ]
+    },
+    {
+      "name": "CreateDatasetGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateDatasetImportJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateExplainability",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateExplainabilityExport",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateForecast",
+      "found": true,
+      "languages": [
+        "Java"
+      ]
+    },
+    {
+      "name": "CreateForecastExportJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateMonitor",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreatePredictor",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreatePredictorBacktestExportJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateWhatIfAnalysis",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateWhatIfForecast",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateWhatIfForecastExport",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteDataset",
+      "found": true,
+      "languages": [
+        "Java"
+      ]
+    },
+    {
+      "name": "DeleteDatasetGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteDatasetImportJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteExplainability",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteExplainabilityExport",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteForecast",
+      "found": true,
+      "languages": [
+        "Java"
+      ]
+    },
+    {
+      "name": "DeleteForecastExportJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteMonitor",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeletePredictor",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeletePredictorBacktestExportJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteResourceTree",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteWhatIfAnalysis",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteWhatIfForecast",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteWhatIfForecastExport",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeAutoPredictor",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeDataset",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeDatasetGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeDatasetImportJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeExplainability",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeExplainabilityExport",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeForecast",
+      "found": true,
+      "languages": [
+        "Java"
+      ]
+    },
+    {
+      "name": "DescribeForecastExportJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeMonitor",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribePredictor",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribePredictorBacktestExportJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeWhatIfAnalysis",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeWhatIfForecast",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeWhatIfForecastExport",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetAccuracyMetrics",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDatasetGroups",
+      "found": true,
+      "languages": [
+        "Java"
+      ]
+    },
+    {
+      "name": "ListDatasetGroupsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDatasetImportJobs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDatasetImportJobsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDatasets",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDatasetsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListExplainabilities",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListExplainabilitiesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListExplainabilityExports",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListExplainabilityExportsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListForecastExportJobs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListForecastExportJobsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListForecasts",
+      "found": true,
+      "languages": [
+        "Java"
+      ]
+    },
+    {
+      "name": "ListForecastsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListMonitorEvaluations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListMonitorEvaluationsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListMonitors",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListMonitorsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPredictorBacktestExportJobs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPredictorBacktestExportJobsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPredictors",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPredictorsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTagsForResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListWhatIfAnalyses",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListWhatIfAnalysesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListWhatIfForecastExports",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListWhatIfForecastExportsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListWhatIfForecasts",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListWhatIfForecastsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ResumeResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StopResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "TagResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UntagResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateDatasetGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Create",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Builder",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceMetadata",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceClientConfiguration",
+      "found": false,
+      "languages": []
+    }
+  ]
+}

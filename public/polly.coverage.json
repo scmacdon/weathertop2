@@ -1,0 +1,111 @@
+{
+  "serviceCode": "polly",
+  "operations": [
+    {
+      "name": "DeleteLexicon",
+      "found": true,
+      "languages": [
+        ".NET"
+      ]
+    },
+    {
+      "name": "DescribeVoices",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Java",
+        "Python",
+        "Ruby",
+        "Rust"
+      ]
+    },
+    {
+      "name": "GetLexicon",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Python"
+      ]
+    },
+    {
+      "name": "GetSpeechSynthesisTask",
+      "found": true,
+      "languages": [
+        "Python"
+      ]
+    },
+    {
+      "name": "ListLexicons",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Java",
+        "Python",
+        "Ruby",
+        "Rust"
+      ]
+    },
+    {
+      "name": "ListSpeechSynthesisTasks",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListSpeechSynthesisTasksPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "PutLexicon",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Python",
+        "Rust"
+      ]
+    },
+    {
+      "name": "StartSpeechSynthesisTask",
+      "found": true,
+      "languages": [
+        "Python"
+      ]
+    },
+    {
+      "name": "SynthesizeSpeech",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Java",
+        "Python",
+        "Ruby",
+        "Rust"
+      ]
+    },
+    {
+      "name": "SynthesizeSpeechAsBytes",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Create",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Builder",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceMetadata",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceClientConfiguration",
+      "found": false,
+      "languages": []
+    }
+  ]
+}

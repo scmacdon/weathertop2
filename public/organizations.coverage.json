@@ -1,0 +1,431 @@
+{
+  "serviceCode": "organizations",
+  "operations": [
+    {
+      "name": "AcceptHandshake",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "AttachPolicy",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Python"
+      ]
+    },
+    {
+      "name": "CancelHandshake",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CloseAccount",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateAccount",
+      "found": true,
+      "languages": [
+        ".NET"
+      ]
+    },
+    {
+      "name": "CreateGovCloudAccount",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateOrganization",
+      "found": true,
+      "languages": [
+        ".NET"
+      ]
+    },
+    {
+      "name": "CreateOrganizationalUnit",
+      "found": true,
+      "languages": [
+        ".NET"
+      ]
+    },
+    {
+      "name": "CreatePolicy",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Python"
+      ]
+    },
+    {
+      "name": "DeclineHandshake",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteOrganization",
+      "found": true,
+      "languages": [
+        ".NET"
+      ]
+    },
+    {
+      "name": "DeleteOrganizationalUnit",
+      "found": true,
+      "languages": [
+        ".NET"
+      ]
+    },
+    {
+      "name": "DeletePolicy",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Python"
+      ]
+    },
+    {
+      "name": "DeleteResourcePolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeregisterDelegatedAdministrator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeAccount",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeCreateAccountStatus",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeEffectivePolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeHandshake",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeOrganization",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeOrganizationalUnit",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribePolicy",
+      "found": true,
+      "languages": [
+        "Python"
+      ]
+    },
+    {
+      "name": "DescribeResourcePolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DetachPolicy",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Python"
+      ]
+    },
+    {
+      "name": "DisableAWSServiceAccess",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DisablePolicyType",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "EnableAWSServiceAccess",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "EnableAllFeatures",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "EnablePolicyType",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "InviteAccountToOrganization",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "LeaveOrganization",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAWSServiceAccessForOrganization",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAWSServiceAccessForOrganizationPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAccounts",
+      "found": true,
+      "languages": [
+        ".NET"
+      ]
+    },
+    {
+      "name": "ListAccountsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAccountsForParent",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAccountsForParentPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAccountsWithInvalidEffectivePolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAccountsWithInvalidEffectivePolicyPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListChildren",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListChildrenPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListCreateAccountStatus",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListCreateAccountStatusPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDelegatedAdministrators",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDelegatedAdministratorsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDelegatedServicesForAccount",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDelegatedServicesForAccountPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListEffectivePolicyValidationErrors",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListEffectivePolicyValidationErrorsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListHandshakesForAccount",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListHandshakesForAccountPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListHandshakesForOrganization",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListHandshakesForOrganizationPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListOrganizationalUnitsForParent",
+      "found": true,
+      "languages": [
+        ".NET"
+      ]
+    },
+    {
+      "name": "ListOrganizationalUnitsForParentPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListParents",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListParentsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPolicies",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Python"
+      ]
+    },
+    {
+      "name": "ListPoliciesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPoliciesForTarget",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPoliciesForTargetPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListRoots",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListRootsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTagsForResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTagsForResourcePaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTargetsForPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTargetsForPolicyPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "MoveAccount",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "PutResourcePolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "RegisterDelegatedAdministrator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "RemoveAccountFromOrganization",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "TagResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UntagResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateOrganizationalUnit",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdatePolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Create",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Builder",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceMetadata",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceClientConfiguration",
+      "found": false,
+      "languages": []
+    }
+  ]
+}

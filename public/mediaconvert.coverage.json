@@ -1,0 +1,245 @@
+{
+  "serviceCode": "mediaconvert",
+  "operations": [
+    {
+      "name": "AssociateCertificate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CancelJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateJob",
+      "found": true,
+      "languages": [
+        ".NET",
+        "C++",
+        "Java",
+        "Kotlin"
+      ]
+    },
+    {
+      "name": "CreateJobTemplate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreatePreset",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateQueue",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateResourceShare",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteJobTemplate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeletePolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeletePreset",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteQueue",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeEndpoints",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeEndpointsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DisassociateCertificate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetJob",
+      "found": true,
+      "languages": [
+        ".NET",
+        "C++",
+        "Java",
+        "Kotlin"
+      ]
+    },
+    {
+      "name": "GetJobTemplate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetJobsQueryResults",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetPreset",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetQueue",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListJobTemplates",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListJobTemplatesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListJobs",
+      "found": true,
+      "languages": [
+        ".NET",
+        "C++",
+        "Java",
+        "Kotlin"
+      ]
+    },
+    {
+      "name": "ListJobsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPresets",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListPresetsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListQueues",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListQueuesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTagsForResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListVersions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListVersionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Probe",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "PutPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "SearchJobs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "SearchJobsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StartJobsQuery",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "TagResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UntagResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateJobTemplate",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdatePreset",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateQueue",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Create",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Builder",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceMetadata",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceClientConfiguration",
+      "found": false,
+      "languages": []
+    }
+  ]
+}

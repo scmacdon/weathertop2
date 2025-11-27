@@ -1,0 +1,155 @@
+{
+  "serviceCode": "translate",
+  "operations": [
+    {
+      "name": "CreateParallelData",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteParallelData",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteTerminology",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeTextTranslationJob",
+      "found": true,
+      "languages": [
+        ".NET",
+        "SAP ABAP"
+      ]
+    },
+    {
+      "name": "GetParallelData",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetTerminology",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ImportTerminology",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListLanguages",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListLanguagesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListParallelData",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListParallelDataPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTagsForResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTerminologies",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTerminologiesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTextTranslationJobs",
+      "found": true,
+      "languages": [
+        ".NET",
+        "SAP ABAP"
+      ]
+    },
+    {
+      "name": "ListTextTranslationJobsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StartTextTranslationJob",
+      "found": true,
+      "languages": [
+        ".NET",
+        "SAP ABAP"
+      ]
+    },
+    {
+      "name": "StopTextTranslationJob",
+      "found": true,
+      "languages": [
+        ".NET",
+        "SAP ABAP"
+      ]
+    },
+    {
+      "name": "TagResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "TranslateDocument",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "TranslateText",
+      "found": true,
+      "languages": [
+        ".NET",
+        "SAP ABAP"
+      ]
+    },
+    {
+      "name": "UntagResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateParallelData",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Create",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Builder",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceMetadata",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceClientConfiguration",
+      "found": false,
+      "languages": []
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "serviceCode": "geoplaces",
+  "operations": [
+    {
+      "name": "Autocomplete",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Geocode",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetPlace",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ReverseGeocode",
+      "found": true,
+      "languages": [
+        "Java"
+      ]
+    },
+    {
+      "name": "SearchNearby",
+      "found": true,
+      "languages": [
+        "Java"
+      ]
+    },
+    {
+      "name": "SearchText",
+      "found": true,
+      "languages": [
+        "Java"
+      ]
+    },
+    {
+      "name": "Suggest",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Create",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Builder",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceMetadata",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceClientConfiguration",
+      "found": false,
+      "languages": []
+    }
+  ]
+}

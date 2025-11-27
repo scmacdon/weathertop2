@@ -1,0 +1,275 @@
+{
+  "serviceCode": "x-ray",
+  "operations": [
+    {
+      "name": "BatchGetTraces",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "BatchGetTracesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CancelTraceRetrieval",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateSamplingRule",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteResourcePolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteSamplingRule",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetEncryptionConfig",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetGroups",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetGroupsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetIndexingRules",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetInsight",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetInsightEvents",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetInsightEventsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetInsightImpactGraph",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetInsightSummaries",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetInsightSummariesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetRetrievedTracesGraph",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetSamplingRules",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetSamplingRulesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetSamplingStatisticSummaries",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetSamplingStatisticSummariesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetSamplingTargets",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetServiceGraph",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetServiceGraphPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetTimeSeriesServiceStatistics",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetTimeSeriesServiceStatisticsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetTraceGraph",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetTraceGraphPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetTraceSegmentDestination",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetTraceSummaries",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetTraceSummariesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListResourcePolicies",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListResourcePoliciesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListRetrievedTraces",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTagsForResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTagsForResourcePaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "PutEncryptionConfig",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "PutResourcePolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "PutTelemetryRecords",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "PutTraceSegments",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StartTraceRetrieval",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "TagResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UntagResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateIndexingRule",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateSamplingRule",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateTraceSegmentDestination",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Create",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Builder",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceMetadata",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceClientConfiguration",
+      "found": false,
+      "languages": []
+    }
+  ]
+}

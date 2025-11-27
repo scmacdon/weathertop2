@@ -1,0 +1,490 @@
+{
+  "serviceCode": "neptune",
+  "operations": [
+    {
+      "name": "AddRoleToDBCluster",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "AddSourceIdentifierToSubscription",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "AddTagsToResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ApplyPendingMaintenanceAction",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CopyDBClusterParameterGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CopyDBClusterSnapshot",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CopyDBParameterGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateDBCluster",
+      "found": true,
+      "languages": [
+        "Java",
+        "Python"
+      ]
+    },
+    {
+      "name": "CreateDBClusterEndpoint",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateDBClusterParameterGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateDBClusterSnapshot",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateDBInstance",
+      "found": true,
+      "languages": [
+        "Java",
+        "Python"
+      ]
+    },
+    {
+      "name": "CreateDBParameterGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateDBSubnetGroup",
+      "found": true,
+      "languages": [
+        "Java",
+        "Python"
+      ]
+    },
+    {
+      "name": "CreateEventSubscription",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateGlobalCluster",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteDBCluster",
+      "found": true,
+      "languages": [
+        "Java",
+        "Python"
+      ]
+    },
+    {
+      "name": "DeleteDBClusterEndpoint",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteDBClusterParameterGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteDBClusterSnapshot",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteDBInstance",
+      "found": true,
+      "languages": [
+        "Java",
+        "Python"
+      ]
+    },
+    {
+      "name": "DeleteDBParameterGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteDBSubnetGroup",
+      "found": true,
+      "languages": [
+        "Java",
+        "Python"
+      ]
+    },
+    {
+      "name": "DeleteEventSubscription",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteGlobalCluster",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeDBClusterEndpoints",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeDBClusterEndpointsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeDBClusterParameterGroups",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeDBClusterParameterGroupsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeDBClusterParameters",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeDBClusterParametersPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeDBClusterSnapshotAttributes",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeDBClusterSnapshots",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeDBClusterSnapshotsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeDBClusters",
+      "found": true,
+      "languages": [
+        "Java",
+        "Python"
+      ]
+    },
+    {
+      "name": "DescribeDBClustersPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeDBEngineVersions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeDBEngineVersionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeDBInstances",
+      "found": true,
+      "languages": [
+        "Java",
+        "Python"
+      ]
+    },
+    {
+      "name": "DescribeDBInstancesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeDBParameterGroups",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeDBParameterGroupsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeDBParameters",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeDBParametersPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeDBSubnetGroups",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeDBSubnetGroupsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeEngineDefaultClusterParameters",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeEngineDefaultParameters",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeEngineDefaultParametersPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeEventCategories",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeEventSubscriptions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeEventSubscriptionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeEvents",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeEventsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeGlobalClusters",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeGlobalClustersPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeOrderableDBInstanceOptions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeOrderableDBInstanceOptionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribePendingMaintenanceActions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribePendingMaintenanceActionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeValidDBInstanceModifications",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "FailoverDBCluster",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "FailoverGlobalCluster",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTagsForResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ModifyDBCluster",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ModifyDBClusterEndpoint",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ModifyDBClusterParameterGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ModifyDBClusterSnapshotAttribute",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ModifyDBInstance",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ModifyDBParameterGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ModifyDBSubnetGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ModifyEventSubscription",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ModifyGlobalCluster",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "PromoteReadReplicaDBCluster",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "RebootDBInstance",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "RemoveFromGlobalCluster",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "RemoveRoleFromDBCluster",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "RemoveSourceIdentifierFromSubscription",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "RemoveTagsFromResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ResetDBClusterParameterGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ResetDBParameterGroup",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "RestoreDBClusterFromSnapshot",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "RestoreDBClusterToPointInTime",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StartDBCluster",
+      "found": true,
+      "languages": [
+        "Java",
+        "Python"
+      ]
+    },
+    {
+      "name": "StopDBCluster",
+      "found": true,
+      "languages": [
+        "Java",
+        "Python"
+      ]
+    },
+    {
+      "name": "SwitchoverGlobalCluster",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Waiter",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Create",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Builder",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceMetadata",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceClientConfiguration",
+      "found": false,
+      "languages": []
+    }
+  ]
+}

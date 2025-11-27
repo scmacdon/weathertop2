@@ -1,0 +1,522 @@
+{
+  "serviceCode": "devicefarm",
+  "operations": [
+    {
+      "name": "CreateDevicePool",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateInstanceProfile",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateNetworkProfile",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateProject",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateRemoteAccessSession",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateTestGridProject",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateTestGridUrl",
+      "found": true,
+      "languages": [
+        "Python"
+      ]
+    },
+    {
+      "name": "CreateUpload",
+      "found": true,
+      "languages": [
+        "Python"
+      ]
+    },
+    {
+      "name": "CreateVPCEConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteDevicePool",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteInstanceProfile",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteNetworkProfile",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteProject",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteRemoteAccessSession",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteRun",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteTestGridProject",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteUpload",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteVPCEConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetAccountSettings",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetDevice",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetDeviceInstance",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetDevicePool",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetDevicePoolCompatibility",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetInstanceProfile",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetNetworkProfile",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetOfferingStatus",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetOfferingStatusPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetProject",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetRemoteAccessSession",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetRun",
+      "found": true,
+      "languages": [
+        "Python"
+      ]
+    },
+    {
+      "name": "GetSuite",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetTest",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetTestGridProject",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetTestGridSession",
+      "found": true,
+      "languages": [
+        "Python"
+      ]
+    },
+    {
+      "name": "GetUpload",
+      "found": true,
+      "languages": [
+        "Python"
+      ]
+    },
+    {
+      "name": "GetVPCEConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "InstallToRemoteAccessSession",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListArtifacts",
+      "found": true,
+      "languages": [
+        "Python"
+      ]
+    },
+    {
+      "name": "ListArtifactsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDeviceInstances",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDevicePools",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDevicePoolsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDevices",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDevicesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListInstanceProfiles",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListJobs",
+      "found": true,
+      "languages": [
+        "Python"
+      ]
+    },
+    {
+      "name": "ListJobsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListNetworkProfiles",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListOfferingPromotions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListOfferingTransactions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListOfferingTransactionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListOfferings",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListOfferingsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListProjects",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListProjectsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListRemoteAccessSessions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListRuns",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListRunsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListSamples",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListSamplesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListSuites",
+      "found": true,
+      "languages": [
+        "Python"
+      ]
+    },
+    {
+      "name": "ListSuitesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTagsForResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTestGridProjects",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTestGridProjectsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTestGridSessionActions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTestGridSessionActionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTestGridSessionArtifacts",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTestGridSessionArtifactsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTestGridSessions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTestGridSessionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTests",
+      "found": true,
+      "languages": [
+        "Python"
+      ]
+    },
+    {
+      "name": "ListTestsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListUniqueProblems",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListUniqueProblemsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListUploads",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListUploadsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListVPCEConfigurations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "PurchaseOffering",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "RenewOffering",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ScheduleRun",
+      "found": true,
+      "languages": [
+        "Python"
+      ]
+    },
+    {
+      "name": "StopJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StopRemoteAccessSession",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StopRun",
+      "found": true,
+      "languages": [
+        "Python"
+      ]
+    },
+    {
+      "name": "TagResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UntagResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateDeviceInstance",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateDevicePool",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateInstanceProfile",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateNetworkProfile",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateProject",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateTestGridProject",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateUpload",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateVPCEConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Create",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Builder",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceMetadata",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceClientConfiguration",
+      "found": false,
+      "languages": []
+    }
+  ]
+}

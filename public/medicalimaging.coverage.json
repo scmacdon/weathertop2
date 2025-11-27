@@ -1,0 +1,227 @@
+{
+  "serviceCode": "medicalimaging",
+  "operations": [
+    {
+      "name": "CopyImageSet",
+      "found": true,
+      "languages": [
+        "Java",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "CreateDatastore",
+      "found": true,
+      "languages": [
+        "Bash",
+        "Java",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "DeleteDatastore",
+      "found": true,
+      "languages": [
+        "Bash",
+        "Java",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "DeleteImageSet",
+      "found": true,
+      "languages": [
+        "C++",
+        "Java",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "GetDICOMImportJob",
+      "found": true,
+      "languages": [
+        "C++",
+        "Java",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "GetDatastore",
+      "found": true,
+      "languages": [
+        "Bash",
+        "Java",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "GetImageFrame",
+      "found": true,
+      "languages": [
+        "C++",
+        "Java",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "GetImageFrameAsBytes",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetImageSet",
+      "found": true,
+      "languages": [
+        "Java",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "GetImageSetMetadata",
+      "found": true,
+      "languages": [
+        "C++",
+        "Java",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "GetImageSetMetadataAsBytes",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDICOMImportJobs",
+      "found": true,
+      "languages": [
+        "Java",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "ListDICOMImportJobsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDatastores",
+      "found": true,
+      "languages": [
+        "Bash",
+        "Java",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "ListDatastoresPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListImageSetVersions",
+      "found": true,
+      "languages": [
+        "Java",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "ListImageSetVersionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTagsForResource",
+      "found": true,
+      "languages": [
+        "Java",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "SearchImageSets",
+      "found": true,
+      "languages": [
+        "C++",
+        "Java",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "SearchImageSetsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StartDICOMImportJob",
+      "found": true,
+      "languages": [
+        "C++",
+        "Java",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "TagResource",
+      "found": true,
+      "languages": [
+        "Java",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "UntagResource",
+      "found": true,
+      "languages": [
+        "Java",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "UpdateImageSetMetadata",
+      "found": true,
+      "languages": [
+        "Java",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "Create",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Builder",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceMetadata",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceClientConfiguration",
+      "found": false,
+      "languages": []
+    }
+  ]
+}

@@ -1,0 +1,1688 @@
+{
+  "serviceCode": "glue",
+  "operations": [
+    {
+      "name": "BatchCreatePartition",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "BatchDeleteConnection",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "BatchDeletePartition",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "BatchDeleteTable",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "BatchDeleteTableVersion",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "BatchGetBlueprints",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "BatchGetCrawlers",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "BatchGetCustomEntityTypes",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "BatchGetDataQualityResult",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "BatchGetDevEndpoints",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "BatchGetJobs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "BatchGetPartition",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "BatchGetTableOptimizer",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "BatchGetTriggers",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "BatchGetWorkflows",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "BatchPutDataQualityStatisticAnnotation",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "BatchStopJobRun",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "BatchUpdatePartition",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CancelDataQualityRuleRecommendationRun",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CancelDataQualityRulesetEvaluationRun",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CancelMLTaskRun",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CancelStatement",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CheckSchemaVersionValidity",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateBlueprint",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateCatalog",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateClassifier",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateColumnStatisticsTaskSettings",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateConnection",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateCrawler",
+      "found": true,
+      "languages": [
+        ".NET",
+        "C++",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "CreateCustomEntityType",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateDataQualityRuleset",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateDatabase",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateDevEndpoint",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateGlueIdentityCenterConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateIntegration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateIntegrationResourceProperty",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateIntegrationTableProperties",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateJob",
+      "found": true,
+      "languages": [
+        ".NET",
+        "C++",
+        "Java",
+        "JavaScript",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "CreateMLTransform",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreatePartition",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreatePartitionIndex",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateRegistry",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateSchema",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateScript",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateSecurityConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateSession",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateTable",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateTableOptimizer",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateTrigger",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateUsageProfile",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateUserDefinedFunction",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateWorkflow",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteBlueprint",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteCatalog",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteClassifier",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteColumnStatisticsForPartition",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteColumnStatisticsForTable",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteColumnStatisticsTaskSettings",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteConnection",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteCrawler",
+      "found": true,
+      "languages": [
+        ".NET",
+        "C++",
+        "Java",
+        "JavaScript",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "DeleteCustomEntityType",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteDataQualityRuleset",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteDatabase",
+      "found": true,
+      "languages": [
+        ".NET",
+        "C++",
+        "Java",
+        "JavaScript",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "DeleteDevEndpoint",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteGlueIdentityCenterConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteIntegration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteIntegrationResourceProperty",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteIntegrationTableProperties",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteJob",
+      "found": true,
+      "languages": [
+        ".NET",
+        "C++",
+        "Java",
+        "JavaScript",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "DeleteMLTransform",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeletePartition",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeletePartitionIndex",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteRegistry",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteResourcePolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteSchema",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteSchemaVersions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteSecurityConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteSession",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteTable",
+      "found": true,
+      "languages": [
+        ".NET",
+        "JavaScript",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "DeleteTableOptimizer",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteTableVersion",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteTrigger",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteUsageProfile",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteUserDefinedFunction",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteWorkflow",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeConnectionType",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeEntity",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeEntityPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeInboundIntegrations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeIntegrations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetBlueprint",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetBlueprintRun",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetBlueprintRuns",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetBlueprintRunsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetCatalog",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetCatalogImportStatus",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetCatalogs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetClassifier",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetClassifiers",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetClassifiersPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetColumnStatisticsForPartition",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetColumnStatisticsForTable",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetColumnStatisticsTaskRun",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetColumnStatisticsTaskRuns",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetColumnStatisticsTaskRunsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetColumnStatisticsTaskSettings",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetConnection",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetConnections",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetConnectionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetCrawler",
+      "found": true,
+      "languages": [
+        ".NET",
+        "C++",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "GetCrawlerMetrics",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetCrawlerMetricsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetCrawlers",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetCrawlersPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetCustomEntityType",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetDataCatalogEncryptionSettings",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetDataQualityModel",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetDataQualityModelResult",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetDataQualityResult",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetDataQualityRuleRecommendationRun",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetDataQualityRuleset",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetDataQualityRulesetEvaluationRun",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetDatabase",
+      "found": true,
+      "languages": [
+        ".NET",
+        "C++",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "GetDatabases",
+      "found": true,
+      "languages": [
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "GetDatabasesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetDataflowGraph",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetDevEndpoint",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetDevEndpoints",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetDevEndpointsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetEntityRecords",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetGlueIdentityCenterConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetIntegrationResourceProperty",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetIntegrationTableProperties",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetJob",
+      "found": true,
+      "languages": [
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "GetJobBookmark",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetJobRun",
+      "found": true,
+      "languages": [
+        ".NET",
+        "C++",
+        "JavaScript",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "GetJobRuns",
+      "found": true,
+      "languages": [
+        ".NET",
+        "C++",
+        "Java",
+        "JavaScript",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Swift"
+      ]
+    },
+    {
+      "name": "GetJobRunsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetJobs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetJobsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetMLTaskRun",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetMLTaskRuns",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetMLTaskRunsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetMLTransform",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetMLTransforms",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetMLTransformsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetMapping",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetPartition",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetPartitionIndexes",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetPartitionIndexesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetPartitions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetPartitionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetPlan",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetRegistry",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetResourcePolicies",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetResourcePoliciesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetResourcePolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetSchema",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetSchemaByDefinition",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetSchemaVersion",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetSchemaVersionsDiff",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetSecurityConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetSecurityConfigurations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetSecurityConfigurationsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetSession",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetStatement",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetTable",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetTableOptimizer",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetTableVersion",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetTableVersions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetTableVersionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetTables",
+      "found": true,
+      "languages": [
+        ".NET",
+        "C++",
+        "Java",
+        "JavaScript",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "GetTablesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetTags",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetTrigger",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetTriggers",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetTriggersPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetUnfilteredPartitionMetadata",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetUnfilteredPartitionsMetadata",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetUnfilteredPartitionsMetadataPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetUnfilteredTableMetadata",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetUsageProfile",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetUserDefinedFunction",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetUserDefinedFunctions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetUserDefinedFunctionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetWorkflow",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetWorkflowRun",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetWorkflowRunProperties",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetWorkflowRuns",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetWorkflowRunsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ImportCatalogToGlue",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListBlueprints",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListBlueprintsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListColumnStatisticsTaskRuns",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListColumnStatisticsTaskRunsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListConnectionTypes",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListConnectionTypesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListCrawlers",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListCrawlersPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListCrawls",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListCustomEntityTypes",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListCustomEntityTypesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDataQualityResults",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDataQualityResultsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDataQualityRuleRecommendationRuns",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDataQualityRuleRecommendationRunsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDataQualityRulesetEvaluationRuns",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDataQualityRulesetEvaluationRunsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDataQualityRulesets",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDataQualityRulesetsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDataQualityStatisticAnnotations",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDataQualityStatistics",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDevEndpoints",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListDevEndpointsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListEntities",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListEntitiesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListIntegrationResourceProperties",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListJobs",
+      "found": true,
+      "languages": [
+        ".NET",
+        "C++",
+        "JavaScript",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "ListJobsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListMLTransforms",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListMLTransformsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListRegistries",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListRegistriesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListSchemaVersions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListSchemaVersionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListSchemas",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListSchemasPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListSessions",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListSessionsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListStatements",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTableOptimizerRuns",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTableOptimizerRunsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTriggers",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTriggersPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListUsageProfiles",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListUsageProfilesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListWorkflows",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListWorkflowsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ModifyIntegration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "PutDataCatalogEncryptionSettings",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "PutDataQualityProfileAnnotation",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "PutResourcePolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "PutSchemaVersionMetadata",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "PutWorkflowRunProperties",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "QuerySchemaVersionMetadata",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "RegisterSchemaVersion",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "RemoveSchemaVersionMetadata",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ResetJobBookmark",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ResumeWorkflowRun",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "RunStatement",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "SearchTables",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "SearchTablesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StartBlueprintRun",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StartColumnStatisticsTaskRun",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StartColumnStatisticsTaskRunSchedule",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StartCrawler",
+      "found": true,
+      "languages": [
+        ".NET",
+        "C++",
+        "Java",
+        "JavaScript",
+        "Kotlin",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "StartCrawlerSchedule",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StartDataQualityRuleRecommendationRun",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StartDataQualityRulesetEvaluationRun",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StartExportLabelsTaskRun",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StartImportLabelsTaskRun",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StartJobRun",
+      "found": true,
+      "languages": [
+        ".NET",
+        "C++",
+        "Java",
+        "JavaScript",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Rust",
+        "Swift"
+      ]
+    },
+    {
+      "name": "StartMLEvaluationTaskRun",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StartMLLabelingSetGenerationTaskRun",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StartTrigger",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StartWorkflowRun",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StopColumnStatisticsTaskRun",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StopColumnStatisticsTaskRunSchedule",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StopCrawler",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StopCrawlerSchedule",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StopSession",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StopTrigger",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StopWorkflowRun",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "TagResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "TestConnection",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UntagResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateBlueprint",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateCatalog",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateClassifier",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateColumnStatisticsForPartition",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateColumnStatisticsForTable",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateColumnStatisticsTaskSettings",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateConnection",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateCrawler",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateCrawlerSchedule",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateDataQualityRuleset",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateDatabase",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateDevEndpoint",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateGlueIdentityCenterConfiguration",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateIntegrationResourceProperty",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateIntegrationTableProperties",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateJobFromSourceControl",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateMLTransform",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdatePartition",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateRegistry",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateSchema",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateSourceControlFromJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateTable",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateTableOptimizer",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateTrigger",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateUsageProfile",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateUserDefinedFunction",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateWorkflow",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Create",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Builder",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceMetadata",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceClientConfiguration",
+      "found": false,
+      "languages": []
+    }
+  ]
+}

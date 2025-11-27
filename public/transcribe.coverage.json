@@ -1,0 +1,325 @@
+{
+  "serviceCode": "transcribe",
+  "operations": [
+    {
+      "name": "CreateCallAnalyticsCategory",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateLanguageModel",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateMedicalVocabulary",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CreateVocabulary",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Python"
+      ]
+    },
+    {
+      "name": "CreateVocabularyFilter",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteCallAnalyticsCategory",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteCallAnalyticsJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteLanguageModel",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteMedicalScribeJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteMedicalTranscriptionJob",
+      "found": true,
+      "languages": [
+        ".NET",
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "DeleteMedicalVocabulary",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteTranscriptionJob",
+      "found": true,
+      "languages": [
+        ".NET",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "DeleteVocabulary",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Python"
+      ]
+    },
+    {
+      "name": "DeleteVocabularyFilter",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeLanguageModel",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetCallAnalyticsCategory",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetCallAnalyticsJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetMedicalScribeJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetMedicalTranscriptionJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetMedicalVocabulary",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetTranscriptionJob",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Python"
+      ]
+    },
+    {
+      "name": "GetVocabulary",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Python"
+      ]
+    },
+    {
+      "name": "GetVocabularyFilter",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListCallAnalyticsCategories",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListCallAnalyticsCategoriesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListCallAnalyticsJobs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListCallAnalyticsJobsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListLanguageModels",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListLanguageModelsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListMedicalScribeJobs",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListMedicalScribeJobsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListMedicalTranscriptionJobs",
+      "found": true,
+      "languages": [
+        ".NET",
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "ListMedicalTranscriptionJobsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListMedicalVocabularies",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListMedicalVocabulariesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTagsForResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTranscriptionJobs",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Java",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "ListTranscriptionJobsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListVocabularies",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Python"
+      ]
+    },
+    {
+      "name": "ListVocabulariesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListVocabularyFilters",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListVocabularyFiltersPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StartCallAnalyticsJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StartMedicalScribeJob",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StartMedicalTranscriptionJob",
+      "found": true,
+      "languages": [
+        ".NET",
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "StartTranscriptionJob",
+      "found": true,
+      "languages": [
+        ".NET",
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      "name": "TagResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UntagResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateCallAnalyticsCategory",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateMedicalVocabulary",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateVocabulary",
+      "found": true,
+      "languages": [
+        ".NET",
+        "Python"
+      ]
+    },
+    {
+      "name": "UpdateVocabularyFilter",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Create",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Builder",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceMetadata",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceClientConfiguration",
+      "found": false,
+      "languages": []
+    }
+  ]
+}

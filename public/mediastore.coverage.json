@@ -1,0 +1,143 @@
+{
+  "serviceCode": "mediastore",
+  "operations": [
+    {
+      "name": "CreateContainer",
+      "found": true,
+      "languages": [
+        "Java"
+      ]
+    },
+    {
+      "name": "DeleteContainer",
+      "found": true,
+      "languages": [
+        "Java"
+      ]
+    },
+    {
+      "name": "DeleteContainerPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteCorsPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteLifecyclePolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteMetricPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeContainer",
+      "found": true,
+      "languages": [
+        "Java"
+      ]
+    },
+    {
+      "name": "GetContainerPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetCorsPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetLifecyclePolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetMetricPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListContainers",
+      "found": true,
+      "languages": [
+        "Java"
+      ]
+    },
+    {
+      "name": "ListContainersPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTagsForResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "PutContainerPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "PutCorsPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "PutLifecyclePolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "PutMetricPolicy",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StartAccessLogging",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StopAccessLogging",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "TagResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UntagResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Create",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Builder",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceMetadata",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceClientConfiguration",
+      "found": false,
+      "languages": []
+    }
+  ]
+}

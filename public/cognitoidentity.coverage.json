@@ -1,0 +1,156 @@
+{
+  "serviceCode": "cognitoidentity",
+  "operations": [
+    {
+      "name": "CreateIdentityPool",
+      "found": true,
+      "languages": [
+        "Java",
+        "Swift"
+      ]
+    },
+    {
+      "name": "DeleteIdentities",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DeleteIdentityPool",
+      "found": true,
+      "languages": [
+        "Java",
+        "Swift"
+      ]
+    },
+    {
+      "name": "DescribeIdentity",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "DescribeIdentityPool",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetCredentialsForIdentity",
+      "found": true,
+      "languages": [
+        "Java"
+      ]
+    },
+    {
+      "name": "GetId",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetIdentityPoolRoles",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetOpenIdToken",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetOpenIdTokenForDeveloperIdentity",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetPrincipalTagAttributeMap",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListIdentities",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListIdentityPools",
+      "found": true,
+      "languages": [
+        "Java",
+        "Swift"
+      ]
+    },
+    {
+      "name": "ListIdentityPoolsPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListTagsForResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "LookupDeveloperIdentity",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "MergeDeveloperIdentities",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "SetIdentityPoolRoles",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "SetPrincipalTagAttributeMap",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "TagResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UnlinkDeveloperIdentity",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UnlinkIdentity",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UntagResource",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "UpdateIdentityPool",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Create",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Builder",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceMetadata",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceClientConfiguration",
+      "found": false,
+      "languages": []
+    }
+  ]
+}

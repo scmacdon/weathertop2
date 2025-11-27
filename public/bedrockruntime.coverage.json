@@ -1,0 +1,65 @@
+{
+  "serviceCode": "bedrockruntime",
+  "operations": [
+    {
+      "name": "ApplyGuardrail",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Converse",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "CountTokens",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "GetAsyncInvoke",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "InvokeModel",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAsyncInvokes",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ListAsyncInvokesPaginator",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "StartAsyncInvoke",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Create",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "Builder",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceMetadata",
+      "found": false,
+      "languages": []
+    },
+    {
+      "name": "ServiceClientConfiguration",
+      "found": false,
+      "languages": []
+    }
+  ]
+}
