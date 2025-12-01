@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import {
   PieChart, Pie, Cell,
   BarChart, Bar, XAxis, YAxis, Tooltip,
@@ -23,6 +23,19 @@ function Coverage() {
   const [hoverIndex, setHoverIndex] = useState(null);
   const [loading, setLoading] = useState(true);
   const [loadingService, setLoadingService] = useState(false);
+  const [highlightHeader, setHighlightHeader] = useState(false);
+
+  const methodsRef = useRef(null);
+
+  // Scroll and highlight effect when a new service is selected
+  useEffect(() => {
+    if (selectedService && methodsRef.current) {
+      methodsRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+      setHighlightHeader(true);
+      const timer = setTimeout(() => setHighlightHeader(false), 1200);
+      return () => clearTimeout(timer);
+    }
+  }, [selectedService]);
 
   useEffect(() => {
     fetch("https://tiu7fhhnl1.execute-api.us-east-1.amazonaws.com/prod/summary")
@@ -150,7 +163,6 @@ function Coverage() {
   const buttonHoverBg = "#4CAF50";
   const pieHeight = 300;
 
-  // Bold black badges for dark mode
   const badgeStyle = (bg) => ({
     display: "inline-block",
     padding: "6px 10px",
@@ -161,7 +173,7 @@ function Coverage() {
     borderRadius: 20,
     fontSize: "0.78rem",
     lineHeight: 1,
-    boxShadow: "0 1px 2px rgba(0,0,0,0.5)", // subtle shadow for dark mode
+    boxShadow: "0 1px 2px rgba(0,0,0,0.5)",
     border: "1px solid rgba(255,255,255,0.12)",
     textTransform: "none",
     whiteSpace: "nowrap"
@@ -306,7 +318,7 @@ function Coverage() {
 
       {/* ---- SELECTED SERVICE METHODS ---- */}
       {selectedService && (
-        <div style={{ marginTop: 6 }}>
+        <div ref={methodsRef} style={{ marginTop: 6 }}>
           <h3 style={{ marginBottom: 10, fontSize: "1.05rem" }}>Methods for {selectedService.serviceName}</h3>
 
           <div style={{ marginBottom: "12px", display: "flex", alignItems: "center", gap: 8 }}>
@@ -371,7 +383,8 @@ function Coverage() {
               }}
             >
               <thead style={{
-                backgroundColor: tableHeaderBg,
+                backgroundColor: highlightHeader ? "#444" : tableHeaderBg,
+                transition: "background-color 0.5s ease",
                 position: "sticky",
                 top: 0,
                 zIndex: 2,
@@ -379,7 +392,7 @@ function Coverage() {
               }}>
                 <tr>
                   <th style={{
-                    width: "30%", // reduced width
+                    width: "30%",
                     maxWidth: 380,
                     textAlign: "left",
                     padding: "12px",
@@ -432,7 +445,7 @@ function Coverage() {
                     <td style={{
                       whiteSpace: "normal",
                       wordBreak: "break-word",
-                      maxWidth: 380, // match header
+                      maxWidth: 380,
                       padding: "12px",
                       verticalAlign: "middle"
                     }}>
@@ -476,6 +489,8 @@ function Coverage() {
 }
 
 export default Coverage;
+
+
 
 
 
