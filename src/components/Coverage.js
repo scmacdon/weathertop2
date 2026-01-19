@@ -24,6 +24,8 @@ function Coverage() {
   const [loading, setLoading] = useState(true);
   const [loadingService, setLoadingService] = useState(false);
   const [highlightHeader, setHighlightHeader] = useState(false);
+  const [globalSdkExampleCount, setGlobalSdkExampleCount] = useState(0);
+
 
   const methodsRef = useRef(null);
 
@@ -43,6 +45,7 @@ function Coverage() {
       .then(summary => {
         const services = summary.services.map(s => ({ ...s, methods: [] }));
         setData(services);
+        setGlobalSdkExampleCount(summary.globalSdkExampleCount || 0);
         setLoading(false);
       })
       .catch(err => {
@@ -209,6 +212,7 @@ function Coverage() {
             <div><strong>Total AWS Services:</strong> {totalServices}</div>
             <div><strong>Total Service Operations:</strong> {totalServiceOperations}</div>
             <div><strong>Total Documented Operations:</strong> {totalDocumentedOperations}</div>
+            <div><strong>Total SDK Code Examples:</strong> {globalSdkExampleCount}</div>
           </div>
           <ResponsiveContainer width="100%" height="70%">
             <PieChart>
