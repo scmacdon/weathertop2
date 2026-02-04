@@ -3,18 +3,25 @@ import TestDashboard from "./components/TestDashboard";
 import Stats from "./components/Stats";
 import Coverage from "./components/Coverage";
 import GettingStarted from "./components/GettingStarted";
+import Management from "./components/Management"; // ✅ ADD THIS
 import "./styles/styles.css";
 
 export default function App() {
   const [activePage, setActivePage] = useState("gettingStarted");
   const [theme, setTheme] = useState("dark");
 
-  const toggleTheme = () => setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+  const toggleTheme = () =>
+    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
 
   return (
     <div
       className={`app-container ${theme}`}
-      style={{ display: "flex", minHeight: "100vh", background: "#121212", color: "#f5f5f5" }}
+      style={{
+        display: "flex",
+        minHeight: "100vh",
+        background: "#121212",
+        color: "#f5f5f5",
+      }}
     >
       {/* Left-Hand Side Menu */}
       <nav
@@ -26,16 +33,44 @@ export default function App() {
           flexDirection: "column",
         }}
       >
-        <h1 style={{ color: "#009999", marginBottom: "2rem", textAlign: "center" }}>Weathertop</h1>
-        <button style={menuButtonStyle(activePage === "gettingStarted")} onClick={() => setActivePage("gettingStarted")}>
+        <h1
+          style={{
+            color: "#009999",
+            marginBottom: "2rem",
+            textAlign: "center",
+          }}
+        >
+          Weathertop
+        </h1>
+
+        <button
+          style={menuButtonStyle(activePage === "gettingStarted")}
+          onClick={() => setActivePage("gettingStarted")}
+        >
           Getting Started
         </button>
-        <button style={menuButtonStyle(activePage === "codeTesting")} onClick={() => setActivePage("codeTesting")}>
+
+        <button
+          style={menuButtonStyle(activePage === "codeTesting")}
+          onClick={() => setActivePage("codeTesting")}
+        >
           Code Testing
         </button>
-        <button style={menuButtonStyle(activePage === "coverage")} onClick={() => setActivePage("coverage")}>
+
+        <button
+          style={menuButtonStyle(activePage === "coverage")}
+          onClick={() => setActivePage("coverage")}
+        >
           Coverage Dashboard
         </button>
+
+        <button
+          style={menuButtonStyle(activePage === "management")}
+          onClick={() => setActivePage("management")}
+        >
+          Task Management
+        </button>
+
         <button
           onClick={toggleTheme}
           style={{
@@ -54,26 +89,30 @@ export default function App() {
       {/* Main Content */}
       <main style={{ flex: 1, overflowY: "auto" }}>
         {activePage === "gettingStarted" && <GettingStarted />}
+
         {activePage === "codeTesting" && (
           <div style={{ padding: "20px" }}>
-            {/* Stats above TestDashboard */}
             <Stats />
             <div style={{ marginTop: "20px" }}>
               <TestDashboard status="Idle" logs={[]} />
             </div>
           </div>
         )}
+
         {activePage === "coverage" && <Coverage />}
+
+        {/* ✅ THIS WAS MISSING */}
+        {activePage === "management" && <Management />}
       </main>
     </div>
   );
 }
 
-// Helper for menu button style
+/* Menu Button Style Helper */
 const menuButtonStyle = (isActive) => ({
   padding: "12px",
   marginBottom: "12px",
-  backgroundColor: isActive ? "#009999" : "#333", // softer cyan neon
+  backgroundColor: isActive ? "#009999" : "#333",
   color: "#fff",
   fontWeight: "bold",
   border: "none",
@@ -81,8 +120,3 @@ const menuButtonStyle = (isActive) => ({
   cursor: "pointer",
   textAlign: "left",
 });
-
-
-
-
-
