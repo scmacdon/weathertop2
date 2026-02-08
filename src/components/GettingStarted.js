@@ -55,13 +55,19 @@ export default function GettingStarted() {
     [
       "🧪",
       "Code Testing",
-      "Explore Weathertop's powerful Code Testing features: view SDK test coverage, check which AWS services have full or partial tests, monitor pass/fail rates, and interactively analyze integration tests...",
+      "Explore Weathertop's powerful Code Testing features: view SDK test coverage, check which AWS services have full or partial tests, monitor pass/fail rates, and interactively analyze integration tests.",
     ],
     [
       "📊",
       "Code Coverage",
-      "The Coverage Dashboard visualizes documentation coverage for all AWS services. Instantly identify missing code examples, method-level documentation gaps, and service-wide coverage percentages...",
+      "The Coverage Dashboard tracks fully tested, production-quality AWS code examples that meet AWS engineering standards and live in the main AWS Code Examples GitHub repository. These examples are runnable, continuously validated by Weathertop, and reflect real-world SDK usage across services and operations.",
     ],
+    [
+  "🧩",
+  "Model-Driven Code Examples",
+  "AWS SDK reference documentation includes model-driven code snippets generated directly from service models. These snippets illustrate API shape and required parameters, but they are not runnable end-to-end and do not meet AWS Code Example standards. They often lack client setup, configuration, and error handling. Weathertop tracks these snippets to measure documentation completeness, reveal gaps in practical guidance, and show where developers see API structure without usable, executable examples."
+]
+,
     [
       "🗂️",
       "Task Management",
@@ -70,10 +76,18 @@ export default function GettingStarted() {
   ];
 
   return (
-    <div style={{ padding: "3rem 0", backgroundColor: "#0b0b0b", minHeight: "100vh" }}>
+    <div
+      style={{
+        padding: "3rem 0",
+        backgroundColor: "#0b0b0b",
+        minHeight: "100vh",
+      }}
+    >
       <h2 style={sectionHeadingStyle}>Getting Started with Weathertop</h2>
       <p style={subtitleStyle}>
-        Welcome to Weathertop! Explore Code Testing, Coverage Dashboard, and Task Management to understand SDK quality, documentation health, and ECS task execution.
+        Welcome to Weathertop! Explore Code Testing, Coverage Dashboard,
+        Model-Driven Examples, and Task Management to understand SDK quality,
+        documentation health, and operational execution.
       </p>
 
       <div style={cardContainerStyle}>
@@ -83,11 +97,13 @@ export default function GettingStarted() {
             style={cardStyle}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = "scale(1.05)";
-              e.currentTarget.style.boxShadow = "0 0 2px #00cfcf, 0 0 5px #66cccc";
+              e.currentTarget.style.boxShadow =
+                "0 0 2px #00cfcf, 0 0 5px #66cccc";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = "scale(1)";
-              e.currentTarget.style.boxShadow = "0 0 1px #00cfcf, 0 0 3px #66cccc";
+              e.currentTarget.style.boxShadow =
+                "0 0 1px #00cfcf, 0 0 3px #66cccc";
             }}
           >
             <div style={iconStyle}>{icon}</div>

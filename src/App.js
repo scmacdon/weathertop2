@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import TestDashboard from "./components/TestDashboard";
 import Stats from "./components/Stats";
 import Coverage from "./components/Coverage";
+import ModelCoverage from "./components/ModelCoverage";
 import GettingStarted from "./components/GettingStarted";
-import Management from "./components/Management"; // ✅ ADD THIS
+import Management from "./components/Management";
 import "./styles/styles.css";
 
 export default function App() {
@@ -23,7 +24,6 @@ export default function App() {
         color: "#f5f5f5",
       }}
     >
-      {/* Left-Hand Side Menu */}
       <nav
         style={{
           width: "240px",
@@ -65,6 +65,13 @@ export default function App() {
         </button>
 
         <button
+          style={menuButtonStyle(activePage === "modelCoverage")}
+          onClick={() => setActivePage("modelCoverage")}
+        >
+          Model-Driven Examples
+        </button>
+
+        <button
           style={menuButtonStyle(activePage === "management")}
           onClick={() => setActivePage("management")}
         >
@@ -86,7 +93,6 @@ export default function App() {
         </button>
       </nav>
 
-      {/* Main Content */}
       <main style={{ flex: 1, overflowY: "auto" }}>
         {activePage === "gettingStarted" && <GettingStarted />}
 
@@ -101,14 +107,14 @@ export default function App() {
 
         {activePage === "coverage" && <Coverage />}
 
-        {/* ✅ THIS WAS MISSING */}
+        {activePage === "modelCoverage" && <ModelCoverage />}
+
         {activePage === "management" && <Management />}
       </main>
     </div>
   );
 }
 
-/* Menu Button Style Helper */
 const menuButtonStyle = (isActive) => ({
   padding: "12px",
   marginBottom: "12px",
