@@ -161,7 +161,7 @@ function ModelCoverage() {
         ) : (
           <p style={{ margin: 0, fontSize: "0.92rem" }}>
             This component tracks <strong>Model Generated Code examples</strong>, which are automatically generated code snippets.
-            These examples do not run and are typically do not meet AWS Code Example standards.
+            These examples do not run and typically do not meet AWS Code Example standards.
           </p>
         )}
       </div>
