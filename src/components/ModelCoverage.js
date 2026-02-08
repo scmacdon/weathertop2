@@ -22,15 +22,20 @@ function ModelCoverage() {
 
   const operationsRef = useRef(null);
 
-  // Load JSON once for bar chart
+  // Load JSON once for Kotlin
   useEffect(() => {
-    if (language !== "Kotlin") return;
+    if (language !== "Kotlin") {
+      setServices([]);
+      setLoading(false);
+      setSelectedService(null);
+      return;
+    }
 
     setLoading(true);
     fetch(`/kotlinref.json?_=${Date.now()}`)
       .then(res => res.json())
       .then(json => {
-        const svcRows = Object.entries(json.services).map(([name, stats]) => ({
+        const svcRows = Object.entries(json).map(([name, stats]) => ({
           serviceName: name,
           serviceCode: name,
           operations: stats.operations,
@@ -52,37 +57,34 @@ function ModelCoverage() {
   }, [selectedService]);
 
   // Load service operations on bar click
-const loadServiceOperations = async (serviceCode) => {
-  console.log("IN LOAD METHOF");
-  try {
-    const res = await fetch(`/kotlinref.json?_=${Date.now()}`); // bypass cache
-    const json = await res.json();
-    
-    // FIX: JSON has services at top-level, not under `services`
-    const stats = json[serviceCode];
-    if (!stats) return;
+  const loadServiceOperations = async (serviceCode) => {
+    console.log("IN LOAD METHOF");
+    try {
+      const res = await fetch(`/kotlinref.json?_=${Date.now()}`);
+      const json = await res.json();
+      const stats = json[serviceCode]; // top-level
+      if (!stats) return;
 
-    const methods = (stats.names || []).map(n => ({
-      name: n,
-      found: true,
-      languages: ["Kotlin"]
-    }));
+      const methods = (stats.names || []).map(n => ({
+        name: n,
+        found: true,
+        languages: ["Kotlin"]
+      }));
 
-    console.log("Number of operations:", methods.length); // should match JSON names array
+      console.log("Number of operations:", methods.length);
 
-    setSelectedService({
-      serviceName: serviceCode,
-      serviceCode,
-      operations: stats.operations,
-      examples: stats.examples,
-      coveragePercent: stats.operations ? (stats.examples / stats.operations) * 100 : 0,
-      methods
-    });
-  } catch (err) {
-    console.error("Failed to load service operations", err);
-  }
-};
-
+      setSelectedService({
+        serviceName: serviceCode,
+        serviceCode,
+        operations: stats.operations,
+        examples: stats.examples,
+        coveragePercent: stats.operations ? (stats.examples / stats.operations) * 100 : 0,
+        methods
+      });
+    } catch (err) {
+      console.error("Failed to load service operations", err);
+    }
+  };
 
   const badgeStyle = (bg) => ({
     display: "inline-block",
@@ -111,7 +113,7 @@ const loadServiceOperations = async (serviceCode) => {
     boxShadow: "inset 0 -2px rgba(0,0,0,0.15)"
   });
 
-  if (loading) return <div style={{ color: "white", padding: 20 }}>Loading Kotlin model coverage…</div>;
+  if (loading) return <div style={{ color: "white", padding: 20 }}>Loading model coverage…</div>;
 
   const totalOperations = services.reduce((sum, s) => sum + s.operations, 0);
   const totalExamples = services.reduce((sum, s) => sum + s.examples, 0);
@@ -136,126 +138,161 @@ const loadServiceOperations = async (serviceCode) => {
     <div style={{ padding: 20, backgroundColor: "#121212", color: "#e0e0e0", fontFamily: "Inter, Arial, sans-serif", minHeight: "100vh" }}>
       <h1>AWS Model Code Coverage</h1>
 
-      {/* GLOBAL SUMMARY */}
-      <div style={{ display: "flex", gap: 20, flexWrap: "wrap", marginBottom: 24 }}>
-        <div style={{ flex: "1 1 320px", backgroundColor: "#1e1e1e", borderRadius: 8, padding: 16 }}>
-          <h3>Global Model Coverage</h3>
-          <div>Total Services: {totalServices}</div>
-          <div>Total Operations: {totalOperations}</div>
-          <div>Total Model Examples: {totalExamples}</div>
-          <ResponsiveContainer width="100%" height={200}>
-            <PieChart>
-              <Pie
-                data={[
-                  { name: "With Examples", value: totalExamples },
-                  { name: "No Examples", value: missingExamples }
-                ]}
-                dataKey="value"
-                cx="50%"
-                cy="50%"
-                outerRadius={80}
-                label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(1)}%`}
-              >
-                <Cell fill="#2ecc71" />
-                <Cell fill="#e74c3c" />
-              </Pie>
-              <Tooltip />
-            </PieChart>
-          </ResponsiveContainer>
-        </div>
-      </div>
-
-      {/* SERVICE COVERAGE BAR */}
+      {/* SDK LANGUAGE DROPDOWN */}
       <div style={{ marginBottom: 24 }}>
-        <h2>Coverage by Service (%)</h2>
-        <div style={{ maxHeight: 420, overflowY: "auto", backgroundColor: "#1e1e1e", borderRadius: 8, padding: 8 }}>
-          <ResponsiveContainer width="100%" height={Math.max(filteredServices.length * 40, 240)}>
-            <BarChart layout="vertical" data={filteredServices} barSize={26}>
-              <XAxis type="number" domain={[0, 100]} tick={{ fill: "#e0e0e0", fontSize: 12 }} />
-              <YAxis type="category" dataKey="serviceName" width={180} tick={{ fill: "#e0e0e0", fontSize: 12 }} />
-              <Tooltip formatter={(v) => `${v.toFixed(1)}%`} />
-              <Bar
-                dataKey="coveragePercent"
-                radius={[5, 5, 5, 5]}
-                cursor="pointer"
-                onClick={(data) => {
-                  if (data && data.payload) {
-                    loadServiceOperations(data.payload.serviceCode);
-                  }
-                }}
-              >
-                {filteredServices.map((entry, idx) => (
-                  <Cell
-                    key={idx}
-                    fill={selectedService?.serviceCode === entry.serviceCode ? "#f39c12" : "#82ca9d"}
-                  />
-                ))}
-              </Bar>
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
+        <label style={{ marginRight: 12 }}>Select SDK Language:</label>
+        <select
+          value={language}
+          onChange={(e) => setLanguage(e.target.value)}
+          style={{ padding: "6px 12px", borderRadius: 6, border: "none", cursor: "pointer", backgroundColor: "#333", color: "#fff" }}
+        >
+          <option value="Kotlin">Kotlin</option>
+          <option value="Java">Java</option>
+        </select>
       </div>
 
-      {/* OPERATIONS TABLE */}
-      {selectedService && (
-        <div ref={operationsRef} style={{ marginTop: 20 }}>
-          <h3>Operations for {selectedService.serviceName}</h3>
+      {/* ABOUT THIS TOOL */}
+      <div style={{ marginBottom: 24 }}>
+        <h3 style={{ marginTop: 0, fontSize: "1.05rem" }}>About This Tool</h3>
+        {language === "Java" ? (
+          <p style={{ margin: 0, fontSize: "0.92rem" }}>
+            Java API Docs has no model-driven examples.
+          </p>
+        ) : (
+          <p style={{ margin: 0, fontSize: "0.92rem" }}>
+            This component tracks <strong>Model Generated Code examples</strong>, which are automatically generated code snippets.
+            These examples do not run and are typically do not meet AWS Code Example standards.
+          </p>
+        )}
+      </div>
 
-          <div style={{ marginBottom: 12, display: "flex", gap: 8 }}>
-            <span>Filter by Language:</span>
-            {allLanguages.map(lang => (
-              <button
-                key={lang}
-                style={{
-                  padding: "6px 10px",
-                  backgroundColor: filterLang === lang ? langColorMap[lang] : "#333",
-                  color: "#fff",
-                  border: "none",
-                  borderRadius: 6,
-                  cursor: "pointer"
-                }}
-                onClick={() => setFilterLang(filterLang === lang ? null : lang)}
-              >
-                {lang}
-              </button>
-            ))}
-            <button
-              style={{ padding: "6px 12px", borderRadius: 6, border: "none", cursor: "pointer", backgroundColor: showMissingOnly ? "#333" : "#4CAF50", color: "#fff" }}
-              onClick={() => {
-                setShowMissingOnly(!showMissingOnly);
-                setFilterLang(null);
-              }}
-            >
-              {showMissingOnly ? "Missing Only" : "Found / Missing"}
-            </button>
+      {/* SHOW NOTHING ELSE IF JAVA */}
+      {language === "Java" && <div style={{ color: "#aaa", fontStyle: "italic" }}>Switch to Kotlin to see model-driven examples.</div>}
+
+      {language === "Kotlin" && (
+        <>
+          {/* GLOBAL SUMMARY */}
+          <div style={{ display: "flex", gap: 20, flexWrap: "wrap", marginBottom: 24 }}>
+            <div style={{ flex: "1 1 320px", backgroundColor: "#1e1e1e", borderRadius: 8, padding: 16 }}>
+              <h3>Global Model Coverage</h3>
+              <div>Total Services: {totalServices}</div>
+              <div>Total Operations: {totalOperations}</div>
+              <div>Total Model Examples: {totalExamples}</div>
+              <ResponsiveContainer width="100%" height={200}>
+                <PieChart>
+                  <Pie
+                    data={[
+                      { name: "With Examples", value: totalExamples },
+                      { name: "No Examples", value: missingExamples }
+                    ]}
+                    dataKey="value"
+                    cx="50%"
+                    cy="50%"
+                    outerRadius={80}
+                    label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(1)}%`}
+                  >
+                    <Cell fill="#2ecc71" />
+                    <Cell fill="#e74c3c" />
+                  </Pie>
+                  <Tooltip />
+                </PieChart>
+              </ResponsiveContainer>
+            </div>
           </div>
 
-          <table style={{ width: "100%", borderCollapse: "collapse", backgroundColor: "#1e1e1e" }}>
-            <thead style={{ backgroundColor: "#262626", position: "sticky", top: 0 }}>
-              <tr>
-                <th style={{ textAlign: "left", padding: 12 }}>Operation Name</th>
-                <th style={{ textAlign: "center", padding: 12 }}>Found</th>
-                <th style={{ textAlign: "left", padding: 12 }}>Languages</th>
-              </tr>
-            </thead>
-            <tbody>
-              {displayedMethods.length === 0 && (
-                <tr>
-                  <td colSpan={3} style={{ padding: 16, textAlign: "center", color: "#aaa" }}>No operations match the filter.</td>
-                </tr>
-              )}
-              {displayedMethods.map((m, idx) => (
-                <tr key={m.name} style={{ backgroundColor: idx % 2 === 0 ? "#171717" : "#1d1d1d" }}>
-                  <td style={{ padding: 12 }}>{m.name}</td>
-                  <td style={{ textAlign: "center", padding: 12 }}><span style={foundBadge(m.found)}>{m.found ? "✅" : "❌"}</span></td>
-                  <td style={{ padding: 12, display: "flex", flexWrap: "wrap", gap: 4 }}>
-                    {m.languages.map((lang, i) => <span key={i} style={badgeStyle(langColorMap[lang] || LANGUAGE_COLORS[i % LANGUAGE_COLORS.length])}>{lang}</span>)}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+          {/* SERVICE COVERAGE BAR */}
+          <div style={{ marginBottom: 24 }}>
+            <h2>Coverage by Service (%)</h2>
+            <div style={{ maxHeight: 420, overflowY: "auto", backgroundColor: "#1e1e1e", borderRadius: 8, padding: 8 }}>
+              <ResponsiveContainer width="100%" height={Math.max(filteredServices.length * 40, 240)}>
+                <BarChart layout="vertical" data={filteredServices} barSize={26}>
+                  <XAxis type="number" domain={[0, 100]} tick={{ fill: "#e0e0e0", fontSize: 12 }} />
+                  <YAxis type="category" dataKey="serviceName" width={180} tick={{ fill: "#e0e0e0", fontSize: 12 }} />
+                  <Tooltip formatter={(v) => `${v.toFixed(1)}%`} />
+                  <Bar
+                    dataKey="coveragePercent"
+                    radius={[5, 5, 5, 5]}
+                    cursor="pointer"
+                    onClick={(data) => {
+                      if (data && data.payload) {
+                        loadServiceOperations(data.payload.serviceCode);
+                      }
+                    }}
+                  >
+                    {filteredServices.map((entry, idx) => (
+                      <Cell
+                        key={idx}
+                        fill={selectedService?.serviceCode === entry.serviceCode ? "#f39c12" : "#82ca9d"}
+                      />
+                    ))}
+                  </Bar>
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
+          </div>
+
+          {/* OPERATIONS TABLE */}
+          {selectedService && (
+            <div ref={operationsRef} style={{ marginTop: 20 }}>
+              <h3>Operations for {selectedService.serviceName}</h3>
+
+              <div style={{ marginBottom: 12, display: "flex", gap: 8 }}>
+                <span>Filter by Language:</span>
+                {allLanguages.map(lang => (
+                  <button
+                    key={lang}
+                    style={{
+                      padding: "6px 10px",
+                      backgroundColor: filterLang === lang ? langColorMap[lang] : "#333",
+                      color: "#fff",
+                      border: "none",
+                      borderRadius: 6,
+                      cursor: "pointer"
+                    }}
+                    onClick={() => setFilterLang(filterLang === lang ? null : lang)}
+                  >
+                    {lang}
+                  </button>
+                ))}
+                <button
+                  style={{ padding: "6px 12px", borderRadius: 6, border: "none", cursor: "pointer", backgroundColor: showMissingOnly ? "#333" : "#4CAF50", color: "#fff" }}
+                  onClick={() => {
+                    setShowMissingOnly(!showMissingOnly);
+                    setFilterLang(null);
+                  }}
+                >
+                  {showMissingOnly ? "Missing Only" : "Found / Missing"}
+                </button>
+              </div>
+
+              <table style={{ width: "100%", borderCollapse: "collapse", backgroundColor: "#1e1e1e" }}>
+                <thead style={{ backgroundColor: "#262626", position: "sticky", top: 0 }}>
+                  <tr>
+                    <th style={{ textAlign: "left", padding: 12 }}>Operation Name</th>
+                    <th style={{ textAlign: "center", padding: 12 }}>Found</th>
+                    <th style={{ textAlign: "left", padding: 12 }}>Languages</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {displayedMethods.length === 0 && (
+                    <tr>
+                      <td colSpan={3} style={{ padding: 16, textAlign: "center", color: "#aaa" }}>No operations match the filter.</td>
+                    </tr>
+                  )}
+                  {displayedMethods.map((m, idx) => (
+                    <tr key={m.name} style={{ backgroundColor: idx % 2 === 0 ? "#171717" : "#1d1d1d" }}>
+                      <td style={{ padding: 12 }}>{m.name}</td>
+                      <td style={{ textAlign: "center", padding: 12 }}><span style={foundBadge(m.found)}>{m.found ? "✅" : "❌"}</span></td>
+                      <td style={{ padding: 12, display: "flex", flexWrap: "wrap", gap: 4 }}>
+                        {m.languages.map((lang, i) => <span key={i} style={badgeStyle(langColorMap[lang] || LANGUAGE_COLORS[i % LANGUAGE_COLORS.length])}>{lang}</span>)}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </>
       )}
     </div>
   );
