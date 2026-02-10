@@ -19,71 +19,80 @@ function ModelCoverage() {
   const [selectedService, setSelectedService] = useState(null);
   const [showMissingOnly, setShowMissingOnly] = useState(false);
   const [filterLang, setFilterLang] = useState(null);
+  const [message, setMessage] = useState(""); // <-- message state
 
   const operationsRef = useRef(null);
 
-  // Load JSON once for Kotlin
   useEffect(() => {
-    if (language !== "Kotlin") {
-      setServices([]);
-      setLoading(false);
-      setSelectedService(null);
+    // Reset state first
+    setServices([]);
+    setSelectedService(null);
+    setLoading(false);
+    setMessage(""); // reset message on every language change
+
+    if (language === "Java") {
+      console.log("Java selected — no model-driven examples available");
+      setMessage("Java has no model-driven examples"); // <-- message for Java
       return;
     }
 
-    setLoading(true);
-    fetch(`/kotlinref.json?_=${Date.now()}`)
-      .then(res => res.json())
-      .then(json => {
-        const svcRows = Object.entries(json).map(([name, stats]) => ({
-          serviceName: name,
-          serviceCode: name,
-          operations: stats.operations,
-          examples: stats.examples,
-          coveragePercent: stats.operations ? (stats.examples / stats.operations) * 100 : 0,
-          names: stats.names || []
-        }));
-        setServices(svcRows);
-      })
-      .catch(err => console.error("Failed to load kotlinref.json", err))
-      .finally(() => setLoading(false));
+    if (language === "Kotlin" || language === "NetV3") {
+      setLoading(true);
+
+      let url = language === "Kotlin"
+        ? `/kotlinref2.json?_=${Date.now()}`
+        : `/csharp.json?_=${Date.now()}`;
+
+      fetch(url)
+        .then(res => res.json())
+        .then(json => {
+          console.log("Raw JSON loaded:", json);
+
+          const svcRows = Array.isArray(json) ? json : [json];
+
+          console.log("Total services in JSON:", svcRows.length);
+
+          const mappedServices = svcRows.map(svc => ({
+            serviceName: svc.service,
+            serviceCode: svc.service,
+            operations: Number(svc.operations) || 0,
+            examples: Number(svc.examples) || 0,
+            coveragePercent: svc.operations ? (svc.examples / svc.operations) * 100 : 0,
+            names: Array.isArray(svc.names) ? svc.names : []
+          }));
+
+          setServices(mappedServices);
+        })
+        .catch(err => console.error("Failed to load JSON", err))
+        .finally(() => setLoading(false));
+
+      return;
+    }
+
+    console.log("Language is not Kotlin or NetV3, clearing services");
+    setServices([]);
   }, [language]);
 
-  // Scroll to operations table when a service is selected
   useEffect(() => {
     if (selectedService && operationsRef.current) {
       operationsRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }, [selectedService]);
 
-  // Load service operations on bar click
-  const loadServiceOperations = async (serviceCode) => {
-    console.log("IN LOAD METHOF");
-    try {
-      const res = await fetch(`/kotlinref.json?_=${Date.now()}`);
-      const json = await res.json();
-      const stats = json[serviceCode]; // top-level
-      if (!stats) return;
+  const loadServiceOperations = (serviceCode) => {
+    const svc = services.find(s => s.serviceCode === serviceCode);
+    if (!svc) return;
 
-      const methods = (stats.names || []).map(n => ({
-        name: n,
-        found: true,
-        languages: ["Kotlin"]
-      }));
+    const methods = (svc.names || []).map(n => ({
+      name: n,
+      found: true,
+      languages: [language === "NetV3" ? ".NET" : "Kotlin"]
+    }));
 
-      console.log("Number of operations:", methods.length);
-
-      setSelectedService({
-        serviceName: serviceCode,
-        serviceCode,
-        operations: stats.operations,
-        examples: stats.examples,
-        coveragePercent: stats.operations ? (stats.examples / stats.operations) * 100 : 0,
-        methods
-      });
-    } catch (err) {
-      console.error("Failed to load service operations", err);
-    }
+    setSelectedService({
+      ...svc,
+      methods
+    });
   };
 
   const badgeStyle = (bg) => ({
@@ -148,30 +157,20 @@ function ModelCoverage() {
         >
           <option value="Kotlin">Kotlin</option>
           <option value="Java">Java</option>
+          <option value="NetV3">.NET v3</option>
         </select>
       </div>
 
-      {/* ABOUT THIS TOOL */}
-      <div style={{ marginBottom: 24 }}>
-        <h3 style={{ marginTop: 0, fontSize: "1.05rem" }}>About This Tool</h3>
-        {language === "Java" ? (
-          <p style={{ margin: 0, fontSize: "0.92rem" }}>
-            Java API Docs has no model-driven examples.
-          </p>
-        ) : (
-          <p style={{ margin: 0, fontSize: "0.92rem" }}>
-            This component tracks <strong>Model Generated Code examples</strong>, which are automatically generated code snippets.
-            These examples do not run and typically do not meet AWS Code Example standards.
-          </p>
-        )}
-      </div>
+      {/* Show message for any language */}
+      {message && (
+        <div style={{ padding: 12, marginBottom: 16, backgroundColor: "#333", borderRadius: 6, color: "#f39c12", fontWeight: "bold" }}>
+          {message}
+        </div>
+      )}
 
-      {/* SHOW NOTHING ELSE IF JAVA */}
-      {language === "Java" && <div style={{ color: "#aaa", fontStyle: "italic" }}>Switch to Kotlin to see model-driven examples.</div>}
-
-      {language === "Kotlin" && (
+      {/* Kotlin and NetV3-specific UI */}
+      {(language === "Kotlin" || language === "NetV3") && (
         <>
-          {/* GLOBAL SUMMARY */}
           <div style={{ display: "flex", gap: 20, flexWrap: "wrap", marginBottom: 24 }}>
             <div style={{ flex: "1 1 320px", backgroundColor: "#1e1e1e", borderRadius: 8, padding: 16 }}>
               <h3>Global Model Coverage</h3>
@@ -200,7 +199,6 @@ function ModelCoverage() {
             </div>
           </div>
 
-          {/* SERVICE COVERAGE BAR */}
           <div style={{ marginBottom: 24 }}>
             <h2>Coverage by Service (%)</h2>
             <div style={{ maxHeight: 420, overflowY: "auto", backgroundColor: "#1e1e1e", borderRadius: 8, padding: 8 }}>
@@ -214,9 +212,7 @@ function ModelCoverage() {
                     radius={[5, 5, 5, 5]}
                     cursor="pointer"
                     onClick={(data) => {
-                      if (data && data.payload) {
-                        loadServiceOperations(data.payload.serviceCode);
-                      }
+                      if (data && data.payload) loadServiceOperations(data.payload.serviceCode);
                     }}
                   >
                     {filteredServices.map((entry, idx) => (
@@ -231,7 +227,6 @@ function ModelCoverage() {
             </div>
           </div>
 
-          {/* OPERATIONS TABLE */}
           {selectedService && (
             <div ref={operationsRef} style={{ marginTop: 20 }}>
               <h3>Operations for {selectedService.serviceName}</h3>
@@ -276,15 +271,26 @@ function ModelCoverage() {
                 <tbody>
                   {displayedMethods.length === 0 && (
                     <tr>
-                      <td colSpan={3} style={{ padding: 16, textAlign: "center", color: "#aaa" }}>No operations match the filter.</td>
+                      <td colSpan={3} style={{ padding: 16, textAlign: "center", color: "#aaa" }}>
+                        No operations match the filter.
+                      </td>
                     </tr>
                   )}
                   {displayedMethods.map((m, idx) => (
                     <tr key={m.name} style={{ backgroundColor: idx % 2 === 0 ? "#171717" : "#1d1d1d" }}>
                       <td style={{ padding: 12 }}>{m.name}</td>
-                      <td style={{ textAlign: "center", padding: 12 }}><span style={foundBadge(m.found)}>{m.found ? "✅" : "❌"}</span></td>
+                      <td style={{ textAlign: "center", padding: 12 }}>
+                        <span style={foundBadge(m.found)}>{m.found ? "✅" : "❌"}</span>
+                      </td>
                       <td style={{ padding: 12, display: "flex", flexWrap: "wrap", gap: 4 }}>
-                        {m.languages.map((lang, i) => <span key={i} style={badgeStyle(langColorMap[lang] || LANGUAGE_COLORS[i % LANGUAGE_COLORS.length])}>{lang}</span>)}
+                        {m.languages.map((lang, i) => (
+                          <span
+                            key={i}
+                            style={badgeStyle(langColorMap[lang] || LANGUAGE_COLORS[i % LANGUAGE_COLORS.length])}
+                          >
+                            {lang}
+                          </span>
+                        ))}
                       </td>
                     </tr>
                   ))}
@@ -299,3 +305,4 @@ function ModelCoverage() {
 }
 
 export default ModelCoverage;
+
