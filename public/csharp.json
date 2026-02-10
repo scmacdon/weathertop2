@@ -40,7 +40,7 @@
     ]
   },
   {
-    "service": "Ec2",
+    "service": "EC2",
     "examples": 177,
     "operations": 756,
     "names": [
@@ -189,15 +189,69 @@
     ]
   },
   {
-    "service": "Dynamodb",
+    "service": "DynamoDB",
     "examples": 0,
     "operations": 57,
     "names": []
   },
   {
-    "service": "Iam",
+    "service": "IAM",
     "examples": 0,
     "operations": 176,
     "names": []
+  },
+  {
+    "service": "Lambda",
+    "examples": 50,
+    "operations": 85,
+    "names": [
+      "AddLayerVersionPermission",
+      "AddPermission",
+      "CreateAlias",
+      "CreateEventSourceMapping",
+      "CreateFunction",
+      "DeleteAlias",
+      "DeleteEventSourceMapping",
+      "DeleteFunction",
+      "DeleteFunctionConcurrency",
+      "DeleteFunctionEventInvokeConfig",
+      "DeleteLayerVersion",
+      "DeleteProvisionedConcurrencyConfig",
+      "GetAccountSettings",
+      "GetAlias",
+      "GetEventSourceMapping",
+      "GetFunction",
+      "GetFunctionConcurrency",
+      "GetFunctionConfiguration",
+      "GetFunctionEventInvokeConfig",
+      "GetLayerVersion",
+      "GetLayerVersionByArn",
+      "GetPolicy",
+      "GetProvisionedConcurrencyConfig",
+      "Invoke",
+      "ListAliases",
+      "ListEventSourceMappings",
+      "ListFunctionEventInvokeConfigs",
+      "ListFunctions",
+      "ListLayerVersions",
+      "ListLayers",
+      "ListProvisionedConcurrencyConfigs",
+      "ListTags",
+      "ListVersionsByFunction",
+      "PublishLayerVersion",
+      "PublishVersion",
+      "PutFunctionConcurrency",
+      "PutFunctionEventInvokeConfig",
+      "PutProvisionedConcurrencyConfig",
+      "RemoveLayerVersionPermission",
+      "RemovePermission",
+      "TagResource",
+      "UntagResource",
+      "UpdateAlias",
+      "UpdateEventSourceMapping",
+      "UpdateFunctionCode",
+      "UpdateFunctionConfiguration",
+      "UpdateFunctionEventInvokeConfig"
+    ]
   }
 ]
