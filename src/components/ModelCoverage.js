@@ -38,7 +38,8 @@ function ModelCoverage() {
       language === "Kotlin" ||
       language === "NetV3" ||
       language === "NetV4" ||
-      language === "Python"
+      language === "Python" ||
+      language === "PHP"
     ) {
       setLoading(true);
 
@@ -52,6 +53,8 @@ function ModelCoverage() {
         url = `/csharp4.json?_=${Date.now()}`;
       } else if (language === "Python") {
         url = `/python.json?_=${Date.now()}`;
+      } else if (language === "PHP") {
+        url = `/PHP.json?_=${Date.now()}`;
       }
 
       fetch(url)
@@ -101,7 +104,9 @@ function ModelCoverage() {
           ? ".NET v4"
           : language === "Kotlin"
           ? "Kotlin"
-          : "Python"
+          : language === "Python"
+          ? "Python"
+          : "PHP"
       ]
     }));
 
@@ -203,6 +208,7 @@ function ModelCoverage() {
           <option value="NetV3">.NET v3</option>
           <option value="NetV4">.NET v4</option>
           <option value="Python">Python</option>
+          <option value="PHP">PHP</option>
         </select>
       </div>
 
@@ -224,7 +230,8 @@ function ModelCoverage() {
       {(language === "Kotlin" ||
         language === "NetV3" ||
         language === "NetV4" ||
-        language === "Python") && (
+        language === "Python" ||
+        language === "PHP") && (
         <>
           <div
             style={{
@@ -491,3 +498,4 @@ function ModelCoverage() {
 }
 
 export default ModelCoverage;
+

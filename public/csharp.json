@@ -189,18 +189,6 @@
     ]
   },
   {
-    "service": "DynamoDB",
-    "examples": 0,
-    "operations": 57,
-    "names": []
-  },
-  {
-    "service": "IAM",
-    "examples": 0,
-    "operations": 176,
-    "names": []
-  },
-  {
     "service": "Lambda",
     "examples": 50,
     "operations": 85,
@@ -253,12 +241,6 @@
       "UpdateFunctionConfiguration",
       "UpdateFunctionEventInvokeConfig"
     ]
-  },
-  {
-    "service": "SNS",
-    "examples": 0,
-    "operations": 42,
-    "names": []
   },
   {
     "service": "SQS",
@@ -491,24 +473,6 @@
     ]
   },
   {
-    "service": "EventBridge",
-    "examples": 0,
-    "operations": 57,
-    "names": []
-  },
-  {
-    "service": "Comprehend",
-    "examples": 0,
-    "operations": 85,
-    "names": []
-  },
-  {
-    "service": "Kinesis",
-    "examples": 0,
-    "operations": 39,
-    "names": []
-  },
-  {
     "service": "ECR",
     "examples": 22,
     "operations": 58,
@@ -532,18 +496,6 @@
       "UpdateImageStorageClass",
       "UpdateRepositoryCreationTemplate"
     ]
-  },
-  {
-    "service": "Athena",
-    "examples": 0,
-    "operations": 70,
-    "names": []
-  },
-  {
-    "service": "STS",
-    "examples": 0,
-    "operations": 11,
-    "names": []
   },
   {
     "service": "Redshift",
