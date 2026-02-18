@@ -36,8 +36,7 @@ function ModelCoverage() {
 
     if (
       language === "Kotlin" ||
-      language === "NetV3" ||
-      language === "NetV4" ||
+      language === "Net" ||
       language === "Python" ||
       language === "PHP" ||
       language === "Ruby"
@@ -48,16 +47,14 @@ function ModelCoverage() {
 
       if (language === "Kotlin") {
         url = `/kotlinref2.json?_=${Date.now()}`;
-      } else if (language === "NetV3") {
-        url = `/csharp.json?_=${Date.now()}`;
-      } else if (language === "NetV4") {
-        url = `/csharp4.json?_=${Date.now()}`;
+      } else if (language === "Net") {
+        url = `/net.json?_=${Date.now()}`;
       } else if (language === "Python") {
         url = `/python.json?_=${Date.now()}`;
       } else if (language === "PHP") {
         url = `/PHP.json?_=${Date.now()}`;
       } else if (language === "Ruby") {
-        url = `/RUBY.json?_=${Date.now()}`; // Added Ruby
+        url = `/RUBY.json?_=${Date.now()}`;
       }
 
       fetch(url)
@@ -101,10 +98,8 @@ function ModelCoverage() {
       name: n,
       found: true,
       languages: [
-        language === "NetV3"
-          ? ".NET v3"
-          : language === "NetV4"
-          ? ".NET v4"
+        language === "Net"
+          ? ".NET"
           : language === "Kotlin"
           ? "Kotlin"
           : language === "Python"
@@ -212,11 +207,10 @@ function ModelCoverage() {
         >
           <option value="Kotlin">Kotlin</option>
           <option value="Java">Java</option>
-          <option value="NetV3">.NET v3</option>
-          <option value="NetV4">.NET v4</option>
+          <option value="Net">.NET</option>
           <option value="Python">Python</option>
           <option value="PHP">PHP</option>
-          <option value="Ruby">Ruby</option> {/* Added Ruby */}
+          <option value="Ruby">Ruby</option>
         </select>
       </div>
 
@@ -236,8 +230,7 @@ function ModelCoverage() {
       )}
 
       {(language === "Kotlin" ||
-        language === "NetV3" ||
-        language === "NetV4" ||
+        language === "Net" ||
         language === "Python" ||
         language === "PHP" ||
         language === "Ruby") && (
@@ -507,5 +500,6 @@ function ModelCoverage() {
 }
 
 export default ModelCoverage;
+
 
 

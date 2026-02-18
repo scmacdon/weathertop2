@@ -1,0 +1,986 @@
+[
+  {
+    "service": "accessanalyzer",
+    "operations": 37,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "account",
+    "operations": 15,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "acm",
+    "operations": 16,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "acm-pca",
+    "operations": 23,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "aiops",
+    "operations": 11,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "amp",
+    "operations": 44,
+    "example_operations": 6,
+    "example_count": 8
+  },
+  {
+    "service": "amplify",
+    "operations": 37,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "amplifybackend",
+    "operations": 31,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "amplifyuibuilder",
+    "operations": 28,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "appconfig",
+    "operations": 45,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "appconfigdata",
+    "operations": 2,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "appfabric",
+    "operations": 26,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "appflow",
+    "operations": 25,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "appintegrations",
+    "operations": 23,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "application-autoscaling",
+    "operations": 14,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "application-insights",
+    "operations": 33,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "application-signals",
+    "operations": 23,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "applicationcostprofiler",
+    "operations": 6,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "appmesh",
+    "operations": 38,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "apprunner",
+    "operations": 37,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "appstream",
+    "operations": 88,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "appsync",
+    "operations": 74,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "athena",
+    "operations": 70,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "auditmanager",
+    "operations": 62,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "autoscaling",
+    "operations": 66,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "autoscaling-plans",
+    "operations": 6,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "b2bi",
+    "operations": 30,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "backup",
+    "operations": 108,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "backup-gateway",
+    "operations": 25,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "backupsearch",
+    "operations": 12,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "batch",
+    "operations": 39,
+    "example_operations": 25,
+    "example_count": 29
+  },
+  {
+    "service": "bedrock",
+    "operations": 98,
+    "example_operations": 2,
+    "example_count": 2
+  },
+  {
+    "service": "bedrock-agent",
+    "operations": 72,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "bedrock-agent-runtime",
+    "operations": 31,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "bedrock-runtime",
+    "operations": 10,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "billing",
+    "operations": 12,
+    "example_operations": 12,
+    "example_count": 12
+  },
+  {
+    "service": "billingconductor",
+    "operations": 32,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "braket",
+    "operations": 17,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "budgets",
+    "operations": 26,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "chatbot",
+    "operations": 34,
+    "example_operations": 8,
+    "example_count": 9
+  },
+  {
+    "service": "chime",
+    "operations": 62,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "chime-sdk-identity",
+    "operations": 30,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "chime-sdk-media-pipelines",
+    "operations": 31,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "chime-sdk-meetings",
+    "operations": 16,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "chime-sdk-messaging",
+    "operations": 51,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "chime-sdk-voice",
+    "operations": 96,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "cleanrooms",
+    "operations": 88,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "cleanroomsml",
+    "operations": 59,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "cloud9",
+    "operations": 13,
+    "example_operations": 10,
+    "example_count": 12
+  },
+  {
+    "service": "cloudcontrol",
+    "operations": 8,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "clouddirectory",
+    "operations": 66,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "cloudformation",
+    "operations": 90,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "cloudfront",
+    "operations": 167,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "cloudhsm",
+    "operations": 20,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "cloudhsmv2",
+    "operations": 18,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "cloudsearch",
+    "operations": 26,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "cloudsearchdomain",
+    "operations": 3,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "cloudtrail",
+    "operations": 60,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "cloudtrail-data",
+    "operations": 1,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "cloudwatch",
+    "operations": 39,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "codeartifact",
+    "operations": 48,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "codebuild",
+    "operations": 59,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "codecatalyst",
+    "operations": 38,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "codecommit",
+    "operations": 79,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "codeconnections",
+    "operations": 27,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "codedeploy",
+    "operations": 47,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "codeguru-reviewer",
+    "operations": 14,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "codeguru-security",
+    "operations": 13,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "codeguruprofiler",
+    "operations": 23,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "codepipeline",
+    "operations": 44,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "codestar-connections",
+    "operations": 27,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "codestar-notifications",
+    "operations": 13,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "comprehend",
+    "operations": 85,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "comprehendmedical",
+    "operations": 26,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "compute-optimizer",
+    "operations": 28,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "connect",
+    "operations": 355,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "connectcampaigns",
+    "operations": 22,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "connectcases",
+    "operations": 42,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "connectparticipant",
+    "operations": 11,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "databrew",
+    "operations": 44,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "dataexchange",
+    "operations": 37,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "datapipeline",
+    "operations": 19,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "datasync",
+    "operations": 53,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "datazone",
+    "operations": 175,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "docdb",
+    "operations": 55,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "docdb-elastic",
+    "operations": 19,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "dynamodb",
+    "operations": 57,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "dynamodbstreams",
+    "operations": 4,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "ec2",
+    "operations": 749,
+    "example_operations": 133,
+    "example_count": 164
+  },
+  {
+    "service": "ecr",
+    "operations": 58,
+    "example_operations": 12,
+    "example_count": 16
+  },
+  {
+    "service": "ecr-public",
+    "operations": 23,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "ecs",
+    "operations": 64,
+    "example_operations": 52,
+    "example_count": 66
+  },
+  {
+    "service": "efs",
+    "operations": 31,
+    "example_operations": 11,
+    "example_count": 11
+  },
+  {
+    "service": "eks",
+    "operations": 64,
+    "example_operations": 5,
+    "example_count": 5
+  },
+  {
+    "service": "elasticache",
+    "operations": 75,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "elasticbeanstalk",
+    "operations": 47,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "emr",
+    "operations": 60,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "emr-containers",
+    "operations": 23,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "emr-serverless",
+    "operations": 16,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "forecast",
+    "operations": 63,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "frauddetector",
+    "operations": 73,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "gamelift",
+    "operations": 118,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "globalaccelerator",
+    "operations": 56,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "grafana",
+    "operations": 25,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "greengrassv2",
+    "operations": 29,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "guardduty",
+    "operations": 87,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "iam",
+    "operations": 176,
+    "example_operations": 73,
+    "example_count": 73
+  },
+  {
+    "service": "identitystore",
+    "operations": 19,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "inspector-scan",
+    "operations": 1,
+    "example_operations": 1,
+    "example_count": 1
+  },
+  {
+    "service": "iot",
+    "operations": 272,
+    "example_operations": 1,
+    "example_count": 1
+  },
+  {
+    "service": "iotanalytics",
+    "operations": 34,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "ivs",
+    "operations": 35,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "kinesis",
+    "operations": 39,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "kinesisanalyticsv2",
+    "operations": 33,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "kinesisvideo",
+    "operations": 32,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "kms",
+    "operations": 53,
+    "example_operations": 46,
+    "example_count": 58
+  },
+  {
+    "service": "lakeformation",
+    "operations": 61,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "lambda",
+    "operations": 85,
+    "example_operations": 48,
+    "example_count": 51
+  },
+  {
+    "service": "license-manager",
+    "operations": 62,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "mq",
+    "operations": 24,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "neptune-graph",
+    "operations": 34,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "network-firewall",
+    "operations": 79,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "opensearch",
+    "operations": 82,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "organizations",
+    "operations": 63,
+    "example_operations": 36,
+    "example_count": 40
+  },
+  {
+    "service": "qbusiness",
+    "operations": 83,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "quicksight",
+    "operations": 230,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "ram",
+    "operations": 35,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "rds",
+    "operations": 163,
+    "example_operations": 121,
+    "example_count": 129
+  },
+  {
+    "service": "rds-data",
+    "operations": 6,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "redshift",
+    "operations": 141,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "redshift-data",
+    "operations": 11,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "route53",
+    "operations": 71,
+    "example_operations": 4,
+    "example_count": 13
+  },
+  {
+    "service": "route53domains",
+    "operations": 34,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "route53resolver",
+    "operations": 68,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "rum",
+    "operations": 20,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "s3",
+    "operations": 111,
+    "example_operations": 53,
+    "example_count": 67
+  },
+  {
+    "service": "s3control",
+    "operations": 97,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "sagemaker",
+    "operations": 379,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "sagemaker-runtime",
+    "operations": 3,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "secretsmanager",
+    "operations": 23,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "securityhub",
+    "operations": 107,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "service-quotas",
+    "operations": 26,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "servicecatalog",
+    "operations": 90,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "servicediscovery",
+    "operations": 30,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "sns",
+    "operations": 42,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "sqs",
+    "operations": 23,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "ssm",
+    "operations": 146,
+    "example_operations": 2,
+    "example_count": 2
+  },
+  {
+    "service": "sso",
+    "operations": 4,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "sso-admin",
+    "operations": 79,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "sts",
+    "operations": 11,
+    "example_operations": 8,
+    "example_count": 10
+  },
+  {
+    "service": "support",
+    "operations": 16,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "swf",
+    "operations": 39,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "textract",
+    "operations": 25,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "timestream-query",
+    "operations": 15,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "timestream-write",
+    "operations": 19,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "transcribe",
+    "operations": 43,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "verifiedpermissions",
+    "operations": 30,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "waf",
+    "operations": 77,
+    "example_operations": 34,
+    "example_count": 34
+  },
+  {
+    "service": "wafv2",
+    "operations": 54,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "wellarchitected",
+    "operations": 72,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "workdocs",
+    "operations": 44,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "workmail",
+    "operations": 92,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "workspaces",
+    "operations": 91,
+    "example_operations": 0,
+    "example_count": 0
+  },
+  {
+    "service": "xray",
+    "operations": 38,
+    "example_operations": 0,
+    "example_count": 0
+  }
+]

@@ -1,6 +1,6 @@
 [
   {
-    "service": "CloudWatch",
+    "service": "cloudwatch",
     "examples": 11,
     "operations": 39,
     "names": [
@@ -18,7 +18,7 @@
     ]
   },
   {
-    "service": "S3",
+    "service": "s3",
     "examples": 19,
     "operations": 107,
     "names": [
@@ -40,7 +40,7 @@
     ]
   },
   {
-    "service": "EC2",
+    "service": "ec2",
     "examples": 177,
     "operations": 756,
     "names": [
@@ -189,19 +189,19 @@
     ]
   },
   {
-    "service": "DynamoDB",
+    "service": "dynamodb",
     "examples": 0,
     "operations": 57,
     "names": []
   },
   {
-    "service": "IAM",
+    "service": "iam",
     "examples": 0,
     "operations": 176,
     "names": []
   },
   {
-    "service": "Lambda",
+    "service": "lambda",
     "examples": 50,
     "operations": 85,
     "names": [
@@ -255,13 +255,13 @@
     ]
   },
   {
-    "service": "SNS",
+    "service": "sns",
     "examples": 0,
     "operations": 42,
     "names": []
   },
   {
-    "service": "SQS",
+    "service": "sqs",
     "examples": 18,
     "operations": 23,
     "names": [
@@ -284,7 +284,7 @@
     ]
   },
   {
-    "service": "RDS",
+    "service": "rds",
     "examples": 129,
     "operations": 163,
     "names": [
@@ -412,7 +412,7 @@
     ]
   },
   {
-    "service": "ECS",
+    "service": "ecs",
     "examples": 68,
     "operations": 64,
     "names": [
@@ -473,7 +473,7 @@
     ]
   },
   {
-    "service": "CloudFormation",
+    "service": "cloudformation",
     "examples": 15,
     "operations": 90,
     "names": [
@@ -491,25 +491,25 @@
     ]
   },
   {
-    "service": "EventBridge",
+    "service": "eventbridge",
     "examples": 0,
     "operations": 57,
     "names": []
   },
   {
-    "service": "Comprehend",
+    "service": "comprehend",
     "examples": 0,
     "operations": 85,
     "names": []
   },
   {
-    "service": "Kinesis",
+    "service": "kinesis",
     "examples": 0,
     "operations": 39,
     "names": []
   },
   {
-    "service": "ECR",
+    "service": "ecr",
     "examples": 22,
     "operations": 58,
     "names": [
@@ -534,19 +534,19 @@
     ]
   },
   {
-    "service": "Athena",
+    "service": "athena",
     "examples": 0,
     "operations": 70,
     "names": []
   },
   {
-    "service": "STS",
+    "service": "sts",
     "examples": 0,
     "operations": 11,
     "names": []
   },
   {
-    "service": "Redshift",
+    "service": "redshift",
     "examples": 36,
     "operations": 141,
     "names": [
