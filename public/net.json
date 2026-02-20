@@ -1,7 +1,624 @@
 [
   {
+    "service": "accessanalyzer",
+    "examples": 22,
+    "operations": 37,
+    "names": [
+      "CheckAccessNotGranted",
+      "CheckNoPublicAccess",
+      "GenerateFindingRecommendation",
+      "GetFindingRecommendation"
+    ]
+  },
+  {
+    "service": "account",
+    "examples": 0,
+    "operations": 15,
+    "names": []
+  },
+  {
+    "service": "acm",
+    "examples": 0,
+    "operations": 16,
+    "names": []
+  },
+  {
+    "service": "acmpca",
+    "examples": 0,
+    "operations": 23,
+    "names": []
+  },
+  {
+    "service": "accessanalyzer",
+    "examples": 0,
+    "operations": 37,
+    "names": []
+  },
+  {
+    "service": "aiops",
+    "examples": 0,
+    "operations": 11,
+    "names": []
+  },
+  {
+    "service": "amp",
+    "examples": 0,
+    "operations": 44,
+    "names": []
+  },
+  {
+    "service": "amplify",
+    "examples": 0,
+    "operations": 37,
+    "names": []
+  },
+  {
+    "service": "amplifybackend",
+    "examples": 0,
+    "operations": 31,
+    "names": []
+  },
+  {
+    "service": "amplifyuibuilder",
+    "examples": 0,
+    "operations": 28,
+    "names": []
+  },
+  {
+    "service": "apigateway",
+    "examples": 0,
+    "operations": 124,
+    "names": []
+  },
+  {
+    "service": "apigatewaymanagementapi",
+    "examples": 0,
+    "operations": 3,
+    "names": []
+  },
+  {
+    "service": "apigatewayv2",
+    "examples": 0,
+    "operations": 103,
+    "names": []
+  },
+  {
+    "service": "appconfig",
+    "examples": 66,
+    "operations": 45,
+    "names": [
+      "CreateApplication",
+      "CreateConfigurationProfile",
+      "CreateDeploymentStrategy",
+      "CreateEnvironment",
+      "CreateHostedConfigurationVersion",
+      "DeleteApplication",
+      "DeleteConfigurationProfile",
+      "DeleteDeploymentStrategy",
+      "DeleteEnvironment",
+      "DeleteHostedConfigurationVersion",
+      "GetApplication",
+      "GetConfiguration",
+      "GetConfigurationProfile",
+      "GetDeployment",
+      "GetDeploymentStrategy",
+      "GetEnvironment",
+      "GetHostedConfigurationVersion",
+      "ListApplications",
+      "ListConfigurationProfiles",
+      "ListDeploymentStrategies",
+      "ListDeployments",
+      "ListEnvironments",
+      "ListHostedConfigurationVersions",
+      "ListTagsForResource",
+      "StartDeployment",
+      "StopDeployment",
+      "TagResource",
+      "UntagResource",
+      "UpdateApplication",
+      "UpdateConfigurationProfile",
+      "UpdateDeploymentStrategy",
+      "UpdateEnvironment",
+      "ValidateConfiguration"
+    ]
+  },
+  {
+    "service": "appmesh",
+    "examples": 0,
+    "operations": 38,
+    "names": []
+  },
+  {
+    "service": "appconfigdata",
+    "examples": 0,
+    "operations": 2,
+    "names": []
+  },
+  {
+    "service": "appfabric",
+    "examples": 0,
+    "operations": 26,
+    "names": []
+  },
+  {
+    "service": "appflow",
+    "examples": 0,
+    "operations": 25,
+    "names": []
+  },
+  {
+    "service": "appintegrations",
+    "examples": 0,
+    "operations": 23,
+    "names": []
+  },
+  {
+    "service": "applicationautoscaling",
+    "examples": 26,
+    "operations": 14,
+    "names": [
+      "DeleteScalingPolicy",
+      "DeleteScheduledAction",
+      "DeregisterScalableTarget",
+      "DescribeScalableTargets",
+      "DescribeScalingActivities",
+      "DescribeScalingPolicies",
+      "DescribeScheduledActions",
+      "ListTagsForResource",
+      "PutScalingPolicy",
+      "PutScheduledAction",
+      "RegisterScalableTarget",
+      "TagResource",
+      "UntagResource"
+    ]
+  },
+  {
+    "service": "applicationdiscoveryservice",
+    "examples": 0,
+    "operations": 28,
+    "names": []
+  },
+  {
+    "service": "applicationinsights",
+    "examples": 0,
+    "operations": 33,
+    "names": []
+  },
+  {
+    "service": "applicationsignals",
+    "examples": 0,
+    "operations": 23,
+    "names": []
+  },
+  {
+    "service": "applicationcostprofiler",
+    "examples": 0,
+    "operations": 6,
+    "names": []
+  },
+  {
+    "service": "apprunner",
+    "examples": 0,
+    "operations": 37,
+    "names": []
+  },
+  {
+    "service": "appstream",
+    "examples": 0,
+    "operations": 88,
+    "names": []
+  },
+  {
+    "service": "appsync",
+    "examples": 0,
+    "operations": 74,
+    "names": []
+  },
+  {
+    "service": "arcregionswitch",
+    "examples": 0,
+    "operations": 21,
+    "names": []
+  },
+  {
+    "service": "arczonalshift",
+    "examples": 0,
+    "operations": 15,
+    "names": []
+  },
+  {
+    "service": "artifact",
+    "examples": 16,
+    "operations": 8,
+    "names": [
+      "GetAccountSettings",
+      "GetReport",
+      "GetReportMetadata",
+      "GetTermForReport",
+      "ListCustomerAgreements",
+      "ListReportVersions",
+      "ListReports",
+      "PutAccountSettings"
+    ]
+  },
+  {
+    "service": "athena",
+    "examples": 0,
+    "operations": 70,
+    "names": []
+  },
+  {
+    "service": "auditmanager",
+    "examples": 0,
+    "operations": 62,
+    "names": []
+  },
+  {
+    "service": "autoscaling",
+    "examples": 128,
+    "operations": 66,
+    "names": [
+      "AttachInstances",
+      "AttachLoadBalancerTargetGroups",
+      "AttachLoadBalancers",
+      "AttachTrafficSources",
+      "CancelInstanceRefresh",
+      "CompleteLifecycleAction",
+      "CreateAutoScalingGroup",
+      "CreateLaunchConfiguration",
+      "CreateOrUpdateTags",
+      "DeleteAutoScalingGroup",
+      "DeleteLaunchConfiguration",
+      "DeleteLifecycleHook",
+      "DeleteNotificationConfiguration",
+      "DeletePolicy",
+      "DeleteScheduledAction",
+      "DeleteTags",
+      "DescribeAccountLimits",
+      "DescribeAdjustmentTypes",
+      "DescribeAutoScalingGroups",
+      "DescribeAutoScalingInstances",
+      "DescribeAutoScalingNotificationTypes",
+      "DescribeInstanceRefreshes",
+      "DescribeLaunchConfigurations",
+      "DescribeLifecycleHookTypes",
+      "DescribeLifecycleHooks",
+      "DescribeLoadBalancerTargetGroups",
+      "DescribeLoadBalancers",
+      "DescribeMetricCollectionTypes",
+      "DescribeNotificationConfigurations",
+      "DescribePolicies",
+      "DescribeScalingActivities",
+      "DescribeScalingProcessTypes",
+      "DescribeScheduledActions",
+      "DescribeTags",
+      "DescribeTerminationPolicyTypes",
+      "DescribeTrafficSources",
+      "DetachInstances",
+      "DetachLoadBalancerTargetGroups",
+      "DetachLoadBalancers",
+      "DetachTrafficSources",
+      "DisableMetricsCollection",
+      "EnableMetricsCollection",
+      "EnterStandby",
+      "ExecutePolicy",
+      "ExitStandby",
+      "PutLifecycleHook",
+      "PutNotificationConfiguration",
+      "PutScalingPolicy",
+      "PutScheduledUpdateGroupAction",
+      "PutWarmPool",
+      "RecordLifecycleActionHeartbeat",
+      "ResumeProcesses",
+      "SetDesiredCapacity",
+      "SetInstanceHealth",
+      "SetInstanceProtection",
+      "StartInstanceRefresh",
+      "SuspendProcesses",
+      "TerminateInstanceInAutoScalingGroup",
+      "UpdateAutoScalingGroup"
+    ]
+  },
+  {
+    "service": "autoscalingplans",
+    "examples": 0,
+    "operations": 6,
+    "names": []
+  },
+  {
+    "service": "b2bi",
+    "examples": 66,
+    "operations": 30,
+    "names": [
+      "CreateCapability",
+      "CreatePartnership",
+      "CreateProfile",
+      "CreateStarterMappingTemplate",
+      "CreateTransformer",
+      "DeleteCapability",
+      "DeletePartnership",
+      "DeleteProfile",
+      "DeleteTransformer",
+      "GenerateMapping",
+      "GetCapability",
+      "GetPartnership",
+      "GetProfile",
+      "GetTransformer",
+      "GetTransformerJob",
+      "ListCapabilities",
+      "ListPartnerships",
+      "ListProfiles",
+      "ListTagsForResource",
+      "ListTransformers",
+      "StartTransformerJob",
+      "TagResource",
+      "TestConversion",
+      "TestMapping",
+      "TestParsing",
+      "UntagResource",
+      "UpdateCapability",
+      "UpdatePartnership",
+      "UpdateProfile",
+      "UpdateTransformer"
+    ]
+  },
+  {
+    "service": "backup",
+    "examples": 0,
+    "operations": 108,
+    "names": []
+  },
+  {
+    "service": "backupgateway",
+    "examples": 0,
+    "operations": 25,
+    "names": []
+  },
+  {
+    "service": "backupsearch",
+    "examples": 0,
+    "operations": 12,
+    "names": []
+  },
+  {
+    "service": "batch",
+    "examples": 58,
+    "operations": 39,
+    "names": [
+      "CancelJob",
+      "CreateComputeEnvironment",
+      "CreateConsumableResource",
+      "CreateJobQueue",
+      "DeleteComputeEnvironment",
+      "DeleteConsumableResource",
+      "DeleteJobQueue",
+      "DeregisterJobDefinition",
+      "DescribeComputeEnvironments",
+      "DescribeConsumableResource",
+      "DescribeJobDefinitions",
+      "DescribeJobQueues",
+      "DescribeJobs",
+      "ListConsumableResources",
+      "ListJobs",
+      "ListJobsByConsumableResource",
+      "ListTagsForResource",
+      "RegisterJobDefinition",
+      "SubmitJob",
+      "TagResource",
+      "TerminateJob",
+      "UntagResource",
+      "UpdateComputeEnvironment",
+      "UpdateConsumableResource",
+      "UpdateJobQueue"
+    ]
+  },
+  {
+    "service": "bcmdashboards",
+    "examples": 0,
+    "operations": 9,
+    "names": []
+  },
+  {
+    "service": "bcmdataexports",
+    "examples": 0,
+    "operations": 12,
+    "names": []
+  },
+  {
+    "service": "bcmpricingcalculator",
+    "examples": 0,
+    "operations": 36,
+    "names": []
+  },
+  {
+    "service": "bcmrecommendedactions",
+    "examples": 0,
+    "operations": 1,
+    "names": []
+  },
+  {
+    "service": "bedrock",
+    "examples": 4,
+    "operations": 98,
+    "names": [
+      "BatchDeleteEvaluationJob",
+      "CreateCustomModel"
+    ]
+  },
+  {
+    "service": "bedrockagent",
+    "examples": 0,
+    "operations": 72,
+    "names": []
+  },
+  {
+    "service": "bedrockagentruntime",
+    "examples": 0,
+    "operations": 31,
+    "names": []
+  },
+  {
+    "service": "bedrockagentcore",
+    "examples": 0,
+    "operations": 36,
+    "names": []
+  },
+  {
+    "service": "bedrockagentcorecontrol",
+    "examples": 0,
+    "operations": 86,
+    "names": []
+  },
+  {
+    "service": "bedrockdataautomation",
+    "examples": 0,
+    "operations": 17,
+    "names": []
+  },
+  {
+    "service": "bedrockdataautomationruntime",
+    "examples": 0,
+    "operations": 6,
+    "names": []
+  },
+  {
+    "service": "bedrockruntime",
+    "examples": 0,
+    "operations": 10,
+    "names": []
+  },
+  {
+    "service": "billing",
+    "examples": 26,
+    "operations": 12,
+    "names": [
+      "AssociateSourceViews",
+      "CreateBillingView",
+      "DeleteBillingView",
+      "DisassociateSourceViews",
+      "GetBillingView",
+      "GetResourcePolicy",
+      "ListBillingViews",
+      "ListSourceViewsForBillingView",
+      "ListTagsForResource",
+      "TagResource",
+      "UntagResource",
+      "UpdateBillingView"
+    ]
+  },
+  {
+    "service": "billingconductor",
+    "examples": 0,
+    "operations": 32,
+    "names": []
+  },
+  {
+    "service": "braket",
+    "examples": 0,
+    "operations": 17,
+    "names": []
+  },
+  {
+    "service": "budgets",
+    "examples": 0,
+    "operations": 26,
+    "names": []
+  },
+  {
+    "service": "chatbot",
+    "examples": 18,
+    "operations": 34,
+    "names": [
+      "AssociateToConfiguration",
+      "CreateCustomAction",
+      "DeleteCustomAction",
+      "DisassociateFromConfiguration",
+      "GetCustomAction",
+      "ListAssociations",
+      "ListCustomActions",
+      "UpdateCustomAction"
+    ]
+  },
+  {
+    "service": "chime",
+    "examples": 0,
+    "operations": 62,
+    "names": []
+  },
+  {
+    "service": "chimesdkidentity",
+    "examples": 0,
+    "operations": 30,
+    "names": []
+  },
+  {
+    "service": "chimesdkmediapipelines",
+    "examples": 0,
+    "operations": 31,
+    "names": []
+  },
+  {
+    "service": "chimesdkmeetings",
+    "examples": 0,
+    "operations": 16,
+    "names": []
+  },
+  {
+    "service": "chimesdkmessaging",
+    "examples": 0,
+    "operations": 51,
+    "names": []
+  },
+  {
+    "service": "chimesdkvoice",
+    "examples": 0,
+    "operations": 96,
+    "names": []
+  },
+  {
+    "service": "cleanrooms",
+    "examples": 0,
+    "operations": 88,
+    "names": []
+  },
+  {
+    "service": "cleanroomsml",
+    "examples": 0,
+    "operations": 59,
+    "names": []
+  },
+  {
+    "service": "cloud9",
+    "examples": 24,
+    "operations": 13,
+    "names": [
+      "CreateEnvironmentEC2",
+      "CreateEnvironmentMembership",
+      "DeleteEnvironment",
+      "DeleteEnvironmentMembership",
+      "DescribeEnvironmentMemberships",
+      "DescribeEnvironmentStatus",
+      "DescribeEnvironments",
+      "ListEnvironments",
+      "UpdateEnvironment",
+      "UpdateEnvironmentMembership"
+    ]
+  },
+  {
+    "service": "cloudtrail",
+    "examples": 0,
+    "operations": 60,
+    "names": []
+  },
+  {
+    "service": "cloudtraildata",
+    "examples": 0,
+    "operations": 1,
+    "names": []
+  },
+  {
     "service": "cloudwatch",
-    "examples": 11,
+    "examples": 16,
     "operations": 39,
     "names": [
       "DeleteAlarms",
@@ -18,30 +635,480 @@
     ]
   },
   {
-    "service": "s3",
-    "examples": 19,
+    "service": "cloudwatchevents",
+    "examples": 0,
+    "operations": 51,
+    "names": []
+  },
+  {
+    "service": "cloudwatchlogs",
+    "examples": 0,
     "operations": 107,
+    "names": []
+  },
+  {
+    "service": "cloudcontrol",
+    "examples": 0,
+    "operations": 8,
+    "names": []
+  },
+  {
+    "service": "clouddirectory",
+    "examples": 0,
+    "operations": 66,
+    "names": []
+  },
+  {
+    "service": "cloudformation",
+    "examples": 0,
+    "operations": 90,
+    "names": []
+  },
+  {
+    "service": "cloudfront",
+    "examples": 0,
+    "operations": 167,
+    "names": []
+  },
+  {
+    "service": "cloudfrontkeyvaluestore",
+    "examples": 0,
+    "operations": 6,
+    "names": []
+  },
+  {
+    "service": "cloudhsm",
+    "examples": 0,
+    "operations": 20,
+    "names": []
+  },
+  {
+    "service": "cloudhsmv2",
+    "examples": 0,
+    "operations": 18,
+    "names": []
+  },
+  {
+    "service": "cloudsearch",
+    "examples": 0,
+    "operations": 26,
+    "names": []
+  },
+  {
+    "service": "cloudsearchdomain",
+    "examples": 0,
+    "operations": 3,
+    "names": []
+  },
+  {
+    "service": "codeartifact",
+    "examples": 0,
+    "operations": 48,
+    "names": []
+  },
+  {
+    "service": "codebuild",
+    "examples": 0,
+    "operations": 59,
+    "names": []
+  },
+  {
+    "service": "codecatalyst",
+    "examples": 0,
+    "operations": 38,
+    "names": []
+  },
+  {
+    "service": "codecommit",
+    "examples": 0,
+    "operations": 79,
+    "names": []
+  },
+  {
+    "service": "codeconnections",
+    "examples": 0,
+    "operations": 27,
+    "names": []
+  },
+  {
+    "service": "codedeploy",
+    "examples": 0,
+    "operations": 47,
+    "names": []
+  },
+  {
+    "service": "codegurureviewer",
+    "examples": 0,
+    "operations": 14,
+    "names": []
+  },
+  {
+    "service": "codegurusecurity",
+    "examples": 0,
+    "operations": 13,
+    "names": []
+  },
+  {
+    "service": "codeguruprofiler",
+    "examples": 0,
+    "operations": 23,
+    "names": []
+  },
+  {
+    "service": "codepipeline",
+    "examples": 0,
+    "operations": 44,
+    "names": []
+  },
+  {
+    "service": "codestarconnections",
+    "examples": 0,
+    "operations": 27,
+    "names": []
+  },
+  {
+    "service": "codestarnotifications",
+    "examples": 0,
+    "operations": 13,
+    "names": []
+  },
+  {
+    "service": "cognitoidentity",
+    "examples": 0,
+    "operations": 23,
+    "names": []
+  },
+  {
+    "service": "cognitoidentityprovider",
+    "examples": 10,
+    "operations": 119,
     "names": [
-      "CompleteMultipartUpload",
-      "CopyObject",
-      "DeleteBucket",
-      "DeleteBucketPolicy",
-      "DeleteObject",
-      "DeleteObjects",
-      "GetBucketLocation",
-      "GetBucketPolicy",
-      "GetObject",
-      "ListBuckets",
-      "ListObjects",
-      "ListParts",
-      "PutBucketPolicy",
-      "PutObject",
-      "UploadPart"
+      "AdminCreateUser",
+      "CreateUserPool",
+      "CreateUserPoolClient",
+      "InitiateAuth",
+      "ListUsers"
     ]
   },
   {
+    "service": "cognitosync",
+    "examples": 0,
+    "operations": 17,
+    "names": []
+  },
+  {
+    "service": "comprehend",
+    "examples": 0,
+    "operations": 85,
+    "names": []
+  },
+  {
+    "service": "comprehendmedical",
+    "examples": 0,
+    "operations": 26,
+    "names": []
+  },
+  {
+    "service": "computeoptimizer",
+    "examples": 0,
+    "operations": 28,
+    "names": []
+  },
+  {
+    "service": "computeoptimizerautomation",
+    "examples": 0,
+    "operations": 23,
+    "names": []
+  },
+  {
+    "service": "configservice",
+    "examples": 0,
+    "operations": 97,
+    "names": []
+  },
+  {
+    "service": "connect",
+    "examples": 0,
+    "operations": 364,
+    "names": []
+  },
+  {
+    "service": "connectcontactlens",
+    "examples": 0,
+    "operations": 1,
+    "names": []
+  },
+  {
+    "service": "connectcampaigns",
+    "examples": 0,
+    "operations": 22,
+    "names": []
+  },
+  {
+    "service": "connectcampaignsv2",
+    "examples": 0,
+    "operations": 35,
+    "names": []
+  },
+  {
+    "service": "connectcases",
+    "examples": 0,
+    "operations": 42,
+    "names": []
+  },
+  {
+    "service": "connectparticipant",
+    "examples": 0,
+    "operations": 11,
+    "names": []
+  },
+  {
+    "service": "controlcatalog",
+    "examples": 0,
+    "operations": 6,
+    "names": []
+  },
+  {
+    "service": "controltower",
+    "examples": 0,
+    "operations": 28,
+    "names": []
+  },
+  {
+    "service": "costandusagereportservice",
+    "examples": 0,
+    "operations": 7,
+    "names": []
+  },
+  {
+    "service": "costexplorer",
+    "examples": 0,
+    "operations": 47,
+    "names": []
+  },
+  {
+    "service": "costoptimizationhub",
+    "examples": 0,
+    "operations": 8,
+    "names": []
+  },
+  {
+    "service": "customerprofiles",
+    "examples": 0,
+    "operations": 98,
+    "names": []
+  },
+  {
+    "service": "datapipeline",
+    "examples": 0,
+    "operations": 19,
+    "names": []
+  },
+  {
+    "service": "databasemigrationservice",
+    "examples": 0,
+    "operations": 119,
+    "names": []
+  },
+  {
+    "service": "databrew",
+    "examples": 0,
+    "operations": 44,
+    "names": []
+  },
+  {
+    "service": "dataexchange",
+    "examples": 0,
+    "operations": 37,
+    "names": []
+  },
+  {
+    "service": "datasync",
+    "examples": 0,
+    "operations": 53,
+    "names": []
+  },
+  {
+    "service": "datazone",
+    "examples": 0,
+    "operations": 175,
+    "names": []
+  },
+  {
+    "service": "dax",
+    "examples": 0,
+    "operations": 21,
+    "names": []
+  },
+  {
+    "service": "deadline",
+    "examples": 0,
+    "operations": 113,
+    "names": []
+  },
+  {
+    "service": "detective",
+    "examples": 0,
+    "operations": 29,
+    "names": []
+  },
+  {
+    "service": "devicefarm",
+    "examples": 84,
+    "operations": 77,
+    "names": [
+      "CreateDevicePool",
+      "CreateProject",
+      "CreateRemoteAccessSession",
+      "CreateUpload",
+      "DeleteDevicePool",
+      "DeleteProject",
+      "DeleteRemoteAccessSession",
+      "DeleteRun",
+      "DeleteUpload",
+      "GetAccountSettings",
+      "GetDevice",
+      "GetDevicePool",
+      "GetDevicePoolCompatibility",
+      "GetJob",
+      "GetOfferingStatus",
+      "GetProject",
+      "GetRemoteAccessSession",
+      "GetRun",
+      "GetSuite",
+      "GetTest",
+      "GetUpload",
+      "InstallToRemoteAccessSession",
+      "ListArtifacts",
+      "ListDevicePools",
+      "ListDevices",
+      "ListJobs",
+      "ListOfferingTransactions",
+      "ListOfferings",
+      "ListProjects",
+      "ListRemoteAccessSessions",
+      "ListRuns",
+      "ListSamples",
+      "ListSuites",
+      "ListTests",
+      "ListUniqueProblems",
+      "ListUploads",
+      "PurchaseOffering",
+      "RenewOffering",
+      "ScheduleRun",
+      "StopRun",
+      "UpdateDevicePool",
+      "UpdateProject"
+    ]
+  },
+  {
+    "service": "devopsguru",
+    "examples": 0,
+    "operations": 31,
+    "names": []
+  },
+  {
+    "service": "directconnect",
+    "examples": 0,
+    "operations": 63,
+    "names": []
+  },
+  {
+    "service": "directoryservice",
+    "examples": 76,
+    "operations": 80,
+    "names": [
+      "AddIpRoutes",
+      "AddTagsToResource",
+      "CancelSchemaExtension",
+      "ConnectDirectory",
+      "CreateAlias",
+      "CreateComputer",
+      "CreateConditionalForwarder",
+      "CreateDirectory",
+      "CreateMicrosoftAD",
+      "CreateSnapshot",
+      "CreateTrust",
+      "DeleteConditionalForwarder",
+      "DeleteDirectory",
+      "DeleteSnapshot",
+      "DeleteTrust",
+      "DeregisterEventTopic",
+      "DescribeConditionalForwarders",
+      "DescribeDirectories",
+      "DescribeEventTopics",
+      "DescribeSnapshots",
+      "DescribeTrusts",
+      "DisableRadius",
+      "DisableSso",
+      "EnableRadius",
+      "EnableSso",
+      "GetDirectoryLimits",
+      "GetSnapshotLimits",
+      "ListIpRoutes",
+      "ListSchemaExtensions",
+      "ListTagsForResource",
+      "RegisterEventTopic",
+      "RemoveIpRoutes",
+      "RemoveTagsFromResource",
+      "RestoreFromSnapshot",
+      "StartSchemaExtension",
+      "UpdateConditionalForwarder",
+      "UpdateRadius",
+      "VerifyTrust"
+    ]
+  },
+  {
+    "service": "directoryservicedata",
+    "examples": 0,
+    "operations": 17,
+    "names": []
+  },
+  {
+    "service": "dlm",
+    "examples": 0,
+    "operations": 8,
+    "names": []
+  },
+  {
+    "service": "docdb",
+    "examples": 0,
+    "operations": 55,
+    "names": []
+  },
+  {
+    "service": "docdbelastic",
+    "examples": 0,
+    "operations": 19,
+    "names": []
+  },
+  {
+    "service": "drs",
+    "examples": 0,
+    "operations": 50,
+    "names": []
+  },
+  {
+    "service": "dsql",
+    "examples": 0,
+    "operations": 12,
+    "names": []
+  },
+  {
+    "service": "dynamodb",
+    "examples": 0,
+    "operations": 57,
+    "names": []
+  },
+  {
+    "service": "dynamodbstreams",
+    "examples": 0,
+    "operations": 4,
+    "names": []
+  },
+  {
     "service": "ec2",
-    "examples": 177,
+    "examples": 354,
     "operations": 756,
     "names": [
       "AllocateAddress",
@@ -189,20 +1256,784 @@
     ]
   },
   {
-    "service": "dynamodb",
+    "service": "ec2instanceconnect",
+    "examples": 2,
+    "operations": 2,
+    "names": [
+      "SendSSHPublicKey"
+    ]
+  },
+  {
+    "service": "ecs",
+    "examples": 136,
+    "operations": 64,
+    "names": [
+      "CreateCapacityProvider",
+      "CreateCluster",
+      "CreateService",
+      "CreateTaskSet",
+      "DeleteAccountSetting",
+      "DeleteAttributes",
+      "DeleteCapacityProvider",
+      "DeleteCluster",
+      "DeleteService",
+      "DeleteTaskDefinitions",
+      "DeleteTaskSet",
+      "DeregisterContainerInstance",
+      "DeregisterTaskDefinition",
+      "DescribeCapacityProviders",
+      "DescribeClusters",
+      "DescribeContainerInstances",
+      "DescribeServiceDeployments",
+      "DescribeServiceRevisions",
+      "DescribeServices",
+      "DescribeTaskDefinition",
+      "DescribeTaskSets",
+      "DescribeTasks",
+      "ExecuteCommand",
+      "GetTaskProtection",
+      "ListAccountSettings",
+      "ListAttributes",
+      "ListClusters",
+      "ListContainerInstances",
+      "ListServiceDeployments",
+      "ListServices",
+      "ListTagsForResource",
+      "ListTaskDefinitionFamilies",
+      "ListTaskDefinitions",
+      "ListTasks",
+      "PutAccountSetting",
+      "PutAccountSettingDefault",
+      "PutAttributes",
+      "PutClusterCapacityProviders",
+      "RegisterTaskDefinition",
+      "RunTask",
+      "StartTask",
+      "StopServiceDeployment",
+      "StopTask",
+      "TagResource",
+      "UntagResource",
+      "UpdateCapacityProvider",
+      "UpdateCluster",
+      "UpdateClusterSettings",
+      "UpdateContainerAgent",
+      "UpdateContainerInstancesState",
+      "UpdateService",
+      "UpdateServicePrimaryTaskSet",
+      "UpdateTaskProtection",
+      "UpdateTaskSet"
+    ]
+  },
+  {
+    "service": "efs",
+    "examples": 0,
+    "operations": 31,
+    "names": []
+  },
+  {
+    "service": "eks",
+    "examples": 10,
+    "operations": 64,
+    "names": [
+      "CreateCluster",
+      "DeleteCluster",
+      "DescribeCluster",
+      "ListClusters",
+      "ListTagsForResource"
+    ]
+  },
+  {
+    "service": "eksauth",
+    "examples": 0,
+    "operations": 1,
+    "names": []
+  },
+  {
+    "service": "ebs",
+    "examples": 0,
+    "operations": 6,
+    "names": []
+  },
+  {
+    "service": "ecr",
+    "examples": 0,
+    "operations": 58,
+    "names": []
+  },
+  {
+    "service": "ecrpublic",
+    "examples": 0,
+    "operations": 23,
+    "names": []
+  },
+  {
+    "service": "elasticbeanstalk",
+    "examples": 0,
+    "operations": 47,
+    "names": []
+  },
+  {
+    "service": "elasticloadbalancing",
+    "examples": 0,
+    "operations": 29,
+    "names": []
+  },
+  {
+    "service": "elasticloadbalancingv2",
+    "examples": 78,
+    "operations": 51,
+    "names": [
+      "AddTags",
+      "CreateListener",
+      "CreateLoadBalancer",
+      "CreateRule",
+      "CreateTargetGroup",
+      "DeleteListener",
+      "DeleteLoadBalancer",
+      "DeleteRule",
+      "DeleteSharedTrustStoreAssociation",
+      "DeleteTargetGroup",
+      "DeregisterTargets",
+      "DescribeListenerAttributes",
+      "DescribeListeners",
+      "DescribeLoadBalancerAttributes",
+      "DescribeLoadBalancers",
+      "DescribeRules",
+      "DescribeSSLPolicies",
+      "DescribeTags",
+      "DescribeTargetGroupAttributes",
+      "DescribeTargetGroups",
+      "DescribeTargetHealth",
+      "GetResourcePolicy",
+      "ModifyListener",
+      "ModifyLoadBalancerAttributes",
+      "ModifyRule",
+      "ModifyTargetGroup",
+      "ModifyTargetGroupAttributes",
+      "RegisterTargets",
+      "RemoveTags",
+      "SetRulePriorities",
+      "SetSecurityGroups",
+      "SetSubnets"
+    ]
+  },
+  {
+    "service": "elasticache",
+    "examples": 0,
+    "operations": 75,
+    "names": []
+  },
+  {
+    "service": "elasticsearchservice",
+    "examples": 0,
+    "operations": 51,
+    "names": []
+  },
+  {
+    "service": "emr",
+    "examples": 0,
+    "operations": 60,
+    "names": []
+  },
+  {
+    "service": "emrcontainers",
+    "examples": 0,
+    "operations": 23,
+    "names": []
+  },
+  {
+    "service": "emrserverless",
+    "examples": 0,
+    "operations": 16,
+    "names": []
+  },
+  {
+    "service": "entityresolution",
+    "examples": 0,
+    "operations": 38,
+    "names": []
+  },
+  {
+    "service": "eventbridge",
     "examples": 0,
     "operations": 57,
     "names": []
   },
   {
-    "service": "iam",
+    "service": "evs",
     "examples": 0,
+    "operations": 14,
+    "names": []
+  },
+  {
+    "service": "finspace",
+    "examples": 0,
+    "operations": 50,
+    "names": []
+  },
+  {
+    "service": "finspacedata",
+    "examples": 0,
+    "operations": 31,
+    "names": []
+  },
+  {
+    "service": "firehose",
+    "examples": 0,
+    "operations": 12,
+    "names": []
+  },
+  {
+    "service": "fis",
+    "examples": 0,
+    "operations": 26,
+    "names": []
+  },
+  {
+    "service": "fms",
+    "examples": 0,
+    "operations": 42,
+    "names": []
+  },
+  {
+    "service": "forecast",
+    "examples": 0,
+    "operations": 63,
+    "names": []
+  },
+  {
+    "service": "forecastquery",
+    "examples": 0,
+    "operations": 2,
+    "names": []
+  },
+  {
+    "service": "frauddetector",
+    "examples": 0,
+    "operations": 73,
+    "names": []
+  },
+  {
+    "service": "freetier",
+    "examples": 0,
+    "operations": 5,
+    "names": []
+  },
+  {
+    "service": "fsx",
+    "examples": 0,
+    "operations": 48,
+    "names": []
+  },
+  {
+    "service": "gamelift",
+    "examples": 0,
+    "operations": 118,
+    "names": []
+  },
+  {
+    "service": "gameliftstreams",
+    "examples": 0,
+    "operations": 24,
+    "names": []
+  },
+  {
+    "service": "geomaps",
+    "examples": 0,
+    "operations": 5,
+    "names": []
+  },
+  {
+    "service": "geoplaces",
+    "examples": 0,
+    "operations": 7,
+    "names": []
+  },
+  {
+    "service": "georoutes",
+    "examples": 0,
+    "operations": 5,
+    "names": []
+  },
+  {
+    "service": "glacier",
+    "examples": 66,
+    "operations": 33,
+    "names": [
+      "AbortMultipartUpload",
+      "AbortVaultLock",
+      "AddTagsToVault",
+      "CompleteMultipartUpload",
+      "CompleteVaultLock",
+      "CreateVault",
+      "DeleteArchive",
+      "DeleteVault",
+      "DeleteVaultAccessPolicy",
+      "DeleteVaultNotifications",
+      "DescribeJob",
+      "DescribeVault",
+      "GetDataRetrievalPolicy",
+      "GetJobOutput",
+      "GetVaultAccessPolicy",
+      "GetVaultLock",
+      "GetVaultNotifications",
+      "InitiateJob",
+      "InitiateMultipartUpload",
+      "InitiateVaultLock",
+      "ListJobs",
+      "ListMultipartUploads",
+      "ListParts",
+      "ListProvisionedCapacity",
+      "ListTagsForVault",
+      "ListVaults",
+      "PurchaseProvisionedCapacity",
+      "RemoveTagsFromVault",
+      "SetDataRetrievalPolicy",
+      "SetVaultAccessPolicy",
+      "SetVaultNotifications",
+      "UploadArchive",
+      "UploadMultipartPart"
+    ]
+  },
+  {
+    "service": "globalaccelerator",
+    "examples": 0,
+    "operations": 56,
+    "names": []
+  },
+  {
+    "service": "glue",
+    "examples": 0,
+    "operations": 265,
+    "names": []
+  },
+  {
+    "service": "grafana",
+    "examples": 0,
+    "operations": 25,
+    "names": []
+  },
+  {
+    "service": "greengrass",
+    "examples": 0,
+    "operations": 92,
+    "names": []
+  },
+  {
+    "service": "greengrassv2",
+    "examples": 0,
+    "operations": 29,
+    "names": []
+  },
+  {
+    "service": "groundstation",
+    "examples": 0,
+    "operations": 35,
+    "names": []
+  },
+  {
+    "service": "guardduty",
+    "examples": 0,
+    "operations": 87,
+    "names": []
+  },
+  {
+    "service": "health",
+    "examples": 0,
+    "operations": 14,
+    "names": []
+  },
+  {
+    "service": "healthlake",
+    "examples": 0,
+    "operations": 13,
+    "names": []
+  },
+  {
+    "service": "iam",
+    "examples": 146,
     "operations": 176,
+    "names": [
+      "AddClientIDToOpenIDConnectProvider",
+      "AddRoleToInstanceProfile",
+      "AddUserToGroup",
+      "AttachGroupPolicy",
+      "AttachRolePolicy",
+      "AttachUserPolicy",
+      "ChangePassword",
+      "CreateAccessKey",
+      "CreateAccountAlias",
+      "CreateGroup",
+      "CreateInstanceProfile",
+      "CreateLoginProfile",
+      "CreateOpenIDConnectProvider",
+      "CreateRole",
+      "CreateUser",
+      "DeleteAccessKey",
+      "DeleteAccountAlias",
+      "DeleteAccountPasswordPolicy",
+      "DeleteGroupPolicy",
+      "DeleteInstanceProfile",
+      "DeleteLoginProfile",
+      "DeleteRole",
+      "DeleteRolePolicy",
+      "DeleteSigningCertificate",
+      "DeleteUser",
+      "DeleteUserPolicy",
+      "DeleteVirtualMFADevice",
+      "DisableOrganizationsRootCredentialsManagement",
+      "DisableOrganizationsRootSessions",
+      "EnableOrganizationsRootCredentialsManagement",
+      "EnableOrganizationsRootSessions",
+      "GenerateOrganizationsAccessReport",
+      "GenerateServiceLastAccessedDetails",
+      "GetAccountPasswordPolicy",
+      "GetAccountSummary",
+      "GetInstanceProfile",
+      "GetLoginProfile",
+      "GetOrganizationsAccessReport",
+      "GetRole",
+      "GetServiceLastAccessedDetails",
+      "GetServiceLastAccessedDetailsWithEntities",
+      "GetUser",
+      "ListAccessKeys",
+      "ListAccountAliases",
+      "ListGroupPolicies",
+      "ListGroups",
+      "ListGroupsForUser",
+      "ListOrganizationsFeatures",
+      "ListPoliciesGrantingServiceAccess",
+      "ListRoleTags",
+      "ListSigningCertificates",
+      "ListUserTags",
+      "ListUsers",
+      "ListVirtualMFADevices",
+      "PutGroupPolicy",
+      "PutRolePolicy",
+      "PutUserPolicy",
+      "RemoveRoleFromInstanceProfile",
+      "RemoveUserFromGroup",
+      "SetSecurityTokenServicePreferences",
+      "TagRole",
+      "TagUser",
+      "UntagRole",
+      "UntagUser",
+      "UpdateAccessKey",
+      "UpdateAccountPasswordPolicy",
+      "UpdateAssumeRolePolicy",
+      "UpdateGroup",
+      "UpdateLoginProfile",
+      "UpdateSigningCertificate",
+      "UpdateUser",
+      "UploadServerCertificate",
+      "UploadSigningCertificate"
+    ]
+  },
+  {
+    "service": "identitystore",
+    "examples": 0,
+    "operations": 19,
+    "names": []
+  },
+  {
+    "service": "imagebuilder",
+    "examples": 0,
+    "operations": 77,
+    "names": []
+  },
+  {
+    "service": "inspector",
+    "examples": 64,
+    "operations": 37,
+    "names": [
+      "AddAttributesToFindings",
+      "CreateAssessmentTarget",
+      "CreateAssessmentTemplate",
+      "CreateResourceGroup",
+      "DeleteAssessmentRun",
+      "DeleteAssessmentTarget",
+      "DeleteAssessmentTemplate",
+      "DescribeAssessmentRuns",
+      "DescribeAssessmentTargets",
+      "DescribeAssessmentTemplates",
+      "DescribeCrossAccountAccessRole",
+      "DescribeFindings",
+      "DescribeResourceGroups",
+      "DescribeRulesPackages",
+      "GetTelemetryMetadata",
+      "ListAssessmentRunAgents",
+      "ListAssessmentRuns",
+      "ListAssessmentTargets",
+      "ListAssessmentTemplates",
+      "ListEventSubscriptions",
+      "ListFindings",
+      "ListRulesPackages",
+      "ListTagsForResource",
+      "PreviewAgents",
+      "RegisterCrossAccountAccessRole",
+      "RemoveAttributesFromFindings",
+      "SetTagsForResource",
+      "StartAssessmentRun",
+      "StopAssessmentRun",
+      "SubscribeToEvent",
+      "UnsubscribeFromEvent",
+      "UpdateAssessmentTarget"
+    ]
+  },
+  {
+    "service": "inspector2",
+    "examples": 28,
+    "operations": 75,
+    "names": [
+      "BatchGetFindingDetails",
+      "CreateCisScanConfiguration",
+      "DeleteCisScanConfiguration",
+      "GetCisScanReport",
+      "GetCisScanResultDetails",
+      "ListCisScanConfigurations",
+      "ListCisScanResultsAggregatedByChecks",
+      "ListCisScanResultsAggregatedByTargetResource",
+      "ListCisScans",
+      "SendCisSessionHealth",
+      "SendCisSessionTelemetry",
+      "StartCisSession",
+      "StopCisSession",
+      "UpdateCisScanConfiguration"
+    ]
+  },
+  {
+    "service": "inspectorscan",
+    "examples": 2,
+    "operations": 1,
+    "names": [
+      "ScanSbom"
+    ]
+  },
+  {
+    "service": "internetmonitor",
+    "examples": 0,
+    "operations": 16,
+    "names": []
+  },
+  {
+    "service": "invoicing",
+    "examples": 56,
+    "operations": 17,
+    "names": [
+      "BatchGetInvoiceProfile",
+      "CreateInvoiceUnit",
+      "CreateProcurementPortalPreference",
+      "DeleteInvoiceUnit",
+      "DeleteProcurementPortalPreference",
+      "GetInvoicePDF",
+      "GetInvoiceUnit",
+      "GetProcurementPortalPreference",
+      "ListInvoiceSummaries",
+      "ListInvoiceUnits",
+      "ListProcurementPortalPreferences",
+      "ListTagsForResource",
+      "PutProcurementPortalPreference",
+      "TagResource",
+      "UntagResource",
+      "UpdateInvoiceUnit",
+      "UpdateProcurementPortalPreferenceStatus"
+    ]
+  },
+  {
+    "service": "iot",
+    "examples": 0,
+    "operations": 272,
+    "names": []
+  },
+  {
+    "service": "iotdataplane",
+    "examples": 0,
+    "operations": 8,
+    "names": []
+  },
+  {
+    "service": "iotevents",
+    "examples": 0,
+    "operations": 26,
+    "names": []
+  },
+  {
+    "service": "ioteventsdata",
+    "examples": 0,
+    "operations": 12,
+    "names": []
+  },
+  {
+    "service": "iotjobsdataplane",
+    "examples": 0,
+    "operations": 5,
+    "names": []
+  },
+  {
+    "service": "iotmanagedintegrations",
+    "examples": 0,
+    "operations": 83,
+    "names": []
+  },
+  {
+    "service": "iotwireless",
+    "examples": 0,
+    "operations": 112,
+    "names": []
+  },
+  {
+    "service": "iotdeviceadvisor",
+    "examples": 0,
+    "operations": 14,
+    "names": []
+  },
+  {
+    "service": "iotfleetwise",
+    "examples": 0,
+    "operations": 57,
+    "names": []
+  },
+  {
+    "service": "iotsecuretunneling",
+    "examples": 0,
+    "operations": 8,
+    "names": []
+  },
+  {
+    "service": "iotsitewise",
+    "examples": 0,
+    "operations": 104,
+    "names": []
+  },
+  {
+    "service": "iotthingsgraph",
+    "examples": 0,
+    "operations": 35,
+    "names": []
+  },
+  {
+    "service": "iottwinmaker",
+    "examples": 0,
+    "operations": 40,
+    "names": []
+  },
+  {
+    "service": "ivs",
+    "examples": 0,
+    "operations": 35,
+    "names": []
+  },
+  {
+    "service": "ivsrealtime",
+    "examples": 0,
+    "operations": 39,
+    "names": []
+  },
+  {
+    "service": "ivschat",
+    "examples": 0,
+    "operations": 17,
+    "names": []
+  },
+  {
+    "service": "kafka",
+    "examples": 0,
+    "operations": 59,
+    "names": []
+  },
+  {
+    "service": "kafkaconnect",
+    "examples": 0,
+    "operations": 18,
+    "names": []
+  },
+  {
+    "service": "kendra",
+    "examples": 0,
+    "operations": 66,
+    "names": []
+  },
+  {
+    "service": "kendraranking",
+    "examples": 0,
+    "operations": 9,
+    "names": []
+  },
+  {
+    "service": "keyspaces",
+    "examples": 0,
+    "operations": 19,
+    "names": []
+  },
+  {
+    "service": "keyspacesstreams",
+    "examples": 0,
+    "operations": 4,
+    "names": []
+  },
+  {
+    "service": "kinesis",
+    "examples": 0,
+    "operations": 39,
+    "names": []
+  },
+  {
+    "service": "kinesisanalytics",
+    "examples": 0,
+    "operations": 20,
+    "names": []
+  },
+  {
+    "service": "kinesisanalyticsv2",
+    "examples": 0,
+    "operations": 33,
+    "names": []
+  },
+  {
+    "service": "kinesisvideo",
+    "examples": 0,
+    "operations": 32,
+    "names": []
+  },
+  {
+    "service": "kinesisvideoarchivedmedia",
+    "examples": 0,
+    "operations": 6,
+    "names": []
+  },
+  {
+    "service": "kinesisvideomedia",
+    "examples": 0,
+    "operations": 1,
+    "names": []
+  },
+  {
+    "service": "kinesisvideosignaling",
+    "examples": 0,
+    "operations": 2,
+    "names": []
+  },
+  {
+    "service": "kinesisvideowebrtcstorage",
+    "examples": 0,
+    "operations": 2,
+    "names": []
+  },
+  {
+    "service": "kms",
+    "examples": 0,
+    "operations": 53,
+    "names": []
+  },
+  {
+    "service": "lakeformation",
+    "examples": 0,
+    "operations": 61,
     "names": []
   },
   {
     "service": "lambda",
-    "examples": 50,
+    "examples": 100,
     "operations": 85,
     "names": [
       "AddLayerVersionPermission",
@@ -255,37 +2086,696 @@
     ]
   },
   {
-    "service": "sns",
+    "service": "launchwizard",
+    "examples": 34,
+    "operations": 15,
+    "names": [
+      "CreateDeployment",
+      "DeleteDeployment",
+      "GetDeployment",
+      "GetWorkload",
+      "GetWorkloadDeploymentPattern",
+      "ListDeploymentEvents",
+      "ListDeploymentPatternVersions",
+      "ListDeployments",
+      "ListTagsForResource",
+      "ListWorkloadDeploymentPatterns",
+      "ListWorkloads",
+      "TagResource",
+      "UntagResource",
+      "UpdateDeployment"
+    ]
+  },
+  {
+    "service": "lexmodelbuildingservice",
+    "examples": 18,
+    "operations": 42,
+    "names": [
+      "GetBot",
+      "GetBots",
+      "GetIntent",
+      "GetIntents",
+      "GetSlotType",
+      "GetSlotTypes",
+      "PutBot",
+      "PutIntent",
+      "PutSlotType"
+    ]
+  },
+  {
+    "service": "lexmodelsv2",
+    "examples": 0,
+    "operations": 102,
+    "names": []
+  },
+  {
+    "service": "lexruntimeservice",
+    "examples": 0,
+    "operations": 5,
+    "names": []
+  },
+  {
+    "service": "lexruntimev2",
+    "examples": 0,
+    "operations": 6,
+    "names": []
+  },
+  {
+    "service": "licensemanager",
+    "examples": 0,
+    "operations": 62,
+    "names": []
+  },
+  {
+    "service": "licensemanagerlinuxsubscriptions",
+    "examples": 0,
+    "operations": 11,
+    "names": []
+  },
+  {
+    "service": "licensemanagerusersubscriptions",
+    "examples": 0,
+    "operations": 17,
+    "names": []
+  },
+  {
+    "service": "lightsail",
+    "examples": 0,
+    "operations": 161,
+    "names": []
+  },
+  {
+    "service": "location",
+    "examples": 0,
+    "operations": 60,
+    "names": []
+  },
+  {
+    "service": "lookoutequipment",
+    "examples": 0,
+    "operations": 49,
+    "names": []
+  },
+  {
+    "service": "m2",
+    "examples": 0,
+    "operations": 37,
+    "names": []
+  },
+  {
+    "service": "machinelearning",
+    "examples": 0,
+    "operations": 28,
+    "names": []
+  },
+  {
+    "service": "macie2",
+    "examples": 0,
+    "operations": 81,
+    "names": []
+  },
+  {
+    "service": "mailmanager",
+    "examples": 0,
+    "operations": 60,
+    "names": []
+  },
+  {
+    "service": "managedblockchain",
+    "examples": 0,
+    "operations": 27,
+    "names": []
+  },
+  {
+    "service": "managedblockchainquery",
+    "examples": 0,
+    "operations": 9,
+    "names": []
+  },
+  {
+    "service": "marketplaceagreement",
+    "examples": 0,
+    "operations": 3,
+    "names": []
+  },
+  {
+    "service": "marketplacecatalog",
+    "examples": 0,
+    "operations": 13,
+    "names": []
+  },
+  {
+    "service": "marketplacecommerceanalytics",
+    "examples": 0,
+    "operations": 2,
+    "names": []
+  },
+  {
+    "service": "marketplacedeployment",
+    "examples": 0,
+    "operations": 4,
+    "names": []
+  },
+  {
+    "service": "marketplaceentitlementservice",
+    "examples": 0,
+    "operations": 1,
+    "names": []
+  },
+  {
+    "service": "marketplacemetering",
+    "examples": 0,
+    "operations": 4,
+    "names": []
+  },
+  {
+    "service": "marketplacereporting",
+    "examples": 4,
+    "operations": 1,
+    "names": [
+      "GetBuyerDashboard"
+    ]
+  },
+  {
+    "service": "mediaconnect",
+    "examples": 0,
+    "operations": 82,
+    "names": []
+  },
+  {
+    "service": "mediaconvert",
+    "examples": 0,
+    "operations": 34,
+    "names": []
+  },
+  {
+    "service": "medialive",
+    "examples": 0,
+    "operations": 123,
+    "names": []
+  },
+  {
+    "service": "mediapackage",
+    "examples": 0,
+    "operations": 19,
+    "names": []
+  },
+  {
+    "service": "mediapackagevod",
+    "examples": 0,
+    "operations": 17,
+    "names": []
+  },
+  {
+    "service": "mediapackagev2",
+    "examples": 0,
+    "operations": 30,
+    "names": []
+  },
+  {
+    "service": "mediastore",
+    "examples": 0,
+    "operations": 21,
+    "names": []
+  },
+  {
+    "service": "mediastoredata",
+    "examples": 0,
+    "operations": 5,
+    "names": []
+  },
+  {
+    "service": "mediatailor",
+    "examples": 0,
+    "operations": 44,
+    "names": []
+  },
+  {
+    "service": "medicalimaging",
+    "examples": 0,
+    "operations": 18,
+    "names": []
+  },
+  {
+    "service": "memorydb",
+    "examples": 0,
+    "operations": 45,
+    "names": []
+  },
+  {
+    "service": "mgn",
+    "examples": 0,
+    "operations": 70,
+    "names": []
+  },
+  {
+    "service": "migrationhub",
+    "examples": 0,
+    "operations": 21,
+    "names": []
+  },
+  {
+    "service": "migrationhubrefactorspaces",
+    "examples": 0,
+    "operations": 24,
+    "names": []
+  },
+  {
+    "service": "migrationhubconfig",
+    "examples": 0,
+    "operations": 4,
+    "names": []
+  },
+  {
+    "service": "migrationhuborchestrator",
+    "examples": 0,
+    "operations": 31,
+    "names": []
+  },
+  {
+    "service": "migrationhubstrategy",
+    "examples": 0,
+    "operations": 22,
+    "names": []
+  },
+  {
+    "service": "mpa",
+    "examples": 0,
+    "operations": 21,
+    "names": []
+  },
+  {
+    "service": "mq",
+    "examples": 0,
+    "operations": 24,
+    "names": []
+  },
+  {
+    "service": "mturk",
+    "examples": 0,
+    "operations": 39,
+    "names": []
+  },
+  {
+    "service": "mwaa",
+    "examples": 0,
+    "operations": 12,
+    "names": []
+  },
+  {
+    "service": "mwaaserverless",
+    "examples": 0,
+    "operations": 15,
+    "names": []
+  },
+  {
+    "service": "neptune",
+    "examples": 106,
+    "operations": 70,
+    "names": [
+      "AddSourceIdentifierToSubscription",
+      "AddTagsToResource",
+      "ApplyPendingMaintenanceAction",
+      "CopyDBClusterParameterGroup",
+      "CopyDBClusterSnapshot",
+      "CopyDBParameterGroup",
+      "CreateDBCluster",
+      "CreateDBClusterParameterGroup",
+      "CreateDBClusterSnapshot",
+      "CreateDBInstance",
+      "CreateDBParameterGroup",
+      "CreateDBSubnetGroup",
+      "CreateEventSubscription",
+      "DeleteDBCluster",
+      "DeleteDBClusterParameterGroup",
+      "DeleteDBClusterSnapshot",
+      "DeleteDBInstance",
+      "DeleteDBParameterGroup",
+      "DeleteDBSubnetGroup",
+      "DeleteEventSubscription",
+      "DescribeDBClusterParameterGroups",
+      "DescribeDBClusterParameters",
+      "DescribeDBClusterSnapshotAttributes",
+      "DescribeDBClusterSnapshots",
+      "DescribeDBClusters",
+      "DescribeDBEngineVersions",
+      "DescribeDBInstances",
+      "DescribeDBParameterGroups",
+      "DescribeDBParameters",
+      "DescribeDBSubnetGroups",
+      "DescribeEngineDefaultClusterParameters",
+      "DescribeEngineDefaultParameters",
+      "DescribeEventCategories",
+      "DescribeEventSubscriptions",
+      "DescribeEvents",
+      "DescribeOrderableDBInstanceOptions",
+      "DescribePendingMaintenanceActions",
+      "FailoverDBCluster",
+      "ListTagsForResource",
+      "ModifyDBCluster",
+      "ModifyDBClusterParameterGroup",
+      "ModifyDBClusterSnapshotAttribute",
+      "ModifyDBInstance",
+      "ModifyDBParameterGroup",
+      "ModifyDBSubnetGroup",
+      "ModifyEventSubscription",
+      "RebootDBInstance",
+      "RemoveSourceIdentifierFromSubscription",
+      "RemoveTagsFromResource",
+      "ResetDBClusterParameterGroup",
+      "ResetDBParameterGroup",
+      "RestoreDBClusterFromSnapshot",
+      "RestoreDBClusterToPointInTime"
+    ]
+  },
+  {
+    "service": "neptunegraph",
+    "examples": 0,
+    "operations": 34,
+    "names": []
+  },
+  {
+    "service": "neptunedata",
+    "examples": 0,
+    "operations": 43,
+    "names": []
+  },
+  {
+    "service": "networkfirewall",
+    "examples": 0,
+    "operations": 79,
+    "names": []
+  },
+  {
+    "service": "networkflowmonitor",
+    "examples": 0,
+    "operations": 25,
+    "names": []
+  },
+  {
+    "service": "networkmanager",
+    "examples": 0,
+    "operations": 95,
+    "names": []
+  },
+  {
+    "service": "networkmonitor",
+    "examples": 0,
+    "operations": 12,
+    "names": []
+  },
+  {
+    "service": "notifications",
+    "examples": 0,
+    "operations": 39,
+    "names": []
+  },
+  {
+    "service": "notificationscontacts",
+    "examples": 0,
+    "operations": 9,
+    "names": []
+  },
+  {
+    "service": "novaact",
+    "examples": 0,
+    "operations": 16,
+    "names": []
+  },
+  {
+    "service": "oam",
+    "examples": 0,
+    "operations": 15,
+    "names": []
+  },
+  {
+    "service": "observabilityadmin",
+    "examples": 0,
+    "operations": 40,
+    "names": []
+  },
+  {
+    "service": "odb",
+    "examples": 0,
+    "operations": 43,
+    "names": []
+  },
+  {
+    "service": "omics",
+    "examples": 0,
+    "operations": 96,
+    "names": []
+  },
+  {
+    "service": "opensearch",
+    "examples": 0,
+    "operations": 82,
+    "names": []
+  },
+  {
+    "service": "opensearchserverless",
+    "examples": 0,
+    "operations": 46,
+    "names": []
+  },
+  {
+    "service": "organizations",
+    "examples": 100,
+    "operations": 63,
+    "names": [
+      "AcceptHandshake",
+      "AttachPolicy",
+      "CancelHandshake",
+      "CreateAccount",
+      "CreateOrganization",
+      "CreateOrganizationalUnit",
+      "CreatePolicy",
+      "DeclineHandshake",
+      "DeleteOrganizationalUnit",
+      "DeletePolicy",
+      "DescribeAccount",
+      "DescribeCreateAccountStatus",
+      "DescribeHandshake",
+      "DescribeOrganization",
+      "DescribeOrganizationalUnit",
+      "DescribePolicy",
+      "DescribeResponsibilityTransfer",
+      "DetachPolicy",
+      "DisablePolicyType",
+      "EnableAllFeatures",
+      "EnablePolicyType",
+      "InviteAccountToOrganization",
+      "InviteOrganizationToTransferResponsibility",
+      "LeaveOrganization",
+      "ListAccounts",
+      "ListAccountsForParent",
+      "ListAccountsWithInvalidEffectivePolicy",
+      "ListChildren",
+      "ListCreateAccountStatus",
+      "ListEffectivePolicyValidationErrors",
+      "ListHandshakesForAccount",
+      "ListHandshakesForOrganization",
+      "ListInboundResponsibilityTransfers",
+      "ListOrganizationalUnitsForParent",
+      "ListOutboundResponsibilityTransfers",
+      "ListParents",
+      "ListPolicies",
+      "ListPoliciesForTarget",
+      "ListRoots",
+      "ListTargetsForPolicy",
+      "MoveAccount",
+      "RemoveAccountFromOrganization",
+      "TerminateResponsibilityTransfer",
+      "UpdateOrganizationalUnit",
+      "UpdatePolicy",
+      "UpdateResponsibilityTransfer"
+    ]
+  },
+  {
+    "service": "osis",
+    "examples": 0,
+    "operations": 22,
+    "names": []
+  },
+  {
+    "service": "outposts",
+    "examples": 0,
+    "operations": 35,
+    "names": []
+  },
+  {
+    "service": "panorama",
+    "examples": 0,
+    "operations": 34,
+    "names": []
+  },
+  {
+    "service": "partnercentralaccount",
+    "examples": 0,
+    "operations": 29,
+    "names": []
+  },
+  {
+    "service": "partnercentralbenefits",
+    "examples": 0,
+    "operations": 17,
+    "names": []
+  },
+  {
+    "service": "partnercentralchannel",
+    "examples": 0,
+    "operations": 17,
+    "names": []
+  },
+  {
+    "service": "partnercentralselling",
     "examples": 0,
     "operations": 42,
     "names": []
   },
   {
-    "service": "sqs",
-    "examples": 18,
-    "operations": 23,
+    "service": "paymentcryptography",
+    "examples": 0,
+    "operations": 26,
+    "names": []
+  },
+  {
+    "service": "paymentcryptographydata",
+    "examples": 0,
+    "operations": 14,
+    "names": []
+  },
+  {
+    "service": "pcaconnectorad",
+    "examples": 0,
+    "operations": 25,
+    "names": []
+  },
+  {
+    "service": "pcaconnectorscep",
+    "examples": 0,
+    "operations": 12,
+    "names": []
+  },
+  {
+    "service": "pcs",
+    "examples": 0,
+    "operations": 19,
+    "names": []
+  },
+  {
+    "service": "personalize",
+    "examples": 0,
+    "operations": 71,
+    "names": []
+  },
+  {
+    "service": "personalizeevents",
+    "examples": 0,
+    "operations": 5,
+    "names": []
+  },
+  {
+    "service": "personalizeruntime",
+    "examples": 0,
+    "operations": 3,
+    "names": []
+  },
+  {
+    "service": "pi",
+    "examples": 0,
+    "operations": 13,
+    "names": []
+  },
+  {
+    "service": "pinpoint",
+    "examples": 6,
+    "operations": 122,
     "names": [
-      "AddPermission",
-      "ChangeMessageVisibility",
-      "ChangeMessageVisibilityBatch",
-      "CreateQueue",
-      "DeleteMessage",
-      "DeleteMessageBatch",
-      "DeleteQueue",
-      "GetQueueAttributes",
-      "GetQueueUrl",
-      "ListDeadLetterSourceQueues",
-      "ListQueues",
-      "ReceiveMessage",
-      "RemovePermission",
-      "SendMessage",
-      "SendMessageBatch",
-      "SetQueueAttributes"
+      "GetJourneyRunExecutionActivityMetrics",
+      "GetJourneyRunExecutionMetrics",
+      "GetJourneyRuns"
     ]
   },
   {
+    "service": "pinpointemail",
+    "examples": 0,
+    "operations": 42,
+    "names": []
+  },
+  {
+    "service": "pinpointsmsvoice",
+    "examples": 0,
+    "operations": 8,
+    "names": []
+  },
+  {
+    "service": "pinpointsmsvoicev2",
+    "examples": 0,
+    "operations": 91,
+    "names": []
+  },
+  {
+    "service": "pipes",
+    "examples": 0,
+    "operations": 10,
+    "names": []
+  },
+  {
+    "service": "polly",
+    "examples": 12,
+    "operations": 9,
+    "names": [
+      "DeleteLexicon",
+      "DescribeVoices",
+      "GetLexicon",
+      "ListLexicons",
+      "PutLexicon",
+      "SynthesizeSpeech"
+    ]
+  },
+  {
+    "service": "pricing",
+    "examples": 4,
+    "operations": 5,
+    "names": [
+      "DescribeServices",
+      "GetAttributeValues"
+    ]
+  },
+  {
+    "service": "proton",
+    "examples": 0,
+    "operations": 87,
+    "names": []
+  },
+  {
+    "service": "qapps",
+    "examples": 0,
+    "operations": 35,
+    "names": []
+  },
+  {
+    "service": "qbusiness",
+    "examples": 0,
+    "operations": 83,
+    "names": []
+  },
+  {
+    "service": "qconnect",
+    "examples": 0,
+    "operations": 93,
+    "names": []
+  },
+  {
+    "service": "quicksight",
+    "examples": 0,
+    "operations": 230,
+    "names": []
+  },
+  {
     "service": "rds",
-    "examples": 129,
+    "examples": 258,
     "operations": 163,
     "names": [
       "AddRoleToDBCluster",
@@ -412,142 +2902,26 @@
     ]
   },
   {
-    "service": "ecs",
-    "examples": 68,
-    "operations": 64,
-    "names": [
-      "CreateCapacityProvider",
-      "CreateCluster",
-      "CreateService",
-      "CreateTaskSet",
-      "DeleteAccountSetting",
-      "DeleteAttributes",
-      "DeleteCapacityProvider",
-      "DeleteCluster",
-      "DeleteService",
-      "DeleteTaskDefinitions",
-      "DeleteTaskSet",
-      "DeregisterContainerInstance",
-      "DeregisterTaskDefinition",
-      "DescribeCapacityProviders",
-      "DescribeClusters",
-      "DescribeContainerInstances",
-      "DescribeServiceDeployments",
-      "DescribeServiceRevisions",
-      "DescribeServices",
-      "DescribeTaskDefinition",
-      "DescribeTaskSets",
-      "DescribeTasks",
-      "ExecuteCommand",
-      "GetTaskProtection",
-      "ListAccountSettings",
-      "ListAttributes",
-      "ListClusters",
-      "ListContainerInstances",
-      "ListServiceDeployments",
-      "ListServices",
-      "ListTagsForResource",
-      "ListTaskDefinitionFamilies",
-      "ListTaskDefinitions",
-      "ListTasks",
-      "PutAccountSetting",
-      "PutAccountSettingDefault",
-      "PutAttributes",
-      "PutClusterCapacityProviders",
-      "RegisterTaskDefinition",
-      "RunTask",
-      "StartTask",
-      "StopServiceDeployment",
-      "StopTask",
-      "TagResource",
-      "UntagResource",
-      "UpdateCapacityProvider",
-      "UpdateCluster",
-      "UpdateClusterSettings",
-      "UpdateContainerAgent",
-      "UpdateContainerInstancesState",
-      "UpdateService",
-      "UpdateServicePrimaryTaskSet",
-      "UpdateTaskProtection",
-      "UpdateTaskSet"
-    ]
-  },
-  {
-    "service": "cloudformation",
-    "examples": 15,
-    "operations": 90,
-    "names": [
-      "CreateGeneratedTemplate",
-      "DeleteGeneratedTemplate",
-      "DescribeGeneratedTemplate",
-      "DescribeResourceScan",
-      "GetGeneratedTemplate",
-      "ListGeneratedTemplates",
-      "ListResourceScanRelatedResources",
-      "ListResourceScanResources",
-      "ListResourceScans",
-      "StartResourceScan",
-      "UpdateGeneratedTemplate"
-    ]
-  },
-  {
-    "service": "eventbridge",
+    "service": "rdsdata",
     "examples": 0,
-    "operations": 57,
+    "operations": 6,
     "names": []
   },
   {
-    "service": "comprehend",
+    "service": "ram",
     "examples": 0,
-    "operations": 85,
+    "operations": 35,
     "names": []
   },
   {
-    "service": "kinesis",
+    "service": "rbin",
     "examples": 0,
-    "operations": 39,
-    "names": []
-  },
-  {
-    "service": "ecr",
-    "examples": 22,
-    "operations": 58,
-    "names": [
-      "BatchDeleteImage",
-      "BatchGetImage",
-      "CreateRepository",
-      "CreateRepositoryCreationTemplate",
-      "DeleteRepository",
-      "DeleteRepositoryCreationTemplate",
-      "DeleteRepositoryPolicy",
-      "DeregisterPullTimeUpdateExclusion",
-      "DescribeRepositories",
-      "DescribeRepositoryCreationTemplates",
-      "GetAuthorizationToken",
-      "GetRepositoryPolicy",
-      "ListImageReferrers",
-      "ListImages",
-      "ListPullTimeUpdateExclusions",
-      "RegisterPullTimeUpdateExclusion",
-      "UpdateImageStorageClass",
-      "UpdateRepositoryCreationTemplate"
-    ]
-  },
-  {
-    "service": "athena",
-    "examples": 0,
-    "operations": 70,
-    "names": []
-  },
-  {
-    "service": "sts",
-    "examples": 0,
-    "operations": 11,
+    "operations": 10,
     "names": []
   },
   {
     "service": "redshift",
-    "examples": 36,
+    "examples": 72,
     "operations": 141,
     "names": [
       "AuthorizeClusterSecurityGroupIngress",
@@ -587,5 +2961,835 @@
       "ModifyClusterSubnetGroup",
       "ModifyEventSubscription"
     ]
+  },
+  {
+    "service": "redshiftdata",
+    "examples": 0,
+    "operations": 11,
+    "names": []
+  },
+  {
+    "service": "redshiftserverless",
+    "examples": 0,
+    "operations": 65,
+    "names": []
+  },
+  {
+    "service": "rekognition",
+    "examples": 82,
+    "operations": 75,
+    "names": [
+      "AssociateFaces",
+      "CompareFaces",
+      "CopyProjectVersion",
+      "CreateCollection",
+      "CreateDataset",
+      "CreateProject",
+      "CreateProjectVersion",
+      "CreateUser",
+      "DeleteCollection",
+      "DeleteDataset",
+      "DeleteFaces",
+      "DeleteProject",
+      "DeleteProjectPolicy",
+      "DeleteProjectVersion",
+      "DeleteUser",
+      "DescribeDataset",
+      "DescribeProjectVersions",
+      "DescribeProjects",
+      "DetectCustomLabels",
+      "DetectFaces",
+      "DetectLabels",
+      "DisassociateFaces",
+      "DistributeDatasetEntries",
+      "GetMediaAnalysisJob",
+      "IndexFaces",
+      "ListCollections",
+      "ListDatasetEntries",
+      "ListDatasetLabels",
+      "ListFaces",
+      "ListMediaAnalysisJobs",
+      "ListProjectPolicies",
+      "ListUsers",
+      "PutProjectPolicy",
+      "SearchFaces",
+      "SearchFacesByImage",
+      "SearchUsers",
+      "SearchUsersByImage",
+      "StartMediaAnalysisJob",
+      "StartProjectVersion",
+      "StopProjectVersion",
+      "UpdateDatasetEntries"
+    ]
+  },
+  {
+    "service": "repostspace",
+    "examples": 16,
+    "operations": 19,
+    "names": [
+      "BatchAddChannelRoleToAccessors",
+      "BatchAddRole",
+      "BatchRemoveChannelRoleFromAccessors",
+      "BatchRemoveRole",
+      "CreateChannel",
+      "GetChannel",
+      "ListChannels",
+      "UpdateChannel"
+    ]
+  },
+  {
+    "service": "resiliencehub",
+    "examples": 0,
+    "operations": 63,
+    "names": []
+  },
+  {
+    "service": "resourceexplorer2",
+    "examples": 0,
+    "operations": 32,
+    "names": []
+  },
+  {
+    "service": "resourcegroups",
+    "examples": 0,
+    "operations": 23,
+    "names": []
+  },
+  {
+    "service": "resourcegroupstaggingapi",
+    "examples": 0,
+    "operations": 9,
+    "names": []
+  },
+  {
+    "service": "rolesanywhere",
+    "examples": 0,
+    "operations": 30,
+    "names": []
+  },
+  {
+    "service": "route53",
+    "examples": 34,
+    "operations": 71,
+    "names": [
+      "AssociateVPCWithHostedZone",
+      "ChangeResourceRecordSets",
+      "ChangeTagsForResource",
+      "CreateHostedZone",
+      "GetChange",
+      "GetHostedZone"
+    ]
+  },
+  {
+    "service": "route53domains",
+    "examples": 0,
+    "operations": 34,
+    "names": []
+  },
+  {
+    "service": "route53recoverycluster",
+    "examples": 0,
+    "operations": 4,
+    "names": []
+  },
+  {
+    "service": "route53recoverycontrolconfig",
+    "examples": 0,
+    "operations": 25,
+    "names": []
+  },
+  {
+    "service": "route53recoveryreadiness",
+    "examples": 0,
+    "operations": 32,
+    "names": []
+  },
+  {
+    "service": "route53globalresolver",
+    "examples": 0,
+    "operations": 47,
+    "names": []
+  },
+  {
+    "service": "route53profiles",
+    "examples": 0,
+    "operations": 16,
+    "names": []
+  },
+  {
+    "service": "route53resolver",
+    "examples": 0,
+    "operations": 68,
+    "names": []
+  },
+  {
+    "service": "rtbfabric",
+    "examples": 0,
+    "operations": 27,
+    "names": []
+  },
+  {
+    "service": "rum",
+    "examples": 0,
+    "operations": 20,
+    "names": []
+  },
+  {
+    "service": "s3",
+    "examples": 38,
+    "operations": 107,
+    "names": [
+      "CompleteMultipartUpload",
+      "CopyObject",
+      "DeleteBucket",
+      "DeleteBucketPolicy",
+      "DeleteObject",
+      "DeleteObjects",
+      "GetBucketLocation",
+      "GetBucketPolicy",
+      "GetObject",
+      "ListBuckets",
+      "ListObjects",
+      "ListParts",
+      "PutBucketPolicy",
+      "PutObject",
+      "UploadPart"
+    ]
+  },
+  {
+    "service": "s3control",
+    "examples": 0,
+    "operations": 97,
+    "names": []
+  },
+  {
+    "service": "s3outposts",
+    "examples": 0,
+    "operations": 5,
+    "names": []
+  },
+  {
+    "service": "s3tables",
+    "examples": 0,
+    "operations": 49,
+    "names": []
+  },
+  {
+    "service": "s3vectors",
+    "examples": 0,
+    "operations": 19,
+    "names": []
+  },
+  {
+    "service": "sns",
+    "examples": 0,
+    "operations": 42,
+    "names": []
+  },
+  {
+    "service": "sqs",
+    "examples": 20,
+    "operations": 23,
+    "names": [
+      "AddPermission",
+      "ChangeMessageVisibility",
+      "ChangeMessageVisibilityBatch",
+      "CreateQueue",
+      "DeleteMessage",
+      "DeleteMessageBatch",
+      "DeleteQueue",
+      "GetQueueAttributes",
+      "GetQueueUrl",
+      "ListDeadLetterSourceQueues",
+      "ListQueues",
+      "ReceiveMessage",
+      "RemovePermission",
+      "SendMessage",
+      "SendMessageBatch",
+      "SetQueueAttributes"
+    ]
+  },
+  {
+    "service": "sts",
+    "examples": 0,
+    "operations": 11,
+    "names": []
+  },
+  {
+    "service": "sagemaker",
+    "examples": 0,
+    "operations": 379,
+    "names": []
+  },
+  {
+    "service": "sagemakera2iruntime",
+    "examples": 0,
+    "operations": 5,
+    "names": []
+  },
+  {
+    "service": "sagemakeredge",
+    "examples": 0,
+    "operations": 3,
+    "names": []
+  },
+  {
+    "service": "sagemakerfeaturestoreruntime",
+    "examples": 0,
+    "operations": 4,
+    "names": []
+  },
+  {
+    "service": "sagemakergeospatial",
+    "examples": 0,
+    "operations": 19,
+    "names": []
+  },
+  {
+    "service": "sagemakermetrics",
+    "examples": 0,
+    "operations": 2,
+    "names": []
+  },
+  {
+    "service": "sagemakerruntime",
+    "examples": 0,
+    "operations": 3,
+    "names": []
+  },
+  {
+    "service": "sagemakerruntimehttp2",
+    "examples": 0,
+    "operations": 1,
+    "names": []
+  },
+  {
+    "service": "savingsplans",
+    "examples": 0,
+    "operations": 10,
+    "names": []
+  },
+  {
+    "service": "scheduler",
+    "examples": 0,
+    "operations": 12,
+    "names": []
+  },
+  {
+    "service": "schemas",
+    "examples": 0,
+    "operations": 31,
+    "names": []
+  },
+  {
+    "service": "secretsmanager",
+    "examples": 52,
+    "operations": 23,
+    "names": [
+      "BatchGetSecretValue",
+      "CancelRotateSecret",
+      "CreateSecret",
+      "DeleteResourcePolicy",
+      "DeleteSecret",
+      "DescribeSecret",
+      "GetRandomPassword",
+      "GetResourcePolicy",
+      "GetSecretValue",
+      "ListSecretVersionIds",
+      "ListSecrets",
+      "PutResourcePolicy",
+      "PutSecretValue",
+      "ReplicateSecretToRegions",
+      "RestoreSecret",
+      "RotateSecret",
+      "TagResource",
+      "UntagResource",
+      "UpdateSecret",
+      "UpdateSecretVersionStage",
+      "ValidateResourcePolicy"
+    ]
+  },
+  {
+    "service": "securityir",
+    "examples": 0,
+    "operations": 24,
+    "names": []
+  },
+  {
+    "service": "securityhub",
+    "examples": 0,
+    "operations": 107,
+    "names": []
+  },
+  {
+    "service": "securitylake",
+    "examples": 0,
+    "operations": 31,
+    "names": []
+  },
+  {
+    "service": "serverlessapplicationrepository",
+    "examples": 0,
+    "operations": 14,
+    "names": []
+  },
+  {
+    "service": "servicecatalog",
+    "examples": 0,
+    "operations": 90,
+    "names": []
+  },
+  {
+    "service": "servicecatalogappregistry",
+    "examples": 0,
+    "operations": 24,
+    "names": []
+  },
+  {
+    "service": "servicequotas",
+    "examples": 0,
+    "operations": 26,
+    "names": []
+  },
+  {
+    "service": "servicediscovery",
+    "examples": 0,
+    "operations": 30,
+    "names": []
+  },
+  {
+    "service": "ses",
+    "examples": 0,
+    "operations": 71,
+    "names": []
+  },
+  {
+    "service": "sesv2",
+    "examples": 0,
+    "operations": 110,
+    "names": []
+  },
+  {
+    "service": "sfn",
+    "examples": 0,
+    "operations": 37,
+    "names": []
+  },
+  {
+    "service": "shield",
+    "examples": 0,
+    "operations": 36,
+    "names": []
+  },
+  {
+    "service": "signer",
+    "examples": 0,
+    "operations": 19,
+    "names": []
+  },
+  {
+    "service": "signin",
+    "examples": 0,
+    "operations": 1,
+    "names": []
+  },
+  {
+    "service": "simspaceweaver",
+    "examples": 0,
+    "operations": 16,
+    "names": []
+  },
+  {
+    "service": "snowdevicemanagement",
+    "examples": 0,
+    "operations": 13,
+    "names": []
+  },
+  {
+    "service": "snowball",
+    "examples": 36,
+    "operations": 27,
+    "names": [
+      "CancelCluster",
+      "CancelJob",
+      "CreateAddress",
+      "CreateCluster",
+      "CreateJob",
+      "DescribeAddress",
+      "DescribeAddresses",
+      "DescribeCluster",
+      "DescribeJob",
+      "GetJobManifest",
+      "GetJobUnlockCode",
+      "GetSnowballUsage",
+      "ListClusterJobs",
+      "ListClusters",
+      "ListJobs",
+      "ListPickupLocations",
+      "UpdateCluster",
+      "UpdateJob"
+    ]
+  },
+  {
+    "service": "socialmessaging",
+    "examples": 0,
+    "operations": 21,
+    "names": []
+  },
+  {
+    "service": "ssm",
+    "examples": 0,
+    "operations": 146,
+    "names": []
+  },
+  {
+    "service": "ssmcontacts",
+    "examples": 0,
+    "operations": 39,
+    "names": []
+  },
+  {
+    "service": "ssmguiconnect",
+    "examples": 0,
+    "operations": 3,
+    "names": []
+  },
+  {
+    "service": "ssmincidents",
+    "examples": 0,
+    "operations": 31,
+    "names": []
+  },
+  {
+    "service": "ssmquicksetup",
+    "examples": 0,
+    "operations": 14,
+    "names": []
+  },
+  {
+    "service": "ssmsap",
+    "examples": 0,
+    "operations": 27,
+    "names": []
+  },
+  {
+    "service": "sso",
+    "examples": 0,
+    "operations": 4,
+    "names": []
+  },
+  {
+    "service": "ssoadmin",
+    "examples": 0,
+    "operations": 79,
+    "names": []
+  },
+  {
+    "service": "ssooidc",
+    "examples": 0,
+    "operations": 4,
+    "names": []
+  },
+  {
+    "service": "storagegateway",
+    "examples": 110,
+    "operations": 96,
+    "names": [
+      "ActivateGateway",
+      "AddCache",
+      "AddTagsToResource",
+      "AddUploadBuffer",
+      "AddWorkingStorage",
+      "CancelArchival",
+      "CancelRetrieval",
+      "CreateCachediSCSIVolume",
+      "CreateSnapshot",
+      "CreateSnapshotFromVolumeRecoveryPoint",
+      "CreateStorediSCSIVolume",
+      "CreateTapeWithBarcode",
+      "CreateTapes",
+      "DeleteBandwidthRateLimit",
+      "DeleteChapCredentials",
+      "DeleteGateway",
+      "DeleteSnapshotSchedule",
+      "DeleteTape",
+      "DeleteTapeArchive",
+      "DeleteVolume",
+      "DescribeBandwidthRateLimit",
+      "DescribeCache",
+      "DescribeCachediSCSIVolumes",
+      "DescribeChapCredentials",
+      "DescribeGatewayInformation",
+      "DescribeMaintenanceStartTime",
+      "DescribeSnapshotSchedule",
+      "DescribeStorediSCSIVolumes",
+      "DescribeTapeArchives",
+      "DescribeTapeRecoveryPoints",
+      "DescribeTapes",
+      "DescribeUploadBuffer",
+      "DescribeVTLDevices",
+      "DescribeWorkingStorage",
+      "DisableGateway",
+      "ListGateways",
+      "ListLocalDisks",
+      "ListTagsForResource",
+      "ListVolumeRecoveryPoints",
+      "ListVolumes",
+      "RemoveTagsFromResource",
+      "ResetCache",
+      "RetrieveTapeArchive",
+      "RetrieveTapeRecoveryPoint",
+      "SetLocalConsolePassword",
+      "ShutdownGateway",
+      "StartGateway",
+      "UpdateBandwidthRateLimit",
+      "UpdateChapCredentials",
+      "UpdateGatewayInformation",
+      "UpdateGatewaySoftwareNow",
+      "UpdateMaintenanceStartTime",
+      "UpdateSnapshotSchedule",
+      "UpdateVTLDeviceType"
+    ]
+  },
+  {
+    "service": "supplychain",
+    "examples": 0,
+    "operations": 30,
+    "names": []
+  },
+  {
+    "service": "support",
+    "examples": 0,
+    "operations": 16,
+    "names": []
+  },
+  {
+    "service": "supportapp",
+    "examples": 0,
+    "operations": 10,
+    "names": []
+  },
+  {
+    "service": "swf",
+    "examples": 0,
+    "operations": 39,
+    "names": []
+  },
+  {
+    "service": "synthetics",
+    "examples": 0,
+    "operations": 22,
+    "names": []
+  },
+  {
+    "service": "taxsettings",
+    "examples": 0,
+    "operations": 16,
+    "names": []
+  },
+  {
+    "service": "textract",
+    "examples": 0,
+    "operations": 25,
+    "names": []
+  },
+  {
+    "service": "timestreaminfluxdb",
+    "examples": 0,
+    "operations": 19,
+    "names": []
+  },
+  {
+    "service": "timestreamquery",
+    "examples": 0,
+    "operations": 15,
+    "names": []
+  },
+  {
+    "service": "timestreamwrite",
+    "examples": 0,
+    "operations": 19,
+    "names": []
+  },
+  {
+    "service": "tnb",
+    "examples": 0,
+    "operations": 33,
+    "names": []
+  },
+  {
+    "service": "transcribe",
+    "examples": 0,
+    "operations": 43,
+    "names": []
+  },
+  {
+    "service": "transcribestreaming",
+    "examples": 0,
+    "operations": 5,
+    "names": []
+  },
+  {
+    "service": "transfer",
+    "examples": 0,
+    "operations": 71,
+    "names": []
+  },
+  {
+    "service": "translate",
+    "examples": 0,
+    "operations": 19,
+    "names": []
+  },
+  {
+    "service": "trustedadvisor",
+    "examples": 0,
+    "operations": 11,
+    "names": []
+  },
+  {
+    "service": "verifiedpermissions",
+    "examples": 0,
+    "operations": 30,
+    "names": []
+  },
+  {
+    "service": "voiceid",
+    "examples": 0,
+    "operations": 29,
+    "names": []
+  },
+  {
+    "service": "vpclattice",
+    "examples": 0,
+    "operations": 73,
+    "names": []
+  },
+  {
+    "service": "waf",
+    "examples": 0,
+    "operations": 77,
+    "names": []
+  },
+  {
+    "service": "wafregional",
+    "examples": 0,
+    "operations": 81,
+    "names": []
+  },
+  {
+    "service": "wafv2",
+    "examples": 0,
+    "operations": 54,
+    "names": []
+  },
+  {
+    "service": "wellarchitected",
+    "examples": 0,
+    "operations": 72,
+    "names": []
+  },
+  {
+    "service": "wickr",
+    "examples": 206,
+    "operations": 42,
+    "names": [
+      "BatchCreateUser",
+      "BatchDeleteUser",
+      "BatchLookupUserUname",
+      "BatchReinviteUser",
+      "BatchResetDevicesForUser",
+      "BatchToggleUserSuspendStatus",
+      "CreateBot",
+      "CreateDataRetentionBot",
+      "CreateDataRetentionBotChallenge",
+      "CreateNetwork",
+      "CreateSecurityGroup",
+      "DeleteBot",
+      "DeleteDataRetentionBot",
+      "DeleteNetwork",
+      "DeleteSecurityGroup",
+      "GetBot",
+      "GetBotsCount",
+      "GetDataRetentionBot",
+      "GetGuestUserHistoryCount",
+      "GetNetwork",
+      "GetNetworkSettings",
+      "GetOidcInfo",
+      "GetSecurityGroup",
+      "GetUser",
+      "GetUsersCount",
+      "ListBlockedGuestUsers",
+      "ListBots",
+      "ListDevicesForUser",
+      "ListGuestUsers",
+      "ListNetworks",
+      "ListSecurityGroupUsers",
+      "ListSecurityGroups",
+      "ListUsers",
+      "RegisterOidcConfig",
+      "RegisterOidcConfigTest",
+      "UpdateBot",
+      "UpdateDataRetention",
+      "UpdateGuestUser",
+      "UpdateNetwork",
+      "UpdateNetworkSettings",
+      "UpdateSecurityGroup",
+      "UpdateUser"
+    ]
+  },
+  {
+    "service": "wisdom",
+    "examples": 0,
+    "operations": 41,
+    "names": []
+  },
+  {
+    "service": "workdocs",
+    "examples": 0,
+    "operations": 44,
+    "names": []
+  },
+  {
+    "service": "workmail",
+    "examples": 0,
+    "operations": 92,
+    "names": []
+  },
+  {
+    "service": "workmailmessageflow",
+    "examples": 0,
+    "operations": 2,
+    "names": []
+  },
+  {
+    "service": "workspaces",
+    "examples": 0,
+    "operations": 91,
+    "names": []
+  },
+  {
+    "service": "workspacesinstances",
+    "examples": 0,
+    "operations": 13,
+    "names": []
+  },
+  {
+    "service": "workspacesthinclient",
+    "examples": 0,
+    "operations": 16,
+    "names": []
+  },
+  {
+    "service": "workspacesweb",
+    "examples": 0,
+    "operations": 75,
+    "names": []
+  },
+  {
+    "service": "xray",
+    "examples": 0,
+    "operations": 38,
+    "names": []
   }
 ]
