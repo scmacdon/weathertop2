@@ -21,6 +21,10 @@ function ModelCoverage() {
   const [filterLang, setFilterLang] = useState(null);
   const [message, setMessage] = useState("");
 
+  // Modal state
+  const [showTotalsModal, setShowTotalsModal] = useState(false);
+  const [sdkTotals, setSdkTotals] = useState(null);
+
   const operationsRef = useRef(null);
 
   useEffect(() => {
@@ -118,6 +122,38 @@ function ModelCoverage() {
     });
   };
 
+  const loadAllSdkTotals = async () => {
+    try {
+      const files = [
+        { name: "Kotlin", file: "/kotlinref2.json" },
+        { name: ".NET", file: "/net.json" },
+        { name: "PHP", file: "/php.json" },
+        { name: "Python", file: "/python.json" },
+        { name: "Ruby", file: "/ruby.json" }
+      ];
+
+      const results = await Promise.all(
+        files.map(async (sdk) => {
+          const res = await fetch(`${sdk.file}?_=${Date.now()}`);
+          const json = await res.json();
+          const rows = Array.isArray(json) ? json : [json];
+          const total = rows.reduce(
+            (sum, svc) => sum + (Number(svc.examples) || 0),
+            0
+          );
+          return { sdk: sdk.name, total };
+        })
+      );
+
+      const grandTotal = results.reduce((sum, r) => sum + r.total, 0);
+
+      setSdkTotals({ results, grandTotal });
+      setShowTotalsModal(true);
+    } catch (err) {
+      console.error("Failed loading SDK totals", err);
+    }
+  };
+
   const badgeStyle = (bg) => ({
     display: "inline-block",
     padding: "6px 10px",
@@ -212,7 +248,125 @@ function ModelCoverage() {
           <option value="PHP">PHP</option>
           <option value="Ruby">Ruby</option>
         </select>
+
+        <div
+          style={{
+            display: "flex",
+            gap: 12,
+            marginTop: 12
+          }}
+        >
+          <button
+            onClick={loadAllSdkTotals}
+            style={{
+              padding: "8px 16px",
+              borderRadius: 6,
+              border: "none",
+              cursor: "pointer",
+              backgroundColor: "#2ecc71",
+              color: "#000",
+              fontWeight: "bold"
+            }}
+          >
+            Total Model examples
+          </button>
+
+          <button
+            style={{
+              padding: "8px 16px",
+              borderRadius: 6,
+              border: "none",
+              cursor: "pointer",
+              backgroundColor: "#3498db",
+              color: "#000",
+              fontWeight: "bold"
+            }}
+          >
+            Filtered Examples
+          </button>
+        </div>
       </div>
+
+      {showTotalsModal && sdkTotals && (
+        <div
+          style={{
+            position: "fixed",
+            inset: 0,
+            backgroundColor: "rgba(0,0,0,0.75)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            zIndex: 9999
+          }}
+        >
+          <div
+            style={{
+              backgroundColor: "#1e1e1e",
+              padding: 30,
+              borderRadius: 12,
+              width: "500px",
+              boxShadow: "0 10px 40px rgba(0,0,0,0.8)",
+              border: "1px solid #333"
+            }}
+          >
+            <h2 style={{ marginBottom: 20, textAlign: "center" }}>
+              Total Model Examples by SDK
+            </h2>
+
+            <div style={{ marginBottom: 20 }}>
+              {sdkTotals.results.map(r => (
+                <div
+                  key={r.sdk}
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    padding: "10px 0",
+                    borderBottom: "1px solid #333",
+                    fontSize: "1rem"
+                  }}
+                >
+                  <span>{r.sdk}</span>
+                  <span style={{ fontWeight: "bold", color: "#2ecc71" }}>
+                    {r.total.toLocaleString()}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                paddingTop: 15,
+                borderTop: "2px solid #444",
+                fontSize: "1.1rem",
+                fontWeight: "bold"
+              }}
+            >
+              <span>Grand Total</span>
+              <span style={{ color: "#f39c12" }}>
+                {sdkTotals.grandTotal.toLocaleString()}
+              </span>
+            </div>
+
+            <div style={{ textAlign: "center", marginTop: 25 }}>
+              <button
+                onClick={() => setShowTotalsModal(false)}
+                style={{
+                  padding: "8px 18px",
+                  borderRadius: 6,
+                  border: "none",
+                  cursor: "pointer",
+                  backgroundColor: "#333",
+                  color: "#fff"
+                }}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {message && (
         <div
@@ -500,6 +654,3 @@ function ModelCoverage() {
 }
 
 export default ModelCoverage;
-
-
-
