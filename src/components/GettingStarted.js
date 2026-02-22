@@ -63,11 +63,16 @@ export default function GettingStarted() {
       "The Coverage Dashboard tracks fully tested, production-quality AWS code examples that meet AWS engineering standards and live in the main AWS Code Examples GitHub repository. These examples are runnable, continuously validated by Weathertop, and reflect real-world SDK usage across services and operations.",
     ],
     [
-  "🧩",
-  "Model-Driven Code Examples",
-  "AWS SDK reference documentation includes model-driven code snippets generated directly from service models. These snippets illustrate API shape and required parameters, but they are not runnable end-to-end and do not meet AWS Code Example standards. They often lack client setup, configuration, and error handling. Weathertop tracks these snippets to measure documentation completeness, reveal gaps in practical guidance, and show where developers see API structure without usable, executable examples."
-]
-,
+      "🧩",
+      "Model-Driven Code Examples",
+      "AWS SDK reference documentation includes model-driven code snippets generated directly from service models. These snippets illustrate API shape and required parameters, but they are not runnable end-to-end and do not meet AWS Code Example standards. They often lack client setup, configuration, and error handling. Weathertop tracks these snippets to measure documentation completeness, reveal gaps in practical guidance, and show where developers see API structure without usable, executable examples.",
+    ],
+    
+    [
+      "🌊",
+      "Tributary Examples",
+      "These examples come from additional GitHub repositories outside of the core AWS Code Examples Library. They are contributed projects that demonstrate extended, specialized, or community-driven use cases built on top of AWS services.\n\nTributary Examples help expand the learning surface of the AWS Code Examples Library",
+    ],
     [
       "🗂️",
       "Task Management",

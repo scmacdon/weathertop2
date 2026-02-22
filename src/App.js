@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import TestDashboard from "./components/TestDashboard";
 import Stats from "./components/Stats";
 import Coverage from "./components/Coverage";
+import Tributaries from "./components/Tributaries";
 import ModelCoverage from "./components/ModelCoverage";
 import GettingStarted from "./components/GettingStarted";
 import Management from "./components/Management";
@@ -71,6 +72,14 @@ export default function App() {
           Model-Driven Examples
         </button>
 
+        {/* ✅ Newly Added Menu Item */}
+        <button
+          style={menuButtonStyle(activePage === "tributaries")}
+          onClick={() => setActivePage("tributaries")}
+        >
+          Tributaries
+        </button>
+
         <button
           style={menuButtonStyle(activePage === "management")}
           onClick={() => setActivePage("management")}
@@ -108,6 +117,9 @@ export default function App() {
         {activePage === "coverage" && <Coverage />}
 
         {activePage === "modelCoverage" && <ModelCoverage />}
+
+        {/* ✅ Newly Added Page Rendering */}
+        {activePage === "tributaries" && <Tributaries />}
 
         {activePage === "management" && <Management />}
       </main>
