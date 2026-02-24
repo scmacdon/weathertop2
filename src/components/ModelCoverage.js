@@ -43,7 +43,8 @@ function ModelCoverage() {
       language === "Net" ||
       language === "Python" ||
       language === "PHP" ||
-      language === "Ruby"
+      language === "Ruby" ||
+      language === "JavaScript"
     ) {
       setLoading(true);
 
@@ -59,6 +60,8 @@ function ModelCoverage() {
         url = `/PHP.json?_=${Date.now()}`;
       } else if (language === "Ruby") {
         url = `/RUBY.json?_=${Date.now()}`;
+      } else if (language === "JavaScript") {
+        url = `/JS.json?_=${Date.now()}`;
       }
 
       fetch(url)
@@ -112,6 +115,8 @@ function ModelCoverage() {
           ? "PHP"
           : language === "Ruby"
           ? "Ruby"
+          : language === "JavaScript"
+          ? "JavaScript"
           : ""
       ]
     }));
@@ -129,7 +134,8 @@ function ModelCoverage() {
         { name: ".NET", file: "/net.json" },
         { name: "PHP", file: "/php.json" },
         { name: "Python", file: "/python.json" },
-        { name: "Ruby", file: "/ruby.json" }
+        { name: "Ruby", file: "/ruby.json" },
+        { name: "JavaScript", file: "/JS.json" }
       ];
 
       const results = await Promise.all(
@@ -247,6 +253,7 @@ function ModelCoverage() {
           <option value="Python">Python</option>
           <option value="PHP">PHP</option>
           <option value="Ruby">Ruby</option>
+          <option value="JavaScript">JavaScript</option>
         </select>
 
         <div
@@ -287,6 +294,7 @@ function ModelCoverage() {
         </div>
       </div>
 
+      {/* Totals Modal */}
       {showTotalsModal && sdkTotals && (
         <div
           style={{
@@ -368,6 +376,7 @@ function ModelCoverage() {
         </div>
       )}
 
+      {/* Message */}
       {message && (
         <div
           style={{
@@ -383,12 +392,15 @@ function ModelCoverage() {
         </div>
       )}
 
+      {/* Charts, Tables, and Operations */}
       {(language === "Kotlin" ||
         language === "Net" ||
         language === "Python" ||
         language === "PHP" ||
-        language === "Ruby") && (
+        language === "Ruby" ||
+        language === "JavaScript") && (
         <>
+          {/* Global Coverage */}
           <div
             style={{
               display: "flex",
@@ -434,6 +446,7 @@ function ModelCoverage() {
             </div>
           </div>
 
+          {/* Coverage by Service */}
           <div style={{ marginBottom: 24 }}>
             <h2>Coverage by Service (%)</h2>
             <div
@@ -479,8 +492,7 @@ function ModelCoverage() {
                       <Cell
                         key={idx}
                         fill={
-                          selectedService?.serviceCode ===
-                          entry.serviceCode
+                          selectedService?.serviceCode === entry.serviceCode
                             ? "#f39c12"
                             : "#82ca9d"
                         }
@@ -492,6 +504,7 @@ function ModelCoverage() {
             </div>
           </div>
 
+          {/* Operations Table */}
           {selectedService && (
             <div ref={operationsRef} style={{ marginTop: 20 }}>
               <h3>
@@ -522,9 +535,7 @@ function ModelCoverage() {
                       cursor: "pointer"
                     }}
                     onClick={() =>
-                      setFilterLang(
-                        filterLang === lang ? null : lang
-                      )
+                      setFilterLang(filterLang === lang ? null : lang)
                     }
                   >
                     {lang}
@@ -547,9 +558,7 @@ function ModelCoverage() {
                     setFilterLang(null);
                   }}
                 >
-                  {showMissingOnly
-                    ? "Missing Only"
-                    : "Found / Missing"}
+                  {showMissingOnly ? "Missing Only" : "Found / Missing"}
                 </button>
               </div>
 
@@ -568,29 +577,15 @@ function ModelCoverage() {
                   }}
                 >
                   <tr>
-                    <th style={{ textAlign: "left", padding: 12 }}>
-                      Operation Name
-                    </th>
-                    <th style={{ textAlign: "center", padding: 12 }}>
-                      Found
-                    </th>
-                    <th style={{ textAlign: "left", padding: 12 }}>
-                      Languages
-                    </th>
+                    <th style={{ textAlign: "left", padding: 12 }}>Operation Name</th>
+                    <th style={{ textAlign: "center", padding: 12 }}>Found</th>
+                    <th style={{ textAlign: "left", padding: 12 }}>Languages</th>
                   </tr>
                 </thead>
-
                 <tbody>
                   {displayedMethods.length === 0 && (
                     <tr>
-                      <td
-                        colSpan={3}
-                        style={{
-                          padding: 16,
-                          textAlign: "center",
-                          color: "#aaa"
-                        }}
-                      >
+                      <td colSpan={3} style={{ padding: 16, textAlign: "center", color: "#aaa" }}>
                         No operations match the filter.
                       </td>
                     </tr>
@@ -600,41 +595,21 @@ function ModelCoverage() {
                     <tr
                       key={m.name}
                       style={{
-                        backgroundColor:
-                          idx % 2 === 0
-                            ? "#171717"
-                            : "#1d1d1d"
+                        backgroundColor: idx % 2 === 0 ? "#171717" : "#1d1d1d"
                       }}
                     >
-                      <td style={{ padding: 12 }}>
-                        {m.name}
-                      </td>
-                      <td
-                        style={{
-                          textAlign: "center",
-                          padding: 12
-                        }}
-                      >
+                      <td style={{ padding: 12 }}>{m.name}</td>
+                      <td style={{ textAlign: "center", padding: 12 }}>
                         <span style={foundBadge(m.found)}>
                           {m.found ? "✅" : "❌"}
                         </span>
                       </td>
-                      <td
-                        style={{
-                          padding: 12,
-                          display: "flex",
-                          flexWrap: "wrap",
-                          gap: 4
-                        }}
-                      >
+                      <td style={{ padding: 12, display: "flex", flexWrap: "wrap", gap: 4 }}>
                         {m.languages.map((lang, i) => (
                           <span
                             key={i}
                             style={badgeStyle(
-                              langColorMap[lang] ||
-                                LANGUAGE_COLORS[
-                                  i % LANGUAGE_COLORS.length
-                                ]
+                              langColorMap[lang] || LANGUAGE_COLORS[i % LANGUAGE_COLORS.length]
                             )}
                           >
                             {lang}
