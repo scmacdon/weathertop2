@@ -77,7 +77,7 @@ export default function App() {
           style={menuButtonStyle(activePage === "tributaries")}
           onClick={() => setActivePage("tributaries")}
         >
-          Tributaries
+          Tributary Examples
         </button>
 
         <button
@@ -119,7 +119,7 @@ export default function App() {
         {activePage === "modelCoverage" && <ModelCoverage />}
 
         {/* ✅ Newly Added Page Rendering */}
-        {activePage === "tributary Examples" && <Tributaries />}
+        {activePage === "tributaries" && <Tributaries />}
 
         {activePage === "management" && <Management />}
       </main>
