@@ -264,6 +264,7 @@ function ModelCoverage() {
           }}
         >
           <button
+           title="A total count of code examples. Some examples may be duplicates of items already in the Code Library."
             onClick={loadAllSdkTotals}
             style={{
               padding: "8px 16px",
@@ -279,18 +280,19 @@ function ModelCoverage() {
           </button>
 
           <button
-            style={{
-              padding: "8px 16px",
-              borderRadius: 6,
-              border: "none",
-              cursor: "pointer",
-              backgroundColor: "#3498db",
-              color: "#000",
-              fontWeight: "bold"
-            }}
-          >
-            Filtered Examples
-          </button>
+  title="Filtered examples are code examples that are currently not in the Code Library."
+  style={{
+    padding: "8px 16px",
+    borderRadius: 6,
+    border: "none",
+    cursor: "pointer",
+    backgroundColor: "#3498db",
+    color: "#000",
+    fontWeight: "bold"
+  }}
+>
+  Filtered Examples
+</button>
         </div>
       </div>
 
