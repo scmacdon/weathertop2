@@ -51,7 +51,7 @@ function ModelCoverage() {
       let url;
 
       if (language === "Kotlin") {
-        url = `/kotlinref2.json?_=${Date.now()}`;
+        url = `/kotlin.json?_=${Date.now()}`;
       } else if (language === "Net") {
         url = `/net.json?_=${Date.now()}`;
       } else if (language === "Python") {
