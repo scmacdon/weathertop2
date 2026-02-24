@@ -6,14 +6,43 @@ import Tributaries from "./components/Tributaries";
 import ModelCoverage from "./components/ModelCoverage";
 import GettingStarted from "./components/GettingStarted";
 import Management from "./components/Management";
+import Login from "./components/Login";
 import "./styles/styles.css";
 
 export default function App() {
   const [activePage, setActivePage] = useState("gettingStarted");
   const [theme, setTheme] = useState("dark");
+  const [isLoggedIn, setIsLoggedIn] = useState(
+    !!localStorage.getItem("id_token")
+  );
+  const [userName, setUserName] = useState(localStorage.getItem("username") || "");
+
+  const [showLoginModal, setShowLoginModal] = useState(false);
 
   const toggleTheme = () =>
     setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+
+  // Called from Login component on success
+  const handleLoginSuccess = (username = "") => {
+    setIsLoggedIn(true);
+    setUserName(username);
+    if (username) localStorage.setItem("username", username);
+    setShowLoginModal(false);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("id_token");
+    localStorage.removeItem("access_token");
+    localStorage.removeItem("refresh_token");
+    localStorage.removeItem("expires_in");
+    localStorage.removeItem("username");
+    setIsLoggedIn(false);
+    setUserName("");
+    setActivePage("gettingStarted");
+  };
+
+  // Disable all menu items except "Getting Started" if not logged in
+  const isMenuDisabled = (page) => !isLoggedIn && page !== "gettingStarted";
 
   return (
     <div
@@ -23,8 +52,10 @@ export default function App() {
         minHeight: "100vh",
         background: "#121212",
         color: "#f5f5f5",
+        position: "relative",
       }}
     >
+      {/* ===== LEFT MENU ===== */}
       <nav
         style={{
           width: "240px",
@@ -44,48 +75,26 @@ export default function App() {
           Weathertop
         </h1>
 
-        <button
-          style={menuButtonStyle(activePage === "gettingStarted")}
-          onClick={() => setActivePage("gettingStarted")}
-        >
-          Getting Started
-        </button>
-
-        <button
-          style={menuButtonStyle(activePage === "codeTesting")}
-          onClick={() => setActivePage("codeTesting")}
-        >
-          Code Testing
-        </button>
-
-        <button
-          style={menuButtonStyle(activePage === "coverage")}
-          onClick={() => setActivePage("coverage")}
-        >
-          Coverage Dashboard
-        </button>
-
-        <button
-          style={menuButtonStyle(activePage === "modelCoverage")}
-          onClick={() => setActivePage("modelCoverage")}
-        >
-          Model-Driven Examples
-        </button>
-
-        {/* ✅ Newly Added Menu Item */}
-        <button
-          style={menuButtonStyle(activePage === "tributaries")}
-          onClick={() => setActivePage("tributaries")}
-        >
-          Tributary Examples
-        </button>
-
-        <button
-          style={menuButtonStyle(activePage === "management")}
-          onClick={() => setActivePage("management")}
-        >
-          Task Management
-        </button>
+        {[
+          { label: "Getting Started", key: "gettingStarted" },
+          { label: "Code Testing", key: "codeTesting" },
+          { label: "Coverage Dashboard", key: "coverage" },
+          { label: "Model-Driven Examples", key: "modelCoverage" },
+          { label: "Tributary Examples", key: "tributaries" },
+          { label: "Task Management", key: "management" },
+        ].map((item) => (
+          <button
+            key={item.key}
+            style={menuButtonStyle(
+              activePage === item.key,
+              isMenuDisabled(item.key)
+            )}
+            onClick={() => !isMenuDisabled(item.key) && setActivePage(item.key)}
+            disabled={isMenuDisabled(item.key)}
+          >
+            {item.label}
+          </button>
+        ))}
 
         <button
           onClick={toggleTheme}
@@ -102,8 +111,47 @@ export default function App() {
         </button>
       </nav>
 
-      <main style={{ flex: 1, overflowY: "auto" }}>
-        {activePage === "gettingStarted" && <GettingStarted />}
+      {/* ===== MAIN CONTENT ===== */}
+      <main style={{ flex: 1, overflowY: "auto", position: "relative" }}>
+        {/* ===== HEADER LOGIN/LOGOUT + WELCOME ===== */}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            padding: "16px",
+            backgroundColor: "#1b1b1b",
+            borderBottom: "1px solid #333",
+            color: "#fff",
+          }}
+        >
+<div style={{ fontWeight: "bold", fontSize: "1.1rem" }}>
+  {isLoggedIn && userName
+    ? `Welcome ${userName} to Weathertop`
+    : "Welcome to Weathertop"}
+</div>
+
+          {isLoggedIn ? (
+            <button onClick={handleLogout} style={loginButtonStyle}>
+              Logout
+            </button>
+          ) : (
+            <button
+              onClick={() => setShowLoginModal(true)}
+              style={loginButtonStyle}
+            >
+              Login
+            </button>
+          )}
+        </div>
+
+        {/* ===== PAGE CONTENT ===== */}
+        {activePage === "gettingStarted" && (
+          <GettingStarted
+            isLoggedIn={isLoggedIn}
+            onLoginSuccess={handleLoginSuccess}
+          />
+        )}
 
         {activePage === "codeTesting" && (
           <div style={{ padding: "20px" }}>
@@ -115,26 +163,55 @@ export default function App() {
         )}
 
         {activePage === "coverage" && <Coverage />}
-
         {activePage === "modelCoverage" && <ModelCoverage />}
-
-        {/* ✅ Newly Added Page Rendering */}
         {activePage === "tributaries" && <Tributaries />}
-
         {activePage === "management" && <Management />}
+
+        {/* ===== LOGIN MODAL ===== */}
+        {showLoginModal && !isLoggedIn && (
+          <div
+            onClick={() => setShowLoginModal(false)}
+            style={{
+              position: "fixed",
+              inset: 0,
+              background: "rgba(0,0,0,0.6)",
+              backdropFilter: "blur(5px)",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              zIndex: 1000,
+            }}
+          >
+            <div onClick={(e) => e.stopPropagation()}>
+              <Login onLoginSuccess={handleLoginSuccess} />
+            </div>
+          </div>
+        )}
       </main>
     </div>
   );
 }
 
-const menuButtonStyle = (isActive) => ({
+// Menu button style with disabled state
+const menuButtonStyle = (isActive, disabled = false) => ({
   padding: "12px",
   marginBottom: "12px",
   backgroundColor: isActive ? "#009999" : "#333",
-  color: "#fff",
+  color: disabled ? "#888" : "#fff",
   fontWeight: "bold",
   border: "none",
   borderRadius: "8px",
-  cursor: "pointer",
+  cursor: disabled ? "not-allowed" : "pointer",
   textAlign: "left",
 });
+
+const loginButtonStyle = {
+  padding: "10px 22px",
+  borderRadius: "8px",
+  border: "none",
+  fontWeight: "bold",
+  cursor: "pointer",
+  background:
+    "linear-gradient(135deg, #00cfcf 0%, #66cccc 100%)",
+  color: "#0b0b0b",
+};
