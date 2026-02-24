@@ -119,7 +119,7 @@ export default function App() {
         {activePage === "modelCoverage" && <ModelCoverage />}
 
         {/* ✅ Newly Added Page Rendering */}
-        {activePage === "tributaries" && <Tributaries />}
+        {activePage === "tributary Examples" && <Tributaries />}
 
         {activePage === "management" && <Management />}
       </main>
