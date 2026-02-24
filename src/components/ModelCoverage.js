@@ -130,7 +130,7 @@ function ModelCoverage() {
   const loadAllSdkTotals = async () => {
     try {
       const files = [
-        { name: "Kotlin", file: "/kotlinref2.json" },
+        { name: "Kotlin", file: "/kotlin.json" },
         { name: ".NET", file: "/net.json" },
         { name: "PHP", file: "/php.json" },
         { name: "Python", file: "/python.json" },
