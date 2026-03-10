@@ -20,6 +20,7 @@ function ModelCoverage() {
   const [showMissingOnly, setShowMissingOnly] = useState(false);
   const [filterLang, setFilterLang] = useState(null);
   const [message, setMessage] = useState("");
+  const [serviceFilter, setServiceFilter] = useState("");
 
   // Modal state
   const [showTotalsModal, setShowTotalsModal] = useState(false);
@@ -199,9 +200,11 @@ function ModelCoverage() {
   const totalServices = services.length;
   const missingExamples = totalOperations - totalExamples;
 
-  const filteredServices = [...services].sort(
-    (a, b) => b.coveragePercent - a.coveragePercent
-  );
+  const filteredServices = [...services]
+  .filter(s =>
+    s.serviceName.toLowerCase().includes(serviceFilter.toLowerCase())
+  )
+  .sort((a, b) => b.coveragePercent - a.coveragePercent);
 
   const displayedMethods = selectedService
     ? selectedService.methods
@@ -451,6 +454,22 @@ function ModelCoverage() {
           {/* Coverage by Service */}
           <div style={{ marginBottom: 24 }}>
             <h2>Coverage by Service (%)</h2>
+            <div style={{ marginBottom: 12 }}>
+  <input
+    type="text"
+    placeholder="Filter AWS Service (e.g. S3, DynamoDB)"
+    value={serviceFilter}
+    onChange={(e) => setServiceFilter(e.target.value)}
+    style={{
+      padding: "6px 10px",
+      borderRadius: 6,
+      border: "none",
+      width: 260,
+      backgroundColor: "#333",
+      color: "#fff"
+    }}
+  />
+</div>
             <div
               style={{
                 maxHeight: 420,
