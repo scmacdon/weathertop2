@@ -8,6 +8,7 @@ import GettingStarted from "./components/GettingStarted";
 import Scenarios from "./components/Scenarios.js";
 import Management from "./components/Management";
 import Login from "./components/Login";
+import SignUp from "./components/Signup"; // Added SignUp import
 import "./styles/styles.css";
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
   const [userName, setUserName] = useState(localStorage.getItem("username") || "");
 
   const [showLoginModal, setShowLoginModal] = useState(false);
+  const [showSignUpModal, setShowSignUpModal] = useState(false); // Added state
 
   const toggleTheme = () =>
     setTheme((prev) => (prev === "dark" ? "light" : "dark"));
@@ -29,6 +31,11 @@ export default function App() {
     setUserName(username);
     if (username) localStorage.setItem("username", username);
     setShowLoginModal(false);
+  };
+
+  // Called from SignUp component on success
+  const handleSignUpSuccess = (username = "") => {
+    setShowSignUpModal(false);
   };
 
   const handleLogout = () => {
@@ -127,24 +134,43 @@ export default function App() {
             color: "#fff",
           }}
         >
-<div style={{ fontWeight: "bold", fontSize: "1.1rem" }}>
-  {isLoggedIn && userName
-    ? `Welcome ${userName} to Weathertop`
-    : "Welcome to Weathertop"}
-</div>
+          <div style={{ fontWeight: "bold", fontSize: "1.1rem" }}>
+            {isLoggedIn && userName
+              ? `Welcome ${userName} to Weathertop`
+              : "Welcome to Weathertop"}
+          </div>
 
-          {isLoggedIn ? (
-            <button onClick={handleLogout} style={loginButtonStyle}>
-              Logout
-            </button>
-          ) : (
-            <button
-              onClick={() => setShowLoginModal(true)}
-              style={loginButtonStyle}
-            >
-              Login
-            </button>
-          )}
+          {/* ===== LOGIN / SIGNUP BUTTONS ===== */}
+          <div style={{ display: "flex", gap: "12px", alignItems: "center" }}>
+            {isLoggedIn ? (
+              <button onClick={handleLogout} style={loginButtonStyle}>
+                Logout
+              </button>
+            ) : (
+              <>
+                <button
+                  onClick={() => setShowLoginModal(true)}
+                  style={loginButtonStyle}
+                >
+                  Login
+                </button>
+
+                <button
+                  onClick={() => setShowSignUpModal(true)}
+                  style={{
+                    ...loginButtonStyle,
+                    background: "#4caf50",
+                    color: "#fff",
+                    opacity: isLoggedIn ? 0.5 : 1,
+                    cursor: isLoggedIn ? "not-allowed" : "pointer",
+                  }}
+                  disabled={isLoggedIn}
+                >
+                  Sign Up
+                </button>
+              </>
+            )}
+          </div>
         </div>
 
         {/* ===== PAGE CONTENT ===== */}
@@ -187,6 +213,27 @@ export default function App() {
           >
             <div onClick={(e) => e.stopPropagation()}>
               <Login onLoginSuccess={handleLoginSuccess} />
+            </div>
+          </div>
+        )}
+
+        {/* ===== SIGN UP MODAL ===== */}
+        {showSignUpModal && !isLoggedIn && (
+          <div
+            onClick={() => setShowSignUpModal(false)}
+            style={{
+              position: "fixed",
+              inset: 0,
+              background: "rgba(0,0,0,0.6)",
+              backdropFilter: "blur(5px)",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              zIndex: 1000,
+            }}
+          >
+            <div onClick={(e) => e.stopPropagation()}>
+              <SignUp onSignUpSuccess={handleSignUpSuccess} />
             </div>
           </div>
         )}
