@@ -74,6 +74,11 @@ export default function GettingStarted() {
       "These examples come from additional GitHub repositories outside of the core AWS Code Examples Library. They are contributed projects that demonstrate extended, specialized, or community-driven use cases built on top of AWS services.\n\nTributary Examples help expand the learning surface of the AWS Code Examples Library",
     ],
     [
+  "🎬",
+  "Scenarios",
+  "Scenarios represent complete, multi-operation programs that demonstrate how AWS services are used together in real workflows. Each Scenario combines multiple SDK operations into a cohesive example, allowing developers to understand practical use cases, application flows, and service interactions. The Scenarios view surfaces these programs from the AWS Code Library so users can explore real-world implementations and learn how services are used in context.",
+],
+    [
       "🗂️",
       "Task Management",
       "View AWS ECS Task information for Weathertop services, including Import Data, Lookup Data, and Create Summary. Inspect task status, execution details, and operational metadata in one place.",

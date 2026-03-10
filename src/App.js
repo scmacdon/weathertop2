@@ -5,6 +5,7 @@ import Coverage from "./components/Coverage";
 import Tributaries from "./components/Tributaries";
 import ModelCoverage from "./components/ModelCoverage";
 import GettingStarted from "./components/GettingStarted";
+import Scenarios from "./components/Scenarios.js";
 import Management from "./components/Management";
 import Login from "./components/Login";
 import "./styles/styles.css";
@@ -81,6 +82,7 @@ export default function App() {
           { label: "Coverage Dashboard", key: "coverage" },
           { label: "Model-Driven Examples", key: "modelCoverage" },
           { label: "Tributary Examples", key: "tributaries" },
+          { label: "Scenario Examples", key: "scenarios" },
           { label: "Task Management", key: "management" },
         ].map((item) => (
           <button
@@ -165,6 +167,7 @@ export default function App() {
         {activePage === "coverage" && <Coverage />}
         {activePage === "modelCoverage" && <ModelCoverage />}
         {activePage === "tributaries" && <Tributaries />}
+        {activePage === "scenarios" && <Scenarios />}
         {activePage === "management" && <Management />}
 
         {/* ===== LOGIN MODAL ===== */}
