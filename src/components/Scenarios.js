@@ -200,21 +200,35 @@ export default function Dashboard() {
         </Card>
       )}
 
-      {/* OPERATIONS TABLE WITH SDK BADGES */}
+      {/* FULL SCENARIO TABLE WITH OPERATIONS */}
       {selectedScenario && (
         <Card>
           <CardContent style={{ textAlign: "left" }}>
-            {/* Synopsis */}
-            <div style={{ marginBottom: 16 }}>
-              <div style={{ fontSize: 12, color: "#6b7280", marginBottom: 8 }}>Synopsis</div>
-              <ul style={{ marginLeft: 16, marginTop: 0, listStyleType: "disc" }}>
-                {selectedScenario.synopsis_list.map((s, i) => (
-                  <li key={i} style={{ fontSize: 14, marginBottom: 6 }}>{s}</li>
-                ))}
-              </ul>
-            </div>
+            {/* Scenario Info Table */}
+            <table style={{ width: "100%", borderCollapse: "separate", borderSpacing: 0, borderRadius: 12, overflow: "hidden", border: "1px solid #e5e7eb", marginBottom: 24 }}>
+              <thead style={{ backgroundColor: "#f3f4f6" }}>
+                <tr>
+                  <th style={{ textAlign: "left", padding: 12 }}>Title</th>
+                  <th style={{ textAlign: "left", padding: 12 }}>AWS Service</th>
+                  <th style={{ textAlign: "left", padding: 12 }}>Synopsis</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style={{ backgroundColor: "white" }}>
+                  <td style={{ padding: 12, fontSize: 14 }}>{selectedScenario.scenario}</td>
+                  <td style={{ padding: 12, fontSize: 14 }}>{selectedScenario.service.toUpperCase()}</td>
+                  <td style={{ padding: 12 }}>
+                    <ul style={{ margin: 0, paddingLeft: 16, listStyleType: "disc" }}>
+                      {selectedScenario.synopsis_list.map((s, i) => (
+                        <li key={i} style={{ fontSize: 14, marginBottom: 6 }}>{s}</li>
+                      ))}
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
 
-            {/* Operations Table */}
+            {/* Operations Table with SDK badges */}
             <div style={{ fontSize: 12, color: "#6b7280", marginBottom: 4 }}>Operations</div>
             <table style={{ width: "100%", borderCollapse: "separate", borderSpacing: 0, borderRadius: 12, overflow: "hidden", border: "1px solid #e5e7eb" }}>
               <thead style={{ backgroundColor: "#f3f4f6" }}>
