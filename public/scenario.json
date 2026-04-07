@@ -1,10 +1,483 @@
 [
   {
+    "id": "auditmanager_Scenario_CreateAssessmentReport",
+    "service": "auditmanager",
+    "scenario": "Create an &AM; assessment report that contains one day of evidence using an &AWS; SDK",
+    "sdk": [
+      "Python"
+    ],
+    "operations": [
+      "AssociateAssessmentReportEvidenceFolder",
+      "BatchDisassociateAssessmentReportEvidence",
+      "CreateAssessmentReport",
+      "DisassociateAssessmentReportEvidenceFolder",
+      "GetAssessment",
+      "GetAssessmentReportUrl",
+      "GetEvidenceByEvidenceFolder",
+      "GetEvidenceFoldersByAssessment",
+      "ListAssessmentReports"
+    ],
+    "synopsis_list": []
+  },
+  {
+    "id": "auditmanager_Scenario_CustomFrameworkFromConformancePack",
+    "service": "auditmanager",
+    "scenario": "Create an &AM; custom framework from an &CC; conformance pack using an &AWS; SDK",
+    "sdk": [
+      "Python"
+    ],
+    "operations": [
+      "CreateAssessmentFramework",
+      "CreateControl"
+    ],
+    "synopsis_list": [
+      "Get a list of CC conformance packs.",
+      "Create an AM custom control for each managed rule in a conformance pack.",
+      "Create an AM custom framework that contains the controls."
+    ]
+  },
+  {
+    "id": "auditmanager_Scenario_CustomFrameworkFromSecurityHub",
+    "service": "auditmanager",
+    "scenario": "Create an &AM; custom framework that contains &ASH; controls using an &AWS; SDK",
+    "sdk": [
+      "Python"
+    ],
+    "operations": [
+      "CreateAssessmentFramework",
+      "GetControl",
+      "ListControls"
+    ],
+    "synopsis_list": [
+      "Get a list of all standard controls that have ASH as their data source.",
+      "Create an AM custom framework that contains the controls."
+    ]
+  },
+  {
+    "id": "aurora_Scenario_GetStartedClusters",
+    "service": "aurora",
+    "scenario": "aurora Scenario GetStartedClusters",
+    "sdk": [
+      ".NET",
+      "Go",
+      "Kotlin",
+      "Java",
+      "Python",
+      "C++",
+      "Rust"
+    ],
+    "operations": [
+      "CreateDBCluster",
+      "CreateDBClusterParameterGroup",
+      "CreateDBClusterSnapshot",
+      "CreateDBInstance",
+      "DeleteDBCluster",
+      "DeleteDBClusterParameterGroup",
+      "DeleteDBInstance",
+      "DescribeDBClusterParameterGroups",
+      "DescribeDBClusterParameters",
+      "DescribeDBClusterSnapshots",
+      "DescribeDBClusters",
+      "DescribeDBEngineVersions",
+      "DescribeDBInstances",
+      "DescribeOrderableDBInstanceOptions",
+      "ModifyDBClusterParameterGroup"
+    ],
+    "synopsis_list": [
+      "Create a custom AUR DB cluster parameter group and set parameter values.",
+      "Create a DB cluster that uses the parameter group.",
+      "Create a DB instance that contains a database.",
+      "Take a snapshot of the DB cluster, then clean up resources."
+    ]
+  },
+  {
+    "id": "auto-scaling_Scenario_GroupsAndInstances",
+    "service": "auto-scaling",
+    "scenario": "auto-scaling Scenario GroupsAndInstances",
+    "sdk": [
+      ".NET",
+      "Kotlin",
+      "Java",
+      "PHP",
+      "Python",
+      "C++",
+      "Rust"
+    ],
+    "operations": [
+      "CreateAutoScalingGroup",
+      "DeleteAutoScalingGroup",
+      "DescribeAutoScalingGroups",
+      "DescribeAutoScalingInstances",
+      "DescribeScalingActivities",
+      "DisableMetricsCollection",
+      "EnableMetricsCollection",
+      "SetDesiredCapacity",
+      "TerminateInstanceInAutoScalingGroup",
+      "UpdateAutoScalingGroup"
+    ],
+    "synopsis_list": [
+      "Create an ASlong group with a launch template and Availability Zones, and get information about running instances.",
+      "Enable CWlong metrics collection.",
+      "Update the group's desired capacity and wait for an instance to start.",
+      "Terminate an instance in the group.",
+      "List scaling activities that occur in response to user requests and capacity changes.",
+      "Get statistics for CW metrics, then clean up resources."
+    ]
+  },
+  {
+    "id": "batch_Scenario",
+    "service": "batch",
+    "scenario": "batch Scenario",
+    "sdk": [
+      "Java"
+    ],
+    "operations": [
+      "CreateComputeEnvironment",
+      "CreateJobQueue",
+      "DeleteComputeEnvironment",
+      "DeleteJobQueue",
+      "DeregisterJobDefinition",
+      "DescribeComputeEnvironments",
+      "DescribeJobQueues",
+      "DescribeJobs",
+      "ListJobsPaginator",
+      "RegisterJobDefinition",
+      "SubmitJob",
+      "UpdateComputeEnvironment",
+      "UpdateJobQueue"
+    ],
+    "synopsis_list": [
+      "Create an BATCH compute environment.",
+      "Check the status of the compute environment.",
+      "Set up an BATCH job queue and job definition.",
+      "Register a job definition.",
+      "Submit an BATCH Job.",
+      "Get a list of jobs applicable to the job queue.",
+      "Check the status of job.",
+      "Delete BATCH resources."
+    ]
+  },
+  {
+    "id": "bedrock-agent-runtime_Scenario_ConverseWithFlow",
+    "service": "bedrock-agent-runtime",
+    "scenario": "Converse with an &BRlong; flow",
+    "sdk": [
+      "Python"
+    ],
+    "operations": [
+      "InvokeFlow"
+    ],
+    "synopsis_list": []
+  },
+  {
+    "id": "bedrock-runtime_Scenario_ToolUseDemo_AmazonNova",
+    "service": "bedrock-runtime",
+    "scenario": "A tool use demo illustrating how to connect AI models on &BR; with a custom tool or API",
+    "sdk": [
+      "Java",
+      ".NET",
+      "JavaScript"
+    ],
+    "operations": [
+      "Converse"
+    ],
+    "synopsis_list": []
+  },
+  {
+    "id": "bedrock-runtime_Scenario_ToolUseDemo_AnthropicClaude",
+    "service": "bedrock-runtime",
+    "scenario": "A tool use demo illustrating how to connect AI models on &BR; with a custom tool or API",
+    "sdk": [
+      "Python",
+      "Rust"
+    ],
+    "operations": [
+      "Converse"
+    ],
+    "synopsis_list": []
+  },
+  {
+    "id": "bedrock-runtime_Scenario_ToolUseDemo_CohereCommand",
+    "service": "bedrock-runtime",
+    "scenario": "A tool use demo illustrating how to connect AI models on &BR; with a custom tool or API",
+    "sdk": [
+      "Python"
+    ],
+    "operations": [
+      "Converse"
+    ],
+    "synopsis_list": []
+  },
+  {
+    "id": "bedrock-runtime_Scenario_ToolUse",
+    "service": "bedrock-runtime",
+    "scenario": "A tool use example illustrating how to connect AI models on &BR; with a custom tool or API",
+    "sdk": [
+      "Java",
+      ".NET",
+      "JavaScript",
+      "Python",
+      "Rust"
+    ],
+    "operations": [
+      "Converse"
+    ],
+    "synopsis_list": []
+  },
+  {
+    "id": "bedrock-runtime_Scenario_GenerateVideos_NovaReel",
+    "service": "bedrock-runtime",
+    "scenario": "Generate videos from text prompts using &BR; and Nova-Reel",
+    "sdk": [
+      "Java"
+    ],
+    "operations": [
+      "GetAsyncInvoke",
+      "StartAsyncInvoke"
+    ],
+    "synopsis_list": []
+  },
+  {
+    "id": "bedrock-runtime_Scenario_InvokeModels",
+    "service": "bedrock-runtime",
+    "scenario": "Invoke multiple foundation models on &BR;",
+    "sdk": [
+      "Go",
+      "JavaScript",
+      "PHP"
+    ],
+    "operations": [
+      "InvokeModel",
+      "InvokeModelWithResponseStream"
+    ],
+    "synopsis_list": []
+  },
+  {
+    "id": "bedrock-runtime_Scenario_AmazonNova_TextToVideo",
+    "service": "bedrock-runtime",
+    "scenario": "Use Amazon Nova Reel to generate a video from a text prompt",
+    "sdk": [
+      "Python",
+      "Swift"
+    ],
+    "operations": [
+      "GetAsyncInvoke",
+      "StartAsyncInvoke"
+    ],
+    "synopsis_list": []
+  },
+  {
+    "id": "cloudwatch_Scenario_GettingStarted",
+    "service": "cloudwatch",
+    "scenario": "Get started with &CW; alarms using an &AWS; SDK",
+    "sdk": [
+      "SAP ABAP"
+    ],
+    "operations": [
+      "DeleteAlarms",
+      "DescribeAlarms",
+      "DisableAlarmActions",
+      "PutMetricAlarm"
+    ],
+    "synopsis_list": [
+      "Create an alarm.",
+      "Disable alarm actions.",
+      "Describe an alarm.",
+      "Delete an alarm."
+    ]
+  },
+  {
+    "id": "cloudwatch-logs_Scenario_BigQuery",
+    "service": "cloudwatch-logs",
+    "scenario": "Use &CWL; to run a large query",
+    "sdk": [
+      ".NET",
+      "JavaScript",
+      "Python"
+    ],
+    "operations": [
+      "GetQueryResults",
+      "StartQuery"
+    ],
+    "synopsis_list": []
+  },
+  {
+    "id": "cognito-identity-provider_Scenario_SignUpUserWithMfa",
+    "service": "cognito-identity-provider",
+    "scenario": "Sign up a user with an &COG; user pool that requires MFA using an &AWS; SDK",
+    "sdk": [
+      ".NET",
+      "Kotlin",
+      "Java",
+      "Python",
+      "JavaScript",
+      "C++",
+      "Swift"
+    ],
+    "operations": [
+      "AdminGetUser",
+      "AdminInitiateAuth",
+      "AdminRespondToAuthChallenge",
+      "AssociateSoftwareToken",
+      "ConfirmDevice",
+      "ConfirmSignUp",
+      "InitiateAuth",
+      "ListUsers",
+      "ResendConfirmationCode",
+      "RespondToAuthChallenge",
+      "SignUp",
+      "VerifySoftwareToken"
+    ],
+    "synopsis_list": [
+      "Sign up and confirm a user with a username, password, and email address.",
+      "Set up multi-factor authentication by associating an MFA application with the user.",
+      "Sign in by using a password and an MFA code."
+    ]
+  },
+  {
+    "id": "controltower_Scenario",
+    "service": "controltower",
+    "scenario": "controltower Scenario",
+    "sdk": [
+      "Java",
+      "Python",
+      ".NET"
+    ],
+    "operations": [
+      "CreateLandingZone",
+      "DeleteLandingZone",
+      "DisableBaseline",
+      "DisableControl",
+      "EnableBaseline",
+      "EnableControl",
+      "GetControlOperation",
+      "GetLandingZoneOperation",
+      "ListBaselines",
+      "ListEnabledBaselines",
+      "ListEnabledControls",
+      "ListLandingZones",
+      "ResetEnabledBaseline"
+    ],
+    "synopsis_list": [
+      "List landing zones.",
+      "List, enable, get, reset, and disable baselines.",
+      "List, enable, get, and disable controls."
+    ]
+  },
+  {
+    "id": "device-farm_Scenario_BrowserTesting",
+    "service": "device-farm",
+    "scenario": "Run browser tests with &ATP; and take screenshots using an &AWS; SDK",
+    "sdk": [
+      "Python"
+    ],
+    "operations": [
+      "CreateTestGridUrl",
+      "GetTestGridSession"
+    ],
+    "synopsis_list": []
+  },
+  {
+    "id": "device-farm_Scenario_DeviceTesting",
+    "service": "device-farm",
+    "scenario": "Upload and test mobile device packages with &ATP; using an &AWS; SDK",
+    "sdk": [
+      "Python"
+    ],
+    "operations": [
+      "CreateUpload",
+      "GetRun",
+      "GetUpload",
+      "ListArtifacts",
+      "ListJobs",
+      "ListSuites",
+      "ListTests",
+      "ScheduleRun",
+      "StopRun"
+    ],
+    "synopsis_list": []
+  },
+  {
+    "id": "dynamodb_Scenario_PartiQLBatch",
+    "service": "dynamodb",
+    "scenario": "Query a &DDB; table by using batches of PartiQL statements and an &AWS; SDK",
+    "sdk": [
+      ".NET",
+      "Go",
+      "Kotlin",
+      "Java",
+      "JavaScript",
+      "PHP",
+      "Python",
+      "Ruby",
+      "C++"
+    ],
+    "operations": [
+      "BatchExecuteStatement"
+    ],
+    "synopsis_list": [
+      "Get a batch of items by running multiple SELECT statements.",
+      "Add a batch of items by running multiple INSERT statements.",
+      "Update a batch of items by running multiple UPDATE statements.",
+      "Delete a batch of items by running multiple DELETE statements."
+    ]
+  },
+  {
+    "id": "dynamodb_Scenario_PartiQLSingle",
+    "service": "dynamodb",
+    "scenario": "Query a &DDB; table using PartiQL and an &AWS; SDK",
+    "sdk": [
+      ".NET",
+      "Go",
+      "Kotlin",
+      "Java",
+      "JavaScript",
+      "PHP",
+      "Python",
+      "Ruby",
+      "C++",
+      "Rust"
+    ],
+    "operations": [
+      "ExecuteStatement"
+    ],
+    "synopsis_list": [
+      "Get an item by running a SELECT statement.",
+      "Add an item by running an INSERT statement.",
+      "Update an item by running an UPDATE statement.",
+      "Delete an item by running a DELETE statement."
+    ]
+  },
+  {
     "id": "dynamodb_Scenario_GettingStartedMovies",
     "service": "dynamodb",
-    "scenario": "Getting started with movies",
-    "sdk": [".NET", "Python", "Java"],
-    "operations": ["CreateTable", "PutItem", "GetItem", "DeleteTable"],
+    "scenario": "dynamodb Scenario GettingStartedMovies",
+    "sdk": [
+      ".NET",
+      "Go",
+      "Kotlin",
+      "Java",
+      "PHP",
+      "Python",
+      "Ruby",
+      "JavaScript",
+      "SAP ABAP",
+      "C++",
+      "Swift",
+      "Bash"
+    ],
+    "operations": [
+      "BatchWriteItem",
+      "CreateTable",
+      "DeleteItem",
+      "DeleteTable",
+      "DescribeTable",
+      "GetItem",
+      "PutItem",
+      "Query",
+      "Scan",
+      "UpdateItem"
+    ],
     "synopsis_list": [
       "Create a table that can hold movie data.",
       "Put, get, and update a single movie in the table.",
@@ -17,28 +490,1660 @@
   {
     "id": "ec2_Scenario_GetStartedInstances",
     "service": "ec2",
-    "scenario": "Get started with EC2 instances",
-    "sdk": ["Java", "Python"],
-    "operations": ["RunInstances", "StopInstances", "TerminateInstances"],
+    "scenario": "ec2 Scenario GetStartedInstances",
+    "sdk": [
+      ".NET",
+      "Kotlin",
+      "Java",
+      "Python",
+      "JavaScript",
+      "Bash",
+      "Rust",
+      "Swift"
+    ],
+    "operations": [
+      "AllocateAddress",
+      "AssociateAddress",
+      "AuthorizeSecurityGroupIngress",
+      "CreateKeyPair",
+      "CreateSecurityGroup",
+      "DeleteKeyPair",
+      "DeleteSecurityGroup",
+      "DescribeImages",
+      "DescribeInstanceTypes",
+      "DescribeInstances",
+      "DescribeKeyPairs",
+      "DescribeSecurityGroups",
+      "DisassociateAddress",
+      "ReleaseAddress",
+      "RunInstances",
+      "StartInstances",
+      "StopInstances",
+      "TerminateInstances",
+      "UnmonitorInstances"
+    ],
     "synopsis_list": [
       "Create a key pair and security group.",
-      "Select an AMI and compatible instance type, then create an instance.",
+      "Select an Amazon Machine Image (AMI) and compatible instance type, then create an instance.",
       "Stop and restart the instance.",
       "Associate an Elastic IP address with your instance.",
       "Connect to your instance with SSH, then clean up resources."
     ]
   },
   {
+    "id": "ecr_Scenario_RepositoryManagement",
+    "service": "ecr",
+    "scenario": "ecr Scenario RepositoryManagement",
+    "sdk": [
+      "Kotlin",
+      "Java",
+      "Python"
+    ],
+    "operations": [
+      "CreateRepository",
+      "DeleteRepository",
+      "DescribeImages",
+      "DescribeRepositories",
+      "GetAuthorizationToken",
+      "GetRepositoryPolicy",
+      "SetRepositoryPolicy",
+      "StartLifecyclePolicyPreview"
+    ],
+    "synopsis_list": [
+      "Create an ECR repository.",
+      "Set repository policies.",
+      "Retrieve repository URIs.",
+      "Get ECR authorization tokens.",
+      "Set lifecycle policies for ECR repositories.",
+      "Push a Docker image to an ECR repository.",
+      "Verify the existence of an image in an ECR repository.",
+      "List ECR repositories for your account and get details about them.",
+      "Delete ECR repositories."
+    ]
+  },
+  {
+    "id": "ecs_Scenario_GetClustersServicesAndTasks",
+    "service": "ecs",
+    "scenario": "Get ARN information for &ECS; clusters, services, and tasks using an &AWS; SDK",
+    "sdk": [
+      ".NET"
+    ],
+    "operations": [
+      "ListClusters",
+      "ListServices",
+      "ListTasks"
+    ],
+    "synopsis_list": [
+      "Get a list of all clusters.",
+      "Get services for a cluster.",
+      "Get tasks for a cluster."
+    ]
+  },
+  {
+    "id": "emr_Scenario_ShortLivedEmrCluster",
+    "service": "emr",
+    "scenario": "Create a short-lived &EMR; cluster and run a step using an &AWS; SDK",
+    "sdk": [
+      "Python"
+    ],
+    "operations": [],
+    "synopsis_list": []
+  },
+  {
+    "id": "entityresolution_Scenario",
+    "service": "entityresolution",
+    "scenario": "entityresolution Scenario",
+    "sdk": [
+      "Java",
+      "JavaScript"
+    ],
+    "operations": [],
+    "synopsis_list": [
+      "Create Schema Mapping.",
+      "Create an ERlong workflow.",
+      "Start the matching job for the workflow.",
+      "Get details for the matching job.",
+      "Get Schema Mapping.",
+      "List all Schema Mappings.",
+      "Tag the Schema Mapping resource.",
+      "Delete the ERlong Assets."
+    ]
+  },
+  {
+    "id": "eventbridge_Scenario_createAndTriggerARule",
+    "service": "eventbridge",
+    "scenario": "Create and trigger a rule in &EVlong; using an &AWS; SDK",
+    "sdk": [
+      "Ruby"
+    ],
+    "operations": [
+      "PutEvents",
+      "PutRule"
+    ],
+    "synopsis_list": []
+  },
+  {
+    "id": "eventbridge_Scenario_GettingStarted",
+    "service": "eventbridge",
+    "scenario": "eventbridge Scenario GettingStarted",
+    "sdk": [
+      "Kotlin",
+      "Java",
+      ".NET"
+    ],
+    "operations": [
+      "DeleteRule",
+      "DescribeRule",
+      "DisableRule",
+      "EnableRule",
+      "ListRuleNamesByTarget",
+      "ListRules",
+      "ListTargetsByRule",
+      "PutEvents",
+      "PutRule",
+      "PutTargets"
+    ],
+    "synopsis_list": [
+      "Create a rule and add a target to it.",
+      "Enable and disable rules.",
+      "List and update rules and targets.",
+      "Send events, then clean up resources."
+    ]
+  },
+  {
+    "id": "firehose_Scenario_PutRecords",
+    "service": "firehose",
+    "scenario": "Use &FHlong; to process individual and batch records",
+    "sdk": [
+      "Java",
+      "Python"
+    ],
+    "operations": [
+      "PutRecord",
+      "PutRecordBatch"
+    ],
+    "synopsis_list": []
+  },
+  {
     "id": "glue_Scenario_GetStartedCrawlersJobs",
     "service": "glue",
-    "scenario": "Glue crawlers and jobs",
-    "sdk": ["Python", "JavaScript"],
-    "operations": ["CreateJob", "StartJobRun", "DeleteJob"],
+    "scenario": "glue Scenario GetStartedCrawlersJobs",
+    "sdk": [
+      ".NET",
+      "Kotlin",
+      "Java",
+      "PHP",
+      "Python",
+      "Ruby",
+      "JavaScript",
+      "C++",
+      "Rust",
+      "Swift"
+    ],
+    "operations": [
+      "CreateCrawler",
+      "CreateJob",
+      "DeleteCrawler",
+      "DeleteDatabase",
+      "DeleteJob",
+      "DeleteTable",
+      "GetCrawler",
+      "GetDatabase",
+      "GetDatabases",
+      "GetJob",
+      "GetJobRun",
+      "GetJobRuns",
+      "GetTables",
+      "ListJobs",
+      "StartCrawler",
+      "StartJobRun"
+    ],
     "synopsis_list": [
       "Create a crawler that crawls a public S3 bucket and generates a database of CSV-formatted metadata.",
-      "List information about databases and tables.",
-      "Create a job to extract CSV data, transform it, and load JSON output into another S3 bucket.",
-      "List job runs, view transformed data, and clean up resources."
+      "List information about databases and tables in your GLUDCLong.",
+      "Create a job to extract CSV data from the S3 bucket, transform the data, and load JSON-formatted output into another S3 bucket.",
+      "List information about job runs, view transformed data, and clean up resources."
+    ]
+  },
+  {
+    "id": "iam_Scenario_UserPolicies",
+    "service": "iam",
+    "scenario": "Create read-only and read-write &IAM-users; using an &AWS; SDK",
+    "sdk": [
+      "Python"
+    ],
+    "operations": [
+      "AttachUserPolicy",
+      "CreateAccessKey",
+      "CreatePolicy",
+      "CreateUser",
+      "DeleteAccessKey",
+      "DeletePolicy",
+      "DeleteUser",
+      "DetachUserPolicy",
+      "ListUsers",
+      "UpdateUser"
+    ],
+    "synopsis_list": [
+      "Create two &IAM-users;.",
+      "Attach a policy for one user to get and put objects in an S3 bucket.",
+      "Attach a policy for the second user to get objects from the bucket.",
+      "Get different permissions to the bucket based on user credentials."
+    ]
+  },
+  {
+    "id": "iam_Scenario_ManageAccessKeys",
+    "service": "iam",
+    "scenario": "Manage &IAM; access keys using an &AWS; SDK",
+    "sdk": [
+      "Python"
+    ],
+    "operations": [
+      "CreateAccessKey",
+      "DeleteAccessKey",
+      "GetAccessKeyLastUsed",
+      "ListAccessKeys",
+      "UpdateAccessKey"
+    ],
+    "synopsis_list": [
+      "Create and list access keys.",
+      "Find out when and how an access key was last used.",
+      "Update and delete access keys."
+    ]
+  },
+  {
+    "id": "iam_Scenario_PolicyManagement",
+    "service": "iam",
+    "scenario": "Manage &IAM; policies using an &AWS; SDK",
+    "sdk": [
+      "Python"
+    ],
+    "operations": [
+      "CreatePolicy",
+      "CreatePolicyVersion",
+      "DeletePolicy",
+      "DeletePolicyVersion",
+      "GetPolicyVersion",
+      "ListPolicies",
+      "ListPolicyVersions",
+      "SetDefaultPolicyVersion"
+    ],
+    "synopsis_list": [
+      "Create and list policies.",
+      "Create and get policy versions.",
+      "Roll back a policy to a previous version.",
+      "Delete policies."
+    ]
+  },
+  {
+    "id": "iam_Scenario_RoleManagement",
+    "service": "iam",
+    "scenario": "Manage &IAM; roles using an &AWS; SDK",
+    "sdk": [
+      "Python"
+    ],
+    "operations": [
+      "AttachRolePolicy",
+      "CreateRole",
+      "DeleteRole",
+      "DetachRolePolicy"
+    ],
+    "synopsis_list": [
+      "Create an IAM role.",
+      "Attach and detach policies for a role.",
+      "Delete a role."
+    ]
+  },
+  {
+    "id": "iam_Scenario_AccountManagement",
+    "service": "iam",
+    "scenario": "Manage your &IAM; account using an &AWS; SDK",
+    "sdk": [
+      "Python"
+    ],
+    "operations": [
+      "CreateAccountAlias",
+      "DeleteAccountAlias",
+      "GenerateCredentialReport",
+      "GetAccountAuthorizationDetails",
+      "GetAccountSummary",
+      "GetCredentialReport",
+      "ListAccountAliases"
+    ],
+    "synopsis_list": [
+      "Get and update the account alias.",
+      "Generate a report of users and credentials.",
+      "Get a summary of account usage.",
+      "Get details for all users, groups, roles, and policies in your account, including their relationships to each other."
+    ]
+  },
+  {
+    "id": "iam_Scenario_RollbackPolicyVersion",
+    "service": "iam",
+    "scenario": "Roll back an &IAM; policy version using an &AWS; SDK",
+    "sdk": [
+      "Python"
+    ],
+    "operations": [
+      "DeletePolicyVersion",
+      "ListPolicyVersions",
+      "SetDefaultPolicyVersion"
+    ],
+    "synopsis_list": [
+      "Get the list of policy versions in order by date.",
+      "Find the default policy version.",
+      "Make the previous policy version the default.",
+      "Delete the old default version."
+    ]
+  },
+  {
+    "id": "iam_Scenario_IamPolicyBuilder",
+    "service": "iam",
+    "scenario": "Work with the &IAM; Policy Builder API using an &AWS; SDK",
+    "sdk": [
+      "Java"
+    ],
+    "operations": [
+      "CreatePolicy",
+      "GetPolicy",
+      "GetPolicyVersion"
+    ],
+    "synopsis_list": [
+      "Create IAM policies by using the object-oriented API.",
+      "Use the IAM Policy Builder API with the IAM service."
+    ]
+  },
+  {
+    "id": "iam_Scenario_CreateUserAssumeRole",
+    "service": "iam",
+    "scenario": "iam Scenario CreateUserAssumeRole",
+    "sdk": [
+      ".NET",
+      "Kotlin",
+      "Java",
+      "JavaScript",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Go",
+      "Rust",
+      "C++",
+      "Bash"
+    ],
+    "operations": [
+      "AttachRolePolicy",
+      "CreateAccessKey",
+      "CreatePolicy",
+      "CreateRole",
+      "CreateUser",
+      "DeleteAccessKey",
+      "DeletePolicy",
+      "DeleteRole",
+      "DeleteUser",
+      "DeleteUserPolicy",
+      "DetachRolePolicy",
+      "PutUserPolicy"
+    ],
+    "synopsis_list": [
+      "Create a user with no permissions.",
+      "Create a role that grants permission to list S3 buckets for the account.",
+      "Add a policy to let the user assume the role.",
+      "Assume the role and list S3 buckets using temporary credentials, then clean up resources."
+    ]
+  },
+  {
+    "id": "inspector_Scenario",
+    "service": "inspector",
+    "scenario": "inspector Scenario",
+    "sdk": [
+      "Java"
+    ],
+    "operations": [
+      "BatchGetAccountStatus",
+      "BatchGetFindingDetails",
+      "CreateFilter",
+      "DeleteFilter",
+      "Enable",
+      "ListCoverage",
+      "ListCoverageStatistics",
+      "ListFilters",
+      "ListFindings",
+      "ListUsageTotals"
+    ],
+    "synopsis_list": [
+      "Check Inspector account status.",
+      "Ensure Inspector is enabled.",
+      "Analyze security findings.",
+      "Check scan coverage.",
+      "Create a findings filter.",
+      "List existing filters.",
+      "Check usage and costs.",
+      "Get coverage statistics.",
+      "Delete a filter."
+    ]
+  },
+  {
+    "id": "iot_Scenario",
+    "service": "iot",
+    "scenario": "iot Scenario",
+    "sdk": [
+      "Kotlin",
+      "Java",
+      ".NET",
+      "C++",
+      "Python"
+    ],
+    "operations": [],
+    "synopsis_list": [
+      "Create an IoT Thing.",
+      "Generate a device certificate.",
+      "Update an IoT Thing with Attributes.",
+      "Return a unique endpoint.",
+      "List your IoT certificates.",
+      "Update an IoT shadow.",
+      "Write out state information.",
+      "Creates a rule.",
+      "List your rules.",
+      "Search things using the Thing name.",
+      "Delete an IoT Thing."
+    ]
+  },
+  {
+    "id": "iotfleetwise_Scenario",
+    "service": "iotfleetwise",
+    "scenario": "iotfleetwise Scenario",
+    "sdk": [
+      "Kotlin",
+      "Java"
+    ],
+    "operations": [],
+    "synopsis_list": [
+      "Create a collection of standardized signals.",
+      "Create a fleet that represents a group of vehicles.",
+      "Create a model manifest.",
+      "Create a decoder manifest.",
+      "Check the status of the model manifest.",
+      "Check the status of the decoder.",
+      "Create an IoT Thing.",
+      "Create a vehicle.",
+      "Display vehicle details.",
+      "Delete the FW Assets."
+    ]
+  },
+  {
+    "id": "iotsitewise_Scenario",
+    "service": "iotsitewise",
+    "scenario": "iotsitewise Scenario",
+    "sdk": [
+      "Java",
+      "Python",
+      "JavaScript"
+    ],
+    "operations": [],
+    "synopsis_list": [
+      "Create an ITSWlong Asset Model.",
+      "Create an ITSWlong Asset.",
+      "Retrieve the property ID values.",
+      "Send data to an ITSWlong Asset.",
+      "Retrieve the value of the ITSWlong Asset property.",
+      "Create an ITSWlong Portal.",
+      "Create an ITSWlong Gateway.",
+      "Describe the ITSWlong Gateway.",
+      "Delete the ITSWlong Assets."
+    ]
+  },
+  {
+    "id": "keyspaces_Scenario_GetStartedKeyspaces",
+    "service": "keyspaces",
+    "scenario": "keyspaces Scenario GetStartedKeyspaces",
+    "sdk": [
+      ".NET",
+      "Kotlin",
+      "Java",
+      "Python"
+    ],
+    "operations": [
+      "CreateKeyspace",
+      "CreateTable",
+      "DeleteKeyspace",
+      "DeleteTable",
+      "GetKeyspace",
+      "GetTable",
+      "ListKeyspaces",
+      "ListTables",
+      "RestoreTable",
+      "UpdateTable"
+    ],
+    "synopsis_list": [
+      "Create a keyspace and table. The table schema holds movie data and has point-in-time recovery enabled.",
+      "Connect to the keyspace using a secure TLS connection with SigV4 authentication.",
+      "Query the table. Add, retrieve, and update movie data.",
+      "Update the table. Add a column to track watched movies.",
+      "Restore the table to its previous state and clean up resources."
+    ]
+  },
+  {
+    "id": "kinesis_Scenario_GettingStarted",
+    "service": "kinesis",
+    "scenario": "kinesis Scenario GettingStarted",
+    "sdk": [
+      "SAP ABAP"
+    ],
+    "operations": [
+      "CreateStream",
+      "DeleteStream",
+      "GetRecords",
+      "GetShardIterator",
+      "PutRecord"
+    ],
+    "synopsis_list": [
+      "Create a stream and put a record in it.",
+      "Create a shard iterator.",
+      "Read the record, then clean up resources."
+    ]
+  },
+  {
+    "id": "kms_Scenario_Basics",
+    "service": "kms",
+    "scenario": "kms Scenario Basics",
+    "sdk": [
+      "Java",
+      "Python",
+      "PHP"
+    ],
+    "operations": [
+      "CreateAlias",
+      "CreateGrant",
+      "CreateKey",
+      "Decrypt",
+      "DescribeKey",
+      "DisableKey",
+      "EnableKey",
+      "Encrypt",
+      "GetKeyPolicy",
+      "ListAliases",
+      "ListGrants",
+      "ListKeys",
+      "RevokeGrant",
+      "ScheduleKeyDeletion",
+      "Sign",
+      "TagResource"
+    ],
+    "synopsis_list": [
+      "Create a &kms-key;.",
+      "List &kms-keys; for your account and get details about them.",
+      "Enable and disable &kms-keys;.",
+      "Generate a symmetric data key that can be used for client-side encryption.",
+      "Generate an asymmetric key used to digitally sign data.",
+      "Tag keys.",
+      "Delete &kms-keys;."
+    ]
+  },
+  {
+    "id": "lambda_Scenario_GettingStartedFunctions",
+    "service": "lambda",
+    "scenario": "lambda Scenario GettingStartedFunctions",
+    "sdk": [
+      ".NET",
+      "Go",
+      "Kotlin",
+      "Java",
+      "PHP",
+      "Python",
+      "Ruby",
+      "SAP ABAP",
+      "JavaScript",
+      "C++",
+      "Rust",
+      "Swift"
+    ],
+    "operations": [
+      "CreateFunction",
+      "DeleteFunction",
+      "GetFunction",
+      "Invoke",
+      "ListFunctions",
+      "UpdateFunctionCode",
+      "UpdateFunctionConfiguration"
+    ],
+    "synopsis_list": [
+      "Create an IAM role and LAM function, then upload handler code.",
+      "Invoke the function with a single parameter and get results.",
+      "Update the function code and configure with an environment variable.",
+      "Invoke the function with new parameters and get results. Display the returned execution log.",
+      "List the functions for your account, then clean up resources."
+    ]
+  },
+  {
+    "id": "location_Scenario",
+    "service": "location",
+    "scenario": "location Scenario",
+    "sdk": [
+      "Kotlin",
+      "Java",
+      "JavaScript"
+    ],
+    "operations": [],
+    "synopsis_list": [
+      "Create an ALshort map.",
+      "Create an ALshort API key.",
+      "Display Map URL.",
+      "Create a geofence collection.",
+      "Store a geofence geometry.",
+      "Create a tracker resource.",
+      "Update the position of a device.",
+      "Retrieve the most recent position update for a specified device.",
+      "Create a route calculator.",
+      "Determine the distance between Seattle and Vancouver.",
+      "Use ALshort higher level APIs.",
+      "Delete the ALshort Assets."
+    ]
+  },
+  {
+    "id": "medical-imaging_Scenario_ImageSetsAndFrames",
+    "service": "medical-imaging",
+    "scenario": "Get started with &AHI; image sets and image frames using an &AWS; SDK",
+    "sdk": [
+      "C++",
+      "Python",
+      "JavaScript"
+    ],
+    "operations": [
+      "DeleteImageSet",
+      "GetDICOMImportJob",
+      "GetImageFrame",
+      "GetImageSetMetadata",
+      "SearchImageSets",
+      "StartDICOMImportJob"
+    ],
+    "synopsis_list": [
+      "Set up resources for a DICOM import.",
+      "Import DICOM files into a data store.",
+      "Retrieve the image set IDs for the import job.",
+      "Retrieve the image frame IDs for the image sets.",
+      "Download, decode and verify the image frames.",
+      "Clean up resources."
+    ]
+  },
+  {
+    "id": "medical-imaging_Scenario_TaggingDataStores",
+    "service": "medical-imaging",
+    "scenario": "Tagging a &AHI; data store using an &AWS; SDK",
+    "sdk": [
+      "Python",
+      "JavaScript",
+      "Java"
+    ],
+    "operations": [
+      "ListTagsForResource",
+      "TagResource",
+      "UntagResource"
+    ],
+    "synopsis_list": []
+  },
+  {
+    "id": "medical-imaging_Scenario_TaggingImageSets",
+    "service": "medical-imaging",
+    "scenario": "Tagging a &AHI; image set using an &AWS; SDK",
+    "sdk": [
+      "Python",
+      "JavaScript",
+      "Java"
+    ],
+    "operations": [
+      "ListTagsForResource",
+      "TagResource",
+      "UntagResource"
+    ],
+    "synopsis_list": []
+  },
+  {
+    "id": "neptune_Scenario",
+    "service": "neptune",
+    "scenario": "neptune Scenario",
+    "sdk": [
+      "Python",
+      "Java"
+    ],
+    "operations": [],
+    "synopsis_list": [
+      "Create an neptunelong Subnet Group.",
+      "Create an neptune Cluster.",
+      "Create an neptune Instance.",
+      "Check the status of the neptune Instance.",
+      "Show neptune cluster details.",
+      "Stop the neptune cluster.",
+      "Start the neptune cluster.",
+      "Delete the neptune Assets."
+    ]
+  },
+  {
+    "id": "opensearch_Scenario",
+    "service": "opensearch",
+    "scenario": "Learn core operations for &ESlong; using an &AWS; SDK",
+    "sdk": [
+      "Java"
+    ],
+    "operations": [
+      "AddTags",
+      "CreateDomain",
+      "DeleteDomain",
+      "DescribeDomain",
+      "DescribeDomainChangeProgress",
+      "ListDomainNames",
+      "ListTags",
+      "UpdateDomainConfig"
+    ],
+    "synopsis_list": [
+      "Create an ES domain.",
+      "Provides detailed information about a specific ES domain.",
+      "Lists all the ES domains owned by the account.",
+      "Waits until the ES domain's change status reaches a completed state.",
+      "Modifies the configuration of an existing ES domain.",
+      "Add a tag to the ES domain.",
+      "Lists the tags associated with an ES domain.",
+      "Removes tags from an ES domain.",
+      "Deletes the ES domain."
+    ]
+  },
+  {
+    "id": "rds_Scenario_GetStartedInstances",
+    "service": "rds",
+    "scenario": "rds Scenario GetStartedInstances",
+    "sdk": [
+      "Kotlin",
+      "Java",
+      ".NET",
+      "Go",
+      "Python",
+      "C++",
+      "Swift"
+    ],
+    "operations": [
+      "CreateDBInstance",
+      "CreateDBParameterGroup",
+      "CreateDBSnapshot",
+      "DeleteDBInstance",
+      "DeleteDBParameterGroup",
+      "DescribeDBEngineVersions",
+      "DescribeDBInstances",
+      "DescribeDBParameterGroups",
+      "DescribeDBParameters",
+      "DescribeDBSnapshots",
+      "DescribeOrderableDBInstanceOptions",
+      "ModifyDBParameterGroup"
+    ],
+    "synopsis_list": [
+      "Create a custom DB parameter group and set parameter values.",
+      "Create a DB instance that's configured to use the parameter group. The DB instance also contains a database.",
+      "Take a snapshot of the instance.",
+      "Delete the instance and parameter group."
+    ]
+  },
+  {
+    "id": "redshift_Scenario",
+    "service": "redshift",
+    "scenario": "redshift Scenario",
+    "sdk": [
+      ".NET",
+      "Go",
+      "Java",
+      "Python"
+    ],
+    "operations": [
+      "CreateCluster",
+      "DescribeClusters",
+      "DescribeStatement",
+      "ExecuteStatement",
+      "GetStatementResult",
+      "ListDatabasesPaginator",
+      "ModifyCluster"
+    ],
+    "synopsis_list": [
+      "Create a Redshift cluster.",
+      "List databases in the cluster.",
+      "Create a table named Movies.",
+      "Populate the Movies table.",
+      "Query the Movies table by year.",
+      "Modify the Redshift cluster.",
+      "Delete the Amazon Redshift cluster."
+    ]
+  },
+  {
+    "id": "route-53-domains_Scenario_GetStartedRoute53Domains",
+    "service": "route-53-domains",
+    "scenario": "route-53-domains Scenario GetStartedRoute53Domains",
+    "sdk": [
+      "Kotlin",
+      "Java",
+      ".NET"
+    ],
+    "operations": [
+      "CheckDomainAvailability",
+      "CheckDomainTransferability",
+      "GetDomainDetail",
+      "GetDomainSuggestions",
+      "GetOperationDetail",
+      "ListDomains",
+      "ListOperations",
+      "ListPrices",
+      "RegisterDomain",
+      "ViewBilling"
+    ],
+    "synopsis_list": [
+      "List current domains, and list operations in the past year.",
+      "View billing for the past year, and view prices for domain types.",
+      "Get domain suggestions.",
+      "Check domain availability and transferability.",
+      "Optionally, request a domain registration.",
+      "Get an operation detail.",
+      "Optionally, get a domain detail."
+    ]
+  },
+  {
+    "id": "s3_Scenario_ListObjectsWeb",
+    "service": "s3",
+    "scenario": "A web page that lists &S3; objects using an &AWS; SDK",
+    "sdk": [
+      "JavaScript"
+    ],
+    "operations": [
+      "ListObjects"
+    ],
+    "synopsis_list": []
+  },
+  {
+    "id": "s3_Scenario_DoesBucketExist",
+    "service": "s3",
+    "scenario": "Check if a bucket exists",
+    "sdk": [
+      "Java"
+    ],
+    "operations": [
+      "GetBucketAcl"
+    ],
+    "synopsis_list": []
+  },
+  {
+    "id": "s3_Scenario_PresignedUrl",
+    "service": "s3",
+    "scenario": "Create a presigned URL for &S3; using an &AWS; SDK",
+    "sdk": [
+      ".NET",
+      "Java",
+      "Python",
+      "Go",
+      "JavaScript",
+      "Ruby",
+      "Kotlin",
+      "Rust",
+      "C++",
+      "PHP",
+      "SAP ABAP"
+    ],
+    "operations": [],
+    "synopsis_list": []
+  },
+  {
+    "id": "s3_Scenario_DeleteAllObjects",
+    "service": "s3",
+    "scenario": "Delete all objects in a given &S3; bucket using an &AWS; SDK",
+    "sdk": [
+      "JavaScript"
+    ],
+    "operations": [
+      "DeleteObjects",
+      "ListObjectsV2"
+    ],
+    "synopsis_list": []
+  },
+  {
+    "id": "s3_Scenario_AbortMultipartUpload",
+    "service": "s3",
+    "scenario": "Delete incomplete multipart uploads to &S3; using an &AWS; SDK",
+    "sdk": [
+      "Java"
+    ],
+    "operations": [
+      "AbortMultipartUpload",
+      "ListMultipartUploads",
+      "PutBucketLifecycleConfiguration"
+    ],
+    "synopsis_list": []
+  },
+  {
+    "id": "s3_Scenario_DownloadS3Directory",
+    "service": "s3",
+    "scenario": "Download S3 'directories' from an &S3long; (&S3;) bucket",
+    "sdk": [
+      "Java"
+    ],
+    "operations": [],
+    "synopsis_list": []
+  },
+  {
+    "id": "s3_Scenario_DownloadStream",
+    "service": "s3",
+    "scenario": "Download a stream of unknown size from an &S3; object using an &AWS; SDK",
+    "sdk": [
+      "Swift"
+    ],
+    "operations": [],
+    "synopsis_list": []
+  },
+  {
+    "id": "s3_Scenario_Tagging",
+    "service": "s3",
+    "scenario": "Get started with tags for &S3; objects using an &AWS; SDK",
+    "sdk": [
+      ".NET"
+    ],
+    "operations": [
+      "GetObjectTagging"
+    ],
+    "synopsis_list": []
+  },
+  {
+    "id": "s3_Scenario_ConditionalRequests",
+    "service": "s3",
+    "scenario": "Make &S3; conditional requests using an &AWS; SDK",
+    "sdk": [
+      "Python",
+      ".NET",
+      "JavaScript"
+    ],
+    "operations": [
+      "CopyObject",
+      "GetObject",
+      "PutObject"
+    ],
+    "synopsis_list": []
+  },
+  {
+    "id": "s3_Scenario_ManageACLs",
+    "service": "s3",
+    "scenario": "Manage access control lists (ACLs) for &S3; buckets using an &AWS; SDK",
+    "sdk": [
+      ".NET"
+    ],
+    "operations": [
+      "GetBucketAcl",
+      "GetObjectAcl",
+      "PutBucketAcl",
+      "PutObjectAcl"
+    ],
+    "synopsis_list": []
+  },
+  {
+    "id": "s3_Scenario_BatchObjectVersioning",
+    "service": "s3",
+    "scenario": "Manage versioned &S3; objects in batches with a &LAM; function using an &AWS; SDK",
+    "sdk": [
+      "Python"
+    ],
+    "operations": [],
+    "synopsis_list": []
+  },
+  {
+    "id": "s3_Scenario_URIParsing",
+    "service": "s3",
+    "scenario": "Parse &S3; URIs using an &AWS; SDK",
+    "sdk": [
+      "Java"
+    ],
+    "operations": [],
+    "synopsis_list": []
+  },
+  {
+    "id": "s3_Scenario_ProcessS3EventNotification",
+    "service": "s3",
+    "scenario": "Receive and process &S3; event notifications by using an &AWS; SDK",
+    "sdk": [
+      "Java"
+    ],
+    "operations": [
+      "DeleteMessageBatch",
+      "GetQueueAttributes",
+      "PutBucketNotificationConfiguration",
+      "ReceiveMessage"
+    ],
+    "synopsis_list": []
+  },
+  {
+    "id": "s3_Scenario_PutBucketNotificationConfiguration",
+    "service": "s3",
+    "scenario": "Send S3 event notifications to &EVlong; using an &AWS; SDK",
+    "sdk": [
+      "Java"
+    ],
+    "operations": [
+      "PutBucketNotificationConfiguration",
+      "PutRule",
+      "PutTargets"
+    ],
+    "synopsis_list": []
+  },
+  {
+    "id": "s3_Scenario_TrackUploadDownload",
+    "service": "s3",
+    "scenario": "Track an &S3; object upload or download using an &AWS; SDK",
+    "sdk": [
+      "Java"
+    ],
+    "operations": [
+      "GetObject",
+      "PutObject"
+    ],
+    "synopsis_list": []
+  },
+  {
+    "id": "s3_Scenario_UploadStream",
+    "service": "s3",
+    "scenario": "Upload a stream of unknown size to an &S3; object using an &AWS; SDK",
+    "sdk": [
+      "Java",
+      "Swift"
+    ],
+    "operations": [],
+    "synopsis_list": []
+  },
+  {
+    "id": "s3_Scenario_UsingLargeFiles",
+    "service": "s3",
+    "scenario": "Upload or download large files to and from &S3; using an &AWS; SDK",
+    "sdk": [
+      "Java",
+      ".NET",
+      "Go",
+      "Python",
+      "Rust",
+      "JavaScript"
+    ],
+    "operations": [],
+    "synopsis_list": []
+  },
+  {
+    "id": "s3_Scenario_UseChecksums",
+    "service": "s3",
+    "scenario": "Use checksums to work with an &S3; object using an &AWS; SDK",
+    "sdk": [
+      "Java"
+    ],
+    "operations": [
+      "CompleteMultipartUpload",
+      "CreateMultipartUpload",
+      "UploadPart"
+    ],
+    "synopsis_list": []
+  },
+  {
+    "id": "s3_Scenario_ObjectIntegrity",
+    "service": "s3",
+    "scenario": "Work with &S3; object integrity features using an &AWS; SDK",
+    "sdk": [
+      "C++"
+    ],
+    "operations": [
+      "AbortMultipartUpload",
+      "CompleteMultipartUpload",
+      "CreateMultipartUpload",
+      "DeleteObject",
+      "GetObjectAttributes",
+      "PutObject",
+      "UploadPart"
+    ],
+    "synopsis_list": []
+  },
+  {
+    "id": "s3_Scenario_ObjectLock",
+    "service": "s3",
+    "scenario": "Work with &S3; object lock features using an &AWS; SDK",
+    "sdk": [
+      "Java",
+      ".NET",
+      "Go",
+      "JavaScript"
+    ],
+    "operations": [
+      "GetObjectLegalHold",
+      "GetObjectLockConfiguration",
+      "GetObjectRetention",
+      "PutObjectLegalHold",
+      "PutObjectLockConfiguration",
+      "PutObjectRetention"
+    ],
+    "synopsis_list": []
+  },
+  {
+    "id": "s3_Scenario_ObjectVersioningUsage",
+    "service": "s3",
+    "scenario": "Work with &S3; versioned objects using an &AWS; SDK",
+    "sdk": [
+      "Python"
+    ],
+    "operations": [
+      "CreateBucket",
+      "DeleteObject",
+      "ListObjectVersions",
+      "PutBucketLifecycleConfiguration"
+    ],
+    "synopsis_list": [
+      "Create a versioned S3 bucket.",
+      "Get all versions of an object.",
+      "Roll an object back to a previous version.",
+      "Delete and restore a versioned object.",
+      "Permanently delete all versions of an object."
+    ]
+  },
+  {
+    "id": "s3_Scenario_GettingStarted",
+    "service": "s3",
+    "scenario": "s3 Scenario GettingStarted",
+    "sdk": [
+      ".NET",
+      "Java",
+      "JavaScript",
+      "Kotlin",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Go",
+      "Rust",
+      "C++",
+      "SAP ABAP",
+      "Swift",
+      "Bash"
+    ],
+    "operations": [
+      "CopyObject",
+      "CreateBucket",
+      "DeleteBucket",
+      "DeleteObjects",
+      "GetObject",
+      "ListObjectsV2",
+      "PutObject"
+    ],
+    "synopsis_list": [
+      "Create a bucket and upload a file to it.",
+      "Download an object from a bucket.",
+      "Copy an object to a subfolder in a bucket.",
+      "List the objects in a bucket.",
+      "Delete the bucket objects and the bucket."
+    ]
+  },
+  {
+    "id": "s3-directory-buckets_Scenario_ExpressBasics",
+    "service": "s3-directory-buckets",
+    "scenario": "s3-directory-buckets Scenario ExpressBasics",
+    "sdk": [
+      "Java",
+      "PHP",
+      "Python"
+    ],
+    "operations": [
+      "CopyObject",
+      "CreateBucket",
+      "DeleteBucket",
+      "DeleteObject",
+      "GetObject",
+      "ListObjects",
+      "PutObject"
+    ],
+    "synopsis_list": [
+      "Set up a VPC and VPC Endpoint.",
+      "Set up the Policies, Roles, and User to work with S3 directory buckets and the S3 Express One Zone storage class.",
+      "Create two S3 Clients.",
+      "Create two buckets.",
+      "Create an object and copy it over.",
+      "Demonstrate performance difference.",
+      "Populate the buckets to show the lexicographical difference.",
+      "Prompt the user to see if they want to clean up the resources."
+    ]
+  },
+  {
+    "id": "sagemaker_Scenario_Pipelines",
+    "service": "sagemaker",
+    "scenario": "Get started with &SM; geospatial jobs in a pipeline using an &AWS; SDK",
+    "sdk": [
+      "Kotlin",
+      "Java",
+      ".NET",
+      "JavaScript"
+    ],
+    "operations": [
+      "CreatePipeline",
+      "DeletePipeline",
+      "DescribePipelineExecution",
+      "StartPipelineExecution",
+      "UpdatePipeline"
+    ],
+    "synopsis_list": [
+      "Set up resources for a pipeline.",
+      "Set up a pipeline that executes a geospatial job.",
+      "Start a pipeline execution.",
+      "Monitor the status of the execution.",
+      "View the output of the pipeline.",
+      "Clean up resources."
+    ]
+  },
+  {
+    "id": "sagemaker_Scenario_GettingStarted",
+    "service": "sagemaker",
+    "scenario": "Get started with &SM; models and endpoints using an &AWS; SDK",
+    "sdk": [
+      "SAP ABAP"
+    ],
+    "operations": [
+      "CreateEndpoint",
+      "CreateEndpointConfig",
+      "CreateModel",
+      "CreateTrainingJob",
+      "DeleteEndpoint",
+      "DeleteEndpointConfig",
+      "DeleteModel",
+      "DescribeEndpoint",
+      "DescribeTrainingJob"
+    ],
+    "synopsis_list": [
+      "Start a training job and create a SM model.",
+      "Create an endpoint configuration.",
+      "Create an endpoint, then clean up resources."
+    ]
+  },
+  {
+    "id": "ses_Scenario_ReplicateIdentities",
+    "service": "ses",
+    "scenario": "Copy &SES; email and domain identities from one &AWS; Region to another using an &AWS; SDK",
+    "sdk": [
+      "Python"
+    ],
+    "operations": [
+      "ListIdentities",
+      "SetIdentityNotificationTopic",
+      "VerifyDomainDkim",
+      "VerifyDomainIdentity",
+      "VerifyEmailIdentity"
+    ],
+    "synopsis_list": []
+  },
+  {
+    "id": "ses_Scenario_GenerateSmtpCredentials",
+    "service": "ses",
+    "scenario": "Generate credentials to connect to an &SES; SMTP endpoint",
+    "sdk": [
+      "Python"
+    ],
+    "operations": [],
+    "synopsis_list": []
+  },
+  {
+    "id": "ses_Scenario_SendEmail",
+    "service": "ses",
+    "scenario": "Verify an email identity and send messages with &SES;  using an &AWS; SDK",
+    "sdk": [
+      "Python"
+    ],
+    "operations": [
+      "CreateTemplate",
+      "DeleteIdentity",
+      "DeleteTemplate",
+      "GetIdentityVerificationAttributes",
+      "GetTemplate",
+      "ListIdentities",
+      "ListTemplates",
+      "SendEmail",
+      "SendTemplatedEmail",
+      "UpdateTemplate",
+      "VerifyDomainIdentity",
+      "VerifyEmailIdentity"
+    ],
+    "synopsis_list": [
+      "Add and verify an email address with SES.",
+      "Send a standard email message.",
+      "Create a template and send a templated email message.",
+      "Send a message by using an SES SMTP server."
+    ]
+  },
+  {
+    "id": "sfn_Scenario_GetStartedStateMachines",
+    "service": "sfn",
+    "scenario": "sfn Scenario GetStartedStateMachines",
+    "sdk": [
+      "Kotlin",
+      ".NET",
+      "Java",
+      "Python"
+    ],
+    "operations": [
+      "CreateActivity",
+      "CreateStateMachine",
+      "DeleteActivity",
+      "DeleteStateMachine",
+      "DescribeExecution",
+      "DescribeStateMachine",
+      "GetActivityTask",
+      "ListActivities",
+      "ListStateMachines",
+      "SendTaskSuccess",
+      "StartExecution",
+      "StopExecution"
+    ],
+    "synopsis_list": [
+      "Create an activity.",
+      "Create a state machine from an SLN definition that contains the previously created activity as a step.",
+      "Run the state machine and respond to the activity with user input.",
+      "Get the final status and output after the run completes, then clean up resources."
+    ]
+  },
+  {
+    "id": "sqs_Scenario_TopicsAndQueues",
+    "service": "sns",
+    "scenario": "Publish &SNS; messages to &SQS; queues using an &AWS; SDK",
+    "sdk": [
+      ".NET",
+      "C++",
+      "Go",
+      "JavaScript",
+      "Java",
+      "Kotlin",
+      "Python",
+      "Swift"
+    ],
+    "operations": [
+      "CreateQueue",
+      "CreateTopic",
+      "DeleteMessageBatch",
+      "DeleteQueue",
+      "DeleteTopic",
+      "GetQueueAttributes",
+      "Publish",
+      "ReceiveMessage",
+      "SetQueueAttributes",
+      "Subscribe",
+      "Unsubscribe"
+    ],
+    "synopsis_list": [
+      "Create topic (FIFO or non-FIFO).",
+      "Subscribe several queues to the topic with an option to apply a filter.",
+      "Publish messages to the topic.",
+      "Poll the queues for messages received."
+    ]
+  },
+  {
+    "id": "sqs_Scenario_SqsExtendedClient",
+    "service": "sqs",
+    "scenario": "Manage large &SQS; messages using &S3; with an &AWS; SDK",
+    "sdk": [
+      "Java"
+    ],
+    "operations": [
+      "CreateBucket",
+      "PutBucketLifecycleConfiguration",
+      "ReceiveMessage",
+      "SendMessage"
+    ],
+    "synopsis_list": []
+  },
+  {
+    "id": "sqs_Scenario_SendReceiveBatch",
+    "service": "sqs",
+    "scenario": "Send and receive batches of messages with &SQS; using an &AWS; SDK",
+    "sdk": [
+      "Python",
+      "Java"
+    ],
+    "operations": [
+      "CreateQueue",
+      "DeleteMessage",
+      "DeleteMessageBatch",
+      "DeleteQueue",
+      "ReceiveMessage",
+      "SendMessage",
+      "SendMessageBatch"
+    ],
+    "synopsis_list": [
+      "Create an SQS queue.",
+      "Send batches of messages to the queue.",
+      "Receive batches of messages from the queue.",
+      "Delete batches of messages from the queue."
+    ]
+  },
+  {
+    "id": "sqs_Scenario_UseJMS",
+    "service": "sqs",
+    "scenario": "Use the &SQS; Java Messaging Library to work with the Java Message Service (JMS) interface for &SQS;",
+    "sdk": [
+      "Java"
+    ],
+    "operations": [
+      "CreateQueue",
+      "DeleteQueue"
+    ],
+    "synopsis_list": []
+  },
+  {
+    "id": "sqs_Scenario_WorkWithTags",
+    "service": "sqs",
+    "scenario": "Work with queue tags and &SQS; using an &AWS; SDK",
+    "sdk": [
+      "Java"
+    ],
+    "operations": [
+      "ListQueueTags",
+      "TagQueue",
+      "UntagQueue"
+    ],
+    "synopsis_list": []
+  },
+  {
+    "id": "ssm_Scenario",
+    "service": "ssm",
+    "scenario": "ssm Scenario",
+    "sdk": [
+      "Java",
+      "JavaScript",
+      "Python"
+    ],
+    "operations": [
+      "CreateDocument",
+      "CreateMaintenanceWindow",
+      "CreateOpsItem",
+      "DeleteMaintenanceWindow",
+      "ListCommandInvocations",
+      "SendCommand",
+      "UpdateOpsItem"
+    ],
+    "synopsis_list": [
+      "Create a maintenance window.",
+      "Modify the maintenance window schedule.",
+      "Create a document.",
+      "Send a command to a specified EC2 instance.",
+      "Create an OpsItem.",
+      "Update and resolve the OpsItem.",
+      "Delete the maintenance window, OpsItem, and document."
+    ]
+  },
+  {
+    "id": "sts_Scenario_AssumeRoleMfa",
+    "service": "sts",
+    "scenario": "Assume an &IAM; role that requires an MFA token with &STS; using an &AWS; SDK",
+    "sdk": [
+      "Python"
+    ],
+    "operations": [
+      "AssumeRole"
+    ],
+    "synopsis_list": [
+      "Create an IAM role that grants permission to list S3 buckets.",
+      "Create an &IAM-user; that has permission to assume the role only when MFA credentials are provided.",
+      "Register an MFA device for the user.",
+      "Assume the role and use temporary credentials to list S3 buckets."
+    ]
+  },
+  {
+    "id": "sts_Scenario_ConstructFederatedUrl",
+    "service": "sts",
+    "scenario": "Construct a URL with &STS; for federated users using an &AWS; SDK",
+    "sdk": [
+      "Python"
+    ],
+    "operations": [
+      "AssumeRole"
+    ],
+    "synopsis_list": [
+      "Create an IAM role that grants read-only access to the current account's S3 resources.",
+      "Get a security token from the AWS federation endpoint.",
+      "Construct a URL that can be used to access the console with federated credentials."
+    ]
+  },
+  {
+    "id": "sts_Scenario_SessionTokenMfa",
+    "service": "sts",
+    "scenario": "Get a session token that requires an MFA token with &STS; using an &AWS; SDK",
+    "sdk": [
+      "Python"
+    ],
+    "operations": [
+      "GetSessionToken"
+    ],
+    "synopsis_list": [
+      "Create an IAM role that grants permission to list S3 buckets.",
+      "Create an &IAM-user; that has permission to assume the role only when MFA credentials are provided.",
+      "Register an MFA device for the user.",
+      "Provide MFA credentials to get a session token and use temporary credentials to list S3 buckets."
+    ]
+  },
+  {
+    "id": "support_Scenario_GetStartedSupportCases",
+    "service": "support",
+    "scenario": "support Scenario GetStartedSupportCases",
+    "sdk": [
+      "Kotlin",
+      "Java",
+      ".NET",
+      "JavaScript",
+      "Python"
+    ],
+    "operations": [
+      "AddAttachmentsToSet",
+      "AddCommunicationToCase",
+      "CreateCase",
+      "DescribeAttachment",
+      "DescribeCases",
+      "DescribeCommunications",
+      "DescribeServices",
+      "DescribeSeverityLevels",
+      "ResolveCase"
+    ],
+    "synopsis_list": [
+      "Get and display available services and severity levels for cases.",
+      "Create a support case using a selected service, category, and severity level.",
+      "Get and display a list of open cases for the current day.",
+      "Add an attachment set and a communication to the new case.",
+      "Describe the new attachment and communication for the case.",
+      "Resolve the case.",
+      "Get and display a list of resolved cases for the current day."
+    ]
+  },
+  {
+    "id": "textract_Scenario_GettingStarted",
+    "service": "textract",
+    "scenario": "Get started with &TEXTRACT; document analysis using an &AWS; SDK",
+    "sdk": [
+      "SAP ABAP"
+    ],
+    "operations": [
+      "GetDocumentAnalysis",
+      "StartDocumentAnalysis"
+    ],
+    "synopsis_list": [
+      "Start asynchronous analysis.",
+      "Get document analysis."
+    ]
+  },
+  {
+    "id": "transcribe_Scenario_CustomVocabulary",
+    "service": "transcribe",
+    "scenario": "Create and refine an &TSC; custom vocabulary using an &AWS; SDK",
+    "sdk": [
+      "Python"
+    ],
+    "operations": [
+      "CreateVocabulary",
+      "DeleteTranscriptionJob",
+      "DeleteVocabulary",
+      "GetTranscriptionJob",
+      "GetVocabulary",
+      "ListVocabularies",
+      "StartTranscriptionJob",
+      "UpdateVocabulary"
+    ],
+    "synopsis_list": [
+      "Upload an audio file to S3.",
+      "Run an TSC job to transcribe the file and get the results.",
+      "Create and refine a custom vocabulary to improve transcription accuracy.",
+      "Run jobs with custom vocabularies and get the results."
+    ]
+  },
+  {
+    "id": "transcribe_Scenario_GettingStartedTranscriptionJobs",
+    "service": "transcribe",
+    "scenario": "Transcribe audio and get job data with &TSC; using an &AWS; SDK",
+    "sdk": [
+      "Java",
+      "Python"
+    ],
+    "operations": [
+      "GetTranscriptionJob",
+      "StartTranscriptionJob"
+    ],
+    "synopsis_list": [
+      "Start a transcription job with TSC.",
+      "Wait for the job to complete.",
+      "Get the URI where the transcript is stored."
+    ]
+  },
+  {
+    "id": "transcribe-streaming_Scenario_StreamEvents_Microphone",
+    "service": "transcribe-streaming",
+    "scenario": "Generate a transcription from a microphone using an &AWS; SDK",
+    "sdk": [
+      "Java"
+    ],
+    "operations": [
+      "StartStreamTranscription"
+    ],
+    "synopsis_list": []
+  },
+  {
+    "id": "transcribe-streaming_Scenario_StreamEvents_File",
+    "service": "transcribe-streaming",
+    "scenario": "Generate a transcription of a file using an &AWS; SDK",
+    "sdk": [
+      "Swift",
+      "Java",
+      "C++"
+    ],
+    "operations": [
+      "StartStreamTranscription"
+    ],
+    "synopsis_list": []
+  },
+  {
+    "id": "translate_Scenario_GettingStarted",
+    "service": "translate",
+    "scenario": "Get started with &TSL; jobs using an &AWS; SDK",
+    "sdk": [
+      "SAP ABAP"
+    ],
+    "operations": [
+      "DescribeTextTranslationJob",
+      "StartTextTranslationJob"
+    ],
+    "synopsis_list": [
+      "Start an asynchronous batch translation job.",
+      "Wait for the asynchronous job to complete.",
+      "Describe the asynchronous job."
     ]
   }
 ]
