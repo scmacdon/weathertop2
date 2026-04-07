@@ -158,8 +158,16 @@ export default function Dashboard() {
                 />
                 <Tooltip
                   cursor={{ fill: "rgba(255,255,255,0.05)" }}
-                  contentStyle={{ backgroundColor: "#1a1d2e", border: "1px solid #2d3148", color: "#e5e7eb" }}
-                  formatter={(value, name, props) => [`${value} ops`, props.payload.name]}
+                  content={({ active, payload }) => {
+                    if (!active || !payload || !payload.length) return null;
+                    const d = payload[0].payload;
+                    return (
+                      <div style={{ backgroundColor: "#1a1d2e", border: "1px solid #2d3148", borderRadius: 8, padding: "8px 12px", color: "#e5e7eb" }}>
+                        <div style={{ fontWeight: 600, marginBottom: 4 }}>{d.service}</div>
+                        <div>{d.operations} operations</div>
+                      </div>
+                    );
+                  }}
                 />
                 <Bar
                   dataKey="operations"
