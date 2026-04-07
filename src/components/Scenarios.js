@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, PieChart, Pie, Cell, Legend, ResponsiveContainer } from "recharts";
 import "./Scenario.css";
 
@@ -50,6 +50,7 @@ export default function Dashboard() {
 
   const [selectedSDK, setSelectedSDK] = useState(null);
   const [selectedScenario, setSelectedScenario] = useState(null);
+  const scenarioTableRef = useRef(null);
 
   const totalScenarios = data.length;
   const totalServices = new Set(data.map(d => d.service)).size;
@@ -106,13 +107,28 @@ export default function Dashboard() {
       <Card>
         <CardContent style={{ textAlign: "center" }}>
           <h2 style={{ fontSize: 18, fontWeight: "600", marginBottom: 16, color: "#f3f4f6" }}>SDK Coverage</h2>
-          <PieChart width={500} height={300}>
+          <div style={{ width: "100%", height: 500 }}>
+          <ResponsiveContainer width="100%" height={500}>
+          <PieChart>
             <Pie
               data={sdkPieData}
               dataKey="value"
               nameKey="name"
-              outerRadius={110}
-              label={({ name, percent }) => `${name} (${(percent * 100).toFixed(0)}%)`}
+              cx="50%"
+              cy="45%"
+              outerRadius={130}
+              labelLine={{ stroke: "#9ca3af", strokeWidth: 1 }}
+              label={({ name, percent, x, y, midAngle }) => {
+                const RADIAN = Math.PI / 180;
+                const radius = 160;
+                const cx2 = x + Math.cos(-midAngle * RADIAN) * 20;
+                const cy2 = y + Math.sin(-midAngle * RADIAN) * 20;
+                return (
+                  <text x={cx2} y={cy2} fill="#e5e7eb" fontSize={13} textAnchor={cx2 > 0 ? "start" : "end"} dominantBaseline="central">
+                    {name} ({(percent * 100).toFixed(0)}%)
+                  </text>
+                );
+              }}
               onClick={(e) => {
                 setSelectedSDK(e.name);
                 setSelectedScenario(null);
@@ -122,9 +138,14 @@ export default function Dashboard() {
                 <Cell key={i} fill={COLORS[_.name] || "#8884d8"} />
               ))}
             </Pie>
-            <Tooltip />
-            <Legend />
+            <Tooltip contentStyle={{ backgroundColor: "#1a1d2e", border: "1px solid #2d3148", color: "#e5e7eb" }} />
+            <Legend
+              verticalAlign="bottom"
+              wrapperStyle={{ paddingTop: 24, color: "#e5e7eb", fontSize: 14 }}
+            />
           </PieChart>
+          </ResponsiveContainer>
+          </div>
         </CardContent>
       </Card>
 
@@ -174,7 +195,12 @@ export default function Dashboard() {
                   barSize={36}
                   radius={[8, 8, 8, 8]}
                   label={{ position: "right", fill: "#e5e7eb", fontSize: 12 }}
-                  onClick={(bar) => setSelectedScenario(bar.full)}
+                  onClick={(bar) => {
+                    setSelectedScenario(bar.full);
+                    setTimeout(() => {
+                      scenarioTableRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }, 100);
+                  }}
                 >
                   {scenarioBarData.map((entry, index) => (
                     <Cell key={entry.name} fill={COLORS[selectedSDK] || COLORS[index % Object.keys(COLORS).length]} />
@@ -189,6 +215,7 @@ export default function Dashboard() {
 
       {/* FULL SCENARIO TABLE WITH OPERATIONS */}
       {selectedScenario && (
+        <div ref={scenarioTableRef}>
         <Card>
           <CardContent style={{ textAlign: "left" }}>
             {/* Scenario Info Table */}
@@ -253,6 +280,7 @@ export default function Dashboard() {
             </table>
           </CardContent>
         </Card>
+        </div>
       )}
     </div>
   );
