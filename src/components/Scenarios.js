@@ -51,6 +51,7 @@ export default function Dashboard() {
   const [selectedSDK, setSelectedSDK] = useState(null);
   const [selectedScenario, setSelectedScenario] = useState(null);
   const scenarioTableRef = useRef(null);
+  const barChartRef = useRef(null);
 
   const totalScenarios = data.length;
   const totalServices = new Set(data.map(d => d.service)).size;
@@ -132,6 +133,9 @@ export default function Dashboard() {
               onClick={(e) => {
                 setSelectedSDK(e.name);
                 setSelectedScenario(null);
+                setTimeout(() => {
+                  barChartRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+                }, 100);
               }}
             >
               {sdkPieData.map((_, i) => (
@@ -151,6 +155,7 @@ export default function Dashboard() {
 
       {/* HORIZONTAL BAR */}
       {selectedSDK && (
+        <div ref={barChartRef}>
         <Card>
           <CardContent style={{ textAlign: "left" }}>
             <h2 style={{ fontSize: 18, fontWeight: "600", marginBottom: 16, color: "#f3f4f6" }}>
@@ -211,6 +216,7 @@ export default function Dashboard() {
             </div>
           </CardContent>
         </Card>
+        </div>
       )}
 
       {/* FULL SCENARIO TABLE WITH OPERATIONS */}
