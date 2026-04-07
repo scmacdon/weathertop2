@@ -227,20 +227,20 @@ export default function Dashboard() {
               <tbody>
                 {selectedScenario.operations.map((op, i) => (
                   <tr key={i} style={{ backgroundColor: i % 2 === 0 ? "#1a1d2e" : "#1f2235" }}>
-                    <td style={{ padding: 12, fontSize: 14, color: "#e5e7eb" }}>{op}</td>
-                    <td style={{ padding: 12 }}>
+                    <td style={{ padding: 14, fontSize: 16, color: "#e5e7eb" }}>{op}</td>
+                    <td style={{ padding: 14 }}>
                       {selectedScenario.sdk.map((s, j) => (
                         <span
                           key={j}
                           style={{
                             display: "inline-block",
-                            padding: "2px 8px",
-                            borderRadius: 8,
+                            padding: "5px 12px",
+                            borderRadius: 10,
                             backgroundColor: COLORS[s] || "#888",
                             color: "white",
-                            fontSize: 12,
+                            fontSize: 14,
                             fontWeight: 600,
-                            marginRight: 4,
+                            marginRight: 6,
                           }}
                         >
                           {s}
