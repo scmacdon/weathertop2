@@ -1,0 +1,44 @@
+[
+  {
+    "id": "dynamodb_Scenario_GettingStartedMovies",
+    "service": "dynamodb",
+    "scenario": "Getting started with movies",
+    "sdk": [".NET", "Python", "Java"],
+    "operations": ["CreateTable", "PutItem", "GetItem", "DeleteTable"],
+    "synopsis_list": [
+      "Create a table that can hold movie data.",
+      "Put, get, and update a single movie in the table.",
+      "Write movie data to the table from a sample JSON file.",
+      "Query for movies that were released in a given year.",
+      "Scan for movies that were released in a range of years.",
+      "Delete a movie from the table, then delete the table."
+    ]
+  },
+  {
+    "id": "ec2_Scenario_GetStartedInstances",
+    "service": "ec2",
+    "scenario": "Get started with EC2 instances",
+    "sdk": ["Java", "Python"],
+    "operations": ["RunInstances", "StopInstances", "TerminateInstances"],
+    "synopsis_list": [
+      "Create a key pair and security group.",
+      "Select an AMI and compatible instance type, then create an instance.",
+      "Stop and restart the instance.",
+      "Associate an Elastic IP address with your instance.",
+      "Connect to your instance with SSH, then clean up resources."
+    ]
+  },
+  {
+    "id": "glue_Scenario_GetStartedCrawlersJobs",
+    "service": "glue",
+    "scenario": "Glue crawlers and jobs",
+    "sdk": ["Python", "JavaScript"],
+    "operations": ["CreateJob", "StartJobRun", "DeleteJob"],
+    "synopsis_list": [
+      "Create a crawler that crawls a public S3 bucket and generates a database of CSV-formatted metadata.",
+      "List information about databases and tables.",
+      "Create a job to extract CSV data, transform it, and load JSON output into another S3 bucket.",
+      "List job runs, view transformed data, and clean up resources."
+    ]
+  }
+]

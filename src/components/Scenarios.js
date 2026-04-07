@@ -1,15 +1,15 @@
-import React, { useMemo, useState } from "react";
-import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, PieChart, Pie, Cell, Legend } from "recharts";
+import React, { useEffect, useMemo, useState } from "react";
+import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, PieChart, Pie, Cell, Legend, ResponsiveContainer } from "recharts";
 import "./Scenario.css";
 
 // Fallback Card components
 const Card = ({ children, style }) => (
   <div
     style={{
-      backgroundColor: "white",
+      backgroundColor: "#1a1d2e",
       borderRadius: 16,
-      border: "1px solid #e5e7eb",
-      boxShadow: "0 4px 8px rgba(0,0,0,0.05)",
+      border: "1px solid #2d3148",
+      boxShadow: "0 4px 8px rgba(0,0,0,0.3)",
       ...style,
     }}
   >
@@ -20,52 +20,6 @@ const Card = ({ children, style }) => (
 const CardContent = ({ children, style }) => (
   <div style={{ padding: 16, textAlign: "center", ...style }}>{children}</div>
 );
-
-// Sample Data
-const data = [
-  {
-    id: "dynamodb_Scenario_GettingStartedMovies",
-    service: "dynamodb",
-    scenario: "Getting started with movies",
-    sdk: [".NET", "Python", "Java"],
-    operations: ["CreateTable", "PutItem", "GetItem", "DeleteTable"],
-    synopsis_list: [
-      "Create a table that can hold movie data.",
-      "Put, get, and update a single movie in the table.",
-      "Write movie data to the table from a sample JSON file.",
-      "Query for movies that were released in a given year.",
-      "Scan for movies that were released in a range of years.",
-      "Delete a movie from the table, then delete the table."
-    ]
-  },
-  {
-    id: "ec2_Scenario_GetStartedInstances",
-    service: "ec2",
-    scenario: "Get started with EC2 instances",
-    sdk: ["Java", "Python"],
-    operations: ["RunInstances", "StopInstances", "TerminateInstances"],
-    synopsis_list: [
-      "Create a key pair and security group.",
-      "Select an AMI and compatible instance type, then create an instance.",
-      "Stop and restart the instance.",
-      "Associate an Elastic IP address with your instance.",
-      "Connect to your instance with SSH, then clean up resources."
-    ]
-  },
-  {
-    id: "glue_Scenario_GetStartedCrawlersJobs",
-    service: "glue",
-    scenario: "Glue crawlers and jobs",
-    sdk: ["Python", "JavaScript"],
-    operations: ["CreateJob", "StartJobRun", "DeleteJob"],
-    synopsis_list: [
-      "Create a crawler that crawls a public S3 bucket and generates a database of CSV-formatted metadata.",
-      "List information about databases and tables.",
-      "Create a job to extract CSV data, transform it, and load JSON output into another S3 bucket.",
-      "List job runs, view transformed data, and clean up resources."
-    ]
-  }
-];
 
 const COLORS = {
   ".NET": "#4F46E5",
@@ -78,6 +32,22 @@ const COLORS = {
 };
 
 export default function Dashboard() {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch("/scenario.json")
+      .then((res) => res.json())
+      .then((json) => {
+        setData(json);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Failed to load scenario.json:", err);
+        setLoading(false);
+      });
+  }, []);
+
   const [selectedSDK, setSelectedSDK] = useState(null);
   const [selectedScenario, setSelectedScenario] = useState(null);
 
@@ -94,7 +64,7 @@ export default function Dashboard() {
       });
     });
     return Object.entries(map).map(([name, value]) => ({ name, value }));
-  }, []);
+  }, [data]);
 
   // Bar chart data with full scenario included
   const scenarioBarData = useMemo(() => {
@@ -107,18 +77,26 @@ export default function Dashboard() {
         operations: d.operations.length,
         full: d
       }));
-  }, [selectedSDK]);
+  }, [selectedSDK, data]);
+
+  if (loading) {
+    return (
+      <div style={{ padding: 32, backgroundColor: "#0f1117", minHeight: "100vh", color: "#9ca3af", display: "flex", alignItems: "center", justifyContent: "center" }}>
+        Loading scenarios...
+      </div>
+    );
+  }
 
   return (
-    <div style={{ padding: 32, backgroundColor: "#f9fafb", minHeight: "100vh", display: "flex", flexDirection: "column", gap: 24 }}>
+    <div style={{ padding: 32, backgroundColor: "#0f1117", minHeight: "100vh", display: "flex", flexDirection: "column", gap: 24 }}>
       
       {/* KPI */}
       <div style={{ display: "flex", gap: 16, justifyContent: "space-between", flexWrap: "wrap" }}>
         {[{ label: "Scenarios", value: totalScenarios }, { label: "Services", value: totalServices }, { label: "SDKs", value: totalSDKs }].map((kpi, i) => (
           <Card key={i} style={{ flex: "1 1 0", minWidth: 140 }}>
             <CardContent>
-              <div style={{ fontSize: 28, fontWeight: "bold", color: "#1f2937" }}>{kpi.value}</div>
-              <div style={{ fontSize: 14, color: "#6b7280" }}>{kpi.label}</div>
+              <div style={{ fontSize: 28, fontWeight: "bold", color: "#f9fafb" }}>{kpi.value}</div>
+              <div style={{ fontSize: 14, color: "#9ca3af" }}>{kpi.label}</div>
             </CardContent>
           </Card>
         ))}
@@ -127,7 +105,7 @@ export default function Dashboard() {
       {/* PIE CHART */}
       <Card>
         <CardContent style={{ textAlign: "center" }}>
-          <h2 style={{ fontSize: 18, fontWeight: "600", marginBottom: 16 }}>SDK Coverage</h2>
+          <h2 style={{ fontSize: 18, fontWeight: "600", marginBottom: 16, color: "#f3f4f6" }}>SDK Coverage</h2>
           <PieChart width={500} height={300}>
             <Pie
               data={sdkPieData}
@@ -153,41 +131,41 @@ export default function Dashboard() {
       {/* HORIZONTAL BAR */}
       {selectedSDK && (
         <Card>
-          <CardContent>
-            <h2 style={{ fontSize: 18, fontWeight: "600", marginBottom: 16 }}>
+          <CardContent style={{ textAlign: "left" }}>
+            <h2 style={{ fontSize: 18, fontWeight: "600", marginBottom: 16, color: "#f3f4f6" }}>
               {selectedSDK} Scenarios by Service
             </h2>
-            <div style={{ maxHeight: 450, overflowY: "auto" }}>
+            <div style={{ width: "100%", minHeight: Math.max(300, scenarioBarData.length * 80 + 60) }}>
+              <ResponsiveContainer width="100%" height={Math.max(300, scenarioBarData.length * 80 + 60)}>
               <BarChart
-                width={720}
-                height={scenarioBarData.length * 60}
                 data={scenarioBarData}
                 layout="vertical"
-                margin={{ top: 20, right: 60, left: 200, bottom: 20 }}
-                barGap={12}
-                barCategoryGap="40%"
+                margin={{ top: 20, right: 80, left: 20, bottom: 20 }}
+                barGap={16}
+                barCategoryGap="30%"
               >
-                <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
+                <CartesianGrid strokeDasharray="3 3" stroke="#2d3148" />
                 <XAxis 
                   type="number" 
-                  tick={{ fontSize: 12, fill: "#374151" }} 
-                  label={{ value: "Operations", position: "insideBottomRight", offset: -10, fill: "#111827" }}
+                  tick={{ fontSize: 12, fill: "#9ca3af" }} 
+                  label={{ value: "Operations", position: "insideBottomRight", offset: -10, fill: "#d1d5db" }}
                 />
                 <YAxis 
                   type="category" 
                   dataKey="name" 
-                  width={220} 
-                  tick={{ fontSize: 14, fill: "#1f2937" }}
+                  width={200} 
+                  tick={{ fontSize: 14, fill: "#e5e7eb" }}
                 />
                 <Tooltip
-                  cursor={{ fill: "rgba(0,0,0,0.05)" }}
+                  cursor={{ fill: "rgba(255,255,255,0.05)" }}
+                  contentStyle={{ backgroundColor: "#1a1d2e", border: "1px solid #2d3148", color: "#e5e7eb" }}
                   formatter={(value, name, props) => [`${value} ops`, props.payload.name]}
                 />
                 <Bar
                   dataKey="operations"
-                  barSize={28}
+                  barSize={36}
                   radius={[8, 8, 8, 8]}
-                  label={{ position: "right", fill: "#1f2937", fontSize: 12 }}
+                  label={{ position: "right", fill: "#e5e7eb", fontSize: 12 }}
                   onClick={(bar) => setSelectedScenario(bar.full)}
                 >
                   {scenarioBarData.map((entry, index) => (
@@ -195,6 +173,7 @@ export default function Dashboard() {
                   ))}
                 </Bar>
               </BarChart>
+              </ResponsiveContainer>
             </div>
           </CardContent>
         </Card>
@@ -205,18 +184,18 @@ export default function Dashboard() {
         <Card>
           <CardContent style={{ textAlign: "left" }}>
             {/* Scenario Info Table */}
-            <table style={{ width: "100%", borderCollapse: "separate", borderSpacing: 0, borderRadius: 12, overflow: "hidden", border: "1px solid #e5e7eb", marginBottom: 24 }}>
-              <thead style={{ backgroundColor: "#f3f4f6" }}>
+            <table style={{ width: "100%", borderCollapse: "separate", borderSpacing: 0, borderRadius: 12, overflow: "hidden", border: "1px solid #2d3148", marginBottom: 24 }}>
+              <thead style={{ backgroundColor: "#232740" }}>
                 <tr>
-                  <th style={{ textAlign: "left", padding: 12 }}>Title</th>
-                  <th style={{ textAlign: "left", padding: 12 }}>AWS Service</th>
-                  <th style={{ textAlign: "left", padding: 12 }}>Synopsis</th>
+                  <th style={{ textAlign: "left", padding: 12, color: "#d1d5db" }}>Title</th>
+                  <th style={{ textAlign: "left", padding: 12, color: "#d1d5db" }}>AWS Service</th>
+                  <th style={{ textAlign: "left", padding: 12, color: "#d1d5db" }}>Synopsis</th>
                 </tr>
               </thead>
               <tbody>
-                <tr style={{ backgroundColor: "white" }}>
-                  <td style={{ padding: 12, fontSize: 14 }}>{selectedScenario.scenario}</td>
-                  <td style={{ padding: 12, fontSize: 14 }}>{selectedScenario.service.toUpperCase()}</td>
+                <tr style={{ backgroundColor: "#1a1d2e" }}>
+                  <td style={{ padding: 12, fontSize: 14, color: "#e5e7eb" }}>{selectedScenario.scenario}</td>
+                  <td style={{ padding: 12, fontSize: 14, color: "#e5e7eb" }}>{selectedScenario.service.toUpperCase()}</td>
                   <td style={{ padding: 12 }}>
                     <ul style={{ margin: 0, paddingLeft: 16, listStyleType: "disc" }}>
                       {selectedScenario.synopsis_list.map((s, i) => (
@@ -229,18 +208,18 @@ export default function Dashboard() {
             </table>
 
             {/* Operations Table with SDK badges */}
-            <div style={{ fontSize: 12, color: "#6b7280", marginBottom: 4 }}>Operations</div>
-            <table style={{ width: "100%", borderCollapse: "separate", borderSpacing: 0, borderRadius: 12, overflow: "hidden", border: "1px solid #e5e7eb" }}>
-              <thead style={{ backgroundColor: "#f3f4f6" }}>
+            <div style={{ fontSize: 12, color: "#9ca3af", marginBottom: 4 }}>Operations</div>
+            <table style={{ width: "100%", borderCollapse: "separate", borderSpacing: 0, borderRadius: 12, overflow: "hidden", border: "1px solid #2d3148" }}>
+              <thead style={{ backgroundColor: "#232740" }}>
                 <tr>
-                  <th style={{ textAlign: "left", padding: 12 }}>Operation</th>
-                  <th style={{ textAlign: "left", padding: 12 }}>SDK</th>
+                  <th style={{ textAlign: "left", padding: 12, color: "#d1d5db" }}>Operation</th>
+                  <th style={{ textAlign: "left", padding: 12, color: "#d1d5db" }}>SDK</th>
                 </tr>
               </thead>
               <tbody>
                 {selectedScenario.operations.map((op, i) => (
-                  <tr key={i} style={{ backgroundColor: i % 2 === 0 ? "white" : "#f9fafb" }}>
-                    <td style={{ padding: 12, fontSize: 14 }}>{op}</td>
+                  <tr key={i} style={{ backgroundColor: i % 2 === 0 ? "#1a1d2e" : "#1f2235" }}>
+                    <td style={{ padding: 12, fontSize: 14, color: "#e5e7eb" }}>{op}</td>
                     <td style={{ padding: 12 }}>
                       {selectedScenario.sdk.map((s, j) => (
                         <span
